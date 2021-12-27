@@ -115,6 +115,7 @@ namespace FormsKursproject {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MainForm::typeid));
 			this->menustrip_main = (gcnew System::Windows::Forms::MenuStrip());
 			this->FileToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->CreateToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -310,6 +311,7 @@ namespace FormsKursproject {
 			this->Controls->Add(this->menustrip_main);
 			this->Controls->Add(this->label_center);
 			this->Controls->Add(this->statusStrip1);
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->MainMenuStrip = this->menustrip_main;
 			this->MinimumSize = System::Drawing::Size(1000, 125);
 			this->Name = L"MainForm";
