@@ -2,11 +2,9 @@
 #include <cctype>
 #include "File_O.h"
 #include "msclr\marshal_cppstd.h"
+#include "AdminForm.h"
 /*#include "HelloForm.h"
 #include "ExitForm.h"
-#include "AdminForm.h"
-#include "QueryForm.h"
-#include "GameStartForm.h"
 #include "InfoForm.h"*/
 
 namespace FormsKursproject {
@@ -1258,7 +1256,7 @@ namespace FormsKursproject {
 		   //Вход в режим администратора
 	private: System::Void EnterToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 		//Открытие формы для ввода пароля
-		/*AdminForm^ p = gcnew AdminForm();
+		AdminForm^ p = gcnew AdminForm();
 		p->ShowDialog();
 
 		//Если пароль верный
@@ -1267,12 +1265,7 @@ namespace FormsKursproject {
 			this->QuitToolStripMenuItem->Visible = true;
 			this->EnterToolStripMenuItem->Visible = false;
 			this->CreateToolStripMenuItem->Enabled = true;
-			this->dataGridView1->BackgroundColor = System::Drawing::Color::LavenderBlush;
-			this->dataGridView1->AllowUserToAddRows = true;
-			this->dataGridView1->AllowUserToDeleteRows = true;
-			this->dataGridView1->ReadOnly = false;
-			this->Column_ID->ReadOnly = true;
-		}*/
+		}
 	}
 
 		   //Выход из режима администратора
@@ -1308,74 +1301,6 @@ namespace FormsKursproject {
 			}
 		}*/
 	}
-
-		   //Сортировка в столбцах
-	/*private: System::Void dataGridView1_SortCompare(System::Object^ sender, System::Windows::Forms::DataGridViewSortCompareEventArgs^ e) {
-		if (e->CellValue1 != nullptr && e->CellValue2 != nullptr) {
-
-			//Сортировка по столбцу Количество
-			if (e->Column->Name == "Column_number") {
-				Int64 v1, v2;
-				v1 = Convert::ToInt64(e->CellValue1);
-				v2 = Convert::ToInt64(e->CellValue2);
-				if (v1 > v2)
-					e->SortResult = 1;
-				else if (v1 < v2)
-					e->SortResult = -1;
-				else
-					e->SortResult = 0;
-			}
-
-			//Сортировка по столбцу Цена
-			else if (e->Column->Name == "Column_cost") {
-				Double v1, v2;
-				v1 = Convert::ToDouble(e->CellValue1);
-				v2 = Convert::ToDouble(e->CellValue2);
-				if (v1 > v2)
-					e->SortResult = 1;
-				else if (v1 < v2)
-					e->SortResult = -1;
-				else
-					e->SortResult = 0;
-			}
-
-			//Сортировка по столбцу Возраст
-			else if (e->Column->Name == "Column_age") {
-				Int32 v1, v2;
-				String^ va1, ^ va2;
-				for (Int16 i = 0; i < e->CellValue1->ToString()->Length - 1; i++)
-					va1 += e->CellValue1->ToString()[i];
-				for (Int16 i = 0; i < e->CellValue2->ToString()->Length - 1; i++)
-					va2 += e->CellValue2->ToString()[i];
-				v1 = Convert::ToInt32(va1);
-				v2 = Convert::ToInt32(va2);
-				if (v1 > v2)
-					e->SortResult = 1;
-				else if (v1 < v2)
-					e->SortResult = -1;
-				else
-					e->SortResult = 0;
-			}
-
-			//Сортировка по остальным столбцам
-			else
-				e->SortResult = System::String::Compare(
-					e->CellValue1->ToString(), e->CellValue2->ToString());
-		}
-
-		//Если сортируемые ячейки пусты
-		else {
-			if (e->CellValue1 == nullptr) {
-				if (e->CellValue2 == nullptr)
-					e->SortResult = 0;
-				else
-					e->SortResult = -1;
-			}
-			else
-				e->SortResult = 1;
-		}
-		e->Handled = true;
-	}*/
 
 	//Произведена смена режима - файл открывается заново
 	private: System::Void QuitToolStripMenuItem_VisibleChanged(System::Object^ sender, System::EventArgs^ e) {
