@@ -159,7 +159,6 @@ namespace FormsKursproject {
 			// menustrip_main
 			// 
 			this->menustrip_main->BackColor = System::Drawing::SystemColors::ControlLightLight;
-			this->menustrip_main->GripMargin = System::Windows::Forms::Padding(2, 2, 0, 2);
 			this->menustrip_main->ImageScalingSize = System::Drawing::Size(28, 28);
 			this->menustrip_main->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(5) {
 				this->FileToolStripMenuItem,
@@ -167,7 +166,8 @@ namespace FormsKursproject {
 			});
 			this->menustrip_main->Location = System::Drawing::Point(0, 0);
 			this->menustrip_main->Name = L"menustrip_main";
-			this->menustrip_main->Size = System::Drawing::Size(1500, 38);
+			this->menustrip_main->Padding = System::Windows::Forms::Padding(3, 1, 0, 1);
+			this->menustrip_main->Size = System::Drawing::Size(895, 24);
 			this->menustrip_main->TabIndex = 0;
 			this->menustrip_main->Text = L"menuStrip1";
 			// 
@@ -179,7 +179,7 @@ namespace FormsKursproject {
 					this->SaveAsToolStripMenuItem, this->toolStripSeparator3, this->ExitToolStripMenuItem
 			});
 			this->FileToolStripMenuItem->Name = L"FileToolStripMenuItem";
-			this->FileToolStripMenuItem->Size = System::Drawing::Size(80, 34);
+			this->FileToolStripMenuItem->Size = System::Drawing::Size(48, 22);
 			this->FileToolStripMenuItem->Text = L"&Файл";
 			// 
 			// CreateToolStripMenuItem
@@ -187,7 +187,7 @@ namespace FormsKursproject {
 			this->CreateToolStripMenuItem->Enabled = false;
 			this->CreateToolStripMenuItem->Name = L"CreateToolStripMenuItem";
 			this->CreateToolStripMenuItem->ShortcutKeys = static_cast<System::Windows::Forms::Keys>((System::Windows::Forms::Keys::Control | System::Windows::Forms::Keys::N));
-			this->CreateToolStripMenuItem->Size = System::Drawing::Size(303, 40);
+			this->CreateToolStripMenuItem->Size = System::Drawing::Size(172, 22);
 			this->CreateToolStripMenuItem->Text = L"&Создать";
 			this->CreateToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::CreateToolStripMenuItem_Click);
 			// 
@@ -195,34 +195,34 @@ namespace FormsKursproject {
 			// 
 			this->OpenToolStripMenuItem->Name = L"OpenToolStripMenuItem";
 			this->OpenToolStripMenuItem->ShortcutKeys = static_cast<System::Windows::Forms::Keys>((System::Windows::Forms::Keys::Control | System::Windows::Forms::Keys::O));
-			this->OpenToolStripMenuItem->Size = System::Drawing::Size(303, 40);
+			this->OpenToolStripMenuItem->Size = System::Drawing::Size(172, 22);
 			this->OpenToolStripMenuItem->Text = L"&Открыть";
 			this->OpenToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::OpenToolStripMenuItem_Click);
 			// 
 			// toolStripSeparator1
 			// 
 			this->toolStripSeparator1->Name = L"toolStripSeparator1";
-			this->toolStripSeparator1->Size = System::Drawing::Size(300, 6);
+			this->toolStripSeparator1->Size = System::Drawing::Size(169, 6);
 			// 
 			// CloseToolStripMenuItem
 			// 
 			this->CloseToolStripMenuItem->Enabled = false;
 			this->CloseToolStripMenuItem->Name = L"CloseToolStripMenuItem";
-			this->CloseToolStripMenuItem->Size = System::Drawing::Size(303, 40);
+			this->CloseToolStripMenuItem->Size = System::Drawing::Size(172, 22);
 			this->CloseToolStripMenuItem->Text = L"&Закрыть";
 			this->CloseToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::CloseToolStripMenuItem_Click);
 			// 
 			// toolStripSeparator2
 			// 
 			this->toolStripSeparator2->Name = L"toolStripSeparator2";
-			this->toolStripSeparator2->Size = System::Drawing::Size(300, 6);
+			this->toolStripSeparator2->Size = System::Drawing::Size(169, 6);
 			// 
 			// SaveToolStripMenuItem
 			// 
 			this->SaveToolStripMenuItem->Enabled = false;
 			this->SaveToolStripMenuItem->Name = L"SaveToolStripMenuItem";
 			this->SaveToolStripMenuItem->ShortcutKeys = static_cast<System::Windows::Forms::Keys>((System::Windows::Forms::Keys::Control | System::Windows::Forms::Keys::S));
-			this->SaveToolStripMenuItem->Size = System::Drawing::Size(303, 40);
+			this->SaveToolStripMenuItem->Size = System::Drawing::Size(172, 22);
 			this->SaveToolStripMenuItem->Text = L"Со&хранить";
 			this->SaveToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::SaveToolStripMenuItem_Click);
 			// 
@@ -230,20 +230,20 @@ namespace FormsKursproject {
 			// 
 			this->SaveAsToolStripMenuItem->Enabled = false;
 			this->SaveAsToolStripMenuItem->Name = L"SaveAsToolStripMenuItem";
-			this->SaveAsToolStripMenuItem->Size = System::Drawing::Size(303, 40);
+			this->SaveAsToolStripMenuItem->Size = System::Drawing::Size(172, 22);
 			this->SaveAsToolStripMenuItem->Text = L"Сох&ранить как...";
 			this->SaveAsToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::SaveAsToolStripMenuItem_Click);
 			// 
 			// toolStripSeparator3
 			// 
 			this->toolStripSeparator3->Name = L"toolStripSeparator3";
-			this->toolStripSeparator3->Size = System::Drawing::Size(300, 6);
+			this->toolStripSeparator3->Size = System::Drawing::Size(169, 6);
 			// 
 			// ExitToolStripMenuItem
 			// 
 			this->ExitToolStripMenuItem->Name = L"ExitToolStripMenuItem";
 			this->ExitToolStripMenuItem->ShortcutKeys = static_cast<System::Windows::Forms::Keys>((System::Windows::Forms::Keys::Alt | System::Windows::Forms::Keys::F4));
-			this->ExitToolStripMenuItem->Size = System::Drawing::Size(303, 40);
+			this->ExitToolStripMenuItem->Size = System::Drawing::Size(172, 22);
 			this->ExitToolStripMenuItem->Text = L"&Выход";
 			this->ExitToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::ExitToolStripMenuItem_Click);
 			// 
@@ -252,7 +252,7 @@ namespace FormsKursproject {
 			this->EnterToolStripMenuItem->Alignment = System::Windows::Forms::ToolStripItemAlignment::Right;
 			this->EnterToolStripMenuItem->Name = L"EnterToolStripMenuItem";
 			this->EnterToolStripMenuItem->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->EnterToolStripMenuItem->Size = System::Drawing::Size(330, 34);
+			this->EnterToolStripMenuItem->Size = System::Drawing::Size(188, 22);
 			this->EnterToolStripMenuItem->Text = L"Вход в режим администратора";
 			this->EnterToolStripMenuItem->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
 			this->EnterToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::EnterToolStripMenuItem_Click);
@@ -261,13 +261,13 @@ namespace FormsKursproject {
 			// 
 			this->CorrectToolStripMenuItem->Enabled = false;
 			this->CorrectToolStripMenuItem->Name = L"CorrectToolStripMenuItem";
-			this->CorrectToolStripMenuItem->Size = System::Drawing::Size(188, 34);
+			this->CorrectToolStripMenuItem->Size = System::Drawing::Size(108, 22);
 			this->CorrectToolStripMenuItem->Text = L"&Редактирование";
 			// 
 			// InfoToolStripMenuItem
 			// 
 			this->InfoToolStripMenuItem->Name = L"InfoToolStripMenuItem";
-			this->InfoToolStripMenuItem->Size = System::Drawing::Size(111, 34);
+			this->InfoToolStripMenuItem->Size = System::Drawing::Size(65, 22);
 			this->InfoToolStripMenuItem->Text = L"&Справка";
 			this->InfoToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::InfoToolStripMenuItem_Click);
 			// 
@@ -275,7 +275,7 @@ namespace FormsKursproject {
 			// 
 			this->QuitToolStripMenuItem->Alignment = System::Windows::Forms::ToolStripItemAlignment::Right;
 			this->QuitToolStripMenuItem->Name = L"QuitToolStripMenuItem";
-			this->QuitToolStripMenuItem->Size = System::Drawing::Size(366, 34);
+			this->QuitToolStripMenuItem->Size = System::Drawing::Size(209, 22);
 			this->QuitToolStripMenuItem->Text = L"Выход из режима администратора";
 			this->QuitToolStripMenuItem->Visible = false;
 			this->QuitToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::QuitToolStripMenuItem_Click);
@@ -285,16 +285,17 @@ namespace FormsKursproject {
 			// 
 			this->statusStrip1->ImageScalingSize = System::Drawing::Size(28, 28);
 			this->statusStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->toolStripStatusLabel_filename });
-			this->statusStrip1->Location = System::Drawing::Point(0, 914);
+			this->statusStrip1->Location = System::Drawing::Point(0, 513);
 			this->statusStrip1->Name = L"statusStrip1";
-			this->statusStrip1->Size = System::Drawing::Size(1500, 22);
+			this->statusStrip1->Padding = System::Windows::Forms::Padding(1, 0, 8, 0);
+			this->statusStrip1->Size = System::Drawing::Size(895, 22);
 			this->statusStrip1->TabIndex = 1;
 			this->statusStrip1->Text = L"statusStrip1";
 			// 
 			// toolStripStatusLabel_filename
 			// 
 			this->toolStripStatusLabel_filename->Name = L"toolStripStatusLabel_filename";
-			this->toolStripStatusLabel_filename->Size = System::Drawing::Size(93, 30);
+			this->toolStripStatusLabel_filename->Size = System::Drawing::Size(53, 17);
 			this->toolStripStatusLabel_filename->Text = L"filename";
 			this->toolStripStatusLabel_filename->Visible = false;
 			this->toolStripStatusLabel_filename->VisibleChanged += gcnew System::EventHandler(this, &MainForm::toolStripStatusLabel_filename_VisibleChanged);
@@ -309,8 +310,9 @@ namespace FormsKursproject {
 			this->label_center->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->label_center->ForeColor = System::Drawing::SystemColors::GrayText;
 			this->label_center->Location = System::Drawing::Point(0, 0);
+			this->label_center->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label_center->Name = L"label_center";
-			this->label_center->Size = System::Drawing::Size(1500, 914);
+			this->label_center->Size = System::Drawing::Size(895, 513);
 			this->label_center->TabIndex = 3;
 			this->label_center->Text = L"Файл не выбран";
 			this->label_center->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -334,30 +336,33 @@ namespace FormsKursproject {
 			this->tableLayoutPanel1->Controls->Add(this->tableLayoutPanel2, 0, 0);
 			this->tableLayoutPanel1->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->tableLayoutPanel1->GrowStyle = System::Windows::Forms::TableLayoutPanelGrowStyle::FixedSize;
-			this->tableLayoutPanel1->Location = System::Drawing::Point(0, 38);
+			this->tableLayoutPanel1->Location = System::Drawing::Point(0, 24);
+			this->tableLayoutPanel1->Margin = System::Windows::Forms::Padding(2);
 			this->tableLayoutPanel1->Name = L"tableLayoutPanel1";
 			this->tableLayoutPanel1->RowCount = 3;
 			this->tableLayoutPanel1->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 33.33333F)));
 			this->tableLayoutPanel1->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 33.33333F)));
 			this->tableLayoutPanel1->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 33.33333F)));
-			this->tableLayoutPanel1->Size = System::Drawing::Size(1500, 876);
+			this->tableLayoutPanel1->Size = System::Drawing::Size(895, 489);
 			this->tableLayoutPanel1->TabIndex = 5;
 			this->tableLayoutPanel1->Visible = false;
 			// 
 			// button2
 			// 
-			this->button2->Location = System::Drawing::Point(502, 3);
+			this->button2->Location = System::Drawing::Point(300, 2);
+			this->button2->Margin = System::Windows::Forms::Padding(2);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(494, 284);
+			this->button2->Size = System::Drawing::Size(268, 149);
 			this->button2->TabIndex = 1;
 			this->button2->Text = L"button2";
 			this->button2->UseVisualStyleBackColor = true;
 			// 
 			// button3
 			// 
-			this->button3->Location = System::Drawing::Point(1002, 3);
+			this->button3->Location = System::Drawing::Point(598, 2);
+			this->button3->Margin = System::Windows::Forms::Padding(2);
 			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(495, 284);
+			this->button3->Size = System::Drawing::Size(270, 149);
 			this->button3->TabIndex = 2;
 			this->button3->Text = L"button3";
 			this->button3->UseVisualStyleBackColor = true;
@@ -366,50 +371,54 @@ namespace FormsKursproject {
 			// 
 			this->tableLayoutPanel2->BackColor = System::Drawing::SystemColors::ControlDark;
 			this->tableLayoutPanel2->ColumnCount = 2;
-			this->tableLayoutPanel2->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent,
-				50)));
-			this->tableLayoutPanel2->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent,
-				50)));
+			this->tableLayoutPanel2->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
+				100)));
+			this->tableLayoutPanel2->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
+				200)));
 			this->tableLayoutPanel2->Controls->Add(this->pictureBox1, 0, 0);
 			this->tableLayoutPanel2->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->tableLayoutPanel2->Location = System::Drawing::Point(3, 3);
-			this->tableLayoutPanel2->MinimumSize = System::Drawing::Size(493, 286);
+			this->tableLayoutPanel2->Location = System::Drawing::Point(2, 2);
+			this->tableLayoutPanel2->Margin = System::Windows::Forms::Padding(2);
+			this->tableLayoutPanel2->MinimumSize = System::Drawing::Size(269, 155);
 			this->tableLayoutPanel2->Name = L"tableLayoutPanel2";
 			this->tableLayoutPanel2->RowCount = 1;
 			this->tableLayoutPanel2->RowStyles->Add((gcnew System::Windows::Forms::RowStyle()));
-			this->tableLayoutPanel2->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Absolute, 20)));
-			this->tableLayoutPanel2->Size = System::Drawing::Size(493, 286);
+			this->tableLayoutPanel2->Size = System::Drawing::Size(294, 159);
 			this->tableLayoutPanel2->TabIndex = 3;
 			// 
 			// pictureBox1
 			// 
 			this->pictureBox1->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(3, 3);
+			this->pictureBox1->Location = System::Drawing::Point(2, 2);
+			this->pictureBox1->Margin = System::Windows::Forms::Padding(2);
 			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(240, 280);
+			this->pictureBox1->Size = System::Drawing::Size(96, 155);
 			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->pictureBox1->TabIndex = 0;
 			this->pictureBox1->TabStop = false;
 			// 
 			// MainForm
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(11, 24);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1500, 936);
+			this->ClientSize = System::Drawing::Size(895, 535);
 			this->Controls->Add(this->tableLayoutPanel1);
 			this->Controls->Add(this->menustrip_main);
 			this->Controls->Add(this->label_center);
 			this->Controls->Add(this->statusStrip1);
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->MainMenuStrip = this->menustrip_main;
-			this->MinimumSize = System::Drawing::Size(1000, 125);
+			this->Margin = System::Windows::Forms::Padding(2);
+			this->MinimumSize = System::Drawing::Size(553, 85);
 			this->Name = L"MainForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"KinoVTeatRe";
 			this->WindowState = System::Windows::Forms::FormWindowState::Maximized;
 			this->FormClosing += gcnew System::Windows::Forms::FormClosingEventHandler(this, &MainForm::MainForm_FormClosing);
 			this->Load += gcnew System::EventHandler(this, &MainForm::MainForm_Load);
+			this->ResizeEnd += gcnew System::EventHandler(this, &MainForm::MainForm_ResizeEnd);
+			this->Resize += gcnew System::EventHandler(this, &MainForm::MainForm_Resize);
 			this->menustrip_main->ResumeLayout(false);
 			this->menustrip_main->PerformLayout();
 			this->statusStrip1->ResumeLayout(false);
@@ -547,6 +556,9 @@ namespace FormsKursproject {
 	private: Void open_file() {
 		this->changes = false;
 		Boolean good = true;
+		System::Object^ sender;
+		System::EventArgs^ e;
+		MainForm_ResizeEnd(sender, e);
 		//this->dataGridView1->Rows->Clear();
 
 		/*if (this->toolStripStatusLabel_filename->Text != L"Новый файл") {
@@ -967,5 +979,18 @@ namespace FormsKursproject {
 		else
 			Application::OpenForms["InfoForm"]->Select();*/
 	}
+	
+	private: System::Void MainForm_ResizeEnd(System::Object^ sender, System::EventArgs^ e) {
+		
+		this->tableLayoutPanel2->ColumnStyles->Clear();
+		this->tableLayoutPanel2->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
+			this->tableLayoutPanel2->Size.Height * 0.7)));
+		this->tableLayoutPanel2->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
+			this->tableLayoutPanel2->Size.Width - this->tableLayoutPanel2->Size.Height * 0.7)));
+	}
+	private: System::Void MainForm_Resize(System::Object^ sender, System::EventArgs^ e) {
+		MainForm_ResizeEnd(sender, e);
+	}
+
 };
 }
