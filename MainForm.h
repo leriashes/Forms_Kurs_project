@@ -25,10 +25,12 @@ namespace FormsKursproject {
 	public ref class MainForm : public System::Windows::Forms::Form
 	{
 	private: File_O* file_stream;
+		   Cinema* cinema;
 	public:
 		MainForm(void)
 		{
 			file_stream = new File_O();
+			cinema = new Cinema();
 			InitializeComponent();
 			//
 			//TODO: добавьте код конструктора
@@ -958,7 +960,18 @@ namespace FormsKursproject {
 		}
 #pragma endregion
 	private: Boolean changes = false;
-	private: int films_number;
+
+	private: System::String^ SetFilmInfo(Film film)
+	{
+		System::String^ Text = "Название: " + msclr::interop::marshal_as<System::String^>(film.name);
+		Text += "\r\nВозрастное ограничение: " + msclr::interop::marshal_as<System::String^>(film.age);
+		Text += "\r\nПродолжительность: " + msclr::interop::marshal_as<System::String^>(film.duration) + " мин.";
+		Text += "\r\nРежиссёр(-ы): " + msclr::interop::marshal_as<System::String^>(film.rejisser);
+		Text += "\r\nВ главных ролях: " + msclr::interop::marshal_as<System::String^>(film.main_role);
+		Text += "\r\n\r\nОписание:\r\n" + msclr::interop::marshal_as<System::String^>(film.short_description);
+
+		return Text;
+	}
 
 		   //Проверка на наличие пустых ячеек в файле
 	/*private: Boolean full_table() {
@@ -1080,7 +1093,7 @@ namespace FormsKursproject {
 	}
 
 		   //Открытие файла
-	private: Void open_file() {
+	private: System::Void open_file() {
 		this->changes = false;
 		Boolean good = true;
 		
@@ -1116,47 +1129,52 @@ namespace FormsKursproject {
 					file_stream->kol_vo_film = (lines->Length - 9) / 134;
 					good = true;
 
-					for (int i = 0; i < file_stream->kol_vo_film; i++)
-					{
-						;
-					}
+					file_stream->Read(*cinema);
 
 					if (file_stream->kol_vo_film >= 1)
 					{
+						this->textBox1->Text = SetFilmInfo(cinema->films[0]);
 						this->tableLayoutPanel2->Visible = true;
 
 						if (file_stream->kol_vo_film >= 2)
 						{
+							this->textBox2->Text = SetFilmInfo(cinema->films[1]);
 							this->tableLayoutPanel3->Visible = true;
 
 							if (file_stream->kol_vo_film >= 3)
 							{
+								this->textBox3->Text = SetFilmInfo(cinema->films[2]);
 								this->tableLayoutPanel4->Visible = true;
 
 								if (file_stream->kol_vo_film >= 4)
 								{
+									this->textBox4->Text = SetFilmInfo(cinema->films[3]);
 									this->tableLayoutPanel5->Visible = true;
 
 									if (file_stream->kol_vo_film >= 5)
 									{
+										this->textBox5->Text = SetFilmInfo(cinema->films[4]);
 										this->tableLayoutPanel6->Visible = true;
 
 										if (file_stream->kol_vo_film >= 6)
 										{
+											this->textBox6->Text = SetFilmInfo(cinema->films[5]);
 											this->tableLayoutPanel7->Visible = true;
 
 											if (file_stream->kol_vo_film >= 7)
 											{
+												this->textBox7->Text = SetFilmInfo(cinema->films[6]);
 												this->tableLayoutPanel8->Visible = true;
 
 												if (file_stream->kol_vo_film >= 8)
 												{
+													this->textBox8->Text = SetFilmInfo(cinema->films[7]);
 													this->tableLayoutPanel9->Visible = true;
 
 													if (file_stream->kol_vo_film >= 9)
 													{
+														this->textBox9->Text = SetFilmInfo(cinema->films[8]);
 														this->tableLayoutPanel10->Visible = true;
-
 													}
 												}
 											}
@@ -1171,45 +1189,6 @@ namespace FormsKursproject {
 				{
 					good = false;
 				}
-
-				/*for each (String ^ str in lines)
-				{
-					DataGridViewRow^ row = gcnew DataGridViewRow();
-					row->CreateCells(this->dataGridView1);
-					array<String^>^ splittedstr = str->Split(L';');
-
-					//Если количество пунктов в строке не удовлетворяет нужному количеству
-					if (splittedstr->Length != 5) {
-						good = false;
-						break;
-					}
-					else
-					{
-						for (Int16 i = 0; i < 2; i++)
-							row->Cells[i]->Value = splittedstr[i];
-
-						//Проверка первого столбца
-						if (good = check_value(splittedstr[0], 0))
-							//Проверка второго столбца
-							if (good = check_value(splittedstr[1], splittedstr[0], this->dataGridView1->Rows->Count, this->dataGridView1))
-								//Проверка третьего столбца
-								if (good = check_value(splittedstr[2], 2)) {
-									row->Cells[2]->Value = Convert::ToString(Convert::ToInt64(splittedstr[2]));
-									//Проверка четвёртого столбца
-									if (good = check_value(splittedstr[3], 3)) {
-										row->Cells[3]->Value = value_format(splittedstr[3], 3);
-										//Проверка пятого столбца
-										if (good = check_value(splittedstr[4], 4)) {
-											row->Cells[4]->Value = value_format(splittedstr[4], 4);
-											this->dataGridView1->Rows->Add(row);
-										}
-									}
-								}
-
-						if (!good)
-							break;
-					}
-				}*/
 
 				//Если содержимое файла не удовлетворяет нужному формату
 				if (!good) 

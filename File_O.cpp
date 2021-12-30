@@ -191,7 +191,7 @@ bool File_O::CheckPath()
 }
 
 
-/*void File_O::Read(Cinema& cinema)
+void File_O::Read(Cinema& cinema)
 {
     ifstream file(path);
 
@@ -357,10 +357,10 @@ bool File_O::CheckPath()
     } while (i < kol_vo_film);
 	cinema.films_number = i;
     file.close();
-    Write(cinema);
+    //Write(cinema);
  
     return;
-}*/
+}
 
 bool File_O::CheckCompound()        //проверка форматировани€ текстового файла
 {
