@@ -3,8 +3,8 @@
 #include "File_O.h"
 #include "msclr\marshal_cppstd.h"
 #include "AdminForm.h"
-/*#include "HelloForm.h"
 #include "ExitForm.h"
+/*#include "HelloForm.h"
 #include "InfoForm.h"*/
 
 namespace FormsKursproject {
@@ -1270,9 +1270,11 @@ namespace FormsKursproject {
 
 		   //Выход из режима администратора
 	private: System::Void QuitToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
-		/*ExitForm^ p = gcnew ExitForm();
+		ExitForm^ p = gcnew ExitForm();
 		if (this->toolStripStatusLabel_filename->Visible && this->changes)
+		{
 			p->ShowDialog();
+		}
 
 		if (!this->toolStripStatusLabel_filename->Visible || !this->changes || p->DialogResult == System::Windows::Forms::DialogResult::No || p->DialogResult == System::Windows::Forms::DialogResult::Yes) {
 			//Сохранение изменений
@@ -1285,21 +1287,21 @@ namespace FormsKursproject {
 				}
 			}
 			else if (this->toolStripStatusLabel_filename->Text == L"Новый файл")
-				this->dataGridView1->Visible = false;
+				this->tableLayoutPanel1->Visible = false;
 
-			if (full_table() || p->DialogResult == System::Windows::Forms::DialogResult::No) {
+			if (true/*full_table()*/ || p->DialogResult == System::Windows::Forms::DialogResult::No) {
 				this->EnterToolStripMenuItem->Visible = true;
 				this->QuitToolStripMenuItem->Visible = false;
-				this->dataGridView1->BackgroundColor = System::Drawing::Color::Bisque;
+				//this->dataGridView1->BackgroundColor = System::Drawing::Color::Bisque;
 				this->CreateToolStripMenuItem->Enabled = false;
 				this->SaveToolStripMenuItem->Enabled = false;
 				this->SaveAsToolStripMenuItem->Enabled = false;
 				this->CorrectToolStripMenuItem->Enabled = false;
-				this->dataGridView1->AllowUserToAddRows = false;
-				this->dataGridView1->AllowUserToDeleteRows = false;
-				this->dataGridView1->ReadOnly = true;
+				//this->dataGridView1->AllowUserToAddRows = false;
+				//this->dataGridView1->AllowUserToDeleteRows = false;
+				//this->dataGridView1->ReadOnly = true;
 			}
-		}*/
+		}
 	}
 
 	//Произведена смена режима - файл открывается заново
@@ -1320,8 +1322,6 @@ namespace FormsKursproject {
 		}
 		else
 			this->toolStripStatusLabel_filename->Visible = false;
-
-
 	}
 
 		   //Сохранение файла при помощи кнопки "Сохранить"
@@ -1356,124 +1356,6 @@ namespace FormsKursproject {
 		}
 		else
 			MessageBox::Show(L"Невозможно сохранить файл: в таблице есть пустые ячейки.");*/
-	}
-
-		   //Изменение значения в ячейке
-	private: System::Void dataGridView1_CellValueChanged(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
-		Boolean good = true;
-		String^ value;
-
-		/*if (e->RowIndex != -1) {
-			this->changes = true;
-
-			//Если ячейка не пустая
-			if (this->dataGridView1->Rows[e->RowIndex]->Cells[e->ColumnIndex]->Value != nullptr) {
-				value = this->dataGridView1->Rows[e->RowIndex]->Cells[e->ColumnIndex]->Value->ToString();
-				if (value->Length > 0) {
-
-					if (e->ColumnIndex != 1)
-						good = check_value(value, e->ColumnIndex);
-					else
-						good = check_value(value, this->dataGridView1->Rows[e->RowIndex]->Cells[0]->Value->ToString(), e->RowIndex, this->dataGridView1);
-
-					switch (e->ColumnIndex) {
-
-						//Ячейка столбца Название игрушки
-					case 0:
-						if (good) {
-							Char symb = value[0];
-
-							if (symb >= 'a' && symb <= 'z' || symb >= L'а' && symb <= L'е' || symb >= L'ж' && symb <= L'я')
-								symb -= 32;
-							else if (symb == L'ё')
-								symb -= 80;
-
-							this->dataGridView1->Rows[e->RowIndex]->Cells[1]->Value = symb + "-0001";
-						}
-						break;
-
-						//Ячейка столбца Инвентарный номер
-					case 1:
-						if (!good) {
-							String^ num = "";
-							for (int i = 0; i < 4; i++)
-								num += value[i + 2];
-							num = Convert::ToString(Convert::ToInt64(num) + 1);
-							while (num->Length < 4)
-								num = "0" + num;
-							num = value[0] + "-" + num;
-							this->dataGridView1->Rows[e->RowIndex]->Cells[1]->Value = Convert::ToString(num);
-						}
-						break;
-
-						//Ячейка столбца Количество
-					case 2:
-						if (good)
-							this->dataGridView1->Rows[e->RowIndex]->Cells[e->ColumnIndex]->Value = Convert::ToString(Convert::ToInt64(value));
-						break;
-
-						//Ячейка столбца Цена
-					case 3:
-						if (good)
-							this->dataGridView1->Rows[e->RowIndex]->Cells[e->ColumnIndex]->Value = value_format(value, 3);
-						break;
-
-						//Ячейка столбца Возраст
-					case 4:
-						if (good)
-							this->dataGridView1->Rows[e->RowIndex]->Cells[e->ColumnIndex]->Value = value_format(value, 4);
-						break;
-					default:
-						break;
-					}
-				}
-				else
-					good = false;
-
-				if (e->ColumnIndex != 1 && this->dataGridView1->Rows[e->RowIndex]->Cells[e->ColumnIndex]->Value != nullptr && value->Length > 0) {
-					if (good) {
-						this->dataGridView1->Rows[e->RowIndex]->Cells[e->ColumnIndex]->Style->BackColor = System::Drawing::Color::White;
-						if (e->ColumnIndex == 0)
-							this->dataGridView1->Rows[e->RowIndex]->Cells[1]->Style->BackColor = System::Drawing::Color::White;
-					}
-					else {
-						this->dataGridView1->Rows[e->RowIndex]->Cells[e->ColumnIndex]->Style->BackColor = System::Drawing::Color::LightCyan;
-						this->dataGridView1->Rows[e->RowIndex]->Cells[e->ColumnIndex]->Value = "";
-						if (e->ColumnIndex == 0) {
-							this->dataGridView1->Rows[e->RowIndex]->Cells[1]->Style->BackColor = System::Drawing::Color::LightCyan;
-							this->dataGridView1->Rows[e->RowIndex]->Cells[1]->Value = "";
-						}
-						MessageBox::Show(L"Введённое значение не удовлетворяет нужному формату.");
-					}
-				}
-			}
-			else
-				this->dataGridView1->Rows[e->RowIndex]->Cells[e->ColumnIndex]->Style->BackColor = System::Drawing::Color::LightCyan;
-
-		}
-	*/
-	}
-
-		   //Запрос
-	private: System::Void QueryToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
-		/*QueryForm^ p = gcnew QueryForm(this->toolStripStatusLabel_filename->Text);
-		p->Show();*/
-	}
-
-		   //Запуск игры
-	private: System::Void GameToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
-		/*if (Application::OpenForms["GameStartForm"] == nullptr && Application::OpenForms["GameForm"] == nullptr) {
-			GameStartForm^ p = gcnew GameStartForm();
-			p->Show();
-		}
-
-		//Если игра уже запущена
-		else if (Application::OpenForms["GameForm"] != nullptr)
-			Application::OpenForms["GameForm"]->Select();
-		else
-			Application::OpenForms["GameStartForm"]->Show();*/
-
-		this->WindowState = FormWindowState::Minimized;
 	}
 
 		   //Открытие справки
@@ -1574,6 +1456,7 @@ namespace FormsKursproject {
 			}
 		}
 	}
+	
 	private: System::Void MainForm_Resize(System::Object^ sender, System::EventArgs^ e) {
 		MainForm_ResizeEnd(sender, e);
 	}
