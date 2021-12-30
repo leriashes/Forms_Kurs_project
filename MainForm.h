@@ -82,6 +82,14 @@ namespace FormsKursproject {
 	private: System::Windows::Forms::SaveFileDialog^ saveFileDialog1;
 
 
+	private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel1;
+
+	private: System::Windows::Forms::Button^ button2;
+	private: System::Windows::Forms::Button^ button3;
+	private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel2;
+	private: System::Windows::Forms::PictureBox^ pictureBox1;
+
+
 
 
 
@@ -136,8 +144,16 @@ namespace FormsKursproject {
 			this->openFileDialog1 = (gcnew System::Windows::Forms::OpenFileDialog());
 			this->label_center = (gcnew System::Windows::Forms::Label());
 			this->saveFileDialog1 = (gcnew System::Windows::Forms::SaveFileDialog());
+			this->tableLayoutPanel1 = (gcnew System::Windows::Forms::TableLayoutPanel());
+			this->button2 = (gcnew System::Windows::Forms::Button());
+			this->button3 = (gcnew System::Windows::Forms::Button());
+			this->tableLayoutPanel2 = (gcnew System::Windows::Forms::TableLayoutPanel());
+			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->menustrip_main->SuspendLayout();
 			this->statusStrip1->SuspendLayout();
+			this->tableLayoutPanel1->SuspendLayout();
+			this->tableLayoutPanel2->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// menustrip_main
@@ -303,11 +319,85 @@ namespace FormsKursproject {
 			// 
 			this->saveFileDialog1->Filter = L"Текстовые файлы(*.txt)|*.txt";
 			// 
+			// tableLayoutPanel1
+			// 
+			this->tableLayoutPanel1->BackColor = System::Drawing::SystemColors::WindowFrame;
+			this->tableLayoutPanel1->ColumnCount = 3;
+			this->tableLayoutPanel1->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent,
+				33.33333F)));
+			this->tableLayoutPanel1->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent,
+				33.33334F)));
+			this->tableLayoutPanel1->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent,
+				33.33334F)));
+			this->tableLayoutPanel1->Controls->Add(this->button2, 1, 0);
+			this->tableLayoutPanel1->Controls->Add(this->button3, 2, 0);
+			this->tableLayoutPanel1->Controls->Add(this->tableLayoutPanel2, 0, 0);
+			this->tableLayoutPanel1->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->tableLayoutPanel1->GrowStyle = System::Windows::Forms::TableLayoutPanelGrowStyle::FixedSize;
+			this->tableLayoutPanel1->Location = System::Drawing::Point(0, 38);
+			this->tableLayoutPanel1->Name = L"tableLayoutPanel1";
+			this->tableLayoutPanel1->RowCount = 3;
+			this->tableLayoutPanel1->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 33.33333F)));
+			this->tableLayoutPanel1->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 33.33333F)));
+			this->tableLayoutPanel1->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 33.33333F)));
+			this->tableLayoutPanel1->Size = System::Drawing::Size(1500, 876);
+			this->tableLayoutPanel1->TabIndex = 5;
+			this->tableLayoutPanel1->Visible = false;
+			// 
+			// button2
+			// 
+			this->button2->Location = System::Drawing::Point(502, 3);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(494, 284);
+			this->button2->TabIndex = 1;
+			this->button2->Text = L"button2";
+			this->button2->UseVisualStyleBackColor = true;
+			// 
+			// button3
+			// 
+			this->button3->Location = System::Drawing::Point(1002, 3);
+			this->button3->Name = L"button3";
+			this->button3->Size = System::Drawing::Size(495, 284);
+			this->button3->TabIndex = 2;
+			this->button3->Text = L"button3";
+			this->button3->UseVisualStyleBackColor = true;
+			// 
+			// tableLayoutPanel2
+			// 
+			this->tableLayoutPanel2->BackColor = System::Drawing::SystemColors::ControlDark;
+			this->tableLayoutPanel2->ColumnCount = 2;
+			this->tableLayoutPanel2->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent,
+				50)));
+			this->tableLayoutPanel2->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent,
+				50)));
+			this->tableLayoutPanel2->Controls->Add(this->pictureBox1, 0, 0);
+			this->tableLayoutPanel2->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->tableLayoutPanel2->Location = System::Drawing::Point(3, 3);
+			this->tableLayoutPanel2->MinimumSize = System::Drawing::Size(493, 286);
+			this->tableLayoutPanel2->Name = L"tableLayoutPanel2";
+			this->tableLayoutPanel2->RowCount = 1;
+			this->tableLayoutPanel2->RowStyles->Add((gcnew System::Windows::Forms::RowStyle()));
+			this->tableLayoutPanel2->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Absolute, 20)));
+			this->tableLayoutPanel2->Size = System::Drawing::Size(493, 286);
+			this->tableLayoutPanel2->TabIndex = 3;
+			// 
+			// pictureBox1
+			// 
+			this->pictureBox1->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
+			this->pictureBox1->Location = System::Drawing::Point(3, 3);
+			this->pictureBox1->Name = L"pictureBox1";
+			this->pictureBox1->Size = System::Drawing::Size(240, 280);
+			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->pictureBox1->TabIndex = 0;
+			this->pictureBox1->TabStop = false;
+			// 
 			// MainForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(11, 24);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1500, 936);
+			this->Controls->Add(this->tableLayoutPanel1);
 			this->Controls->Add(this->menustrip_main);
 			this->Controls->Add(this->label_center);
 			this->Controls->Add(this->statusStrip1);
@@ -324,6 +414,9 @@ namespace FormsKursproject {
 			this->menustrip_main->PerformLayout();
 			this->statusStrip1->ResumeLayout(false);
 			this->statusStrip1->PerformLayout();
+			this->tableLayoutPanel1->ResumeLayout(false);
+			this->tableLayoutPanel2->ResumeLayout(false);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -445,6 +538,7 @@ namespace FormsKursproject {
 		else if (this->openFileDialog1->ShowDialog() == System::Windows::Forms::DialogResult::OK) {
 			this->toolStripStatusLabel_filename->Text = this->openFileDialog1->FileName;
 			this->toolStripStatusLabel_filename->Visible = true;
+			this->tableLayoutPanel1->Visible = true;
 			open_file();
 		}
 	}
@@ -557,7 +651,7 @@ namespace FormsKursproject {
 	private: System::Void toolStripStatusLabel_filename_VisibleChanged(System::Object^ sender, System::EventArgs^ e) {
 		//Файл не выбран
 		if (!this->toolStripStatusLabel_filename->Visible) {
-			//this->dataGridView1->Visible = false;
+			this->tableLayoutPanel1->Visible = false;
 			this->label_center->Visible = true;
 			this->CloseToolStripMenuItem->Enabled = false;
 			//this->QueryToolStripMenuItem->Enabled = false;
@@ -706,6 +800,8 @@ namespace FormsKursproject {
 		}
 		else
 			this->toolStripStatusLabel_filename->Visible = false;
+
+
 	}
 
 		   //Сохранение файла при помощи кнопки "Сохранить"
@@ -871,5 +967,5 @@ namespace FormsKursproject {
 		else
 			Application::OpenForms["InfoForm"]->Select();*/
 	}
-	};
+};
 }
