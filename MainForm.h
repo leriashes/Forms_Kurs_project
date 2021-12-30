@@ -1,5 +1,7 @@
 #pragma once
 #include <cctype>
+#include "File_O.h"
+#include "msclr\marshal_cppstd.h"
 /*#include "HelloForm.h"
 #include "ExitForm.h"
 #include "AdminForm.h"
@@ -22,9 +24,11 @@ namespace FormsKursproject {
 	/// </summary>
 	public ref class MainForm : public System::Windows::Forms::Form
 	{
+	private: File_O* file_stream;
 	public:
 		MainForm(void)
 		{
+			file_stream = new File_O();
 			InitializeComponent();
 			//
 			//TODO: добавьте код конструктора
@@ -37,6 +41,7 @@ namespace FormsKursproject {
 		/// </summary>
 		~MainForm()
 		{
+			delete file_stream;
 			if (components)
 			{
 				delete components;
@@ -424,7 +429,7 @@ namespace FormsKursproject {
 			this->tableLayoutPanel10->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
 				100)));
 			this->tableLayoutPanel10->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
-				200)));
+				225)));
 			this->tableLayoutPanel10->Controls->Add(this->pictureBox9, 0, 0);
 			this->tableLayoutPanel10->Controls->Add(this->textBox9, 1, 0);
 			this->tableLayoutPanel10->Dock = System::Windows::Forms::DockStyle::Fill;
@@ -436,6 +441,7 @@ namespace FormsKursproject {
 			this->tableLayoutPanel10->RowStyles->Add((gcnew System::Windows::Forms::RowStyle()));
 			this->tableLayoutPanel10->Size = System::Drawing::Size(325, 202);
 			this->tableLayoutPanel10->TabIndex = 11;
+			this->tableLayoutPanel10->Visible = false;
 			// 
 			// pictureBox9
 			// 
@@ -476,7 +482,7 @@ namespace FormsKursproject {
 			this->tableLayoutPanel9->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
 				100)));
 			this->tableLayoutPanel9->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
-				200)));
+				224)));
 			this->tableLayoutPanel9->Controls->Add(this->pictureBox8, 0, 0);
 			this->tableLayoutPanel9->Controls->Add(this->textBox8, 1, 0);
 			this->tableLayoutPanel9->Dock = System::Windows::Forms::DockStyle::Fill;
@@ -488,6 +494,7 @@ namespace FormsKursproject {
 			this->tableLayoutPanel9->RowStyles->Add((gcnew System::Windows::Forms::RowStyle()));
 			this->tableLayoutPanel9->Size = System::Drawing::Size(324, 202);
 			this->tableLayoutPanel9->TabIndex = 10;
+			this->tableLayoutPanel9->Visible = false;
 			// 
 			// pictureBox8
 			// 
@@ -528,7 +535,7 @@ namespace FormsKursproject {
 			this->tableLayoutPanel8->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
 				100)));
 			this->tableLayoutPanel8->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
-				200)));
+				223)));
 			this->tableLayoutPanel8->Controls->Add(this->pictureBox7, 0, 0);
 			this->tableLayoutPanel8->Controls->Add(this->textBox7, 1, 0);
 			this->tableLayoutPanel8->Dock = System::Windows::Forms::DockStyle::Fill;
@@ -540,6 +547,7 @@ namespace FormsKursproject {
 			this->tableLayoutPanel8->RowStyles->Add((gcnew System::Windows::Forms::RowStyle()));
 			this->tableLayoutPanel8->Size = System::Drawing::Size(323, 202);
 			this->tableLayoutPanel8->TabIndex = 9;
+			this->tableLayoutPanel8->Visible = false;
 			// 
 			// pictureBox7
 			// 
@@ -580,7 +588,7 @@ namespace FormsKursproject {
 			this->tableLayoutPanel7->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
 				100)));
 			this->tableLayoutPanel7->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
-				200)));
+				225)));
 			this->tableLayoutPanel7->Controls->Add(this->pictureBox6, 0, 0);
 			this->tableLayoutPanel7->Controls->Add(this->textBox6, 1, 0);
 			this->tableLayoutPanel7->Dock = System::Windows::Forms::DockStyle::Fill;
@@ -592,6 +600,7 @@ namespace FormsKursproject {
 			this->tableLayoutPanel7->RowStyles->Add((gcnew System::Windows::Forms::RowStyle()));
 			this->tableLayoutPanel7->Size = System::Drawing::Size(325, 201);
 			this->tableLayoutPanel7->TabIndex = 8;
+			this->tableLayoutPanel7->Visible = false;
 			// 
 			// pictureBox6
 			// 
@@ -632,7 +641,7 @@ namespace FormsKursproject {
 			this->tableLayoutPanel6->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
 				100)));
 			this->tableLayoutPanel6->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
-				200)));
+				224)));
 			this->tableLayoutPanel6->Controls->Add(this->pictureBox5, 0, 0);
 			this->tableLayoutPanel6->Controls->Add(this->textBox5, 1, 0);
 			this->tableLayoutPanel6->Dock = System::Windows::Forms::DockStyle::Fill;
@@ -644,6 +653,7 @@ namespace FormsKursproject {
 			this->tableLayoutPanel6->RowStyles->Add((gcnew System::Windows::Forms::RowStyle()));
 			this->tableLayoutPanel6->Size = System::Drawing::Size(324, 201);
 			this->tableLayoutPanel6->TabIndex = 7;
+			this->tableLayoutPanel6->Visible = false;
 			// 
 			// pictureBox5
 			// 
@@ -684,7 +694,7 @@ namespace FormsKursproject {
 			this->tableLayoutPanel5->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
 				100)));
 			this->tableLayoutPanel5->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
-				200)));
+				223)));
 			this->tableLayoutPanel5->Controls->Add(this->pictureBox4, 0, 0);
 			this->tableLayoutPanel5->Controls->Add(this->textBox4, 1, 0);
 			this->tableLayoutPanel5->Dock = System::Windows::Forms::DockStyle::Fill;
@@ -696,6 +706,7 @@ namespace FormsKursproject {
 			this->tableLayoutPanel5->RowStyles->Add((gcnew System::Windows::Forms::RowStyle()));
 			this->tableLayoutPanel5->Size = System::Drawing::Size(323, 201);
 			this->tableLayoutPanel5->TabIndex = 6;
+			this->tableLayoutPanel5->Visible = false;
 			// 
 			// pictureBox4
 			// 
@@ -736,7 +747,7 @@ namespace FormsKursproject {
 			this->tableLayoutPanel4->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
 				100)));
 			this->tableLayoutPanel4->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
-				200)));
+				225)));
 			this->tableLayoutPanel4->Controls->Add(this->pictureBox3, 0, 0);
 			this->tableLayoutPanel4->Controls->Add(this->textBox3, 1, 0);
 			this->tableLayoutPanel4->Dock = System::Windows::Forms::DockStyle::Fill;
@@ -748,6 +759,7 @@ namespace FormsKursproject {
 			this->tableLayoutPanel4->RowStyles->Add((gcnew System::Windows::Forms::RowStyle()));
 			this->tableLayoutPanel4->Size = System::Drawing::Size(325, 201);
 			this->tableLayoutPanel4->TabIndex = 5;
+			this->tableLayoutPanel4->Visible = false;
 			// 
 			// pictureBox3
 			// 
@@ -788,7 +800,7 @@ namespace FormsKursproject {
 			this->tableLayoutPanel3->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
 				100)));
 			this->tableLayoutPanel3->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
-				200)));
+				224)));
 			this->tableLayoutPanel3->Controls->Add(this->pictureBox2, 0, 0);
 			this->tableLayoutPanel3->Controls->Add(this->textBox2, 1, 0);
 			this->tableLayoutPanel3->Dock = System::Windows::Forms::DockStyle::Fill;
@@ -800,6 +812,7 @@ namespace FormsKursproject {
 			this->tableLayoutPanel3->RowStyles->Add((gcnew System::Windows::Forms::RowStyle()));
 			this->tableLayoutPanel3->Size = System::Drawing::Size(324, 201);
 			this->tableLayoutPanel3->TabIndex = 4;
+			this->tableLayoutPanel3->Visible = false;
 			// 
 			// pictureBox2
 			// 
@@ -840,7 +853,7 @@ namespace FormsKursproject {
 			this->tableLayoutPanel2->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
 				100)));
 			this->tableLayoutPanel2->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
-				200)));
+				223)));
 			this->tableLayoutPanel2->Controls->Add(this->pictureBox1, 0, 0);
 			this->tableLayoutPanel2->Controls->Add(this->textBox1, 1, 0);
 			this->tableLayoutPanel2->Dock = System::Windows::Forms::DockStyle::Fill;
@@ -852,6 +865,7 @@ namespace FormsKursproject {
 			this->tableLayoutPanel2->RowStyles->Add((gcnew System::Windows::Forms::RowStyle()));
 			this->tableLayoutPanel2->Size = System::Drawing::Size(323, 201);
 			this->tableLayoutPanel2->TabIndex = 3;
+			this->tableLayoutPanel2->Visible = false;
 			// 
 			// pictureBox1
 			// 
@@ -944,6 +958,7 @@ namespace FormsKursproject {
 		}
 #pragma endregion
 	private: Boolean changes = false;
+	private: int films_number;
 
 		   //Проверка на наличие пустых ячеек в файле
 	/*private: Boolean full_table() {
@@ -1068,25 +1083,97 @@ namespace FormsKursproject {
 	private: Void open_file() {
 		this->changes = false;
 		Boolean good = true;
-		System::Object^ sender;
-		System::EventArgs^ e;
-		MainForm_ResizeEnd(sender, e);
-		//this->dataGridView1->Rows->Clear();
+		
+		this->tableLayoutPanel2->Visible = false;
+		this->tableLayoutPanel3->Visible = false;
+		this->tableLayoutPanel4->Visible = false;
+		this->tableLayoutPanel5->Visible = false;
+		this->tableLayoutPanel6->Visible = false;
+		this->tableLayoutPanel7->Visible = false;
+		this->tableLayoutPanel8->Visible = false;
+		this->tableLayoutPanel9->Visible = false;
+		this->tableLayoutPanel10->Visible = false;
 
-		/*if (this->toolStripStatusLabel_filename->Text != L"Новый файл") {
-			array<String^>^ lines = File::ReadAllLines(this->toolStripStatusLabel_filename->Text, System::Text::Encoding::GetEncoding(1251));
+		if (this->toolStripStatusLabel_filename->Text != L"Новый файл") 
+		{
+			file_stream->path = msclr::interop::marshal_as<std::string>(this->toolStripStatusLabel_filename->Text);
+			cli::array<String^>^ lines = File::ReadAllLines(this->toolStripStatusLabel_filename->Text, System::Text::Encoding::GetEncoding(1251));
 			//Если файл пуст
-			if (lines->Length == 0 && !this->QuitToolStripMenuItem->Visible) {
+			if (lines->Length == 0 && !this->QuitToolStripMenuItem->Visible) 
+			{
 				good = false;
 				this->CloseToolStripMenuItem->Enabled = true;
-				this->QueryToolStripMenuItem->Enabled = false;
-				this->dataGridView1->Visible = false;
+				this->tableLayoutPanel1->Visible = false;
 				this->label_center->Visible = true;
 				this->label_center->Text = L"Файл пуст";
 			}
 			//Если файл не пустой
-			else {
-				for each (String ^ str in lines) {
+			else 
+			{
+				if (((lines->Length - 9) % 134 == 0) || ((lines->Length - 8) % 134 == 0))            //форматирование верно
+				{
+					
+					file_stream->kol_vo_film = (lines->Length - 9) / 134;
+					good = true;
+
+					for (int i = 0; i < file_stream->kol_vo_film; i++)
+					{
+						;
+					}
+
+					if (file_stream->kol_vo_film >= 1)
+					{
+						this->tableLayoutPanel2->Visible = true;
+
+						if (file_stream->kol_vo_film >= 2)
+						{
+							this->tableLayoutPanel3->Visible = true;
+
+							if (file_stream->kol_vo_film >= 3)
+							{
+								this->tableLayoutPanel4->Visible = true;
+
+								if (file_stream->kol_vo_film >= 4)
+								{
+									this->tableLayoutPanel5->Visible = true;
+
+									if (file_stream->kol_vo_film >= 5)
+									{
+										this->tableLayoutPanel6->Visible = true;
+
+										if (file_stream->kol_vo_film >= 6)
+										{
+											this->tableLayoutPanel7->Visible = true;
+
+											if (file_stream->kol_vo_film >= 7)
+											{
+												this->tableLayoutPanel8->Visible = true;
+
+												if (file_stream->kol_vo_film >= 8)
+												{
+													this->tableLayoutPanel9->Visible = true;
+
+													if (file_stream->kol_vo_film >= 9)
+													{
+														this->tableLayoutPanel10->Visible = true;
+
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				else
+				{
+					good = false;
+				}
+
+				/*for each (String ^ str in lines)
+				{
 					DataGridViewRow^ row = gcnew DataGridViewRow();
 					row->CreateCells(this->dataGridView1);
 					array<String^>^ splittedstr = str->Split(L';');
@@ -1122,15 +1209,20 @@ namespace FormsKursproject {
 						if (!good)
 							break;
 					}
-				}
+				}*/
 
 				//Если содержимое файла не удовлетворяет нужному формату
-				if (!good) {
+				if (!good) 
+				{
 					this->toolStripStatusLabel_filename->Visible = false;
 					if (this->EnterToolStripMenuItem->Visible)
+					{
 						MessageBox::Show(L"Содержимое файла не удовлетворяет формату.");
-					else {
-						if (MessageBox::Show(L"Содержимое файла не удовлетворяет формату. Очистить файл?", "", MessageBoxButtons::YesNo) == System::Windows::Forms::DialogResult::Yes) {
+					}
+					else 
+					{
+						if (MessageBox::Show(L"Содержимое файла не удовлетворяет формату. Очистить файл?", "", MessageBoxButtons::YesNo) == System::Windows::Forms::DialogResult::Yes) 
+						{
 							this->toolStripStatusLabel_filename->Visible = true;
 							good = true;
 							StreamWriter^ sw = gcnew StreamWriter(this->toolStripStatusLabel_filename->Text, false, System::Text::Encoding::GetEncoding(1251));
@@ -1140,8 +1232,10 @@ namespace FormsKursproject {
 				}
 			}
 		}
-		else {
-			if (this->toolStripStatusLabel_filename->Text == L"Новый файл" && this->EnterToolStripMenuItem->Visible) {
+		else 
+		{
+			if (this->toolStripStatusLabel_filename->Text == L"Новый файл" && this->EnterToolStripMenuItem->Visible) 
+			{
 				this->toolStripStatusLabel_filename->Visible = false;
 				good = false;
 			}
@@ -1149,26 +1243,25 @@ namespace FormsKursproject {
 
 
 		//Если содержимое файла удовлетворяет нужному формату
-		if (good) {
-			this->dataGridView1->Visible = true;
+		if (good) 
+		{
+			this->tableLayoutPanel1->Visible = true;
 			this->label_center->Visible = false;
 			this->CloseToolStripMenuItem->Enabled = true;
-			this->QueryToolStripMenuItem->Enabled = true;
-			if (this->QuitToolStripMenuItem->Visible) {
+			if (this->QuitToolStripMenuItem->Visible) 
+			{
 				this->SaveAsToolStripMenuItem->Enabled = true;
 				if (this->toolStripStatusLabel_filename->Text != L"Новый файл")
 					this->SaveToolStripMenuItem->Enabled = true;
 				else
 					this->SaveToolStripMenuItem->Enabled = false;
 				this->CorrectToolStripMenuItem->Enabled = true;
-				if (this->dataGridView1->Rows->Count > 1 || this->dataGridView1->Rows->Count == 1 && this->dataGridView1->Rows[this->dataGridView1->Rows->Count - 1]->Cells[0]->Value != nullptr)
-					this->DelAllRowsToolStripMenuItem->Enabled = true;
-				else {
-					this->DelAllRowsToolStripMenuItem->Enabled = false;
-					this->QueryToolStripMenuItem->Enabled = false;
-				}
 			}
-		}*/
+		}
+
+		System::Object^ sender;
+		System::EventArgs^ e;
+		MainForm_ResizeEnd(sender, e);
 	}
 
 		   //Открытие/закрытие файла
@@ -1178,7 +1271,6 @@ namespace FormsKursproject {
 			this->tableLayoutPanel1->Visible = false;
 			this->label_center->Visible = true;
 			this->CloseToolStripMenuItem->Enabled = false;
-			//this->QueryToolStripMenuItem->Enabled = false;
 			this->CorrectToolStripMenuItem->Enabled = false;
 			this->label_center->Text = L"Файл не выбран";
 		}
@@ -1494,59 +1586,89 @@ namespace FormsKursproject {
 	
 	private: System::Void MainForm_ResizeEnd(System::Object^ sender, System::EventArgs^ e) {
 		
-		this->tableLayoutPanel2->ColumnStyles->Clear();
-		this->tableLayoutPanel2->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
-			this->tableLayoutPanel2->Size.Height * 0.7)));
-		this->tableLayoutPanel2->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
-			this->tableLayoutPanel2->Size.Width - this->tableLayoutPanel2->Size.Height * 0.7)));
+		if (this->tableLayoutPanel1->Visible)
+		{
+			if (this->tableLayoutPanel2->Visible)
+			{
+				this->tableLayoutPanel2->ColumnStyles->Clear();
+				this->tableLayoutPanel2->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
+					this->tableLayoutPanel2->Size.Height * 0.7)));
+				this->tableLayoutPanel2->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
+					this->tableLayoutPanel2->Size.Width - this->tableLayoutPanel2->Size.Height * 0.7)));
 
-		this->tableLayoutPanel3->ColumnStyles->Clear();
-		this->tableLayoutPanel3->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
-			this->tableLayoutPanel3->Size.Height * 0.7)));
-		this->tableLayoutPanel3->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
-			this->tableLayoutPanel3->Size.Width - this->tableLayoutPanel3->Size.Height * 0.7)));
+				if (this->tableLayoutPanel3->Visible)
+				{
+					this->tableLayoutPanel3->ColumnStyles->Clear();
+					this->tableLayoutPanel3->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
+						this->tableLayoutPanel3->Size.Height * 0.7)));
+					this->tableLayoutPanel3->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
+						this->tableLayoutPanel3->Size.Width - this->tableLayoutPanel3->Size.Height * 0.7)));
 
-		this->tableLayoutPanel4->ColumnStyles->Clear();
-		this->tableLayoutPanel4->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
-			this->tableLayoutPanel4->Size.Height * 0.7)));
-		this->tableLayoutPanel4->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
-			this->tableLayoutPanel4->Size.Width - this->tableLayoutPanel4->Size.Height * 0.7)));
+					if (this->tableLayoutPanel4->Visible)
+					{
+						this->tableLayoutPanel4->ColumnStyles->Clear();
+						this->tableLayoutPanel4->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
+							this->tableLayoutPanel4->Size.Height * 0.7)));
+						this->tableLayoutPanel4->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
+							this->tableLayoutPanel4->Size.Width - this->tableLayoutPanel4->Size.Height * 0.7)));
 
-		this->tableLayoutPanel5->ColumnStyles->Clear();
-		this->tableLayoutPanel5->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
-			this->tableLayoutPanel5->Size.Height * 0.7)));
-		this->tableLayoutPanel5->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
-			this->tableLayoutPanel5->Size.Width - this->tableLayoutPanel5->Size.Height * 0.7)));
+						if (this->tableLayoutPanel5->Visible)
+						{
+							this->tableLayoutPanel5->ColumnStyles->Clear();
+							this->tableLayoutPanel5->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
+								this->tableLayoutPanel5->Size.Height * 0.7)));
+							this->tableLayoutPanel5->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
+								this->tableLayoutPanel5->Size.Width - this->tableLayoutPanel5->Size.Height * 0.7)));
 
-		this->tableLayoutPanel6->ColumnStyles->Clear();
-		this->tableLayoutPanel6->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
-			this->tableLayoutPanel6->Size.Height * 0.7)));
-		this->tableLayoutPanel6->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
-			this->tableLayoutPanel6->Size.Width - this->tableLayoutPanel6->Size.Height * 0.7)));
+							if (this->tableLayoutPanel6->Visible)
+							{
+								this->tableLayoutPanel6->ColumnStyles->Clear();
+								this->tableLayoutPanel6->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
+									this->tableLayoutPanel6->Size.Height * 0.7)));
+								this->tableLayoutPanel6->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
+									this->tableLayoutPanel6->Size.Width - this->tableLayoutPanel6->Size.Height * 0.7)));
 
-		this->tableLayoutPanel7->ColumnStyles->Clear();
-		this->tableLayoutPanel7->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
-			this->tableLayoutPanel7->Size.Height * 0.7)));
-		this->tableLayoutPanel7->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
-			this->tableLayoutPanel7->Size.Width - this->tableLayoutPanel7->Size.Height * 0.7)));
+								if (this->tableLayoutPanel7->Visible)
+								{
+									this->tableLayoutPanel7->ColumnStyles->Clear();
+									this->tableLayoutPanel7->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
+										this->tableLayoutPanel7->Size.Height * 0.7)));
+									this->tableLayoutPanel7->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
+										this->tableLayoutPanel7->Size.Width - this->tableLayoutPanel7->Size.Height * 0.7)));
 
-		this->tableLayoutPanel8->ColumnStyles->Clear();
-		this->tableLayoutPanel8->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
-			this->tableLayoutPanel8->Size.Height * 0.7)));
-		this->tableLayoutPanel8->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
-			this->tableLayoutPanel8->Size.Width - this->tableLayoutPanel8->Size.Height * 0.7)));
-
-		this->tableLayoutPanel9->ColumnStyles->Clear();
-		this->tableLayoutPanel9->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
-			this->tableLayoutPanel9->Size.Height * 0.7)));
-		this->tableLayoutPanel9->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
-			this->tableLayoutPanel9->Size.Width - this->tableLayoutPanel9->Size.Height * 0.7)));
-
-		this->tableLayoutPanel10->ColumnStyles->Clear();
-		this->tableLayoutPanel10->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
-			this->tableLayoutPanel10->Size.Height * 0.7)));
-		this->tableLayoutPanel10->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
-			this->tableLayoutPanel10->Size.Width - this->tableLayoutPanel10->Size.Height * 0.7)));
+									if (this->tableLayoutPanel8->Visible)
+									{
+										this->tableLayoutPanel8->ColumnStyles->Clear();
+										this->tableLayoutPanel8->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
+											this->tableLayoutPanel8->Size.Height * 0.7)));
+										this->tableLayoutPanel8->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
+											this->tableLayoutPanel8->Size.Width - this->tableLayoutPanel8->Size.Height * 0.7)));
+									
+										if (this->tableLayoutPanel9->Visible)
+										{
+											this->tableLayoutPanel9->ColumnStyles->Clear();
+											this->tableLayoutPanel9->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
+												this->tableLayoutPanel9->Size.Height * 0.7)));
+											this->tableLayoutPanel9->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
+												this->tableLayoutPanel9->Size.Width - this->tableLayoutPanel9->Size.Height * 0.7)));
+										
+											if (this->tableLayoutPanel10->Visible)
+											{
+												this->tableLayoutPanel10->ColumnStyles->Clear();
+												this->tableLayoutPanel10->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
+													this->tableLayoutPanel10->Size.Height * 0.7)));
+												this->tableLayoutPanel10->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
+													this->tableLayoutPanel10->Size.Width - this->tableLayoutPanel10->Size.Height * 0.7)));
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 	private: System::Void MainForm_Resize(System::Object^ sender, System::EventArgs^ e) {
 		MainForm_ResizeEnd(sender, e);
