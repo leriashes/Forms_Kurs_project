@@ -205,6 +205,7 @@ namespace FormsKursproject {
 	private: System::Windows::Forms::Panel^ panel104;
 	private: System::Windows::Forms::Panel^ panel105;
 private: System::Windows::Forms::Label^ label30;
+private: System::Windows::Forms::ToolStripProgressBar^ toolStripProgressBar1;
 
 
 
@@ -388,6 +389,7 @@ private: System::Windows::Forms::Label^ label30;
 			this->QuitToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->statusStrip1 = (gcnew System::Windows::Forms::StatusStrip());
 			this->toolStripStatusLabel_filename = (gcnew System::Windows::Forms::ToolStripStatusLabel());
+			this->toolStripProgressBar1 = (gcnew System::Windows::Forms::ToolStripProgressBar());
 			this->openFileDialog1 = (gcnew System::Windows::Forms::OpenFileDialog());
 			this->saveFileDialog1 = (gcnew System::Windows::Forms::SaveFileDialog());
 			this->label_center = (gcnew System::Windows::Forms::Label());
@@ -725,7 +727,10 @@ private: System::Windows::Forms::Label^ label30;
 			// statusStrip1
 			// 
 			this->statusStrip1->ImageScalingSize = System::Drawing::Size(28, 28);
-			this->statusStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->toolStripStatusLabel_filename });
+			this->statusStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
+				this->toolStripStatusLabel_filename,
+					this->toolStripProgressBar1
+			});
 			this->statusStrip1->Location = System::Drawing::Point(0, 640);
 			this->statusStrip1->Name = L"statusStrip1";
 			this->statusStrip1->Padding = System::Windows::Forms::Padding(1, 0, 8, 0);
@@ -740,6 +745,15 @@ private: System::Windows::Forms::Label^ label30;
 			this->toolStripStatusLabel_filename->Text = L"filename";
 			this->toolStripStatusLabel_filename->Visible = false;
 			this->toolStripStatusLabel_filename->VisibleChanged += gcnew System::EventHandler(this, &MainForm::toolStripStatusLabel_filename_VisibleChanged);
+			// 
+			// toolStripProgressBar1
+			// 
+			this->toolStripProgressBar1->Margin = System::Windows::Forms::Padding(20, 3, 1, 3);
+			this->toolStripProgressBar1->Name = L"toolStripProgressBar1";
+			this->toolStripProgressBar1->Size = System::Drawing::Size(200, 16);
+			this->toolStripProgressBar1->Style = System::Windows::Forms::ProgressBarStyle::Continuous;
+			this->toolStripProgressBar1->Visible = false;
+			this->toolStripProgressBar1->VisibleChanged += gcnew System::EventHandler(this, &MainForm::toolStripProgressBar1_VisibleChanged);
 			// 
 			// openFileDialog1
 			// 
@@ -3579,9 +3593,13 @@ private: System::Windows::Forms::Label^ label30;
 					file_stream->kol_vo_film = (lines->Length - 9) / 134;
 					good = true;
 
-					file_stream->Read(*cinema);
+					this->toolStripProgressBar1->Maximum = file_stream->kol_vo_film;
+					this->toolStripProgressBar1->Visible = true;
+					file_stream->Read(*cinema, this->toolStripProgressBar1->Value);
+					this->toolStripProgressBar1->Visible = false;
 
 					this->toolStripComboBox1->Items->Clear();
+					this->toolStripProgressBar1->Visible = true;
 
 					for (int i = 0; i < file_stream->kol_vo_film; i++)
 					{
@@ -3994,5 +4012,7 @@ private: System::Windows::Forms::Label^ label30;
 	private: System::Void comboBox2_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
 		CheckIndex();
 	}
+private: System::Void toolStripProgressBar1_VisibleChanged(System::Object^ sender, System::EventArgs^ e) {
+}
 };
 }

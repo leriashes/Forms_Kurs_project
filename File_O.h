@@ -19,7 +19,7 @@ public:
 	void InputPath();		//ввод пути для файла
 	void New(Cinema& cinema);	//создание нового файла   ??????
 	bool CheckPath();	//проверка на сущестование
-	void Read(Cinema& cinema);
+	void Read(Cinema& cinema, int^ value);
 	bool CheckCompound();	//проверка форматирования файла
 	void Write(Cinema cinema);	//запись всех данных в файл
 	void Clean();

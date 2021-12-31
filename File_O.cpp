@@ -191,7 +191,7 @@ bool File_O::CheckPath()
 }
 
 
-void File_O::Read(Cinema& cinema)
+void File_O::Read(Cinema& cinema, int^ value)
 {
     ifstream file(path);
 
@@ -312,6 +312,7 @@ void File_O::Read(Cinema& cinema)
     {
         doub = doub + cinema.otchet_today[i];
     }
+
     if (doub == (to_string(da) + '.' + to_string(mo) + '.' + to_string(yea)))
     {
         generate = false;
@@ -322,7 +323,10 @@ void File_O::Read(Cinema& cinema)
         generate = true;
         cinema.otchet_today = "0";
     }
+
+    value = 0;
     i = 0;
+
     //заполнение информации о фильмах
     do
     {
@@ -353,7 +357,9 @@ void File_O::Read(Cinema& cinema)
                 Sleep(100);
             }
         }
+        
         i++;
+        value = i;
     } while (i < kol_vo_film);
 	cinema.films_number = i;
     file.close();
