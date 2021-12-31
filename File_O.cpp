@@ -308,7 +308,7 @@ void File_O::Read(Cinema& cinema)
     string doub;
     //cout << cinema.otchet_today.size();
     //_getch();
-    for (i = 0; i < 10; i++)
+    for (i = 0; i < 10 && i < cinema.otchet_today.length(); i++)
     {
         doub = doub + cinema.otchet_today[i];
     }
