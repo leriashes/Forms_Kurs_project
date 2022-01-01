@@ -863,7 +863,7 @@ private: System::Windows::Forms::Label^ label30;
 			// panel5
 			// 
 			this->panel5->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
-			this->panel5->BackColor = System::Drawing::Color::Teal;
+			this->panel5->BackColor = System::Drawing::Color::Brown;
 			this->panel5->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel5->Location = System::Drawing::Point(20, 285);
 			this->panel5->Margin = System::Windows::Forms::Padding(10, 5, 3, 3);
@@ -887,7 +887,7 @@ private: System::Windows::Forms::Label^ label30;
 			// panel3
 			// 
 			this->panel3->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
-			this->panel3->BackColor = System::Drawing::Color::IndianRed;
+			this->panel3->BackColor = System::Drawing::Color::LightGreen;
 			this->panel3->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel3->Location = System::Drawing::Point(20, 205);
 			this->panel3->Margin = System::Windows::Forms::Padding(10, 5, 3, 3);
@@ -1615,1199 +1615,1399 @@ private: System::Windows::Forms::Label^ label30;
 			this->panel7->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel7->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel7->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel7->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel7->Location = System::Drawing::Point(229, 446);
 			this->panel7->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel7->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel7->Name = L"panel7";
 			this->panel7->Size = System::Drawing::Size(30, 30);
 			this->panel7->TabIndex = 30;
+			this->panel7->Click += gcnew System::EventHandler(this, &MainForm::panel7_Click);
 			// 
 			// panel8
 			// 
 			this->panel8->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel8->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel8->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel8->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel8->Location = System::Drawing::Point(269, 446);
 			this->panel8->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel8->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel8->Name = L"panel8";
 			this->panel8->Size = System::Drawing::Size(30, 30);
 			this->panel8->TabIndex = 31;
+			this->panel8->Click += gcnew System::EventHandler(this, &MainForm::panel8_Click);
 			// 
 			// panel6
 			// 
 			this->panel6->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel6->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel6->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel6->Location = System::Drawing::Point(187, 446);
 			this->panel6->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel6->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel6->Name = L"panel6";
 			this->panel6->Size = System::Drawing::Size(30, 30);
 			this->panel6->TabIndex = 29;
+			this->panel6->Click += gcnew System::EventHandler(this, &MainForm::panel6_Click);
 			// 
 			// panel9
 			// 
 			this->panel9->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel9->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel9->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel9->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel9->Location = System::Drawing::Point(309, 446);
 			this->panel9->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel9->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel9->Name = L"panel9";
 			this->panel9->Size = System::Drawing::Size(30, 30);
 			this->panel9->TabIndex = 32;
+			this->panel9->Click += gcnew System::EventHandler(this, &MainForm::panel9_Click);
 			// 
 			// panel10
 			// 
 			this->panel10->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel10->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel10->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel10->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel10->Location = System::Drawing::Point(349, 446);
 			this->panel10->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel10->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel10->Name = L"panel10";
 			this->panel10->Size = System::Drawing::Size(30, 30);
 			this->panel10->TabIndex = 33;
+			this->panel10->Click += gcnew System::EventHandler(this, &MainForm::panel10_Click);
 			// 
 			// panel11
 			// 
 			this->panel11->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel11->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel11->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel11->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel11->Location = System::Drawing::Point(389, 446);
 			this->panel11->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel11->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel11->Name = L"panel11";
 			this->panel11->Size = System::Drawing::Size(30, 30);
 			this->panel11->TabIndex = 34;
+			this->panel11->Click += gcnew System::EventHandler(this, &MainForm::panel11_Click);
 			// 
 			// panel12
 			// 
 			this->panel12->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel12->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel12->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel12->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel12->Location = System::Drawing::Point(429, 446);
 			this->panel12->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel12->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel12->Name = L"panel12";
 			this->panel12->Size = System::Drawing::Size(30, 30);
 			this->panel12->TabIndex = 35;
+			this->panel12->Click += gcnew System::EventHandler(this, &MainForm::panel12_Click);
 			// 
 			// panel13
 			// 
 			this->panel13->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel13->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel13->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel13->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel13->Location = System::Drawing::Point(469, 446);
 			this->panel13->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel13->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel13->Name = L"panel13";
 			this->panel13->Size = System::Drawing::Size(30, 30);
 			this->panel13->TabIndex = 36;
+			this->panel13->Click += gcnew System::EventHandler(this, &MainForm::panel13_Click);
 			// 
 			// panel14
 			// 
 			this->panel14->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel14->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel14->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel14->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel14->Location = System::Drawing::Point(509, 446);
 			this->panel14->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel14->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel14->Name = L"panel14";
 			this->panel14->Size = System::Drawing::Size(30, 30);
 			this->panel14->TabIndex = 37;
+			this->panel14->Click += gcnew System::EventHandler(this, &MainForm::panel14_Click);
 			// 
 			// panel15
 			// 
 			this->panel15->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel15->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel15->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel15->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel15->Location = System::Drawing::Point(549, 446);
 			this->panel15->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel15->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel15->Name = L"panel15";
 			this->panel15->Size = System::Drawing::Size(30, 30);
 			this->panel15->TabIndex = 38;
+			this->panel15->Click += gcnew System::EventHandler(this, &MainForm::panel15_Click);
 			// 
 			// panel16
 			// 
 			this->panel16->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel16->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel16->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel16->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel16->Location = System::Drawing::Point(189, 86);
 			this->panel16->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel16->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel16->Name = L"panel16";
 			this->panel16->Size = System::Drawing::Size(30, 30);
 			this->panel16->TabIndex = 39;
+			this->panel16->Click += gcnew System::EventHandler(this, &MainForm::panel16_Click);
 			// 
 			// panel17
 			// 
 			this->panel17->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel17->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel17->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel17->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel17->Location = System::Drawing::Point(229, 86);
 			this->panel17->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel17->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel17->Name = L"panel17";
 			this->panel17->Size = System::Drawing::Size(30, 30);
 			this->panel17->TabIndex = 40;
+			this->panel17->Click += gcnew System::EventHandler(this, &MainForm::panel17_Click);
 			// 
 			// panel18
 			// 
 			this->panel18->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel18->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel18->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel18->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel18->Location = System::Drawing::Point(269, 86);
 			this->panel18->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel18->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel18->Name = L"panel18";
 			this->panel18->Size = System::Drawing::Size(30, 30);
 			this->panel18->TabIndex = 41;
+			this->panel18->Click += gcnew System::EventHandler(this, &MainForm::panel18_Click);
 			// 
 			// panel19
 			// 
 			this->panel19->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel19->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel19->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel19->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel19->Location = System::Drawing::Point(309, 86);
 			this->panel19->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel19->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel19->Name = L"panel19";
 			this->panel19->Size = System::Drawing::Size(30, 30);
 			this->panel19->TabIndex = 42;
+			this->panel19->Click += gcnew System::EventHandler(this, &MainForm::panel19_Click);
 			// 
 			// panel20
 			// 
 			this->panel20->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel20->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel20->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel20->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel20->Location = System::Drawing::Point(349, 86);
 			this->panel20->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel20->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel20->Name = L"panel20";
 			this->panel20->Size = System::Drawing::Size(30, 30);
 			this->panel20->TabIndex = 43;
+			this->panel20->Click += gcnew System::EventHandler(this, &MainForm::panel20_Click);
 			// 
 			// panel21
 			// 
 			this->panel21->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel21->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel21->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel21->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel21->Location = System::Drawing::Point(389, 86);
 			this->panel21->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel21->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel21->Name = L"panel21";
 			this->panel21->Size = System::Drawing::Size(30, 30);
 			this->panel21->TabIndex = 44;
+			this->panel21->Click += gcnew System::EventHandler(this, &MainForm::panel21_Click);
 			// 
 			// panel22
 			// 
 			this->panel22->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel22->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel22->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel22->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel22->Location = System::Drawing::Point(429, 86);
 			this->panel22->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel22->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel22->Name = L"panel22";
 			this->panel22->Size = System::Drawing::Size(30, 30);
 			this->panel22->TabIndex = 45;
+			this->panel22->Click += gcnew System::EventHandler(this, &MainForm::panel22_Click);
 			// 
 			// panel23
 			// 
 			this->panel23->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel23->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel23->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel23->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel23->Location = System::Drawing::Point(469, 86);
 			this->panel23->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel23->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel23->Name = L"panel23";
 			this->panel23->Size = System::Drawing::Size(30, 30);
 			this->panel23->TabIndex = 46;
+			this->panel23->Click += gcnew System::EventHandler(this, &MainForm::panel23_Click);
 			// 
 			// panel24
 			// 
 			this->panel24->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel24->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel24->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel24->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel24->Location = System::Drawing::Point(509, 86);
 			this->panel24->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel24->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel24->Name = L"panel24";
 			this->panel24->Size = System::Drawing::Size(30, 30);
 			this->panel24->TabIndex = 47;
+			this->panel24->Click += gcnew System::EventHandler(this, &MainForm::panel24_Click);
 			// 
 			// panel25
 			// 
 			this->panel25->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel25->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel25->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel25->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel25->Location = System::Drawing::Point(549, 86);
 			this->panel25->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel25->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel25->Name = L"panel25";
 			this->panel25->Size = System::Drawing::Size(30, 30);
 			this->panel25->TabIndex = 48;
+			this->panel25->Click += gcnew System::EventHandler(this, &MainForm::panel25_Click);
 			// 
 			// panel26
 			// 
 			this->panel26->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel26->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel26->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel26->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel26->Location = System::Drawing::Point(189, 126);
 			this->panel26->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel26->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel26->Name = L"panel26";
 			this->panel26->Size = System::Drawing::Size(30, 30);
 			this->panel26->TabIndex = 49;
+			this->panel26->Click += gcnew System::EventHandler(this, &MainForm::panel26_Click);
 			// 
 			// panel27
 			// 
 			this->panel27->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel27->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel27->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel27->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel27->Location = System::Drawing::Point(229, 126);
 			this->panel27->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel27->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel27->Name = L"panel27";
 			this->panel27->Size = System::Drawing::Size(30, 30);
 			this->panel27->TabIndex = 50;
+			this->panel27->Click += gcnew System::EventHandler(this, &MainForm::panel27_Click);
 			// 
 			// panel28
 			// 
 			this->panel28->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel28->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel28->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel28->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel28->Location = System::Drawing::Point(269, 126);
 			this->panel28->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel28->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel28->Name = L"panel28";
 			this->panel28->Size = System::Drawing::Size(30, 30);
 			this->panel28->TabIndex = 51;
+			this->panel28->Click += gcnew System::EventHandler(this, &MainForm::panel28_Click);
 			// 
 			// panel29
 			// 
 			this->panel29->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel29->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel29->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel29->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel29->Location = System::Drawing::Point(309, 126);
 			this->panel29->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel29->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel29->Name = L"panel29";
 			this->panel29->Size = System::Drawing::Size(30, 30);
 			this->panel29->TabIndex = 52;
+			this->panel29->Click += gcnew System::EventHandler(this, &MainForm::panel29_Click);
 			// 
 			// panel30
 			// 
 			this->panel30->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel30->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel30->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel30->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel30->Location = System::Drawing::Point(349, 126);
 			this->panel30->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel30->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel30->Name = L"panel30";
 			this->panel30->Size = System::Drawing::Size(30, 30);
 			this->panel30->TabIndex = 53;
+			this->panel30->Click += gcnew System::EventHandler(this, &MainForm::panel30_Click);
 			// 
 			// panel32
 			// 
 			this->panel32->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel32->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel32->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel32->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel32->Location = System::Drawing::Point(429, 126);
 			this->panel32->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel32->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel32->Name = L"panel32";
 			this->panel32->Size = System::Drawing::Size(30, 30);
 			this->panel32->TabIndex = 55;
+			this->panel32->Click += gcnew System::EventHandler(this, &MainForm::panel32_Click);
 			// 
 			// panel31
 			// 
 			this->panel31->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel31->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel31->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel31->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel31->Location = System::Drawing::Point(389, 126);
 			this->panel31->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel31->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel31->Name = L"panel31";
 			this->panel31->Size = System::Drawing::Size(30, 30);
 			this->panel31->TabIndex = 54;
+			this->panel31->Click += gcnew System::EventHandler(this, &MainForm::panel31_Click);
 			// 
 			// panel33
 			// 
 			this->panel33->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel33->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel33->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel33->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel33->Location = System::Drawing::Point(469, 126);
 			this->panel33->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel33->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel33->Name = L"panel33";
 			this->panel33->Size = System::Drawing::Size(30, 30);
 			this->panel33->TabIndex = 56;
+			this->panel33->Click += gcnew System::EventHandler(this, &MainForm::panel33_Click);
 			// 
 			// panel34
 			// 
 			this->panel34->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel34->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel34->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel34->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel34->Location = System::Drawing::Point(509, 126);
 			this->panel34->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel34->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel34->Name = L"panel34";
 			this->panel34->Size = System::Drawing::Size(30, 30);
 			this->panel34->TabIndex = 57;
+			this->panel34->Click += gcnew System::EventHandler(this, &MainForm::panel34_Click);
 			// 
 			// panel35
 			// 
 			this->panel35->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel35->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel35->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel35->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel35->Location = System::Drawing::Point(549, 126);
 			this->panel35->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel35->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel35->Name = L"panel35";
 			this->panel35->Size = System::Drawing::Size(30, 30);
 			this->panel35->TabIndex = 58;
+			this->panel35->Click += gcnew System::EventHandler(this, &MainForm::panel35_Click);
 			// 
 			// panel36
 			// 
 			this->panel36->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel36->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel36->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel36->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel36->Location = System::Drawing::Point(189, 166);
 			this->panel36->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel36->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel36->Name = L"panel36";
 			this->panel36->Size = System::Drawing::Size(30, 30);
 			this->panel36->TabIndex = 59;
+			this->panel36->Click += gcnew System::EventHandler(this, &MainForm::panel36_Click);
 			// 
 			// panel37
 			// 
 			this->panel37->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel37->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel37->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel37->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel37->Location = System::Drawing::Point(229, 166);
 			this->panel37->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel37->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel37->Name = L"panel37";
 			this->panel37->Size = System::Drawing::Size(30, 30);
 			this->panel37->TabIndex = 60;
+			this->panel37->Click += gcnew System::EventHandler(this, &MainForm::panel37_Click);
 			// 
 			// panel38
 			// 
 			this->panel38->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel38->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel38->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel38->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel38->Location = System::Drawing::Point(269, 166);
 			this->panel38->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel38->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel38->Name = L"panel38";
 			this->panel38->Size = System::Drawing::Size(30, 30);
 			this->panel38->TabIndex = 61;
+			this->panel38->Click += gcnew System::EventHandler(this, &MainForm::panel38_Click);
 			// 
 			// panel39
 			// 
 			this->panel39->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel39->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel39->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel39->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel39->Location = System::Drawing::Point(309, 166);
 			this->panel39->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel39->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel39->Name = L"panel39";
 			this->panel39->Size = System::Drawing::Size(30, 30);
 			this->panel39->TabIndex = 62;
+			this->panel39->Click += gcnew System::EventHandler(this, &MainForm::panel39_Click);
 			// 
 			// panel40
 			// 
 			this->panel40->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel40->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel40->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel40->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel40->Location = System::Drawing::Point(349, 166);
 			this->panel40->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel40->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel40->Name = L"panel40";
 			this->panel40->Size = System::Drawing::Size(30, 30);
 			this->panel40->TabIndex = 63;
+			this->panel40->Click += gcnew System::EventHandler(this, &MainForm::panel40_Click);
 			// 
 			// panel41
 			// 
 			this->panel41->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel41->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel41->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel41->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel41->Location = System::Drawing::Point(389, 166);
 			this->panel41->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel41->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel41->Name = L"panel41";
 			this->panel41->Size = System::Drawing::Size(30, 30);
 			this->panel41->TabIndex = 64;
+			this->panel41->Click += gcnew System::EventHandler(this, &MainForm::panel41_Click);
 			// 
 			// panel42
 			// 
 			this->panel42->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel42->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel42->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel42->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel42->Location = System::Drawing::Point(429, 166);
 			this->panel42->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel42->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel42->Name = L"panel42";
 			this->panel42->Size = System::Drawing::Size(30, 30);
 			this->panel42->TabIndex = 65;
+			this->panel42->Click += gcnew System::EventHandler(this, &MainForm::panel42_Click);
 			// 
 			// panel43
 			// 
 			this->panel43->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel43->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel43->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel43->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel43->Location = System::Drawing::Point(469, 166);
 			this->panel43->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel43->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel43->Name = L"panel43";
 			this->panel43->Size = System::Drawing::Size(30, 30);
 			this->panel43->TabIndex = 66;
+			this->panel43->Click += gcnew System::EventHandler(this, &MainForm::panel43_Click);
 			// 
 			// panel44
 			// 
 			this->panel44->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel44->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel44->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel44->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel44->Location = System::Drawing::Point(509, 166);
 			this->panel44->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel44->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel44->Name = L"panel44";
 			this->panel44->Size = System::Drawing::Size(30, 30);
 			this->panel44->TabIndex = 67;
+			this->panel44->Click += gcnew System::EventHandler(this, &MainForm::panel44_Click);
 			// 
 			// panel45
 			// 
 			this->panel45->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel45->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel45->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel45->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel45->Location = System::Drawing::Point(549, 166);
 			this->panel45->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel45->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel45->Name = L"panel45";
 			this->panel45->Size = System::Drawing::Size(30, 30);
 			this->panel45->TabIndex = 68;
+			this->panel45->Click += gcnew System::EventHandler(this, &MainForm::panel45_Click);
 			// 
 			// panel46
 			// 
 			this->panel46->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel46->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel46->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel46->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel46->Location = System::Drawing::Point(189, 206);
 			this->panel46->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel46->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel46->Name = L"panel46";
 			this->panel46->Size = System::Drawing::Size(30, 30);
 			this->panel46->TabIndex = 69;
+			this->panel46->Click += gcnew System::EventHandler(this, &MainForm::panel46_Click);
 			// 
 			// panel47
 			// 
 			this->panel47->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel47->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel47->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel47->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel47->Location = System::Drawing::Point(229, 206);
 			this->panel47->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel47->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel47->Name = L"panel47";
 			this->panel47->Size = System::Drawing::Size(30, 30);
 			this->panel47->TabIndex = 70;
+			this->panel47->Click += gcnew System::EventHandler(this, &MainForm::panel47_Click);
 			// 
 			// panel48
 			// 
 			this->panel48->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel48->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel48->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel48->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel48->Location = System::Drawing::Point(269, 206);
 			this->panel48->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel48->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel48->Name = L"panel48";
 			this->panel48->Size = System::Drawing::Size(30, 30);
 			this->panel48->TabIndex = 71;
+			this->panel48->Click += gcnew System::EventHandler(this, &MainForm::panel48_Click);
 			// 
 			// panel49
 			// 
 			this->panel49->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel49->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel49->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel49->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel49->Location = System::Drawing::Point(309, 206);
 			this->panel49->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel49->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel49->Name = L"panel49";
 			this->panel49->Size = System::Drawing::Size(30, 30);
 			this->panel49->TabIndex = 72;
+			this->panel49->Click += gcnew System::EventHandler(this, &MainForm::panel49_Click);
 			// 
 			// panel50
 			// 
 			this->panel50->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel50->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel50->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel50->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel50->Location = System::Drawing::Point(349, 206);
 			this->panel50->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel50->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel50->Name = L"panel50";
 			this->panel50->Size = System::Drawing::Size(30, 30);
 			this->panel50->TabIndex = 73;
+			this->panel50->Click += gcnew System::EventHandler(this, &MainForm::panel50_Click);
 			// 
 			// panel51
 			// 
 			this->panel51->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel51->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel51->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel51->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel51->Location = System::Drawing::Point(389, 206);
 			this->panel51->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel51->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel51->Name = L"panel51";
 			this->panel51->Size = System::Drawing::Size(30, 30);
 			this->panel51->TabIndex = 74;
+			this->panel51->Click += gcnew System::EventHandler(this, &MainForm::panel51_Click);
 			// 
 			// panel52
 			// 
 			this->panel52->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel52->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel52->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel52->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel52->Location = System::Drawing::Point(429, 206);
 			this->panel52->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel52->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel52->Name = L"panel52";
 			this->panel52->Size = System::Drawing::Size(30, 30);
 			this->panel52->TabIndex = 75;
+			this->panel52->Click += gcnew System::EventHandler(this, &MainForm::panel52_Click);
 			// 
 			// panel53
 			// 
 			this->panel53->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel53->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel53->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel53->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel53->Location = System::Drawing::Point(469, 206);
 			this->panel53->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel53->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel53->Name = L"panel53";
 			this->panel53->Size = System::Drawing::Size(30, 30);
 			this->panel53->TabIndex = 76;
+			this->panel53->Click += gcnew System::EventHandler(this, &MainForm::panel53_Click);
 			// 
 			// panel54
 			// 
 			this->panel54->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel54->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel54->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel54->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel54->Location = System::Drawing::Point(509, 206);
 			this->panel54->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel54->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel54->Name = L"panel54";
 			this->panel54->Size = System::Drawing::Size(30, 30);
 			this->panel54->TabIndex = 77;
+			this->panel54->Click += gcnew System::EventHandler(this, &MainForm::panel54_Click);
 			// 
 			// panel55
 			// 
 			this->panel55->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel55->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel55->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel55->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel55->Location = System::Drawing::Point(549, 206);
 			this->panel55->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel55->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel55->Name = L"panel55";
 			this->panel55->Size = System::Drawing::Size(30, 30);
 			this->panel55->TabIndex = 78;
+			this->panel55->Click += gcnew System::EventHandler(this, &MainForm::panel55_Click);
 			// 
 			// panel56
 			// 
 			this->panel56->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel56->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel56->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel56->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel56->Location = System::Drawing::Point(189, 246);
 			this->panel56->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel56->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel56->Name = L"panel56";
 			this->panel56->Size = System::Drawing::Size(30, 30);
 			this->panel56->TabIndex = 79;
+			this->panel56->Click += gcnew System::EventHandler(this, &MainForm::panel56_Click);
 			// 
 			// panel57
 			// 
 			this->panel57->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel57->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel57->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel57->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel57->Location = System::Drawing::Point(229, 246);
 			this->panel57->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel57->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel57->Name = L"panel57";
 			this->panel57->Size = System::Drawing::Size(30, 30);
 			this->panel57->TabIndex = 80;
+			this->panel57->Click += gcnew System::EventHandler(this, &MainForm::panel57_Click);
 			// 
 			// panel58
 			// 
 			this->panel58->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel58->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel58->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel58->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel58->Location = System::Drawing::Point(269, 246);
 			this->panel58->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel58->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel58->Name = L"panel58";
 			this->panel58->Size = System::Drawing::Size(30, 30);
 			this->panel58->TabIndex = 81;
+			this->panel58->Click += gcnew System::EventHandler(this, &MainForm::panel58_Click);
 			// 
 			// panel59
 			// 
 			this->panel59->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel59->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel59->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel59->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel59->Location = System::Drawing::Point(309, 246);
 			this->panel59->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel59->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel59->Name = L"panel59";
 			this->panel59->Size = System::Drawing::Size(30, 30);
 			this->panel59->TabIndex = 82;
+			this->panel59->Click += gcnew System::EventHandler(this, &MainForm::panel59_Click);
 			// 
 			// panel60
 			// 
 			this->panel60->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel60->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel60->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel60->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel60->Location = System::Drawing::Point(349, 246);
 			this->panel60->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel60->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel60->Name = L"panel60";
 			this->panel60->Size = System::Drawing::Size(30, 30);
 			this->panel60->TabIndex = 83;
+			this->panel60->Click += gcnew System::EventHandler(this, &MainForm::panel60_Click);
 			// 
 			// panel61
 			// 
 			this->panel61->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel61->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel61->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel61->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel61->Location = System::Drawing::Point(389, 246);
 			this->panel61->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel61->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel61->Name = L"panel61";
 			this->panel61->Size = System::Drawing::Size(30, 30);
 			this->panel61->TabIndex = 84;
+			this->panel61->Click += gcnew System::EventHandler(this, &MainForm::panel61_Click);
 			// 
 			// panel62
 			// 
 			this->panel62->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel62->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel62->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel62->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel62->Location = System::Drawing::Point(429, 246);
 			this->panel62->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel62->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel62->Name = L"panel62";
 			this->panel62->Size = System::Drawing::Size(30, 30);
 			this->panel62->TabIndex = 85;
+			this->panel62->Click += gcnew System::EventHandler(this, &MainForm::panel62_Click);
 			// 
 			// panel63
 			// 
 			this->panel63->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel63->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel63->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel63->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel63->Location = System::Drawing::Point(469, 246);
 			this->panel63->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel63->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel63->Name = L"panel63";
 			this->panel63->Size = System::Drawing::Size(30, 30);
 			this->panel63->TabIndex = 86;
+			this->panel63->Click += gcnew System::EventHandler(this, &MainForm::panel63_Click);
 			// 
 			// panel64
 			// 
 			this->panel64->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel64->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel64->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel64->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel64->Location = System::Drawing::Point(509, 246);
 			this->panel64->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel64->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel64->Name = L"panel64";
 			this->panel64->Size = System::Drawing::Size(30, 30);
 			this->panel64->TabIndex = 87;
+			this->panel64->Click += gcnew System::EventHandler(this, &MainForm::panel64_Click);
 			// 
 			// panel65
 			// 
 			this->panel65->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel65->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel65->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel65->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel65->Location = System::Drawing::Point(549, 246);
 			this->panel65->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel65->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel65->Name = L"panel65";
 			this->panel65->Size = System::Drawing::Size(30, 30);
 			this->panel65->TabIndex = 88;
+			this->panel65->Click += gcnew System::EventHandler(this, &MainForm::panel65_Click);
 			// 
 			// panel66
 			// 
 			this->panel66->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel66->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel66->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel66->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel66->Location = System::Drawing::Point(189, 286);
 			this->panel66->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel66->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel66->Name = L"panel66";
 			this->panel66->Size = System::Drawing::Size(30, 30);
 			this->panel66->TabIndex = 89;
+			this->panel66->Click += gcnew System::EventHandler(this, &MainForm::panel66_Click);
 			// 
 			// panel67
 			// 
 			this->panel67->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel67->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel67->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel67->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel67->Location = System::Drawing::Point(229, 286);
 			this->panel67->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel67->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel67->Name = L"panel67";
 			this->panel67->Size = System::Drawing::Size(30, 30);
 			this->panel67->TabIndex = 90;
+			this->panel67->Click += gcnew System::EventHandler(this, &MainForm::panel67_Click);
 			// 
 			// panel70
 			// 
 			this->panel70->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel70->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel70->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel70->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel70->Location = System::Drawing::Point(349, 286);
 			this->panel70->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel70->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel70->Name = L"panel70";
 			this->panel70->Size = System::Drawing::Size(30, 30);
 			this->panel70->TabIndex = 93;
+			this->panel70->Click += gcnew System::EventHandler(this, &MainForm::panel70_Click);
 			// 
 			// panel69
 			// 
 			this->panel69->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel69->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel69->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel69->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel69->Location = System::Drawing::Point(309, 286);
 			this->panel69->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel69->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel69->Name = L"panel69";
 			this->panel69->Size = System::Drawing::Size(30, 30);
 			this->panel69->TabIndex = 92;
+			this->panel69->Click += gcnew System::EventHandler(this, &MainForm::panel69_Click);
 			// 
 			// panel68
 			// 
 			this->panel68->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel68->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel68->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel68->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel68->Location = System::Drawing::Point(269, 286);
 			this->panel68->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel68->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel68->Name = L"panel68";
 			this->panel68->Size = System::Drawing::Size(30, 30);
 			this->panel68->TabIndex = 91;
+			this->panel68->Click += gcnew System::EventHandler(this, &MainForm::panel68_Click);
 			// 
 			// panel71
 			// 
 			this->panel71->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel71->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel71->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel71->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel71->Location = System::Drawing::Point(389, 286);
 			this->panel71->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel71->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel71->Name = L"panel71";
 			this->panel71->Size = System::Drawing::Size(30, 30);
 			this->panel71->TabIndex = 94;
+			this->panel71->Click += gcnew System::EventHandler(this, &MainForm::panel71_Click);
 			// 
 			// panel72
 			// 
 			this->panel72->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel72->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel72->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel72->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel72->Location = System::Drawing::Point(429, 286);
 			this->panel72->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel72->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel72->Name = L"panel72";
 			this->panel72->Size = System::Drawing::Size(30, 30);
 			this->panel72->TabIndex = 95;
+			this->panel72->Click += gcnew System::EventHandler(this, &MainForm::panel72_Click);
 			// 
 			// panel73
 			// 
 			this->panel73->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel73->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel73->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel73->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel73->Location = System::Drawing::Point(469, 286);
 			this->panel73->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel73->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel73->Name = L"panel73";
 			this->panel73->Size = System::Drawing::Size(30, 30);
 			this->panel73->TabIndex = 96;
+			this->panel73->Click += gcnew System::EventHandler(this, &MainForm::panel73_Click);
 			// 
 			// panel74
 			// 
 			this->panel74->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel74->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel74->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel74->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel74->Location = System::Drawing::Point(509, 286);
 			this->panel74->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel74->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel74->Name = L"panel74";
 			this->panel74->Size = System::Drawing::Size(30, 30);
 			this->panel74->TabIndex = 97;
+			this->panel74->Click += gcnew System::EventHandler(this, &MainForm::panel74_Click);
 			// 
 			// panel75
 			// 
 			this->panel75->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel75->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel75->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel75->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel75->Location = System::Drawing::Point(549, 286);
 			this->panel75->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel75->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel75->Name = L"panel75";
 			this->panel75->Size = System::Drawing::Size(30, 30);
 			this->panel75->TabIndex = 98;
+			this->panel75->Click += gcnew System::EventHandler(this, &MainForm::panel75_Click);
 			// 
 			// panel76
 			// 
 			this->panel76->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel76->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel76->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel76->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel76->Location = System::Drawing::Point(189, 326);
 			this->panel76->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel76->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel76->Name = L"panel76";
 			this->panel76->Size = System::Drawing::Size(30, 30);
 			this->panel76->TabIndex = 99;
+			this->panel76->Click += gcnew System::EventHandler(this, &MainForm::panel76_Click);
 			// 
 			// panel77
 			// 
 			this->panel77->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel77->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel77->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel77->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel77->Location = System::Drawing::Point(229, 326);
 			this->panel77->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel77->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel77->Name = L"panel77";
 			this->panel77->Size = System::Drawing::Size(30, 30);
 			this->panel77->TabIndex = 100;
+			this->panel77->Click += gcnew System::EventHandler(this, &MainForm::panel77_Click);
 			// 
 			// panel78
 			// 
 			this->panel78->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel78->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel78->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel78->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel78->Location = System::Drawing::Point(269, 326);
 			this->panel78->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel78->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel78->Name = L"panel78";
 			this->panel78->Size = System::Drawing::Size(30, 30);
 			this->panel78->TabIndex = 101;
+			this->panel78->Click += gcnew System::EventHandler(this, &MainForm::panel78_Click);
 			// 
 			// panel79
 			// 
 			this->panel79->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel79->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel79->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel79->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel79->Location = System::Drawing::Point(309, 326);
 			this->panel79->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel79->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel79->Name = L"panel79";
 			this->panel79->Size = System::Drawing::Size(30, 30);
 			this->panel79->TabIndex = 102;
+			this->panel79->Click += gcnew System::EventHandler(this, &MainForm::panel79_Click);
 			// 
 			// panel80
 			// 
 			this->panel80->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel80->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel80->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel80->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel80->Location = System::Drawing::Point(349, 326);
 			this->panel80->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel80->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel80->Name = L"panel80";
 			this->panel80->Size = System::Drawing::Size(30, 30);
 			this->panel80->TabIndex = 103;
+			this->panel80->Click += gcnew System::EventHandler(this, &MainForm::panel80_Click);
 			// 
 			// panel81
 			// 
 			this->panel81->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel81->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel81->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel81->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel81->Location = System::Drawing::Point(389, 326);
 			this->panel81->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel81->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel81->Name = L"panel81";
 			this->panel81->Size = System::Drawing::Size(30, 30);
 			this->panel81->TabIndex = 104;
+			this->panel81->Click += gcnew System::EventHandler(this, &MainForm::panel81_Click);
 			// 
 			// panel82
 			// 
 			this->panel82->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel82->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel82->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel82->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel82->Location = System::Drawing::Point(429, 326);
 			this->panel82->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel82->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel82->Name = L"panel82";
 			this->panel82->Size = System::Drawing::Size(30, 30);
 			this->panel82->TabIndex = 105;
+			this->panel82->Click += gcnew System::EventHandler(this, &MainForm::panel82_Click);
 			// 
 			// panel83
 			// 
 			this->panel83->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel83->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel83->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel83->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel83->Location = System::Drawing::Point(469, 326);
 			this->panel83->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel83->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel83->Name = L"panel83";
 			this->panel83->Size = System::Drawing::Size(30, 30);
 			this->panel83->TabIndex = 106;
+			this->panel83->Click += gcnew System::EventHandler(this, &MainForm::panel83_Click);
 			// 
 			// panel84
 			// 
 			this->panel84->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel84->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel84->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel84->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel84->Location = System::Drawing::Point(509, 326);
 			this->panel84->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel84->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel84->Name = L"panel84";
 			this->panel84->Size = System::Drawing::Size(30, 30);
 			this->panel84->TabIndex = 107;
+			this->panel84->Click += gcnew System::EventHandler(this, &MainForm::panel84_Click);
 			// 
 			// panel85
 			// 
 			this->panel85->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel85->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel85->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel85->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel85->Location = System::Drawing::Point(549, 326);
 			this->panel85->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel85->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel85->Name = L"panel85";
 			this->panel85->Size = System::Drawing::Size(30, 30);
 			this->panel85->TabIndex = 108;
+			this->panel85->Click += gcnew System::EventHandler(this, &MainForm::panel85_Click);
 			// 
 			// panel86
 			// 
 			this->panel86->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel86->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel86->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel86->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel86->Location = System::Drawing::Point(189, 366);
 			this->panel86->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel86->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel86->Name = L"panel86";
 			this->panel86->Size = System::Drawing::Size(30, 30);
 			this->panel86->TabIndex = 109;
+			this->panel86->Click += gcnew System::EventHandler(this, &MainForm::panel86_Click);
 			// 
 			// panel87
 			// 
 			this->panel87->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel87->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel87->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel87->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel87->Location = System::Drawing::Point(229, 366);
 			this->panel87->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel87->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel87->Name = L"panel87";
 			this->panel87->Size = System::Drawing::Size(30, 30);
 			this->panel87->TabIndex = 110;
+			this->panel87->Click += gcnew System::EventHandler(this, &MainForm::panel87_Click);
 			// 
 			// panel88
 			// 
 			this->panel88->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel88->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel88->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel88->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel88->Location = System::Drawing::Point(269, 366);
 			this->panel88->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel88->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel88->Name = L"panel88";
 			this->panel88->Size = System::Drawing::Size(30, 30);
 			this->panel88->TabIndex = 111;
+			this->panel88->Click += gcnew System::EventHandler(this, &MainForm::panel88_Click);
 			// 
 			// panel89
 			// 
 			this->panel89->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel89->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel89->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel89->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel89->Location = System::Drawing::Point(309, 366);
 			this->panel89->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel89->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel89->Name = L"panel89";
 			this->panel89->Size = System::Drawing::Size(30, 30);
 			this->panel89->TabIndex = 112;
+			this->panel89->Click += gcnew System::EventHandler(this, &MainForm::panel89_Click);
 			// 
 			// panel90
 			// 
 			this->panel90->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel90->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel90->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel90->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel90->Location = System::Drawing::Point(349, 366);
 			this->panel90->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel90->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel90->Name = L"panel90";
 			this->panel90->Size = System::Drawing::Size(30, 30);
 			this->panel90->TabIndex = 113;
+			this->panel90->Click += gcnew System::EventHandler(this, &MainForm::panel90_Click);
 			// 
 			// panel91
 			// 
 			this->panel91->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel91->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel91->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel91->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel91->Location = System::Drawing::Point(389, 366);
 			this->panel91->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel91->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel91->Name = L"panel91";
 			this->panel91->Size = System::Drawing::Size(30, 30);
 			this->panel91->TabIndex = 114;
+			this->panel91->Click += gcnew System::EventHandler(this, &MainForm::panel91_Click);
 			// 
 			// panel92
 			// 
 			this->panel92->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel92->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel92->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel92->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel92->Location = System::Drawing::Point(429, 366);
 			this->panel92->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel92->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel92->Name = L"panel92";
 			this->panel92->Size = System::Drawing::Size(30, 30);
 			this->panel92->TabIndex = 115;
+			this->panel92->Click += gcnew System::EventHandler(this, &MainForm::panel92_Click);
 			// 
 			// panel93
 			// 
 			this->panel93->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel93->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel93->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel93->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel93->Location = System::Drawing::Point(469, 366);
 			this->panel93->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel93->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel93->Name = L"panel93";
 			this->panel93->Size = System::Drawing::Size(30, 30);
 			this->panel93->TabIndex = 116;
+			this->panel93->Click += gcnew System::EventHandler(this, &MainForm::panel93_Click);
 			// 
 			// panel94
 			// 
 			this->panel94->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel94->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel94->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel94->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel94->Location = System::Drawing::Point(509, 366);
 			this->panel94->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel94->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel94->Name = L"panel94";
 			this->panel94->Size = System::Drawing::Size(30, 30);
 			this->panel94->TabIndex = 117;
+			this->panel94->Click += gcnew System::EventHandler(this, &MainForm::panel94_Click);
 			// 
 			// panel95
 			// 
 			this->panel95->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel95->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel95->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel95->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel95->Location = System::Drawing::Point(549, 366);
 			this->panel95->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel95->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel95->Name = L"panel95";
 			this->panel95->Size = System::Drawing::Size(30, 30);
 			this->panel95->TabIndex = 118;
+			this->panel95->Click += gcnew System::EventHandler(this, &MainForm::panel95_Click);
 			// 
 			// panel96
 			// 
 			this->panel96->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel96->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel96->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel96->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel96->Location = System::Drawing::Point(189, 406);
 			this->panel96->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel96->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel96->Name = L"panel96";
 			this->panel96->Size = System::Drawing::Size(30, 30);
 			this->panel96->TabIndex = 119;
+			this->panel96->Click += gcnew System::EventHandler(this, &MainForm::panel96_Click);
 			// 
 			// panel97
 			// 
 			this->panel97->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel97->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel97->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel97->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel97->Location = System::Drawing::Point(229, 406);
 			this->panel97->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel97->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel97->Name = L"panel97";
 			this->panel97->Size = System::Drawing::Size(30, 30);
 			this->panel97->TabIndex = 120;
+			this->panel97->Click += gcnew System::EventHandler(this, &MainForm::panel97_Click);
 			// 
 			// panel98
 			// 
 			this->panel98->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel98->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel98->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel98->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel98->Location = System::Drawing::Point(269, 406);
 			this->panel98->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel98->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel98->Name = L"panel98";
 			this->panel98->Size = System::Drawing::Size(30, 30);
 			this->panel98->TabIndex = 121;
+			this->panel98->Click += gcnew System::EventHandler(this, &MainForm::panel98_Click);
 			// 
 			// panel99
 			// 
 			this->panel99->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel99->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel99->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel99->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel99->Location = System::Drawing::Point(309, 406);
 			this->panel99->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel99->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel99->Name = L"panel99";
 			this->panel99->Size = System::Drawing::Size(30, 30);
 			this->panel99->TabIndex = 122;
+			this->panel99->Click += gcnew System::EventHandler(this, &MainForm::panel99_Click);
 			// 
 			// panel100
 			// 
 			this->panel100->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel100->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel100->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel100->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel100->Location = System::Drawing::Point(349, 406);
 			this->panel100->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel100->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel100->Name = L"panel100";
 			this->panel100->Size = System::Drawing::Size(30, 30);
 			this->panel100->TabIndex = 123;
+			this->panel100->Click += gcnew System::EventHandler(this, &MainForm::panel100_Click);
 			// 
 			// panel101
 			// 
 			this->panel101->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel101->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel101->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel101->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel101->Location = System::Drawing::Point(389, 406);
 			this->panel101->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel101->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel101->Name = L"panel101";
 			this->panel101->Size = System::Drawing::Size(30, 30);
 			this->panel101->TabIndex = 124;
+			this->panel101->Click += gcnew System::EventHandler(this, &MainForm::panel101_Click);
 			// 
 			// panel102
 			// 
 			this->panel102->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel102->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel102->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel102->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel102->Location = System::Drawing::Point(429, 406);
 			this->panel102->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel102->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel102->Name = L"panel102";
 			this->panel102->Size = System::Drawing::Size(30, 30);
 			this->panel102->TabIndex = 125;
+			this->panel102->Click += gcnew System::EventHandler(this, &MainForm::panel102_Click);
 			// 
 			// panel103
 			// 
 			this->panel103->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel103->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel103->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel103->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel103->Location = System::Drawing::Point(469, 406);
 			this->panel103->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel103->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel103->Name = L"panel103";
 			this->panel103->Size = System::Drawing::Size(30, 30);
 			this->panel103->TabIndex = 126;
+			this->panel103->Click += gcnew System::EventHandler(this, &MainForm::panel103_Click);
 			// 
 			// panel104
 			// 
 			this->panel104->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel104->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel104->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel104->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel104->Location = System::Drawing::Point(509, 406);
 			this->panel104->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel104->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel104->Name = L"panel104";
 			this->panel104->Size = System::Drawing::Size(30, 30);
 			this->panel104->TabIndex = 127;
+			this->panel104->Click += gcnew System::EventHandler(this, &MainForm::panel104_Click);
 			// 
 			// panel105
 			// 
 			this->panel105->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel105->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel105->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel105->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panel105->Location = System::Drawing::Point(549, 406);
 			this->panel105->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel105->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel105->Name = L"panel105";
 			this->panel105->Size = System::Drawing::Size(30, 30);
 			this->panel105->TabIndex = 128;
+			this->panel105->Click += gcnew System::EventHandler(this, &MainForm::panel105_Click);
 			// 
 			// tableLayoutPanel1
 			// 
@@ -3390,6 +3590,27 @@ private: System::Windows::Forms::Label^ label30;
 #pragma endregion
 	private: Boolean changes = false;
 
+	private: System::Void SeatClick(int number)
+	{
+		if (this->EnterToolStripMenuItem->Visible)
+		{
+			if (seats[number]->BackColor == panel4->BackColor)
+			{
+				seats[number]->BackColor = panel5->BackColor;
+			}
+			else if (seats[number]->BackColor == panel5->BackColor)
+			{
+				seats[number]->BackColor = panel4->BackColor;
+			}
+		}
+		else
+		{
+			;
+		}
+
+		return;
+	}
+
 	private: System::String^ SetFilmInfo(Film film)
 	{
 		System::String^ Text = "Название: " + msclr::interop::marshal_as<System::String^>(film.name);
@@ -3408,6 +3629,7 @@ private: System::Windows::Forms::Label^ label30;
 		this->tableLayoutPanel1->Visible = false;
 		this->toolStripComboBox1->SelectedIndex = -1;
 		this->toolStripComboBox1->SelectedIndex = film_number;
+
 		return;
 	}
 
@@ -3415,6 +3637,45 @@ private: System::Windows::Forms::Label^ label30;
 	{
 		if (this->comboBox1->SelectedIndex != -1 && this->comboBox2->SelectedIndex != -1 && this->toolStripComboBox1->SelectedIndex != -1)
 		{
+			for (int i = 0; i < 100; i++)
+			{
+				if (cinema->films[this->toolStripComboBox1->SelectedIndex].mesta[this->comboBox2->SelectedIndex + this->comboBox1->SelectedIndex * 3][i] == '0')
+				{
+					seats[i]->BackColor = this->panel4->BackColor;
+					seats[i]->Cursor = System::Windows::Forms::Cursors::Hand;
+				}
+				else if (cinema->films[this->toolStripComboBox1->SelectedIndex].mesta[this->comboBox2->SelectedIndex + this->comboBox1->SelectedIndex * 3][i] == '1')
+				{
+					seats[i]->BackColor = this->panel3->BackColor;
+
+					if (this->EnterToolStripMenuItem->Visible)
+					{
+						seats[i]->Cursor = System::Windows::Forms::Cursors::Default;
+					}
+					else
+					{
+						seats[i]->Cursor = System::Windows::Forms::Cursors::Hand;
+					}
+				}
+				else if (cinema->films[this->toolStripComboBox1->SelectedIndex].mesta[this->comboBox2->SelectedIndex + this->comboBox1->SelectedIndex * 3][i] == '2')
+				{
+					seats[i]->BackColor = this->panel2->BackColor;
+
+					if (this->EnterToolStripMenuItem->Visible)
+					{
+						seats[i]->Cursor = System::Windows::Forms::Cursors::Default;
+					}
+					else
+					{
+						seats[i]->Cursor = System::Windows::Forms::Cursors::Hand;
+					}
+				}
+				else
+				{
+					seats[i]->BackColor = this->panel5->BackColor;
+					seats[i]->Cursor = System::Windows::Forms::Cursors::Hand;
+				}
+			}
 			this->tableLayoutPanel13->Visible = true;
 			this->label4->Text = this->toolStripComboBox1->Text;
 		}
@@ -3436,7 +3697,7 @@ private: System::Windows::Forms::Label^ label30;
 
 	//Запуск программы
 	private: System::Void MainForm_Load(System::Object^ sender, System::EventArgs^ e) {
-		cli::array<System::Windows::Forms::Panel^>^ seats = gcnew cli::array<System::Windows::Forms::Panel^>(100);
+		seats = gcnew cli::array<System::Windows::Forms::Panel^>(100);
 		for (int i = 0; i < 100; i++) 
 		{
 			seats[i] = gcnew System::Windows::Forms::Panel;
@@ -4112,6 +4373,326 @@ private: System::Windows::Forms::Label^ label30;
 
 	private: System::Void comboBox2_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
 		CheckIndex();
+	}
+			
+		   //Ряд 1
+	private: System::Void panel16_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(0);
+	}
+	private: System::Void panel17_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(1);
+	}
+	private: System::Void panel18_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(2);
+	}
+	private: System::Void panel19_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(3);
+	}
+	private: System::Void panel20_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(4);
+	}
+	private: System::Void panel21_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(5);
+	}
+	private: System::Void panel22_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(6);
+	}
+	private: System::Void panel23_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(7);
+	}
+	private: System::Void panel24_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(8);
+	}
+	private: System::Void panel25_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(9);
+	}
+
+		   //Ряд 2
+	private: System::Void panel26_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(10);
+	}
+	private: System::Void panel27_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(11);
+	}
+	private: System::Void panel28_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(12);
+	}
+	private: System::Void panel29_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(13);
+	}
+	private: System::Void panel30_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(14);
+	}
+	private: System::Void panel31_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(15);
+	}
+	private: System::Void panel32_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(16);
+	}
+	private: System::Void panel33_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(17);
+	}
+	private: System::Void panel34_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(18);
+	}
+	private: System::Void panel35_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(19);
+	}
+
+		   //Ряд3
+	private: System::Void panel36_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(20);
+	}
+	private: System::Void panel37_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(21);
+	}
+	private: System::Void panel38_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(22);
+	}
+	private: System::Void panel39_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(23);
+	}
+	private: System::Void panel40_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(24);
+	}
+	private: System::Void panel41_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(25);
+	}
+	private: System::Void panel42_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(26);
+	}
+	private: System::Void panel43_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(27);
+	}
+	private: System::Void panel44_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(28);
+	}
+	private: System::Void panel45_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(29);
+	}
+
+		   //Ряд 4
+	private: System::Void panel46_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(30);
+	}
+	private: System::Void panel47_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(31);
+	}
+	private: System::Void panel48_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(32);
+	}
+	private: System::Void panel49_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(33);
+	}
+	private: System::Void panel50_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(34);
+	}
+	private: System::Void panel51_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(35);
+	}
+	private: System::Void panel52_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(36);
+	}
+	private: System::Void panel53_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(37);
+	}
+	private: System::Void panel54_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(38);
+	}
+	private: System::Void panel55_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(39);
+	}
+
+		   //Ряд 5
+	private: System::Void panel56_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(40);
+	}
+	private: System::Void panel57_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(41);
+	}
+	private: System::Void panel58_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(42);
+	}
+	private: System::Void panel59_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(43);
+	}
+	private: System::Void panel60_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(44);
+	}
+	private: System::Void panel61_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(45);
+	}
+	private: System::Void panel62_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(46);
+	}
+	private: System::Void panel63_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(47);
+	}
+	private: System::Void panel64_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(48);
+	}
+	private: System::Void panel65_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(49);
+	}
+
+		   //Ряд 6
+	private: System::Void panel66_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(50);
+	}
+	private: System::Void panel67_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(51);
+	}
+	private: System::Void panel68_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(52);
+	}
+	private: System::Void panel69_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(53);
+	}
+	private: System::Void panel70_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(54);
+	}
+	private: System::Void panel71_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(55);
+	}
+	private: System::Void panel72_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(56);
+	}
+	private: System::Void panel73_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(57);
+	}
+	private: System::Void panel74_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(58);
+	}
+	private: System::Void panel75_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(59);
+	}
+
+		   //Ряд 7
+	private: System::Void panel76_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(60);
+	}
+	private: System::Void panel77_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(61);
+	}
+	private: System::Void panel78_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(62);
+	}
+	private: System::Void panel79_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(63);
+	}
+	private: System::Void panel80_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(64);
+	}
+	private: System::Void panel81_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(65);
+	}
+	private: System::Void panel82_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(66);
+	}
+	private: System::Void panel83_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(67);
+	}
+	private: System::Void panel84_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(68);
+	}
+	private: System::Void panel85_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(69);
+	}
+
+		   //Ряд 8
+	private: System::Void panel86_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(70);
+	}
+	private: System::Void panel87_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(71);
+	}
+	private: System::Void panel88_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(72);
+	}
+	private: System::Void panel89_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(73);
+	}
+	private: System::Void panel90_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(74);
+	}
+	private: System::Void panel91_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(75);
+	}
+	private: System::Void panel92_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(76);
+	}
+	private: System::Void panel93_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(77);
+	}
+	private: System::Void panel94_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(78);
+	}
+	private: System::Void panel95_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(79);
+	}
+
+		   //Ряд 9
+	private: System::Void panel96_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(80);
+	}
+	private: System::Void panel97_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(81);
+	}
+	private: System::Void panel98_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(82);
+	}
+	private: System::Void panel99_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(83);
+	}
+	private: System::Void panel100_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(84);
+	}
+	private: System::Void panel101_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(85);
+	}
+	private: System::Void panel102_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(86);
+	}
+	private: System::Void panel103_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(87);
+	}
+	private: System::Void panel104_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(88);
+	}
+	private: System::Void panel105_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(89);
+	}
+
+		   //Ряд 10
+	private: System::Void panel6_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(90);
+	}
+	private: System::Void panel7_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(91);
+	}
+	private: System::Void panel8_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(92);
+	}
+	private: System::Void panel9_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(93);
+	}
+	private: System::Void panel10_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(94);
+	}
+	private: System::Void panel11_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(95);
+	}
+	private: System::Void panel12_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(96);
+	}
+	private: System::Void panel13_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(97);
+	}
+	private: System::Void panel14_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(98);
+	}
+	private: System::Void panel15_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(99);
 	}
 };
 }
