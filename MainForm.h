@@ -397,6 +397,7 @@ private: System::Windows::Forms::Label^ label31;
 			this->tableLayoutPanel11 = (gcnew System::Windows::Forms::TableLayoutPanel());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
 			this->tableLayoutPanel12 = (gcnew System::Windows::Forms::TableLayoutPanel());
+			this->label32 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->panel5 = (gcnew System::Windows::Forms::Panel());
 			this->panel4 = (gcnew System::Windows::Forms::Panel());
@@ -410,15 +411,16 @@ private: System::Windows::Forms::Label^ label31;
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
+			this->textBox10 = (gcnew System::Windows::Forms::TextBox());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->button3 = (gcnew System::Windows::Forms::Button());
-			this->textBox10 = (gcnew System::Windows::Forms::TextBox());
 			this->toolStrip1 = (gcnew System::Windows::Forms::ToolStrip());
 			this->toolStripButton2 = (gcnew System::Windows::Forms::ToolStripButton());
 			this->toolStripSeparator4 = (gcnew System::Windows::Forms::ToolStripSeparator());
 			this->toolStripComboBox1 = (gcnew System::Windows::Forms::ToolStripComboBox());
 			this->tableLayoutPanel13 = (gcnew System::Windows::Forms::TableLayoutPanel());
+			this->label31 = (gcnew System::Windows::Forms::Label());
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->tableLayoutPanel14 = (gcnew System::Windows::Forms::TableLayoutPanel());
@@ -571,8 +573,6 @@ private: System::Windows::Forms::Label^ label31;
 			this->tableLayoutPanel2 = (gcnew System::Windows::Forms::TableLayoutPanel());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
-			this->label31 = (gcnew System::Windows::Forms::Label());
-			this->label32 = (gcnew System::Windows::Forms::Label());
 			this->menustrip_main->SuspendLayout();
 			this->statusStrip1->SuspendLayout();
 			this->tableLayoutPanel11->SuspendLayout();
@@ -857,6 +857,19 @@ private: System::Windows::Forms::Label^ label31;
 			this->tableLayoutPanel12->Size = System::Drawing::Size(254, 591);
 			this->tableLayoutPanel12->TabIndex = 2;
 			// 
+			// label32
+			// 
+			this->label32->AutoSize = true;
+			this->tableLayoutPanel12->SetColumnSpan(this->label32, 2);
+			this->label32->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->label32->Location = System::Drawing::Point(3, 303);
+			this->label32->Margin = System::Windows::Forms::Padding(3);
+			this->label32->Name = L"label32";
+			this->label32->Size = System::Drawing::Size(248, 34);
+			this->label32->TabIndex = 30;
+			this->label32->Text = L"Цена билета: 0 руб.";
+			this->label32->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			// 
 			// label3
 			// 
 			this->label3->AutoSize = true;
@@ -1010,6 +1023,15 @@ private: System::Windows::Forms::Label^ label31;
 			this->panel2->Size = System::Drawing::Size(30, 30);
 			this->panel2->TabIndex = 21;
 			// 
+			// textBox10
+			// 
+			this->textBox10->Dock = System::Windows::Forms::DockStyle::Left;
+			this->textBox10->Location = System::Drawing::Point(56, 440);
+			this->textBox10->Margin = System::Windows::Forms::Padding(3, 10, 3, 3);
+			this->textBox10->Name = L"textBox10";
+			this->textBox10->Size = System::Drawing::Size(185, 20);
+			this->textBox10->TabIndex = 29;
+			// 
 			// button1
 			// 
 			this->button1->Enabled = false;
@@ -1039,15 +1061,6 @@ private: System::Windows::Forms::Label^ label31;
 			this->button3->TabIndex = 27;
 			this->button3->Text = L"Оплатить";
 			this->button3->UseVisualStyleBackColor = true;
-			// 
-			// textBox10
-			// 
-			this->textBox10->Dock = System::Windows::Forms::DockStyle::Left;
-			this->textBox10->Location = System::Drawing::Point(56, 440);
-			this->textBox10->Margin = System::Windows::Forms::Padding(3, 10, 3, 3);
-			this->textBox10->Name = L"textBox10";
-			this->textBox10->Size = System::Drawing::Size(185, 20);
-			this->textBox10->TabIndex = 29;
 			// 
 			// toolStrip1
 			// 
@@ -1113,6 +1126,19 @@ private: System::Windows::Forms::Label^ label31;
 			this->tableLayoutPanel13->Size = System::Drawing::Size(764, 616);
 			this->tableLayoutPanel13->TabIndex = 1;
 			this->tableLayoutPanel13->Visible = false;
+			// 
+			// label31
+			// 
+			this->label31->AutoSize = true;
+			this->label31->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->label31->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label31->Location = System::Drawing::Point(3, 576);
+			this->label31->Name = L"label31";
+			this->label31->Size = System::Drawing::Size(758, 40);
+			this->label31->TabIndex = 3;
+			this->label31->Text = L"Кол-во билетов на сумму";
+			this->label31->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// label5
 			// 
@@ -3530,32 +3556,6 @@ private: System::Windows::Forms::Label^ label31;
 			this->textBox1->Size = System::Drawing::Size(229, 195);
 			this->textBox1->TabIndex = 1;
 			// 
-			// label31
-			// 
-			this->label31->AutoSize = true;
-			this->label31->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->label31->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
-			this->label31->Location = System::Drawing::Point(3, 576);
-			this->label31->Name = L"label31";
-			this->label31->Size = System::Drawing::Size(758, 40);
-			this->label31->TabIndex = 3;
-			this->label31->Text = L"Кол-во билетов на сумму";
-			this->label31->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			// 
-			// label32
-			// 
-			this->label32->AutoSize = true;
-			this->tableLayoutPanel12->SetColumnSpan(this->label32, 2);
-			this->label32->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->label32->Location = System::Drawing::Point(3, 303);
-			this->label32->Margin = System::Windows::Forms::Padding(3);
-			this->label32->Name = L"label32";
-			this->label32->Size = System::Drawing::Size(248, 34);
-			this->label32->TabIndex = 30;
-			this->label32->Text = L"Цена билета: 0 руб.";
-			this->label32->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
-			// 
 			// MainForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -3646,6 +3646,48 @@ private: System::Windows::Forms::Label^ label31;
 			;
 		}
 
+		int k = 0;
+
+		for (int i = 0; i < 100; i++)
+		{
+			if (seats[i]->BackColor == panel5->BackColor)
+			{
+				k++;
+			}
+		}
+
+		label31->Text = k + " билет";
+
+		if (k % 10 >= 2 && k % 10 <= 4 && (k < 12 || k > 21))
+		{
+			label31->Text += "a";
+		}
+		else if (k % 10 != 1 || k == 11)
+		{
+			label31->Text += "ов";
+		}
+		
+		label31->Text += " на сумму " + k * stoi(cinema->films[this->toolStripComboBox1->SelectedIndex].price[this->comboBox2->SelectedIndex + this->comboBox1->SelectedIndex * 3]) + " руб.";
+
+		if (k > 0)
+		{
+			if (this->EnterToolStripMenuItem->Visible)
+			{
+				button3->Enabled = true;
+				button2->Enabled = true;
+			}
+			else
+			{
+				button1->Enabled = true;
+			}
+		}
+		else
+		{
+			button3->Enabled = false;
+			button2->Enabled = false;
+			button1->Enabled = false;
+		}
+
 		return;
 	}
 
@@ -3717,12 +3759,18 @@ private: System::Windows::Forms::Label^ label31;
 			this->tableLayoutPanel13->Visible = true;
 			this->label4->Text = this->toolStripComboBox1->Text;
 			this->label32->Text = "Цена билета: " + msclr::interop::marshal_as<System::String^>(cinema->films[this->toolStripComboBox1->SelectedIndex].price[this->comboBox2->SelectedIndex + this->comboBox1->SelectedIndex * 3]) + " руб.";
+			this->label31->Text = "0 билетов на сумму 0 руб.";
 		}
 		else
 		{
 			this->tableLayoutPanel13->Visible = false;
 			this->label32->Text = "Цена билета: 0 руб.";
 		}
+
+		button3->Enabled = false;
+		button2->Enabled = false;
+		button1->Enabled = false;
+
 		return;
 	}
 		   //Проверка на наличие пустых ячеек в файле
