@@ -23,6 +23,7 @@ namespace FormsKursproject {
 	public ref class MainForm : public System::Windows::Forms::Form
 	{
 	private: File_O* file_stream;
+	private: cli::array<System::Windows::Forms::Panel^>^ seats;
 	private: System::Windows::Forms::Label^ label_center;
 	private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 	private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel1;
@@ -3435,7 +3436,124 @@ private: System::Windows::Forms::Label^ label30;
 
 	//Запуск программы
 	private: System::Void MainForm_Load(System::Object^ sender, System::EventArgs^ e) {
+		cli::array<System::Windows::Forms::Panel^>^ seats = gcnew cli::array<System::Windows::Forms::Panel^>(100);
+		for (int i = 0; i < 100; i++) 
+		{
+			seats[i] = gcnew System::Windows::Forms::Panel;
+		}
 
+		seats[0] = this->panel16;
+		seats[1] = this->panel17;
+		seats[2] = this->panel18;
+		seats[3] = this->panel19;
+		seats[4] = this->panel20;
+		seats[5] = this->panel21;
+		seats[6] = this->panel22;
+		seats[7] = this->panel23;
+		seats[8] = this->panel24;
+		seats[9] = this->panel25;
+
+		seats[10] = this->panel26;
+		seats[11] = this->panel27;
+		seats[12] = this->panel28;
+		seats[13] = this->panel29;
+		seats[14] = this->panel30;
+		seats[15] = this->panel31;
+		seats[16] = this->panel32;
+		seats[17] = this->panel33;
+		seats[18] = this->panel34;
+		seats[19] = this->panel35;
+
+		seats[20] = this->panel36;
+		seats[21] = this->panel37;
+		seats[22] = this->panel38;
+		seats[23] = this->panel39;
+		seats[24] = this->panel40;
+		seats[25] = this->panel41;
+		seats[26] = this->panel42;
+		seats[27] = this->panel43;
+		seats[28] = this->panel44;
+		seats[29] = this->panel45;
+
+		seats[30] = this->panel46;
+		seats[31] = this->panel47;
+		seats[32] = this->panel48;
+		seats[33] = this->panel49;
+		seats[34] = this->panel50;
+		seats[35] = this->panel51;
+		seats[36] = this->panel52;
+		seats[37] = this->panel53;
+		seats[38] = this->panel54;
+		seats[39] = this->panel55;
+
+		seats[40] = this->panel56;
+		seats[41] = this->panel57;
+		seats[42] = this->panel58;
+		seats[43] = this->panel59;
+		seats[44] = this->panel60;
+		seats[45] = this->panel61;
+		seats[46] = this->panel62;
+		seats[47] = this->panel63;
+		seats[48] = this->panel64;
+		seats[49] = this->panel65;
+
+		seats[50] = this->panel66;
+		seats[51] = this->panel67;
+		seats[52] = this->panel68;
+		seats[53] = this->panel69;
+		seats[54] = this->panel70;
+		seats[55] = this->panel71;
+		seats[56] = this->panel72;
+		seats[57] = this->panel73;
+		seats[58] = this->panel74;
+		seats[59] = this->panel75;
+
+		seats[60] = this->panel76;
+		seats[61] = this->panel77;
+		seats[62] = this->panel78;
+		seats[63] = this->panel79;
+		seats[64] = this->panel80;
+		seats[65] = this->panel81;
+		seats[66] = this->panel82;
+		seats[67] = this->panel83;
+		seats[68] = this->panel84;
+		seats[69] = this->panel85;
+
+		seats[70] = this->panel86;
+		seats[71] = this->panel87;
+		seats[72] = this->panel88;
+		seats[73] = this->panel89;
+		seats[74] = this->panel90;
+		seats[75] = this->panel91;
+		seats[76] = this->panel92;
+		seats[77] = this->panel93;
+		seats[78] = this->panel94;
+		seats[79] = this->panel95;
+
+		seats[80] = this->panel96;
+		seats[81] = this->panel97;
+		seats[82] = this->panel98;
+		seats[83] = this->panel99;
+		seats[84] = this->panel100;
+		seats[85] = this->panel101;
+		seats[86] = this->panel102;
+		seats[87] = this->panel103;
+		seats[88] = this->panel104;
+		seats[89] = this->panel105;
+
+		seats[90] = this->panel6;
+		seats[91] = this->panel7;
+		seats[92] = this->panel8;
+		seats[93] = this->panel9;
+		seats[94] = this->panel10;
+		seats[95] = this->panel11;
+		seats[96] = this->panel12;
+		seats[97] = this->panel13;
+		seats[98] = this->panel14;
+		seats[99] = this->panel15;
+
+
+		//seats[0]->BackColor = System::Drawing::SystemColors::ControlDarkDark;
 		//Открытие приветственной формы
 		/*HelloForm^ p = gcnew HelloForm();
 		p->ShowDialog();
@@ -3991,6 +4109,7 @@ private: System::Windows::Forms::Label^ label30;
 			}
 		}
 	}
+
 	private: System::Void comboBox2_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
 		CheckIndex();
 	}
