@@ -4,6 +4,7 @@
 #include "msclr\marshal_cppstd.h"
 #include "AdminForm.h"
 #include "ExitForm.h"
+#include "FilmForm.h"
 /*#include "HelloForm.h"
 #include "InfoForm.h"*/
 
@@ -755,7 +756,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 					this->CorrectMovieToolStripMenuItem, this->DelMovieToolStripMenuItem
 			});
 			this->MovieToolStripMenuItem->Name = L"MovieToolStripMenuItem";
-			this->MovieToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->MovieToolStripMenuItem->Size = System::Drawing::Size(132, 22);
 			this->MovieToolStripMenuItem->Text = L"&Фильм";
 			// 
 			// NewMovieToolStripMenuItem
@@ -763,6 +764,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->NewMovieToolStripMenuItem->Name = L"NewMovieToolStripMenuItem";
 			this->NewMovieToolStripMenuItem->Size = System::Drawing::Size(165, 22);
 			this->NewMovieToolStripMenuItem->Text = L"&Добавить новый";
+			this->NewMovieToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::NewMovieToolStripMenuItem_Click);
 			// 
 			// CorrectMovieToolStripMenuItem
 			// 
@@ -783,7 +785,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 					this->CorrectPromoToolStripMenuItem, this->DelPromoToolStripMenuItem
 			});
 			this->PromoToolStripMenuItem->Name = L"PromoToolStripMenuItem";
-			this->PromoToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->PromoToolStripMenuItem->Size = System::Drawing::Size(132, 22);
 			this->PromoToolStripMenuItem->Text = L"&Промокод";
 			// 
 			// NewPromoToolStripMenuItem
@@ -811,7 +813,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 					this->AddressToolStripMenuItem, this->CashiersToolStripMenuItem, this->INNToolStripMenuItem, this->RNMToolStripMenuItem
 			});
 			this->CinemaToolStripMenuItem->Name = L"CinemaToolStripMenuItem";
-			this->CinemaToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->CinemaToolStripMenuItem->Size = System::Drawing::Size(132, 22);
 			this->CinemaToolStripMenuItem->Text = L"&Кинотеатр";
 			// 
 			// NameToolStripMenuItem
@@ -4971,6 +4973,32 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			//поиск по коду брони
 			textBox10->Text = "";
 		}
+	}
+	private: System::Void NewMovieToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+		FilmForm^ p = gcnew FilmForm();
+		p->ShowDialog();
+
+		//Выход
+		/*if (p->DialogResult == System::Windows::Forms::DialogResult::Cancel) {
+			this->Close();
+			if (this->Visible)
+				MainForm_Load(sender, e);
+		}
+		//Открыть файл
+		else if (p->DialogResult == System::Windows::Forms::DialogResult::No) {
+			OpenToolStripMenuItem_Click(sender, e);
+			if (!this->toolStripStatusLabel_filename->Visible)
+				MainForm_Load(sender, e);
+		}
+		//Вход в режим администратора
+		else if (p->DialogResult == System::Windows::Forms::DialogResult::Yes) {
+			EnterToolStripMenuItem_Click(sender, e);
+			if (this->EnterToolStripMenuItem->Visible)
+				MainForm_Load(sender, e);
+		}
+		//Запуск игры
+		else if (p->DialogResult == System::Windows::Forms::DialogResult::OK)
+			GameToolStripMenuItem_Click(sender, e);*/
 	}
 };
 }

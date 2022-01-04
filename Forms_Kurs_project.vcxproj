@@ -120,6 +120,9 @@
     </ClInclude>
     <ClInclude Include="File_O.h" />
     <ClInclude Include="Film.h" />
+    <ClInclude Include="FilmForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="MainForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -142,12 +145,16 @@
     <ClCompile Include="ExitForm.cpp" />
     <ClCompile Include="File_O.cpp" />
     <ClCompile Include="Film.cpp" />
+    <ClCompile Include="FilmForm.cpp" />
     <ClCompile Include="MainForm.cpp" />
     <ClCompile Include="Time.cpp" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AdminForm.resx">
       <DependentUpon>AdminForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilmForm.resx">
+      <DependentUpon>FilmForm.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.h</DependentUpon>
