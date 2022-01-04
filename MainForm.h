@@ -1031,6 +1031,7 @@ private: System::Windows::Forms::Label^ label31;
 			this->textBox10->Name = L"textBox10";
 			this->textBox10->Size = System::Drawing::Size(185, 20);
 			this->textBox10->TabIndex = 29;
+			this->textBox10->TextChanged += gcnew System::EventHandler(this, &MainForm::textBox10_TextChanged);
 			// 
 			// button1
 			// 
@@ -4801,6 +4802,14 @@ private: System::Windows::Forms::Label^ label31;
 				}
 			}
 			file_stream->Write(*cinema);
+		}
+	}
+
+	private: System::Void textBox10_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+		if (textBox10->Text->Length == 5)
+		{
+			//поиск по коду брони
+			textBox10->Text = "";
 		}
 	}
 };
