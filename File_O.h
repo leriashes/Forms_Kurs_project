@@ -21,7 +21,7 @@ public:
 	bool CheckPath();	//проверка на сущестование
 	void Read(Cinema& cinema);
 	bool CheckCompound();	//проверка форматирования файла
-	void Write(Cinema cinema);	//запись всех данных в файл
+	void Write(Cinema& cinema);	//запись всех данных в файл
 	void Clean();
 
 	//friend class Menu;

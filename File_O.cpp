@@ -6,6 +6,7 @@
 #include <cstring>
 #include <cstdio>
 #include "File_O.h"
+#include "Time.h"
 //#include "Menu.h"
 #include "windows.h"
 using namespace std;
@@ -90,7 +91,7 @@ void File_O::ReadBron(Cinema& cinema) //считывание данных из файла бронирования
     return;
 }
 */
-void File_O::InputPath()
+/*void File_O::InputPath()
 {
     do
     {
@@ -109,7 +110,7 @@ void File_O::InputPath()
     } while (!CheckPath());
 
     return;
-}
+}*/
 
 /*void File_O::New(Cinema& cinema)
 {
@@ -166,30 +167,30 @@ void File_O::InputPath()
 
 bool File_O::CheckPath()
 {
-	bool result = false;
+    bool result = false;
     ifstream f1;
 
     f1.open(path);
-    if (!(f1.is_open())) 
-	{
+    if (!(f1.is_open()))
+    {
         cout << "\nФайл не найден\n";
-		_getch();
+        _getch();
         //создание файла, заполнение всех данных
 
     }
-    else 
-	{
+    else
+    {
+        f1.close();
         //cout << "Файл найден!";
         result = true;
     }
 
-	return result;
+    return result;
     /*ofstream fout(path); // создаём объект класса ofstream для записи и связываем его с файлом cppstudio.txt
     fout << "Работа с файлами в С++"; // запись строки в файл
     fout.close(); // закрываем файл
     */
 }
-
 
 void File_O::Read(Cinema& cinema)
 {
@@ -225,10 +226,10 @@ void File_O::Read(Cinema& cinema)
     }
 
     //заполнение информации о кинотеатре
-        
+
     getline(file, cinema.address);    //чтение адреса кинотеатра
 
-	//???? читаем только одного ?????
+    //???? читаем только одного ?????
     getline(file, cinema.cashiers[0]);     //чтения ФИО кассиров
     string sep = ", ";   // строка или символ разделитель
     size_t sep_size = sep.size();
@@ -258,10 +259,10 @@ void File_O::Read(Cinema& cinema)
     getline(file, cinema.inn);     //чтение ИНН
     getline(file, cinema.rnm);     //чтение РНМ
     getline(file, cinema.promo[0][0]);     //чтение промокодов
-    
+
     string tempura;
     string original = cinema.promo[0][0];
-    
+
     h = 1;
     while (true) {
         tempura = original.substr(0, original.find(sep));
@@ -288,7 +289,7 @@ void File_O::Read(Cinema& cinema)
         {
             break;
         }
-        else 
+        else
         {
             original = original.substr(tempura.size() + sep_size);
         }
@@ -299,30 +300,49 @@ void File_O::Read(Cinema& cinema)
     getline(file, cinema.otchet_vsego);     //чтение выручки за период
     getline(file, cinema.otchet_today);     //чтение выручки за сегодняшний день
     bool generate = false;
+    /*
     time_t t;
     std::time(&t);
 
     int da = localtime(&t)->tm_mday;
     int mo = localtime(&t)->tm_mon + 1;
     int yea = localtime(&t)->tm_year + 1900;
+    */
     string doub;
     //cout << cinema.otchet_today.size();
     //_getch();
-    for (i = 0; i < 10 && i < cinema.otchet_today.length(); i++)
+    for (i = 0; i < 10; i++)
     {
         doub = doub + cinema.otchet_today[i];
     }
-    if (doub == (to_string(da) + '.' + to_string(mo) + '.' + to_string(yea)))
+    string today_d;
+    today_d = Time::RetDate(0, 1);
+    /*if (to_string(da).size() == 1)
+    {
+        today_d = "0";
+    }
+    today_d = today_d + to_string(da) + ".";
+    if (to_string(mo).size() == 1)
+    {
+        today_d = today_d + "0";
+    }
+    today_d = today_d + to_string(mo) + "." + to_string(yea);
+    */
+    if (doub == today_d)
     {
         generate = false;
-        cinema.otchet_today.erase(0, 11);
+        cinema.otchet_today.erase(0, 12);
     }
     else
     {
         generate = true;
         cinema.otchet_today = "0";
     }
+    string old_date;
+    getline(file, old_date);
+
     i = 0;
+    int sdvig = 0;
     //заполнение информации о фильмах
     do
     {
@@ -338,33 +358,128 @@ void File_O::Read(Cinema& cinema)
         for (j = 0; j < 9; j++)
         {
             getline(file, temp);
+            if (j % 3 == 0)
+            {
+                getline(file, cinema.films[i].date[j / 3]);
+            }
+
+            if (j == 3)
+            {
+                if (old_date == Time::RetDate(0, 1))
+                {
+                    sdvig = 2;
+                    //cout << "2";
+                }
+                else if (old_date == Time::RetDate(1, 1))
+                {
+                    sdvig = 1;
+                    //cout << "1";
+                }
+                else if (old_date == Time::RetDate(2, 1))
+                {
+                    sdvig = 0;
+                    //cout << "0";
+                }
+                else
+                {
+                    sdvig = 3;
+                    //cout << "3";
+                    //cout << Time::RetDate(2, 1);
+                }
+            }
+
             getline(file, cinema.films[i].price[j]);
             getline(file, cinema.films[i].time[j]);
             getline(file, cinema.films[i].rand[j]);
-           
+
+            //string mesta_sdvig;
+
             for (int k = 0; k < 10; k++)
             {
                 getline(file, temp);
                 cinema.films[i].mesta[j] = cinema.films[i].mesta[j] + temp;
             }
-            if (cinema.films[i].rand[j][0] == '0' && generate == true)
+            if (j == 8)
+            {
+                int o;
+                int d;
+                for (d = 0, o = sdvig * 3; d < (3 - sdvig) * 3; d++, o++)
+                {
+                    cinema.films[i].mesta[d] = cinema.films[i].mesta[o];
+                }
+
+
+                /*if (sdvig == 1)
+                {
+                    //cout << cinema.films[i].mesta[0];
+                    //cout << cinema.films[i].mesta[0];
+                    //_getch();
+
+                    cinema.films[i].mesta[0] = cinema.films[i].mesta[3];
+                    cinema.films[i].mesta[1] = cinema.films[i].mesta[4];
+                    cinema.films[i].mesta[2] = cinema.films[i].mesta[5];
+
+                    cinema.films[i].mesta[3] = cinema.films[i].mesta[6];
+                    cinema.films[i].mesta[4] = cinema.films[i].mesta[7];
+                    cinema.films[i].mesta[5] = cinema.films[i].mesta[8];
+
+                    /*
+                    for (int k = 6; k < 9; k++)
+                    {
+                        cinema.films[i].mesta[k] = cinema.NewHall();
+                    }
+                    */
+                    //}
+                    /*
+                    else if (sdvig == 2)
+                    {
+                        cinema.films[i].mesta[0] = cinema.films[i].mesta[6];
+                        cinema.films[i].mesta[1] = cinema.films[i].mesta[7];
+                        cinema.films[i].mesta[2] = cinema.films[i].mesta[8];
+                        /*
+                        for (int k = 3; k < 9; k++)
+                        {
+                            cinema.films[i].mesta[k] = cinema.NewHall();
+                        }
+                        */
+                        //}
+
+                        /*else if (sdvig == 3)
+                        {
+                            for (int k = 0; k < 9; k++)
+                            {
+                                //cout << cinema.films[i].mesta[k];
+
+                                //cout << cinema.films[i].mesta[k];
+                            }
+                        }
+                        */
+                for (int l = (3 - sdvig) * 3; l < 9; l++)
+                {
+                    cinema.films[i].mesta[l] = cinema.NewHall();
+
+                }
+            }
+
+            /*if (cinema.films[i].rand[j][0] == '0' && generate == true)
             {
                 cinema.films[i].mesta[j] = cinema.NewHall();
                 Sleep(100);
             }
+            */
         }
         i++;
     } while (i < kol_vo_film);
-	cinema.films_number = i;
+    cinema.films_number = i;
     file.close();
-    //Write(cinema);
- 
+    Write(cinema);
+
     return;
 }
 
 bool File_O::CheckCompound()        //проверка форматирования текстового файла
 {
-	bool result = false;
+    bool result = false;
     char* str = new char[1024];
     int i = 0;
     ifstream base(path);
@@ -376,25 +491,24 @@ bool File_O::CheckCompound()        //проверка форматирования текстового файла
     base.close();
     delete[] str;
 
-    if (((i - 10) % 134 == 0) || ((i - 9) % 134 == 0))            //форматирование верно
+    if (((i - 11) % 137 == 0) || ((i - 10) % 137 == 0))            //форматирование верно
     {
-        kol_vo_film = (i - 10) / 134;
-		result = true;
+        kol_vo_film = (i - 11) / 137;
+        result = true;
     }
-    base.close();
-	return result;
+    return result;
 }
 
-/*void File_O::Write(Cinema cinema)
+void File_O::Write(Cinema& cinema)
 {
-
+    /*
     time_t t;
     std::time(&t);
 
     int da = localtime(&t)->tm_mday;
     int mo = localtime(&t)->tm_mon + 1;
     int yea = localtime(&t)->tm_year + 1900;
-
+    */
     string path_cop = path;
     path_cop.resize(path_cop.size() - 4);
     path_cop = path_cop + "_copy.txt\0";
@@ -431,7 +545,7 @@ bool File_O::CheckCompound()        //проверка форматирования текстового файла
         f << cinema.rnm << endl;     //запись РНМ кинотеатра в файл
 
         //f << cinema.promo[0][0] << endl;     //запись промокодов
-        
+
         for (int o = 1; o <= cinema.promo_number; o++)
         {
             f << cinema.promo[o][0] << " " << cinema.promo[o][1];
@@ -442,11 +556,21 @@ bool File_O::CheckCompound()        //проверка форматирования текстового файла
         }
         f << endl;
         f << cinema.otchet_vsego << endl;     //запись выручки за весь период
-        /// <summary>
-        /// ПЕРЕДЕЛАТЬ ЗАПИСЬ ЕЖЕДНЕВНОГО ОТЧЕТА
-        /// </summary>
-        /// <param name="cinema"></param>
-        f << to_string(da) << '.' << to_string(mo) << '.' << to_string(yea) << ': ' << cinema.otchet_today << endl;     //запись выручки за сегодняшний день
+        f << Time::RetDate(0, 1);
+        /*
+        if (to_string(da).size() == 1)
+        {
+            f << "0" ;
+        }
+        f << to_string(da) << '.';
+        if (to_string(mo).size() == 1)
+        {
+            f << "0";
+        }
+        f << to_string(mo) << '.' << to_string(yea) << ": " << cinema.otchet_today << endl;
+        */
+        f << ": " << cinema.otchet_today << endl;     //запись выручки за сегодняшний день
+        f << Time::RetDate(2, 1) << endl;       //запись крайней даты (техническая запись)
 
         for (int i = 0; i < cinema.films_number; i++)
         {
@@ -462,6 +586,12 @@ bool File_O::CheckCompound()        //проверка форматирования текстового файла
 
             for (int j = 0; j < 9; j++)
             {
+                if (j % 3 == 0)
+                {
+                    f << Time::RetDate((j / 3), 1) << endl;
+                    //cinema.films[i].date[j / 3] << endl;
+                }
+
                 f << cinema.films[i].price[j] << endl;   //запись стоиомсти билета
                 f << cinema.films[i].time[j] << endl;   //запись времени сеанса
                 f << cinema.films[i].rand[j] << endl;   //запись точки (флажка) генерации
@@ -492,7 +622,7 @@ bool File_O::CheckCompound()        //проверка форматирования текстового файла
     }
 
     return;
-}*/
+}
 
 void File_O::Clean()
 {

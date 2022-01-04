@@ -1051,6 +1051,7 @@ private: System::Windows::Forms::Label^ label31;
 			this->button2->TabIndex = 26;
 			this->button2->Text = L"Забронировать";
 			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &MainForm::button2_Click);
 			// 
 			// button3
 			// 
@@ -3758,6 +3759,7 @@ private: System::Windows::Forms::Label^ label31;
 			}
 			this->tableLayoutPanel13->Visible = true;
 			this->label4->Text = this->toolStripComboBox1->Text;
+			this->label5->Text = msclr::interop::marshal_as<System::String^>(cinema->films[this->toolStripComboBox1->SelectedIndex].date[this->comboBox1->SelectedIndex]) + ", " + msclr::interop::marshal_as<System::String^>(cinema->films[this->toolStripComboBox1->SelectedIndex].time[this->comboBox2->SelectedIndex]) + ", Кинотеатр " + msclr::interop::marshal_as<System::String^>(cinema->name) + ", " + msclr::interop::marshal_as<System::String^>(cinema->films[this->toolStripComboBox1->SelectedIndex].number_zal) + " зал";
 			this->label32->Text = "Цена билета: " + msclr::interop::marshal_as<System::String^>(cinema->films[this->toolStripComboBox1->SelectedIndex].price[this->comboBox2->SelectedIndex + this->comboBox1->SelectedIndex * 3]) + " руб.";
 			this->label31->Text = "0 билетов на сумму 0 руб.";
 		}
@@ -4041,9 +4043,9 @@ private: System::Windows::Forms::Label^ label31;
 			//Если файл не пустой
 			else 
 			{
-				if (((lines->Length - 9) % 134 == 0) || ((lines->Length - 8) % 134 == 0))            //форматирование верно
+				if (((lines->Length - 10) % 137 == 0) || ((lines->Length - 9) % 137 == 0))            //форматирование верно
 				{
-					file_stream->kol_vo_film = (lines->Length - 9) / 134;
+					file_stream->kol_vo_film = (lines->Length - 10) / 137;
 					good = true;
 
 					file_stream->Read(*cinema);
@@ -4781,6 +4783,25 @@ private: System::Windows::Forms::Label^ label31;
 	}
 	private: System::Void panel15_Click(System::Object^ sender, System::EventArgs^ e) {
 		SeatClick(99);
+	}
+	
+		   //Бронирование
+	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+		String^ message = L"Выбранные места забронированы. За 30 минут до начала сеанса бронь аннулируется. \n\nПри оплате заказа назовите код: 12345";
+		String^ caption = L"";
+		if (MessageBox::Show(message, caption, MessageBoxButtons::OK) == System::Windows::Forms::DialogResult::OK)
+		{
+			toolStripButton2_Click(sender, e);
+			for (int i = 0; i < 100; i++)
+			{
+				if (seats[i]->BackColor == panel5->BackColor)
+				{
+					seats[i]->BackColor = panel3->BackColor;
+					cinema->films[this->toolStripComboBox1->SelectedIndex].mesta[this->comboBox2->SelectedIndex + this->comboBox1->SelectedIndex * 3][i] = '1';
+				}
+			}
+			file_stream->Write(*cinema);
+		}
 	}
 };
 }
