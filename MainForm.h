@@ -208,6 +208,23 @@ namespace FormsKursproject {
 private: System::Windows::Forms::Label^ label30;
 private: System::Windows::Forms::Label^ label32;
 private: System::Windows::Forms::Label^ label31;
+private: System::Windows::Forms::ToolStripMenuItem^ ReportToolStripMenuItem;
+private: System::Windows::Forms::ToolStripMenuItem^ TodayReportToolStripMenuItem;
+private: System::Windows::Forms::ToolStripMenuItem^ AllTimeReportToolStripMenuItem;
+private: System::Windows::Forms::ToolStripMenuItem^ MovieToolStripMenuItem;
+private: System::Windows::Forms::ToolStripMenuItem^ PromoToolStripMenuItem;
+private: System::Windows::Forms::ToolStripMenuItem^ CinemaToolStripMenuItem;
+private: System::Windows::Forms::ToolStripMenuItem^ NewMovieToolStripMenuItem;
+private: System::Windows::Forms::ToolStripMenuItem^ CorrectMovieToolStripMenuItem;
+private: System::Windows::Forms::ToolStripMenuItem^ DelMovieToolStripMenuItem;
+private: System::Windows::Forms::ToolStripMenuItem^ NewPromoToolStripMenuItem;
+private: System::Windows::Forms::ToolStripMenuItem^ CorrectPromoToolStripMenuItem;
+private: System::Windows::Forms::ToolStripMenuItem^ DelPromoToolStripMenuItem;
+private: System::Windows::Forms::ToolStripMenuItem^ NameToolStripMenuItem;
+private: System::Windows::Forms::ToolStripMenuItem^ AddressToolStripMenuItem;
+private: System::Windows::Forms::ToolStripMenuItem^ CashiersToolStripMenuItem;
+private: System::Windows::Forms::ToolStripMenuItem^ INNToolStripMenuItem;
+private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 
 
 
@@ -387,6 +404,23 @@ private: System::Windows::Forms::Label^ label31;
 			this->ExitToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->EnterToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->CorrectToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->MovieToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->NewMovieToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->CorrectMovieToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->DelMovieToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->PromoToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->NewPromoToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->CorrectPromoToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->DelPromoToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->CinemaToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->NameToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->AddressToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->CashiersToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->INNToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->RNMToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->ReportToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->TodayReportToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->AllTimeReportToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->InfoToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->QuitToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->statusStrip1 = (gcnew System::Windows::Forms::StatusStrip());
@@ -606,9 +640,9 @@ private: System::Windows::Forms::Label^ label31;
 			// 
 			this->menustrip_main->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->menustrip_main->ImageScalingSize = System::Drawing::Size(28, 28);
-			this->menustrip_main->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(5) {
+			this->menustrip_main->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(6) {
 				this->FileToolStripMenuItem,
-					this->EnterToolStripMenuItem, this->CorrectToolStripMenuItem, this->InfoToolStripMenuItem, this->QuitToolStripMenuItem
+					this->EnterToolStripMenuItem, this->CorrectToolStripMenuItem, this->ReportToolStripMenuItem, this->InfoToolStripMenuItem, this->QuitToolStripMenuItem
 			});
 			this->menustrip_main->Location = System::Drawing::Point(0, 0);
 			this->menustrip_main->Name = L"menustrip_main";
@@ -705,10 +739,133 @@ private: System::Windows::Forms::Label^ label31;
 			// 
 			// CorrectToolStripMenuItem
 			// 
+			this->CorrectToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {
+				this->MovieToolStripMenuItem,
+					this->PromoToolStripMenuItem, this->CinemaToolStripMenuItem
+			});
 			this->CorrectToolStripMenuItem->Enabled = false;
 			this->CorrectToolStripMenuItem->Name = L"CorrectToolStripMenuItem";
 			this->CorrectToolStripMenuItem->Size = System::Drawing::Size(108, 22);
 			this->CorrectToolStripMenuItem->Text = L"&Редактирование";
+			// 
+			// MovieToolStripMenuItem
+			// 
+			this->MovieToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {
+				this->NewMovieToolStripMenuItem,
+					this->CorrectMovieToolStripMenuItem, this->DelMovieToolStripMenuItem
+			});
+			this->MovieToolStripMenuItem->Name = L"MovieToolStripMenuItem";
+			this->MovieToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->MovieToolStripMenuItem->Text = L"&Фильм";
+			// 
+			// NewMovieToolStripMenuItem
+			// 
+			this->NewMovieToolStripMenuItem->Name = L"NewMovieToolStripMenuItem";
+			this->NewMovieToolStripMenuItem->Size = System::Drawing::Size(165, 22);
+			this->NewMovieToolStripMenuItem->Text = L"&Добавить новый";
+			// 
+			// CorrectMovieToolStripMenuItem
+			// 
+			this->CorrectMovieToolStripMenuItem->Name = L"CorrectMovieToolStripMenuItem";
+			this->CorrectMovieToolStripMenuItem->Size = System::Drawing::Size(165, 22);
+			this->CorrectMovieToolStripMenuItem->Text = L"&Изменить";
+			// 
+			// DelMovieToolStripMenuItem
+			// 
+			this->DelMovieToolStripMenuItem->Name = L"DelMovieToolStripMenuItem";
+			this->DelMovieToolStripMenuItem->Size = System::Drawing::Size(165, 22);
+			this->DelMovieToolStripMenuItem->Text = L"&Удалить";
+			// 
+			// PromoToolStripMenuItem
+			// 
+			this->PromoToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {
+				this->NewPromoToolStripMenuItem,
+					this->CorrectPromoToolStripMenuItem, this->DelPromoToolStripMenuItem
+			});
+			this->PromoToolStripMenuItem->Name = L"PromoToolStripMenuItem";
+			this->PromoToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->PromoToolStripMenuItem->Text = L"&Промокод";
+			// 
+			// NewPromoToolStripMenuItem
+			// 
+			this->NewPromoToolStripMenuItem->Name = L"NewPromoToolStripMenuItem";
+			this->NewPromoToolStripMenuItem->Size = System::Drawing::Size(165, 22);
+			this->NewPromoToolStripMenuItem->Text = L"&Добавить новый";
+			// 
+			// CorrectPromoToolStripMenuItem
+			// 
+			this->CorrectPromoToolStripMenuItem->Name = L"CorrectPromoToolStripMenuItem";
+			this->CorrectPromoToolStripMenuItem->Size = System::Drawing::Size(165, 22);
+			this->CorrectPromoToolStripMenuItem->Text = L"&Изменить";
+			// 
+			// DelPromoToolStripMenuItem
+			// 
+			this->DelPromoToolStripMenuItem->Name = L"DelPromoToolStripMenuItem";
+			this->DelPromoToolStripMenuItem->Size = System::Drawing::Size(165, 22);
+			this->DelPromoToolStripMenuItem->Text = L"&Удалить";
+			// 
+			// CinemaToolStripMenuItem
+			// 
+			this->CinemaToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(5) {
+				this->NameToolStripMenuItem,
+					this->AddressToolStripMenuItem, this->CashiersToolStripMenuItem, this->INNToolStripMenuItem, this->RNMToolStripMenuItem
+			});
+			this->CinemaToolStripMenuItem->Name = L"CinemaToolStripMenuItem";
+			this->CinemaToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->CinemaToolStripMenuItem->Text = L"&Кинотеатр";
+			// 
+			// NameToolStripMenuItem
+			// 
+			this->NameToolStripMenuItem->Name = L"NameToolStripMenuItem";
+			this->NameToolStripMenuItem->Size = System::Drawing::Size(126, 22);
+			this->NameToolStripMenuItem->Text = L"&Название";
+			// 
+			// AddressToolStripMenuItem
+			// 
+			this->AddressToolStripMenuItem->Name = L"AddressToolStripMenuItem";
+			this->AddressToolStripMenuItem->Size = System::Drawing::Size(126, 22);
+			this->AddressToolStripMenuItem->Text = L"&Адрес";
+			// 
+			// CashiersToolStripMenuItem
+			// 
+			this->CashiersToolStripMenuItem->Name = L"CashiersToolStripMenuItem";
+			this->CashiersToolStripMenuItem->Size = System::Drawing::Size(126, 22);
+			this->CashiersToolStripMenuItem->Text = L"&Кассиры";
+			// 
+			// INNToolStripMenuItem
+			// 
+			this->INNToolStripMenuItem->Name = L"INNToolStripMenuItem";
+			this->INNToolStripMenuItem->Size = System::Drawing::Size(126, 22);
+			this->INNToolStripMenuItem->Text = L"&ИНН";
+			// 
+			// RNMToolStripMenuItem
+			// 
+			this->RNMToolStripMenuItem->Name = L"RNMToolStripMenuItem";
+			this->RNMToolStripMenuItem->Size = System::Drawing::Size(126, 22);
+			this->RNMToolStripMenuItem->Text = L"&РНМ";
+			// 
+			// ReportToolStripMenuItem
+			// 
+			this->ReportToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
+				this->TodayReportToolStripMenuItem,
+					this->AllTimeReportToolStripMenuItem
+			});
+			this->ReportToolStripMenuItem->Enabled = false;
+			this->ReportToolStripMenuItem->Name = L"ReportToolStripMenuItem";
+			this->ReportToolStripMenuItem->Size = System::Drawing::Size(51, 22);
+			this->ReportToolStripMenuItem->Text = L"&Отчёт";
+			// 
+			// TodayReportToolStripMenuItem
+			// 
+			this->TodayReportToolStripMenuItem->Name = L"TodayReportToolStripMenuItem";
+			this->TodayReportToolStripMenuItem->Size = System::Drawing::Size(178, 22);
+			this->TodayReportToolStripMenuItem->Text = L"&Отчёт за день";
+			// 
+			// AllTimeReportToolStripMenuItem
+			// 
+			this->AllTimeReportToolStripMenuItem->Name = L"AllTimeReportToolStripMenuItem";
+			this->AllTimeReportToolStripMenuItem->Size = System::Drawing::Size(178, 22);
+			this->AllTimeReportToolStripMenuItem->Text = L"О&тчёт за всё время";
 			// 
 			// InfoToolStripMenuItem
 			// 
@@ -4162,6 +4319,7 @@ private: System::Windows::Forms::Label^ label31;
 				else
 					this->SaveToolStripMenuItem->Enabled = false;
 				this->CorrectToolStripMenuItem->Enabled = true;
+				this->ReportToolStripMenuItem->Enabled = true;
 			}
 		}
 
@@ -4179,6 +4337,7 @@ private: System::Windows::Forms::Label^ label31;
 			this->label_center->Visible = true;
 			this->CloseToolStripMenuItem->Enabled = false;
 			this->CorrectToolStripMenuItem->Enabled = false;
+			this->ReportToolStripMenuItem->Enabled = false;
 			this->label_center->Text = L"Файл не выбран";
 		}
 	}
@@ -4230,6 +4389,7 @@ private: System::Windows::Forms::Label^ label31;
 				this->SaveToolStripMenuItem->Enabled = false;
 				this->SaveAsToolStripMenuItem->Enabled = false;
 				this->CorrectToolStripMenuItem->Enabled = false;
+				this->ReportToolStripMenuItem->Enabled = false;
 				this->button1->Enabled = false;
 			}
 		}
