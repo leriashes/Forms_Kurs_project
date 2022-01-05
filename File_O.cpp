@@ -203,6 +203,7 @@ void File_O::Read(Cinema& cinema)
     cinema.cashiers_number = 0;
     cinema.promo_number = 0;
     getline(file, temp);    //чтение id кинотеатра (если имеется)
+    cinema.id_cinema = "";
     if (temp[0] == 'i' && temp[1] == 'd' && temp[2] == ':')
     {
         for (int g = 0; g < temp.size(); g++)

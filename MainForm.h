@@ -4977,28 +4977,16 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 	private: System::Void NewMovieToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 		FilmForm^ p = gcnew FilmForm();
 		p->ShowDialog();
-
-		//Выход
-		/*if (p->DialogResult == System::Windows::Forms::DialogResult::Cancel) {
-			this->Close();
-			if (this->Visible)
-				MainForm_Load(sender, e);
+		
+		if (p->DialogResult == System::Windows::Forms::DialogResult::OK)
+		{
+			Film film = p->Result();
+			cinema->films[cinema->films_number] = film;
+			cinema->NewHallCinema(cinema->films_number);
+			cinema->films_number += 1;
+			file_stream->Write(*cinema);
+			open_file();
 		}
-		//Открыть файл
-		else if (p->DialogResult == System::Windows::Forms::DialogResult::No) {
-			OpenToolStripMenuItem_Click(sender, e);
-			if (!this->toolStripStatusLabel_filename->Visible)
-				MainForm_Load(sender, e);
-		}
-		//Вход в режим администратора
-		else if (p->DialogResult == System::Windows::Forms::DialogResult::Yes) {
-			EnterToolStripMenuItem_Click(sender, e);
-			if (this->EnterToolStripMenuItem->Visible)
-				MainForm_Load(sender, e);
-		}
-		//Запуск игры
-		else if (p->DialogResult == System::Windows::Forms::DialogResult::OK)
-			GameToolStripMenuItem_Click(sender, e);*/
 	}
 };
 }

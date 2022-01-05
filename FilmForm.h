@@ -1,4 +1,7 @@
 #pragma once
+#include "Cinema.h"
+#include "msclr\marshal_cppstd.h"
+#include "Time.h"
 
 namespace FormsKursproject {
 
@@ -15,12 +18,20 @@ namespace FormsKursproject {
 	public ref class FilmForm : public System::Windows::Forms::Form
 	{
 	public:
+		Film* film;
+
 		FilmForm(void)
 		{
 			InitializeComponent();
+			film = new Film();
 			//
 			//TODO: добавьте код конструктора
 			//
+		}
+
+		Film Result()
+		{
+			return *film;
 		}
 
 	protected:
@@ -160,6 +171,7 @@ namespace FormsKursproject {
 			this->button1->TabIndex = 0;
 			this->button1->Text = L"Сохранить";
 			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &FilmForm::button1_Click);
 			// 
 			// button2
 			// 
@@ -186,6 +198,7 @@ namespace FormsKursproject {
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(267, 20);
 			this->textBox1->TabIndex = 3;
+			this->textBox1->TextChanged += gcnew System::EventHandler(this, &FilmForm::Check);
 			// 
 			// label2
 			// 
@@ -203,6 +216,7 @@ namespace FormsKursproject {
 			this->textBox2->Name = L"textBox2";
 			this->textBox2->Size = System::Drawing::Size(309, 97);
 			this->textBox2->TabIndex = 5;
+			this->textBox2->TextChanged += gcnew System::EventHandler(this, &FilmForm::Check);
 			// 
 			// label3
 			// 
@@ -248,6 +262,7 @@ namespace FormsKursproject {
 			this->maskedTextBox4->Size = System::Drawing::Size(50, 20);
 			this->maskedTextBox4->TabIndex = 5;
 			this->maskedTextBox4->ValidatingType = System::DateTime::typeid;
+			this->maskedTextBox4->TextChanged += gcnew System::EventHandler(this, &FilmForm::maskedTextBox4_TextChanged);
 			// 
 			// maskedTextBox3
 			// 
@@ -258,6 +273,7 @@ namespace FormsKursproject {
 			this->maskedTextBox3->Size = System::Drawing::Size(50, 20);
 			this->maskedTextBox3->TabIndex = 4;
 			this->maskedTextBox3->ValidatingType = System::DateTime::typeid;
+			this->maskedTextBox3->TextChanged += gcnew System::EventHandler(this, &FilmForm::maskedTextBox3_TextChanged);
 			// 
 			// maskedTextBox2
 			// 
@@ -408,6 +424,7 @@ namespace FormsKursproject {
 			this->maskedTextBox5->Name = L"maskedTextBox5";
 			this->maskedTextBox5->Size = System::Drawing::Size(36, 20);
 			this->maskedTextBox5->TabIndex = 10;
+			this->maskedTextBox5->TextChanged += gcnew System::EventHandler(this, &FilmForm::Check);
 			// 
 			// label10
 			// 
@@ -425,6 +442,7 @@ namespace FormsKursproject {
 			this->textBox9->Name = L"textBox9";
 			this->textBox9->Size = System::Drawing::Size(309, 45);
 			this->textBox9->TabIndex = 13;
+			this->textBox9->TextChanged += gcnew System::EventHandler(this, &FilmForm::Check);
 			// 
 			// label11
 			// 
@@ -441,6 +459,7 @@ namespace FormsKursproject {
 			this->textBox10->Name = L"textBox10";
 			this->textBox10->Size = System::Drawing::Size(309, 20);
 			this->textBox10->TabIndex = 15;
+			this->textBox10->TextChanged += gcnew System::EventHandler(this, &FilmForm::Check);
 			// 
 			// groupBox3
 			// 
@@ -466,6 +485,7 @@ namespace FormsKursproject {
 			this->maskedTextBox7->Size = System::Drawing::Size(94, 20);
 			this->maskedTextBox7->TabIndex = 5;
 			this->maskedTextBox7->ValidatingType = System::DateTime::typeid;
+			this->maskedTextBox7->TextChanged += gcnew System::EventHandler(this, &FilmForm::Check);
 			// 
 			// maskedTextBox6
 			// 
@@ -476,6 +496,7 @@ namespace FormsKursproject {
 			this->maskedTextBox6->Size = System::Drawing::Size(94, 20);
 			this->maskedTextBox6->TabIndex = 4;
 			this->maskedTextBox6->ValidatingType = System::DateTime::typeid;
+			this->maskedTextBox6->TextChanged += gcnew System::EventHandler(this, &FilmForm::Check);
 			// 
 			// maskedTextBox8
 			// 
@@ -486,6 +507,7 @@ namespace FormsKursproject {
 			this->maskedTextBox8->Size = System::Drawing::Size(94, 20);
 			this->maskedTextBox8->TabIndex = 3;
 			this->maskedTextBox8->ValidatingType = System::DateTime::typeid;
+			this->maskedTextBox8->TextChanged += gcnew System::EventHandler(this, &FilmForm::Check);
 			// 
 			// label12
 			// 
@@ -534,6 +556,7 @@ namespace FormsKursproject {
 			this->comboBox1->Name = L"comboBox1";
 			this->comboBox1->Size = System::Drawing::Size(127, 21);
 			this->comboBox1->TabIndex = 17;
+			this->comboBox1->TextChanged += gcnew System::EventHandler(this, &FilmForm::Check);
 			// 
 			// label16
 			// 
@@ -558,6 +581,7 @@ namespace FormsKursproject {
 			this->textBox11->ReadOnly = true;
 			this->textBox11->Size = System::Drawing::Size(127, 20);
 			this->textBox11->TabIndex = 19;
+			this->textBox11->TextChanged += gcnew System::EventHandler(this, &FilmForm::Check);
 			// 
 			// button3
 			// 
@@ -629,7 +653,13 @@ namespace FormsKursproject {
 
 		}
 #pragma endregion
-		//Загрузка изображения (постера)
+		   //Проверка всех полей
+	private: System::Void Check(System::Object^ sender, System::EventArgs^ e)
+	{
+		this->button1->Enabled = (textBox1->Text != "" && textBox2->Text != "" && textBox9->Text != "" && textBox10->Text != "" && maskedTextBox1->Text != "    мин." && maskedTextBox2->Text->Length == 5 && maskedTextBox3->Text->Length == 5 && maskedTextBox4->Text->Length == 5 && maskedTextBox4->Text[0] != ' ' && maskedTextBox4->Text[1] != ' ' && maskedTextBox4->Text[3] != ' ' && maskedTextBox5->Text != "  +" && maskedTextBox6->Text != "     руб." && maskedTextBox7->Text != "     руб." && maskedTextBox8->Text != "     руб." && comboBox1->SelectedIndex != -1);
+	}
+
+		   //Загрузка изображения (постера)
 	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
 		if (this->openFileDialog1->ShowDialog() == System::Windows::Forms::DialogResult::OK) 
 		{
@@ -684,7 +714,11 @@ namespace FormsKursproject {
 
 				this->textBox4->Text = "00:00";
 			}
+
+			maskedTextBox2_TextChanged(sender, e);
 		}
+
+		Check(sender, e);
 	}
 
 		   //Ввод времени начала певрого сеанса
@@ -804,6 +838,248 @@ namespace FormsKursproject {
 			this->textBox5->Text = "00:00";
 			this->textBox6->Text = "00:00";
 		}
+		maskedTextBox3_TextChanged(sender, e);
+	}
+
+		   //Ввод времени начала второго сеанса
+	private: System::Void maskedTextBox3_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+		bool ready = true;
+		int second_time = 0, min = 0;
+		int h = 0, m = 0;
+
+		for (int i = 0; i < this->maskedTextBox1->Text->Length; i++)
+		{
+			if (this->maskedTextBox1->Text[i] >= '0' && this->maskedTextBox1->Text[i] <= '9')
+			{
+				min = min * 10 + this->maskedTextBox1->Text[i] - 48;
+			}
+		}
+
+		for (int i = 0; i < this->maskedTextBox3->Text->Length && ready; i++)
+		{
+			if (this->maskedTextBox3->Text[i] == ' ' || this->maskedTextBox3->Text->Length < 5)
+			{
+				ready = false;
+			}
+		}
+
+		if (ready)
+		{
+			for (int i = 0; i < 2; i++)
+			{
+				h = h * 10 + this->maskedTextBox3->Text[i] - 48;
+				m = m * 10 + this->maskedTextBox3->Text[i + 3] - 48;
+			}
+			second_time = h * 60 + m;
+			int h1 = 0, m1 = 0;
+
+			for (int i = 0; i < 2; i++)
+			{
+				h1 = h1 * 10 + this->textBox5->Text[i] - 48;
+				m1 = m1 * 10 + this->textBox5->Text[i + 3] - 48;
+			}
+
+			ready = false;
+
+			if (h >= 0 && h <= 23 && m >= 0 && m <= 59)
+			{
+				if (h > h1 || h == h1 && m >= m1)
+				{
+					h1 = m1 = 0;
+					for (int i = 0; i < 2; i++)
+					{
+						h1 = h1 * 10 + this->textBox6->Text[i] - 48;
+						m1 = m1 * 10 + this->textBox6->Text[i + 3] - 48;
+					}
+
+					if (h < h1 || h == h1 && m <= m1)
+					{
+						ready = true;
+					}
+				}
+			}
+
+			if (ready)
+			{
+				this->maskedTextBox4->Enabled = true;
+
+				h = (second_time + 15 + min) / 60;
+				m = (second_time + 15 + min) % 60;
+
+				this->textBox7->Text = "";
+				if (h < 10)
+				{
+					this->textBox7->Text += "0";
+				}
+				this->textBox7->Text += h + ":";
+				if (m < 10)
+				{
+					this->textBox7->Text += "0";
+				}
+				this->textBox7->Text += m;
+
+
+				h = (21 * 60 - min) / 60;
+				m = (21 * 60 - min) % 60;
+
+				this->textBox8->Text = "";
+				if (h < 10)
+				{
+					this->textBox8->Text += "0";
+				}
+				this->textBox8->Text += h + ":";
+				if (m < 10)
+				{
+					this->textBox8->Text += "0";
+				}
+				this->textBox8->Text += m;
+			}
+			else
+			{
+				this->maskedTextBox4->Enabled = false;
+
+				this->maskedTextBox3->Text = "";
+				this->maskedTextBox4->Text = "";
+
+				this->textBox7->Text = "00:00";
+				this->textBox8->Text = "00:00";
+			}
+		}
+		else
+		{
+			this->maskedTextBox4->Enabled = false;
+
+			this->maskedTextBox4->Text = "";
+
+			this->textBox7->Text = "00:00";
+			this->textBox8->Text = "00:00";
+		}
+		Check(sender, e);
+	}
+
+		   //Ввод времени начала третьего сеанса
+	private: System::Void maskedTextBox4_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+		bool ready = true;
+		int h = 0, m = 0;
+
+		for (int i = 0; i < this->maskedTextBox4->Text->Length && ready; i++)
+		{
+			if (this->maskedTextBox4->Text[i] == ' ' || this->maskedTextBox4->Text->Length < 5)
+			{
+				ready = false;
+			}
+		}
+
+		if (ready)
+		{
+			for (int i = 0; i < 2; i++)
+			{
+				h = h * 10 + this->maskedTextBox4->Text[i] - 48;
+				m = m * 10 + this->maskedTextBox4->Text[i + 3] - 48;
+			}
+			int h1 = 0, m1 = 0;
+
+			for (int i = 0; i < 2; i++)
+			{
+				h1 = h1 * 10 + this->textBox7->Text[i] - 48;
+				m1 = m1 * 10 + this->textBox7->Text[i + 3] - 48;
+			}
+
+			ready = false;
+
+			if (h >= 0 && h <= 23 && m >= 0 && m <= 59)
+			{
+				if (h > h1 || h == h1 && m >= m1)
+				{
+					h1 = m1 = 0;
+					for (int i = 0; i < 2; i++)
+					{
+						h1 = h1 * 10 + this->textBox8->Text[i] - 48;
+						m1 = m1 * 10 + this->textBox8->Text[i + 3] - 48;
+					}
+
+					if (h < h1 || h == h1 && m <= m1)
+					{
+						ready = true;
+					}
+				}
+			}
+
+			if (!ready)
+			{
+				this->maskedTextBox4->Text = "";
+			}
+		}
+		Check(sender, e);
+	}
+
+		   //Нажата кнопка сохранить
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+		film->age = "";
+		for (int i = 0; i < maskedTextBox5->Text->Length; i++)
+		{
+			if (maskedTextBox5->Text[i] >= '0' && maskedTextBox5->Text[i] <= '9' || maskedTextBox5->Text[i] == '+')
+			{
+				film->age += maskedTextBox5->Text[i];
+			}
+		}
+
+		for (int i = 0; i < 3; i++)
+		{
+			film->date[i] = Time::RetDate(i, 1);
+		}
+		
+		film->duration = "";
+		for (int i = 0; i < maskedTextBox1->Text->Length; i++)
+		{
+			if (maskedTextBox1->Text[i] >= '0' && maskedTextBox1->Text[i] <= '9')
+			{
+				film->duration += maskedTextBox1->Text[i];
+			}
+		}
+
+		film->main_role = msclr::interop::marshal_as<std::string>(textBox9->Text);
+		film->name = msclr::interop::marshal_as<std::string>(textBox1->Text);
+		film->number_zal = msclr::interop::marshal_as<std::string>(comboBox1->Text);
+
+		film->price[0] = "";
+		for (int i = 0; i < maskedTextBox8->Text->Length; i++)
+		{
+			if (maskedTextBox8->Text[i] >= '0' && maskedTextBox8->Text[i] <= '9')
+			{
+				film->price[0] += maskedTextBox8->Text[i];
+			}
+		}
+
+		film->price[1] = "";
+		for (int i = 0; i < maskedTextBox6->Text->Length; i++)
+		{
+			if (maskedTextBox6->Text[i] >= '0' && maskedTextBox6->Text[i] <= '9')
+			{
+				film->price[1] += maskedTextBox6->Text[i];
+			}
+		}
+		
+		film->price[2] = "";
+		for (int i = 0; i < maskedTextBox7->Text->Length; i++)
+		{
+			if (maskedTextBox7->Text[i] >= '0' && maskedTextBox7->Text[i] <= '9')
+			{
+				film->price[2] += maskedTextBox7->Text[i];
+			}
+		}
+
+		for (int i = 0; i < 3; i++)
+		{
+			film->price[3 + i] = film->price[6 + i] = film->price[i];
+		}
+
+		film->rejisser = msclr::interop::marshal_as<std::string>(textBox10->Text);
+		film->short_description = msclr::interop::marshal_as<std::string>(textBox2->Text);
+
+		film->time[0] = film->time[3] = film->time[6] = msclr::interop::marshal_as<std::string>(maskedTextBox2->Text);
+		film->time[1] = film->time[4] = film->time[7] = msclr::interop::marshal_as<std::string>(maskedTextBox3->Text);
+		film->time[2] = film->time[5] = film->time[8] = msclr::interop::marshal_as<std::string>(maskedTextBox4->Text);
 	}
 };
 }
