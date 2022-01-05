@@ -268,6 +268,7 @@ namespace FormsKursproject {
 			this->maskedTextBox2->Size = System::Drawing::Size(50, 20);
 			this->maskedTextBox2->TabIndex = 3;
 			this->maskedTextBox2->ValidatingType = System::DateTime::typeid;
+			this->maskedTextBox2->TextChanged += gcnew System::EventHandler(this, &FilmForm::maskedTextBox2_TextChanged);
 			// 
 			// label6
 			// 
@@ -628,8 +629,7 @@ namespace FormsKursproject {
 
 		}
 #pragma endregion
-	private: System::Void maskedTextBox9_MaskInputRejected(System::Object^ sender, System::Windows::Forms::MaskInputRejectedEventArgs^ e) {
-	}
+		//Загрузка изображения (постера)
 	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
 		if (this->openFileDialog1->ShowDialog() == System::Windows::Forms::DialogResult::OK) 
 		{
@@ -639,6 +639,7 @@ namespace FormsKursproject {
 		}
 	}
 
+		   //Ввод продолжительности фильма
 	private: System::Void maskedTextBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 		if (this->maskedTextBox1->Text != "")
 		{
@@ -675,12 +676,133 @@ namespace FormsKursproject {
 				this->maskedTextBox2->Enabled = false;
 				this->maskedTextBox3->Enabled = false;
 				this->maskedTextBox4->Enabled = false;
+
 				this->maskedTextBox1->Text = "";
 				this->maskedTextBox2->Text = "";
 				this->maskedTextBox3->Text = "";
 				this->maskedTextBox4->Text = "";
+
 				this->textBox4->Text = "00:00";
 			}
+		}
+	}
+
+		   //Ввод времени начала певрого сеанса
+	private: System::Void maskedTextBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+		bool ready = true;
+		int first_time = 0, min = 0;
+		int h = 0, m = 0;
+
+		for (int i = 0; i < this->maskedTextBox1->Text->Length; i++)
+		{
+			if (this->maskedTextBox1->Text[i] >= '0' && this->maskedTextBox1->Text[i] <= '9')
+			{
+				min = min * 10 + this->maskedTextBox1->Text[i] - 48;
+			}
+		}
+
+		for (int i = 0; i < this->maskedTextBox2->Text->Length && ready; i++)
+		{
+			if (this->maskedTextBox2->Text[i] == ' ' || this->maskedTextBox2->Text->Length < 5)
+			{
+				ready = false;
+			}
+		}
+
+		if (ready)
+		{
+			for (int i = 0; i < 2; i++)
+			{
+				h = h * 10 + this->maskedTextBox2->Text[i] - 48;
+				m = m * 10 + this->maskedTextBox2->Text[i + 3] - 48;
+			}
+			first_time = h * 60 + m;
+			int h1 = 0, m1 = 0;
+
+			for (int i = 0; i < 2; i++)
+			{
+				h1 = h1 * 10 + this->textBox3->Text[i] - 48;
+				m1 = m1 * 10 + this->textBox3->Text[i + 3] - 48;
+			}
+
+			ready = false;
+
+			if (h >= 0 && h <= 23 && m >= 0 && m <= 59)
+			{
+				if (h > h1 || h == h1 && m >= m1)
+				{
+					h1 = m1 = 0;
+					for (int i = 0; i < 2; i++)
+					{
+						h1 = h1 * 10 + this->textBox4->Text[i] - 48;
+						m1 = m1 * 10 + this->textBox4->Text[i + 3] - 48;
+					}
+
+					if (h < h1 || h == h1 && m <= m1)
+					{
+						ready = true;
+					}
+				}
+			}
+
+			if (ready)
+			{
+				this->maskedTextBox3->Enabled = true;
+
+				h = (first_time + 15 + min) / 60;
+				m = (first_time + 15 + min) % 60;
+
+				this->textBox5->Text = "";
+				if (h < 10)
+				{
+					this->textBox5->Text += "0";
+				}
+				this->textBox5->Text += h + ":";
+				if (m < 10)
+				{
+					this->textBox5->Text += "0";
+				}
+				this->textBox5->Text += m;
+
+
+				h = (21 * 60 - 15 - 2 * min) / 60;
+				m = (21 * 60 - 15 - 2 * min) % 60;
+
+				this->textBox6->Text = "";
+				if (h < 10)
+				{
+					this->textBox6->Text += "0";
+				}
+				this->textBox6->Text += h + ":";
+				if (m < 10)
+				{
+					this->textBox6->Text += "0";
+				}
+				this->textBox6->Text += m;
+			}
+			else
+			{
+				this->maskedTextBox3->Enabled = false;
+				this->maskedTextBox4->Enabled = false;
+
+				this->maskedTextBox2->Text = "";
+				this->maskedTextBox3->Text = "";
+				this->maskedTextBox4->Text = "";
+
+				this->textBox5->Text = "00:00";
+				this->textBox6->Text = "00:00";
+			}
+		}
+		else
+		{
+			this->maskedTextBox3->Enabled = false;
+			this->maskedTextBox4->Enabled = false;
+
+			this->maskedTextBox3->Text = "";
+			this->maskedTextBox4->Text = "";
+
+			this->textBox5->Text = "00:00";
+			this->textBox6->Text = "00:00";
 		}
 	}
 };
