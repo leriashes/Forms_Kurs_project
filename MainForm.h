@@ -26,7 +26,7 @@ namespace FormsKursproject {
 	private: File_O* file_stream;
 	private: cli::array<System::Windows::Forms::Panel^>^ seats;
 	private: System::Windows::Forms::Label^ label_center;
-	private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
+
 	private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel1;
 	private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel10;
 	private: System::Windows::Forms::PictureBox^ pictureBox9;
@@ -55,160 +55,160 @@ namespace FormsKursproject {
 	private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel2;
 	private: System::Windows::Forms::PictureBox^ pictureBox1;
 	private: System::Windows::Forms::TextBox^ textBox1;
-	private: System::Windows::Forms::Panel^ panel1;
-	private: System::Windows::Forms::ToolStrip^ toolStrip1;
-	private: System::Windows::Forms::ToolStripButton^ toolStripButton2;
-	private: System::Windows::Forms::ToolStripSeparator^ toolStripSeparator4;
-	private: System::Windows::Forms::ToolStripComboBox^ toolStripComboBox1;
-	private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel12;
-	private: System::Windows::Forms::ComboBox^ comboBox2;
-
-	private: System::Windows::Forms::Label^ label1;
-	private: System::Windows::Forms::ComboBox^ comboBox1;
-	private: System::Windows::Forms::Label^ label2;
 
 
-	private: System::Windows::Forms::Label^ label12;
-	private: System::Windows::Forms::Label^ label10;
-	private: System::Windows::Forms::Label^ label8;
-	private: System::Windows::Forms::Label^ label6;
-	private: System::Windows::Forms::Panel^ panel2;
 
-	private: System::Windows::Forms::Panel^ panel4;
-	private: System::Windows::Forms::Panel^ panel3;
-	private: System::Windows::Forms::Panel^ panel5;
-	private: System::Windows::Forms::Label^ label3;
-	private: System::Windows::Forms::Button^ button1;
-	private: System::Windows::Forms::Button^ button2;
-	private: System::Windows::Forms::Button^ button3;
-	private: System::Windows::Forms::TextBox^ textBox10;
-	private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel13;
-	private: System::Windows::Forms::Label^ label5;
-	private: System::Windows::Forms::Label^ label4;
-	private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel14;
-	private: System::Windows::Forms::Label^ label19;
-	private: System::Windows::Forms::Label^ label18;
-	private: System::Windows::Forms::Label^ label17;
-	private: System::Windows::Forms::Label^ label16;
-	private: System::Windows::Forms::Label^ label15;
-	private: System::Windows::Forms::Label^ label14;
-	private: System::Windows::Forms::Label^ label13;
-	private: System::Windows::Forms::Label^ label11;
-	private: System::Windows::Forms::Label^ label9;
-	private: System::Windows::Forms::Label^ label7;
-	private: System::Windows::Forms::Label^ label29;
-	private: System::Windows::Forms::Label^ label28;
-	private: System::Windows::Forms::Label^ label27;
-	private: System::Windows::Forms::Label^ label26;
-	private: System::Windows::Forms::Label^ label25;
-	private: System::Windows::Forms::Label^ label24;
-	private: System::Windows::Forms::Label^ label23;
-	private: System::Windows::Forms::Label^ label22;
-	private: System::Windows::Forms::Label^ label21;
-	private: System::Windows::Forms::Label^ label20;
-	private: System::Windows::Forms::Panel^ panel7;
-	private: System::Windows::Forms::Panel^ panel8;
-	private: System::Windows::Forms::Panel^ panel6;
-	private: System::Windows::Forms::Panel^ panel9;
-	private: System::Windows::Forms::Panel^ panel10;
-	private: System::Windows::Forms::Panel^ panel11;
-	private: System::Windows::Forms::Panel^ panel12;
-	private: System::Windows::Forms::Panel^ panel13;
-	private: System::Windows::Forms::Panel^ panel14;
-	private: System::Windows::Forms::Panel^ panel15;
-	private: System::Windows::Forms::Panel^ panel16;
-	private: System::Windows::Forms::Panel^ panel17;
-	private: System::Windows::Forms::Panel^ panel18;
-	private: System::Windows::Forms::Panel^ panel19;
-	private: System::Windows::Forms::Panel^ panel20;
-	private: System::Windows::Forms::Panel^ panel21;
-	private: System::Windows::Forms::Panel^ panel22;
-	private: System::Windows::Forms::Panel^ panel23;
-	private: System::Windows::Forms::Panel^ panel24;
-	private: System::Windows::Forms::Panel^ panel25;
-	private: System::Windows::Forms::Panel^ panel26;
-	private: System::Windows::Forms::Panel^ panel27;
-	private: System::Windows::Forms::Panel^ panel28;
-	private: System::Windows::Forms::Panel^ panel29;
-	private: System::Windows::Forms::Panel^ panel30;
-	private: System::Windows::Forms::Panel^ panel32;
-	private: System::Windows::Forms::Panel^ panel31;
-	private: System::Windows::Forms::Panel^ panel33;
-	private: System::Windows::Forms::Panel^ panel34;
-	private: System::Windows::Forms::Panel^ panel35;
-	private: System::Windows::Forms::Panel^ panel36;
-	private: System::Windows::Forms::Panel^ panel37;
-	private: System::Windows::Forms::Panel^ panel38;
-	private: System::Windows::Forms::Panel^ panel39;
-	private: System::Windows::Forms::Panel^ panel40;
-	private: System::Windows::Forms::Panel^ panel41;
-	private: System::Windows::Forms::Panel^ panel42;
-	private: System::Windows::Forms::Panel^ panel43;
-	private: System::Windows::Forms::Panel^ panel44;
-	private: System::Windows::Forms::Panel^ panel45;
-	private: System::Windows::Forms::Panel^ panel46;
-	private: System::Windows::Forms::Panel^ panel47;
-	private: System::Windows::Forms::Panel^ panel48;
-	private: System::Windows::Forms::Panel^ panel49;
-	private: System::Windows::Forms::Panel^ panel50;
-	private: System::Windows::Forms::Panel^ panel51;
-	private: System::Windows::Forms::Panel^ panel52;
-	private: System::Windows::Forms::Panel^ panel53;
-	private: System::Windows::Forms::Panel^ panel54;
-	private: System::Windows::Forms::Panel^ panel55;
-	private: System::Windows::Forms::Panel^ panel56;
-	private: System::Windows::Forms::Panel^ panel57;
-	private: System::Windows::Forms::Panel^ panel58;
-	private: System::Windows::Forms::Panel^ panel59;
-	private: System::Windows::Forms::Panel^ panel60;
-	private: System::Windows::Forms::Panel^ panel61;
-	private: System::Windows::Forms::Panel^ panel62;
-	private: System::Windows::Forms::Panel^ panel63;
-	private: System::Windows::Forms::Panel^ panel64;
-	private: System::Windows::Forms::Panel^ panel65;
-	private: System::Windows::Forms::Panel^ panel66;
-	private: System::Windows::Forms::Panel^ panel67;
-	private: System::Windows::Forms::Panel^ panel70;
-	private: System::Windows::Forms::Panel^ panel69;
-	private: System::Windows::Forms::Panel^ panel68;
-	private: System::Windows::Forms::Panel^ panel71;
-	private: System::Windows::Forms::Panel^ panel72;
-	private: System::Windows::Forms::Panel^ panel73;
-	private: System::Windows::Forms::Panel^ panel74;
-	private: System::Windows::Forms::Panel^ panel75;
-	private: System::Windows::Forms::Panel^ panel76;
-	private: System::Windows::Forms::Panel^ panel77;
-	private: System::Windows::Forms::Panel^ panel78;
-	private: System::Windows::Forms::Panel^ panel79;
-	private: System::Windows::Forms::Panel^ panel80;
-	private: System::Windows::Forms::Panel^ panel81;
-	private: System::Windows::Forms::Panel^ panel82;
-	private: System::Windows::Forms::Panel^ panel83;
-	private: System::Windows::Forms::Panel^ panel84;
-	private: System::Windows::Forms::Panel^ panel85;
-	private: System::Windows::Forms::Panel^ panel86;
-	private: System::Windows::Forms::Panel^ panel87;
-	private: System::Windows::Forms::Panel^ panel88;
-	private: System::Windows::Forms::Panel^ panel89;
-	private: System::Windows::Forms::Panel^ panel90;
-	private: System::Windows::Forms::Panel^ panel91;
-	private: System::Windows::Forms::Panel^ panel92;
-	private: System::Windows::Forms::Panel^ panel93;
-	private: System::Windows::Forms::Panel^ panel94;
-	private: System::Windows::Forms::Panel^ panel95;
-	private: System::Windows::Forms::Panel^ panel96;
-	private: System::Windows::Forms::Panel^ panel97;
-	private: System::Windows::Forms::Panel^ panel98;
-	private: System::Windows::Forms::Panel^ panel99;
-	private: System::Windows::Forms::Panel^ panel100;
-	private: System::Windows::Forms::Panel^ panel101;
-	private: System::Windows::Forms::Panel^ panel102;
-	private: System::Windows::Forms::Panel^ panel103;
-	private: System::Windows::Forms::Panel^ panel104;
-	private: System::Windows::Forms::Panel^ panel105;
-private: System::Windows::Forms::Label^ label30;
-private: System::Windows::Forms::Label^ label32;
-private: System::Windows::Forms::Label^ label31;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 private: System::Windows::Forms::ToolStripMenuItem^ ReportToolStripMenuItem;
 private: System::Windows::Forms::ToolStripMenuItem^ TodayReportToolStripMenuItem;
 private: System::Windows::Forms::ToolStripMenuItem^ AllTimeReportToolStripMenuItem;
@@ -226,6 +226,159 @@ private: System::Windows::Forms::ToolStripMenuItem^ AddressToolStripMenuItem;
 private: System::Windows::Forms::ToolStripMenuItem^ CashiersToolStripMenuItem;
 private: System::Windows::Forms::ToolStripMenuItem^ INNToolStripMenuItem;
 private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
+private: System::Windows::Forms::Panel^ panelPlus;
+
+private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel13;
+private: System::Windows::Forms::Label^ label5;
+private: System::Windows::Forms::Label^ label4;
+private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel14;
+private: System::Windows::Forms::Label^ label30;
+private: System::Windows::Forms::Label^ label29;
+private: System::Windows::Forms::Label^ label28;
+private: System::Windows::Forms::Label^ label27;
+private: System::Windows::Forms::Label^ label26;
+private: System::Windows::Forms::Label^ label25;
+private: System::Windows::Forms::Label^ label24;
+private: System::Windows::Forms::Label^ label23;
+private: System::Windows::Forms::Label^ label22;
+private: System::Windows::Forms::Label^ label21;
+private: System::Windows::Forms::Label^ label20;
+private: System::Windows::Forms::Label^ label19;
+private: System::Windows::Forms::Label^ label18;
+private: System::Windows::Forms::Label^ label17;
+private: System::Windows::Forms::Label^ label16;
+private: System::Windows::Forms::Label^ label15;
+private: System::Windows::Forms::Label^ label14;
+private: System::Windows::Forms::Label^ label13;
+private: System::Windows::Forms::Label^ label11;
+private: System::Windows::Forms::Label^ label9;
+private: System::Windows::Forms::Label^ label7;
+private: System::Windows::Forms::Panel^ panel7;
+private: System::Windows::Forms::Panel^ panel8;
+private: System::Windows::Forms::Panel^ panel6;
+private: System::Windows::Forms::Panel^ panel9;
+private: System::Windows::Forms::Panel^ panel10;
+private: System::Windows::Forms::Panel^ panel11;
+private: System::Windows::Forms::Panel^ panel12;
+private: System::Windows::Forms::Panel^ panel13;
+private: System::Windows::Forms::Panel^ panel14;
+private: System::Windows::Forms::Panel^ panel15;
+private: System::Windows::Forms::Panel^ panel16;
+private: System::Windows::Forms::Panel^ panel17;
+private: System::Windows::Forms::Panel^ panel18;
+private: System::Windows::Forms::Panel^ panel19;
+private: System::Windows::Forms::Panel^ panel20;
+private: System::Windows::Forms::Panel^ panel21;
+private: System::Windows::Forms::Panel^ panel22;
+private: System::Windows::Forms::Panel^ panel23;
+private: System::Windows::Forms::Panel^ panel24;
+private: System::Windows::Forms::Panel^ panel25;
+private: System::Windows::Forms::Panel^ panel26;
+private: System::Windows::Forms::Panel^ panel27;
+private: System::Windows::Forms::Panel^ panel28;
+private: System::Windows::Forms::Panel^ panel29;
+private: System::Windows::Forms::Panel^ panel30;
+private: System::Windows::Forms::Panel^ panel32;
+private: System::Windows::Forms::Panel^ panel31;
+private: System::Windows::Forms::Panel^ panel33;
+private: System::Windows::Forms::Panel^ panel34;
+private: System::Windows::Forms::Panel^ panel35;
+private: System::Windows::Forms::Panel^ panel36;
+private: System::Windows::Forms::Panel^ panel37;
+private: System::Windows::Forms::Panel^ panel38;
+private: System::Windows::Forms::Panel^ panel39;
+private: System::Windows::Forms::Panel^ panel40;
+private: System::Windows::Forms::Panel^ panel41;
+private: System::Windows::Forms::Panel^ panel42;
+private: System::Windows::Forms::Panel^ panel43;
+private: System::Windows::Forms::Panel^ panel44;
+private: System::Windows::Forms::Panel^ panel45;
+private: System::Windows::Forms::Panel^ panel46;
+private: System::Windows::Forms::Panel^ panel47;
+private: System::Windows::Forms::Panel^ panel48;
+private: System::Windows::Forms::Panel^ panel49;
+private: System::Windows::Forms::Panel^ panel50;
+private: System::Windows::Forms::Panel^ panel51;
+private: System::Windows::Forms::Panel^ panel52;
+private: System::Windows::Forms::Panel^ panel53;
+private: System::Windows::Forms::Panel^ panel54;
+private: System::Windows::Forms::Panel^ panel55;
+private: System::Windows::Forms::Panel^ panel56;
+private: System::Windows::Forms::Panel^ panel57;
+private: System::Windows::Forms::Panel^ panel58;
+private: System::Windows::Forms::Panel^ panel59;
+private: System::Windows::Forms::Panel^ panel60;
+private: System::Windows::Forms::Panel^ panel61;
+private: System::Windows::Forms::Panel^ panel62;
+private: System::Windows::Forms::Panel^ panel63;
+private: System::Windows::Forms::Panel^ panel64;
+private: System::Windows::Forms::Panel^ panel65;
+private: System::Windows::Forms::Panel^ panel66;
+private: System::Windows::Forms::Panel^ panel67;
+private: System::Windows::Forms::Panel^ panel70;
+private: System::Windows::Forms::Panel^ panel69;
+private: System::Windows::Forms::Panel^ panel68;
+private: System::Windows::Forms::Panel^ panel71;
+private: System::Windows::Forms::Panel^ panel72;
+private: System::Windows::Forms::Panel^ panel73;
+private: System::Windows::Forms::Panel^ panel74;
+private: System::Windows::Forms::Panel^ panel75;
+private: System::Windows::Forms::Panel^ panel76;
+private: System::Windows::Forms::Panel^ panel77;
+private: System::Windows::Forms::Panel^ panel78;
+private: System::Windows::Forms::Panel^ panel79;
+private: System::Windows::Forms::Panel^ panel80;
+private: System::Windows::Forms::Panel^ panel81;
+private: System::Windows::Forms::Panel^ panel82;
+private: System::Windows::Forms::Panel^ panel83;
+private: System::Windows::Forms::Panel^ panel84;
+private: System::Windows::Forms::Panel^ panel85;
+private: System::Windows::Forms::Panel^ panel86;
+private: System::Windows::Forms::Panel^ panel87;
+private: System::Windows::Forms::Panel^ panel88;
+private: System::Windows::Forms::Panel^ panel89;
+private: System::Windows::Forms::Panel^ panel90;
+private: System::Windows::Forms::Panel^ panel91;
+private: System::Windows::Forms::Panel^ panel92;
+private: System::Windows::Forms::Panel^ panel93;
+private: System::Windows::Forms::Panel^ panel94;
+private: System::Windows::Forms::Panel^ panel95;
+private: System::Windows::Forms::Panel^ panel96;
+private: System::Windows::Forms::Panel^ panel97;
+private: System::Windows::Forms::Panel^ panel98;
+private: System::Windows::Forms::Panel^ panel99;
+private: System::Windows::Forms::Panel^ panel100;
+private: System::Windows::Forms::Panel^ panel101;
+private: System::Windows::Forms::Panel^ panel102;
+private: System::Windows::Forms::Panel^ panel103;
+private: System::Windows::Forms::Panel^ panel104;
+private: System::Windows::Forms::Panel^ panel105;
+private: System::Windows::Forms::Label^ label31;
+private: System::Windows::Forms::Panel^ panel1;
+private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel12;
+private: System::Windows::Forms::Label^ label32;
+private: System::Windows::Forms::Label^ label3;
+private: System::Windows::Forms::Panel^ panel5;
+private: System::Windows::Forms::Panel^ panel4;
+private: System::Windows::Forms::Panel^ panel3;
+private: System::Windows::Forms::Label^ label12;
+private: System::Windows::Forms::Label^ label10;
+private: System::Windows::Forms::Label^ label8;
+private: System::Windows::Forms::Label^ label6;
+private: System::Windows::Forms::Label^ label2;
+private: System::Windows::Forms::ComboBox^ comboBox2;
+private: System::Windows::Forms::Label^ label1;
+private: System::Windows::Forms::ComboBox^ comboBox1;
+private: System::Windows::Forms::Panel^ panel2;
+private: System::Windows::Forms::TextBox^ textBox10;
+private: System::Windows::Forms::Button^ button1;
+private: System::Windows::Forms::Button^ button2;
+private: System::Windows::Forms::Button^ button3;
+private: System::Windows::Forms::ToolStrip^ toolStrip1;
+private: System::Windows::Forms::ToolStripButton^ toolStripButton2;
+private: System::Windows::Forms::ToolStripSeparator^ toolStripSeparator4;
+private: System::Windows::Forms::ToolStripComboBox^ toolStripComboBox1;
+private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 
 
 
@@ -429,33 +582,36 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->openFileDialog1 = (gcnew System::Windows::Forms::OpenFileDialog());
 			this->saveFileDialog1 = (gcnew System::Windows::Forms::SaveFileDialog());
 			this->label_center = (gcnew System::Windows::Forms::Label());
-			this->tableLayoutPanel11 = (gcnew System::Windows::Forms::TableLayoutPanel());
-			this->panel1 = (gcnew System::Windows::Forms::Panel());
-			this->tableLayoutPanel12 = (gcnew System::Windows::Forms::TableLayoutPanel());
-			this->label32 = (gcnew System::Windows::Forms::Label());
-			this->label3 = (gcnew System::Windows::Forms::Label());
-			this->panel5 = (gcnew System::Windows::Forms::Panel());
-			this->panel4 = (gcnew System::Windows::Forms::Panel());
-			this->panel3 = (gcnew System::Windows::Forms::Panel());
-			this->label12 = (gcnew System::Windows::Forms::Label());
-			this->label10 = (gcnew System::Windows::Forms::Label());
-			this->label8 = (gcnew System::Windows::Forms::Label());
-			this->label6 = (gcnew System::Windows::Forms::Label());
-			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->comboBox2 = (gcnew System::Windows::Forms::ComboBox());
-			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
-			this->panel2 = (gcnew System::Windows::Forms::Panel());
-			this->textBox10 = (gcnew System::Windows::Forms::TextBox());
-			this->button1 = (gcnew System::Windows::Forms::Button());
-			this->button2 = (gcnew System::Windows::Forms::Button());
-			this->button3 = (gcnew System::Windows::Forms::Button());
-			this->toolStrip1 = (gcnew System::Windows::Forms::ToolStrip());
-			this->toolStripButton2 = (gcnew System::Windows::Forms::ToolStripButton());
-			this->toolStripSeparator4 = (gcnew System::Windows::Forms::ToolStripSeparator());
-			this->toolStripComboBox1 = (gcnew System::Windows::Forms::ToolStripComboBox());
+			this->tableLayoutPanel1 = (gcnew System::Windows::Forms::TableLayoutPanel());
+			this->tableLayoutPanel10 = (gcnew System::Windows::Forms::TableLayoutPanel());
+			this->pictureBox9 = (gcnew System::Windows::Forms::PictureBox());
+			this->textBox9 = (gcnew System::Windows::Forms::TextBox());
+			this->tableLayoutPanel9 = (gcnew System::Windows::Forms::TableLayoutPanel());
+			this->pictureBox8 = (gcnew System::Windows::Forms::PictureBox());
+			this->textBox8 = (gcnew System::Windows::Forms::TextBox());
+			this->tableLayoutPanel8 = (gcnew System::Windows::Forms::TableLayoutPanel());
+			this->pictureBox7 = (gcnew System::Windows::Forms::PictureBox());
+			this->textBox7 = (gcnew System::Windows::Forms::TextBox());
+			this->tableLayoutPanel7 = (gcnew System::Windows::Forms::TableLayoutPanel());
+			this->pictureBox6 = (gcnew System::Windows::Forms::PictureBox());
+			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
+			this->tableLayoutPanel6 = (gcnew System::Windows::Forms::TableLayoutPanel());
+			this->pictureBox5 = (gcnew System::Windows::Forms::PictureBox());
+			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
+			this->tableLayoutPanel5 = (gcnew System::Windows::Forms::TableLayoutPanel());
+			this->pictureBox4 = (gcnew System::Windows::Forms::PictureBox());
+			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
+			this->tableLayoutPanel4 = (gcnew System::Windows::Forms::TableLayoutPanel());
+			this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
+			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
+			this->tableLayoutPanel3 = (gcnew System::Windows::Forms::TableLayoutPanel());
+			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
+			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
+			this->tableLayoutPanel2 = (gcnew System::Windows::Forms::TableLayoutPanel());
+			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+			this->panelPlus = (gcnew System::Windows::Forms::Panel());
 			this->tableLayoutPanel13 = (gcnew System::Windows::Forms::TableLayoutPanel());
-			this->label31 = (gcnew System::Windows::Forms::Label());
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->tableLayoutPanel14 = (gcnew System::Windows::Forms::TableLayoutPanel());
@@ -580,42 +736,34 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel103 = (gcnew System::Windows::Forms::Panel());
 			this->panel104 = (gcnew System::Windows::Forms::Panel());
 			this->panel105 = (gcnew System::Windows::Forms::Panel());
-			this->tableLayoutPanel1 = (gcnew System::Windows::Forms::TableLayoutPanel());
-			this->tableLayoutPanel10 = (gcnew System::Windows::Forms::TableLayoutPanel());
-			this->pictureBox9 = (gcnew System::Windows::Forms::PictureBox());
-			this->textBox9 = (gcnew System::Windows::Forms::TextBox());
-			this->tableLayoutPanel9 = (gcnew System::Windows::Forms::TableLayoutPanel());
-			this->pictureBox8 = (gcnew System::Windows::Forms::PictureBox());
-			this->textBox8 = (gcnew System::Windows::Forms::TextBox());
-			this->tableLayoutPanel8 = (gcnew System::Windows::Forms::TableLayoutPanel());
-			this->pictureBox7 = (gcnew System::Windows::Forms::PictureBox());
-			this->textBox7 = (gcnew System::Windows::Forms::TextBox());
-			this->tableLayoutPanel7 = (gcnew System::Windows::Forms::TableLayoutPanel());
-			this->pictureBox6 = (gcnew System::Windows::Forms::PictureBox());
-			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
-			this->tableLayoutPanel6 = (gcnew System::Windows::Forms::TableLayoutPanel());
-			this->pictureBox5 = (gcnew System::Windows::Forms::PictureBox());
-			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
-			this->tableLayoutPanel5 = (gcnew System::Windows::Forms::TableLayoutPanel());
-			this->pictureBox4 = (gcnew System::Windows::Forms::PictureBox());
-			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
-			this->tableLayoutPanel4 = (gcnew System::Windows::Forms::TableLayoutPanel());
-			this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
-			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
-			this->tableLayoutPanel3 = (gcnew System::Windows::Forms::TableLayoutPanel());
-			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
-			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
-			this->tableLayoutPanel2 = (gcnew System::Windows::Forms::TableLayoutPanel());
-			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+			this->label31 = (gcnew System::Windows::Forms::Label());
+			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->tableLayoutPanel12 = (gcnew System::Windows::Forms::TableLayoutPanel());
+			this->label32 = (gcnew System::Windows::Forms::Label());
+			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->panel5 = (gcnew System::Windows::Forms::Panel());
+			this->panel4 = (gcnew System::Windows::Forms::Panel());
+			this->panel3 = (gcnew System::Windows::Forms::Panel());
+			this->label12 = (gcnew System::Windows::Forms::Label());
+			this->label10 = (gcnew System::Windows::Forms::Label());
+			this->label8 = (gcnew System::Windows::Forms::Label());
+			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->comboBox2 = (gcnew System::Windows::Forms::ComboBox());
+			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
+			this->panel2 = (gcnew System::Windows::Forms::Panel());
+			this->textBox10 = (gcnew System::Windows::Forms::TextBox());
+			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->button2 = (gcnew System::Windows::Forms::Button());
+			this->button3 = (gcnew System::Windows::Forms::Button());
+			this->toolStrip1 = (gcnew System::Windows::Forms::ToolStrip());
+			this->toolStripButton2 = (gcnew System::Windows::Forms::ToolStripButton());
+			this->toolStripSeparator4 = (gcnew System::Windows::Forms::ToolStripSeparator());
+			this->toolStripComboBox1 = (gcnew System::Windows::Forms::ToolStripComboBox());
+			this->tableLayoutPanel11 = (gcnew System::Windows::Forms::TableLayoutPanel());
 			this->menustrip_main->SuspendLayout();
 			this->statusStrip1->SuspendLayout();
-			this->tableLayoutPanel11->SuspendLayout();
-			this->panel1->SuspendLayout();
-			this->tableLayoutPanel12->SuspendLayout();
-			this->toolStrip1->SuspendLayout();
-			this->tableLayoutPanel13->SuspendLayout();
-			this->tableLayoutPanel14->SuspendLayout();
 			this->tableLayoutPanel1->SuspendLayout();
 			this->tableLayoutPanel10->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox9))->BeginInit();
@@ -635,6 +783,12 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			this->tableLayoutPanel2->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
+			this->tableLayoutPanel13->SuspendLayout();
+			this->tableLayoutPanel14->SuspendLayout();
+			this->panel1->SuspendLayout();
+			this->tableLayoutPanel12->SuspendLayout();
+			this->toolStrip1->SuspendLayout();
+			this->tableLayoutPanel11->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// menustrip_main
@@ -918,360 +1072,544 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			// 
 			this->label_center->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->label_center->ForeColor = System::Drawing::SystemColors::GrayText;
-			this->label_center->Location = System::Drawing::Point(0, 0);
+			this->label_center->Location = System::Drawing::Point(0, 24);
 			this->label_center->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label_center->Name = L"label_center";
-			this->label_center->Size = System::Drawing::Size(1018, 662);
+			this->label_center->Size = System::Drawing::Size(1018, 638);
 			this->label_center->TabIndex = 3;
 			this->label_center->Text = L"Файл не выбран";
 			this->label_center->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
-			// tableLayoutPanel11
+			// tableLayoutPanel1
 			// 
-			this->tableLayoutPanel11->BackColor = System::Drawing::Color::Silver;
-			this->tableLayoutPanel11->ColumnCount = 2;
-			this->tableLayoutPanel11->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
-				254)));
-			this->tableLayoutPanel11->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent,
+			this->tableLayoutPanel1->BackColor = System::Drawing::SystemColors::ControlDark;
+			this->tableLayoutPanel1->ColumnCount = 3;
+			this->tableLayoutPanel1->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent,
+				33.33333F)));
+			this->tableLayoutPanel1->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent,
+				33.33334F)));
+			this->tableLayoutPanel1->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent,
+				33.33334F)));
+			this->tableLayoutPanel1->Controls->Add(this->tableLayoutPanel10, 2, 2);
+			this->tableLayoutPanel1->Controls->Add(this->tableLayoutPanel9, 1, 2);
+			this->tableLayoutPanel1->Controls->Add(this->tableLayoutPanel8, 0, 2);
+			this->tableLayoutPanel1->Controls->Add(this->tableLayoutPanel7, 2, 1);
+			this->tableLayoutPanel1->Controls->Add(this->tableLayoutPanel6, 1, 1);
+			this->tableLayoutPanel1->Controls->Add(this->tableLayoutPanel5, 0, 1);
+			this->tableLayoutPanel1->Controls->Add(this->tableLayoutPanel4, 2, 0);
+			this->tableLayoutPanel1->Controls->Add(this->tableLayoutPanel3, 1, 0);
+			this->tableLayoutPanel1->Controls->Add(this->tableLayoutPanel2, 0, 0);
+			this->tableLayoutPanel1->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->tableLayoutPanel1->GrowStyle = System::Windows::Forms::TableLayoutPanelGrowStyle::FixedSize;
+			this->tableLayoutPanel1->Location = System::Drawing::Point(0, 24);
+			this->tableLayoutPanel1->Margin = System::Windows::Forms::Padding(2);
+			this->tableLayoutPanel1->Name = L"tableLayoutPanel1";
+			this->tableLayoutPanel1->RowCount = 3;
+			this->tableLayoutPanel1->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 33.33333F)));
+			this->tableLayoutPanel1->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 33.33333F)));
+			this->tableLayoutPanel1->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 33.33333F)));
+			this->tableLayoutPanel1->Size = System::Drawing::Size(1018, 616);
+			this->tableLayoutPanel1->TabIndex = 6;
+			this->tableLayoutPanel1->Visible = false;
+			// 
+			// tableLayoutPanel10
+			// 
+			this->tableLayoutPanel10->BackColor = System::Drawing::SystemColors::ControlDarkDark;
+			this->tableLayoutPanel10->ColumnCount = 2;
+			this->tableLayoutPanel10->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
 				100)));
-			this->tableLayoutPanel11->Controls->Add(this->panel1, 0, 0);
-			this->tableLayoutPanel11->Controls->Add(this->tableLayoutPanel13, 1, 0);
-			this->tableLayoutPanel11->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->tableLayoutPanel11->Location = System::Drawing::Point(0, 24);
-			this->tableLayoutPanel11->Name = L"tableLayoutPanel11";
-			this->tableLayoutPanel11->RowCount = 1;
-			this->tableLayoutPanel11->RowStyles->Add((gcnew System::Windows::Forms::RowStyle()));
-			this->tableLayoutPanel11->Size = System::Drawing::Size(1018, 616);
-			this->tableLayoutPanel11->TabIndex = 4;
-			this->tableLayoutPanel11->Visible = false;
+			this->tableLayoutPanel10->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
+				236)));
+			this->tableLayoutPanel10->Controls->Add(this->pictureBox9, 0, 0);
+			this->tableLayoutPanel10->Controls->Add(this->textBox9, 1, 0);
+			this->tableLayoutPanel10->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->tableLayoutPanel10->Location = System::Drawing::Point(680, 412);
+			this->tableLayoutPanel10->Margin = System::Windows::Forms::Padding(2);
+			this->tableLayoutPanel10->MinimumSize = System::Drawing::Size(269, 155);
+			this->tableLayoutPanel10->Name = L"tableLayoutPanel10";
+			this->tableLayoutPanel10->RowCount = 1;
+			this->tableLayoutPanel10->RowStyles->Add((gcnew System::Windows::Forms::RowStyle()));
+			this->tableLayoutPanel10->Size = System::Drawing::Size(336, 202);
+			this->tableLayoutPanel10->TabIndex = 11;
+			this->tableLayoutPanel10->Visible = false;
 			// 
-			// panel1
+			// pictureBox9
 			// 
-			this->panel1->BackColor = System::Drawing::SystemColors::ControlLightLight;
-			this->panel1->Controls->Add(this->tableLayoutPanel12);
-			this->panel1->Controls->Add(this->toolStrip1);
-			this->panel1->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->panel1->Location = System::Drawing::Point(0, 0);
-			this->panel1->Margin = System::Windows::Forms::Padding(0);
-			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(254, 616);
-			this->panel1->TabIndex = 0;
+			this->pictureBox9->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->pictureBox9->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->pictureBox9->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox9.Image")));
+			this->pictureBox9->Location = System::Drawing::Point(2, 2);
+			this->pictureBox9->Margin = System::Windows::Forms::Padding(2);
+			this->pictureBox9->Name = L"pictureBox9";
+			this->pictureBox9->Size = System::Drawing::Size(96, 198);
+			this->pictureBox9->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->pictureBox9->TabIndex = 0;
+			this->pictureBox9->TabStop = false;
+			this->pictureBox9->Click += gcnew System::EventHandler(this, &MainForm::pictureBox9_Click);
 			// 
-			// tableLayoutPanel12
+			// textBox9
 			// 
-			this->tableLayoutPanel12->BackColor = System::Drawing::SystemColors::Control;
-			this->tableLayoutPanel12->ColumnCount = 2;
-			this->tableLayoutPanel12->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
-				53)));
-			this->tableLayoutPanel12->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
-				201)));
-			this->tableLayoutPanel12->Controls->Add(this->label32, 0, 7);
-			this->tableLayoutPanel12->Controls->Add(this->label3, 0, 9);
-			this->tableLayoutPanel12->Controls->Add(this->panel5, 0, 6);
-			this->tableLayoutPanel12->Controls->Add(this->panel4, 0, 5);
-			this->tableLayoutPanel12->Controls->Add(this->panel3, 0, 4);
-			this->tableLayoutPanel12->Controls->Add(this->label12, 1, 6);
-			this->tableLayoutPanel12->Controls->Add(this->label10, 1, 5);
-			this->tableLayoutPanel12->Controls->Add(this->label8, 1, 4);
-			this->tableLayoutPanel12->Controls->Add(this->label6, 1, 3);
-			this->tableLayoutPanel12->Controls->Add(this->label2, 0, 1);
-			this->tableLayoutPanel12->Controls->Add(this->comboBox2, 1, 1);
-			this->tableLayoutPanel12->Controls->Add(this->label1, 0, 0);
-			this->tableLayoutPanel12->Controls->Add(this->comboBox1, 1, 0);
-			this->tableLayoutPanel12->Controls->Add(this->panel2, 0, 3);
-			this->tableLayoutPanel12->Controls->Add(this->textBox10, 1, 9);
-			this->tableLayoutPanel12->Controls->Add(this->button1, 1, 12);
-			this->tableLayoutPanel12->Controls->Add(this->button2, 1, 11);
-			this->tableLayoutPanel12->Controls->Add(this->button3, 1, 10);
-			this->tableLayoutPanel12->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->tableLayoutPanel12->Location = System::Drawing::Point(0, 25);
-			this->tableLayoutPanel12->Name = L"tableLayoutPanel12";
-			this->tableLayoutPanel12->RowCount = 13;
-			this->tableLayoutPanel12->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Absolute,
-				25)));
-			this->tableLayoutPanel12->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Absolute,
-				25)));
-			this->tableLayoutPanel12->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 50)));
-			this->tableLayoutPanel12->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Absolute,
-				40)));
-			this->tableLayoutPanel12->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Absolute,
-				40)));
-			this->tableLayoutPanel12->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Absolute,
-				40)));
-			this->tableLayoutPanel12->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Absolute,
-				40)));
-			this->tableLayoutPanel12->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Absolute,
-				40)));
-			this->tableLayoutPanel12->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 50)));
-			this->tableLayoutPanel12->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Absolute,
-				40)));
-			this->tableLayoutPanel12->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Absolute,
-				40)));
-			this->tableLayoutPanel12->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Absolute,
-				40)));
-			this->tableLayoutPanel12->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Absolute,
-				40)));
-			this->tableLayoutPanel12->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Absolute,
-				20)));
-			this->tableLayoutPanel12->Size = System::Drawing::Size(254, 591);
-			this->tableLayoutPanel12->TabIndex = 2;
+			this->textBox9->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->textBox9->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->textBox9->Cursor = System::Windows::Forms::Cursors::Arrow;
+			this->textBox9->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->textBox9->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->textBox9->ForeColor = System::Drawing::SystemColors::Menu;
+			this->textBox9->Location = System::Drawing::Point(103, 3);
+			this->textBox9->Multiline = true;
+			this->textBox9->Name = L"textBox9";
+			this->textBox9->ReadOnly = true;
+			this->textBox9->ScrollBars = System::Windows::Forms::ScrollBars::Both;
+			this->textBox9->Size = System::Drawing::Size(230, 196);
+			this->textBox9->TabIndex = 1;
 			// 
-			// label32
+			// tableLayoutPanel9
 			// 
-			this->label32->AutoSize = true;
-			this->tableLayoutPanel12->SetColumnSpan(this->label32, 2);
-			this->label32->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->label32->Location = System::Drawing::Point(3, 303);
-			this->label32->Margin = System::Windows::Forms::Padding(3);
-			this->label32->Name = L"label32";
-			this->label32->Size = System::Drawing::Size(248, 34);
-			this->label32->TabIndex = 30;
-			this->label32->Text = L"Цена билета: 0 руб.";
-			this->label32->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			this->tableLayoutPanel9->BackColor = System::Drawing::SystemColors::ControlDarkDark;
+			this->tableLayoutPanel9->ColumnCount = 2;
+			this->tableLayoutPanel9->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
+				100)));
+			this->tableLayoutPanel9->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
+				235)));
+			this->tableLayoutPanel9->Controls->Add(this->pictureBox8, 0, 0);
+			this->tableLayoutPanel9->Controls->Add(this->textBox8, 1, 0);
+			this->tableLayoutPanel9->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->tableLayoutPanel9->Location = System::Drawing::Point(341, 412);
+			this->tableLayoutPanel9->Margin = System::Windows::Forms::Padding(2);
+			this->tableLayoutPanel9->MinimumSize = System::Drawing::Size(269, 155);
+			this->tableLayoutPanel9->Name = L"tableLayoutPanel9";
+			this->tableLayoutPanel9->RowCount = 1;
+			this->tableLayoutPanel9->RowStyles->Add((gcnew System::Windows::Forms::RowStyle()));
+			this->tableLayoutPanel9->Size = System::Drawing::Size(335, 202);
+			this->tableLayoutPanel9->TabIndex = 10;
+			this->tableLayoutPanel9->Visible = false;
 			// 
-			// label3
+			// pictureBox8
 			// 
-			this->label3->AutoSize = true;
-			this->label3->Dock = System::Windows::Forms::DockStyle::Top;
-			this->label3->Location = System::Drawing::Point(3, 437);
-			this->label3->Margin = System::Windows::Forms::Padding(3, 7, 3, 0);
-			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(47, 26);
-			this->label3->TabIndex = 28;
-			this->label3->Text = L"Код заказа:";
-			this->label3->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			this->pictureBox8->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->pictureBox8->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->pictureBox8->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox8.Image")));
+			this->pictureBox8->Location = System::Drawing::Point(2, 2);
+			this->pictureBox8->Margin = System::Windows::Forms::Padding(2);
+			this->pictureBox8->Name = L"pictureBox8";
+			this->pictureBox8->Size = System::Drawing::Size(96, 198);
+			this->pictureBox8->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->pictureBox8->TabIndex = 0;
+			this->pictureBox8->TabStop = false;
+			this->pictureBox8->Click += gcnew System::EventHandler(this, &MainForm::pictureBox8_Click);
 			// 
-			// panel5
+			// textBox8
 			// 
-			this->panel5->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
-			this->panel5->BackColor = System::Drawing::Color::Brown;
-			this->panel5->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->panel5->Location = System::Drawing::Point(20, 265);
-			this->panel5->Margin = System::Windows::Forms::Padding(10, 5, 3, 3);
-			this->panel5->MaximumSize = System::Drawing::Size(30, 30);
-			this->panel5->Name = L"panel5";
-			this->panel5->Size = System::Drawing::Size(30, 30);
-			this->panel5->TabIndex = 24;
+			this->textBox8->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->textBox8->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->textBox8->Cursor = System::Windows::Forms::Cursors::Arrow;
+			this->textBox8->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->textBox8->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->textBox8->ForeColor = System::Drawing::SystemColors::Menu;
+			this->textBox8->Location = System::Drawing::Point(103, 3);
+			this->textBox8->Multiline = true;
+			this->textBox8->Name = L"textBox8";
+			this->textBox8->ReadOnly = true;
+			this->textBox8->ScrollBars = System::Windows::Forms::ScrollBars::Both;
+			this->textBox8->Size = System::Drawing::Size(229, 196);
+			this->textBox8->TabIndex = 1;
 			// 
-			// panel4
+			// tableLayoutPanel8
 			// 
-			this->panel4->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
-			this->panel4->BackColor = System::Drawing::SystemColors::ControlLightLight;
-			this->panel4->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->panel4->Location = System::Drawing::Point(20, 225);
-			this->panel4->Margin = System::Windows::Forms::Padding(10, 5, 3, 3);
-			this->panel4->MaximumSize = System::Drawing::Size(30, 30);
-			this->panel4->Name = L"panel4";
-			this->panel4->Size = System::Drawing::Size(30, 30);
-			this->panel4->TabIndex = 23;
+			this->tableLayoutPanel8->BackColor = System::Drawing::SystemColors::ControlDarkDark;
+			this->tableLayoutPanel8->ColumnCount = 2;
+			this->tableLayoutPanel8->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
+				100)));
+			this->tableLayoutPanel8->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
+				235)));
+			this->tableLayoutPanel8->Controls->Add(this->pictureBox7, 0, 0);
+			this->tableLayoutPanel8->Controls->Add(this->textBox7, 1, 0);
+			this->tableLayoutPanel8->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->tableLayoutPanel8->Location = System::Drawing::Point(2, 412);
+			this->tableLayoutPanel8->Margin = System::Windows::Forms::Padding(2);
+			this->tableLayoutPanel8->MinimumSize = System::Drawing::Size(269, 155);
+			this->tableLayoutPanel8->Name = L"tableLayoutPanel8";
+			this->tableLayoutPanel8->RowCount = 1;
+			this->tableLayoutPanel8->RowStyles->Add((gcnew System::Windows::Forms::RowStyle()));
+			this->tableLayoutPanel8->Size = System::Drawing::Size(335, 202);
+			this->tableLayoutPanel8->TabIndex = 9;
+			this->tableLayoutPanel8->Visible = false;
 			// 
-			// panel3
+			// pictureBox7
 			// 
-			this->panel3->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
-			this->panel3->BackColor = System::Drawing::Color::LightGreen;
-			this->panel3->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->panel3->Location = System::Drawing::Point(20, 185);
-			this->panel3->Margin = System::Windows::Forms::Padding(10, 5, 3, 3);
-			this->panel3->MaximumSize = System::Drawing::Size(30, 30);
-			this->panel3->Name = L"panel3";
-			this->panel3->Size = System::Drawing::Size(30, 30);
-			this->panel3->TabIndex = 22;
+			this->pictureBox7->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->pictureBox7->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->pictureBox7->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox7.Image")));
+			this->pictureBox7->Location = System::Drawing::Point(2, 2);
+			this->pictureBox7->Margin = System::Windows::Forms::Padding(2);
+			this->pictureBox7->Name = L"pictureBox7";
+			this->pictureBox7->Size = System::Drawing::Size(96, 198);
+			this->pictureBox7->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->pictureBox7->TabIndex = 0;
+			this->pictureBox7->TabStop = false;
+			this->pictureBox7->Click += gcnew System::EventHandler(this, &MainForm::pictureBox7_Click);
 			// 
-			// label12
+			// textBox7
 			// 
-			this->label12->AutoSize = true;
-			this->label12->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->label12->Location = System::Drawing::Point(56, 263);
-			this->label12->Margin = System::Windows::Forms::Padding(3);
-			this->label12->Name = L"label12";
-			this->label12->Size = System::Drawing::Size(195, 34);
-			this->label12->TabIndex = 14;
-			this->label12->Text = L"Выбрано";
-			this->label12->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			this->textBox7->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->textBox7->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->textBox7->Cursor = System::Windows::Forms::Cursors::Arrow;
+			this->textBox7->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->textBox7->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->textBox7->ForeColor = System::Drawing::SystemColors::Menu;
+			this->textBox7->Location = System::Drawing::Point(103, 3);
+			this->textBox7->Multiline = true;
+			this->textBox7->Name = L"textBox7";
+			this->textBox7->ReadOnly = true;
+			this->textBox7->ScrollBars = System::Windows::Forms::ScrollBars::Both;
+			this->textBox7->Size = System::Drawing::Size(229, 196);
+			this->textBox7->TabIndex = 1;
 			// 
-			// label10
+			// tableLayoutPanel7
 			// 
-			this->label10->AutoSize = true;
-			this->label10->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->label10->Location = System::Drawing::Point(56, 223);
-			this->label10->Margin = System::Windows::Forms::Padding(3);
-			this->label10->Name = L"label10";
-			this->label10->Size = System::Drawing::Size(195, 34);
-			this->label10->TabIndex = 12;
-			this->label10->Text = L"Свободно";
-			this->label10->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			this->tableLayoutPanel7->BackColor = System::Drawing::SystemColors::ControlDarkDark;
+			this->tableLayoutPanel7->ColumnCount = 2;
+			this->tableLayoutPanel7->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
+				100)));
+			this->tableLayoutPanel7->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
+				236)));
+			this->tableLayoutPanel7->Controls->Add(this->pictureBox6, 0, 0);
+			this->tableLayoutPanel7->Controls->Add(this->textBox6, 1, 0);
+			this->tableLayoutPanel7->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->tableLayoutPanel7->Location = System::Drawing::Point(680, 207);
+			this->tableLayoutPanel7->Margin = System::Windows::Forms::Padding(2);
+			this->tableLayoutPanel7->MinimumSize = System::Drawing::Size(269, 155);
+			this->tableLayoutPanel7->Name = L"tableLayoutPanel7";
+			this->tableLayoutPanel7->RowCount = 1;
+			this->tableLayoutPanel7->RowStyles->Add((gcnew System::Windows::Forms::RowStyle()));
+			this->tableLayoutPanel7->Size = System::Drawing::Size(336, 201);
+			this->tableLayoutPanel7->TabIndex = 8;
+			this->tableLayoutPanel7->Visible = false;
 			// 
-			// label8
+			// pictureBox6
 			// 
-			this->label8->AutoSize = true;
-			this->label8->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->label8->Location = System::Drawing::Point(56, 183);
-			this->label8->Margin = System::Windows::Forms::Padding(3);
-			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(195, 34);
-			this->label8->TabIndex = 10;
-			this->label8->Text = L"Забронировано";
-			this->label8->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			this->pictureBox6->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->pictureBox6->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->pictureBox6->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox6.Image")));
+			this->pictureBox6->Location = System::Drawing::Point(2, 2);
+			this->pictureBox6->Margin = System::Windows::Forms::Padding(2);
+			this->pictureBox6->Name = L"pictureBox6";
+			this->pictureBox6->Size = System::Drawing::Size(96, 197);
+			this->pictureBox6->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->pictureBox6->TabIndex = 0;
+			this->pictureBox6->TabStop = false;
+			this->pictureBox6->Click += gcnew System::EventHandler(this, &MainForm::pictureBox6_Click);
 			// 
-			// label6
+			// textBox6
 			// 
-			this->label6->AutoSize = true;
-			this->label6->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->label6->Location = System::Drawing::Point(56, 143);
-			this->label6->Margin = System::Windows::Forms::Padding(3);
-			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(195, 34);
-			this->label6->TabIndex = 8;
-			this->label6->Text = L"Занято";
-			this->label6->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			this->textBox6->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->textBox6->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->textBox6->Cursor = System::Windows::Forms::Cursors::Arrow;
+			this->textBox6->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->textBox6->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->textBox6->ForeColor = System::Drawing::SystemColors::Menu;
+			this->textBox6->Location = System::Drawing::Point(103, 3);
+			this->textBox6->Multiline = true;
+			this->textBox6->Name = L"textBox6";
+			this->textBox6->ReadOnly = true;
+			this->textBox6->ScrollBars = System::Windows::Forms::ScrollBars::Both;
+			this->textBox6->Size = System::Drawing::Size(230, 195);
+			this->textBox6->TabIndex = 1;
 			// 
-			// label2
+			// tableLayoutPanel6
 			// 
-			this->label2->AutoSize = true;
-			this->label2->Dock = System::Windows::Forms::DockStyle::Top;
-			this->label2->Location = System::Drawing::Point(3, 32);
-			this->label2->Margin = System::Windows::Forms::Padding(3, 7, 3, 0);
-			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(47, 13);
-			this->label2->TabIndex = 4;
-			this->label2->Text = L"Время: ";
-			this->label2->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			this->tableLayoutPanel6->BackColor = System::Drawing::SystemColors::ControlDarkDark;
+			this->tableLayoutPanel6->ColumnCount = 2;
+			this->tableLayoutPanel6->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
+				100)));
+			this->tableLayoutPanel6->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
+				235)));
+			this->tableLayoutPanel6->Controls->Add(this->pictureBox5, 0, 0);
+			this->tableLayoutPanel6->Controls->Add(this->textBox5, 1, 0);
+			this->tableLayoutPanel6->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->tableLayoutPanel6->Location = System::Drawing::Point(341, 207);
+			this->tableLayoutPanel6->Margin = System::Windows::Forms::Padding(2);
+			this->tableLayoutPanel6->MinimumSize = System::Drawing::Size(269, 155);
+			this->tableLayoutPanel6->Name = L"tableLayoutPanel6";
+			this->tableLayoutPanel6->RowCount = 1;
+			this->tableLayoutPanel6->RowStyles->Add((gcnew System::Windows::Forms::RowStyle()));
+			this->tableLayoutPanel6->Size = System::Drawing::Size(335, 201);
+			this->tableLayoutPanel6->TabIndex = 7;
+			this->tableLayoutPanel6->Visible = false;
 			// 
-			// comboBox2
+			// pictureBox5
 			// 
-			this->comboBox2->Dock = System::Windows::Forms::DockStyle::Left;
-			this->comboBox2->FormattingEnabled = true;
-			this->comboBox2->Location = System::Drawing::Point(56, 28);
-			this->comboBox2->Name = L"comboBox2";
-			this->comboBox2->Size = System::Drawing::Size(185, 21);
-			this->comboBox2->TabIndex = 3;
-			this->comboBox2->SelectedIndexChanged += gcnew System::EventHandler(this, &MainForm::comboBox2_SelectedIndexChanged);
+			this->pictureBox5->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->pictureBox5->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->pictureBox5->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox5.Image")));
+			this->pictureBox5->Location = System::Drawing::Point(2, 2);
+			this->pictureBox5->Margin = System::Windows::Forms::Padding(2);
+			this->pictureBox5->Name = L"pictureBox5";
+			this->pictureBox5->Size = System::Drawing::Size(96, 197);
+			this->pictureBox5->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->pictureBox5->TabIndex = 0;
+			this->pictureBox5->TabStop = false;
+			this->pictureBox5->Click += gcnew System::EventHandler(this, &MainForm::pictureBox5_Click);
 			// 
-			// label1
+			// textBox5
 			// 
-			this->label1->AutoSize = true;
-			this->label1->Dock = System::Windows::Forms::DockStyle::Top;
-			this->label1->Location = System::Drawing::Point(3, 7);
-			this->label1->Margin = System::Windows::Forms::Padding(3, 7, 3, 0);
-			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(47, 13);
-			this->label1->TabIndex = 0;
-			this->label1->Text = L"Дата: ";
-			this->label1->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			this->textBox5->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->textBox5->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->textBox5->Cursor = System::Windows::Forms::Cursors::Arrow;
+			this->textBox5->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->textBox5->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->textBox5->ForeColor = System::Drawing::SystemColors::Menu;
+			this->textBox5->Location = System::Drawing::Point(103, 3);
+			this->textBox5->Multiline = true;
+			this->textBox5->Name = L"textBox5";
+			this->textBox5->ReadOnly = true;
+			this->textBox5->ScrollBars = System::Windows::Forms::ScrollBars::Both;
+			this->textBox5->Size = System::Drawing::Size(229, 195);
+			this->textBox5->TabIndex = 1;
 			// 
-			// comboBox1
+			// tableLayoutPanel5
 			// 
-			this->comboBox1->Dock = System::Windows::Forms::DockStyle::Left;
-			this->comboBox1->FormattingEnabled = true;
-			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"Сегодня", L"Завтра", L"Послезавтра" });
-			this->comboBox1->Location = System::Drawing::Point(56, 3);
-			this->comboBox1->Name = L"comboBox1";
-			this->comboBox1->Size = System::Drawing::Size(185, 21);
-			this->comboBox1->TabIndex = 1;
-			this->comboBox1->SelectedIndexChanged += gcnew System::EventHandler(this, &MainForm::comboBox1_SelectedIndexChanged);
+			this->tableLayoutPanel5->BackColor = System::Drawing::SystemColors::ControlDarkDark;
+			this->tableLayoutPanel5->ColumnCount = 2;
+			this->tableLayoutPanel5->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
+				100)));
+			this->tableLayoutPanel5->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
+				235)));
+			this->tableLayoutPanel5->Controls->Add(this->pictureBox4, 0, 0);
+			this->tableLayoutPanel5->Controls->Add(this->textBox4, 1, 0);
+			this->tableLayoutPanel5->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->tableLayoutPanel5->Location = System::Drawing::Point(2, 207);
+			this->tableLayoutPanel5->Margin = System::Windows::Forms::Padding(2);
+			this->tableLayoutPanel5->MinimumSize = System::Drawing::Size(269, 155);
+			this->tableLayoutPanel5->Name = L"tableLayoutPanel5";
+			this->tableLayoutPanel5->RowCount = 1;
+			this->tableLayoutPanel5->RowStyles->Add((gcnew System::Windows::Forms::RowStyle()));
+			this->tableLayoutPanel5->Size = System::Drawing::Size(335, 201);
+			this->tableLayoutPanel5->TabIndex = 6;
+			this->tableLayoutPanel5->Visible = false;
 			// 
-			// panel2
+			// pictureBox4
 			// 
-			this->panel2->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
-			this->panel2->BackColor = System::Drawing::SystemColors::ControlDarkDark;
-			this->panel2->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->panel2->Location = System::Drawing::Point(20, 145);
-			this->panel2->Margin = System::Windows::Forms::Padding(10, 5, 3, 3);
-			this->panel2->MaximumSize = System::Drawing::Size(30, 30);
-			this->panel2->Name = L"panel2";
-			this->panel2->Size = System::Drawing::Size(30, 30);
-			this->panel2->TabIndex = 21;
+			this->pictureBox4->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->pictureBox4->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->pictureBox4->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox4.Image")));
+			this->pictureBox4->Location = System::Drawing::Point(2, 2);
+			this->pictureBox4->Margin = System::Windows::Forms::Padding(2);
+			this->pictureBox4->Name = L"pictureBox4";
+			this->pictureBox4->Size = System::Drawing::Size(96, 197);
+			this->pictureBox4->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->pictureBox4->TabIndex = 0;
+			this->pictureBox4->TabStop = false;
+			this->pictureBox4->Click += gcnew System::EventHandler(this, &MainForm::pictureBox4_Click);
 			// 
-			// textBox10
+			// textBox4
 			// 
-			this->textBox10->Dock = System::Windows::Forms::DockStyle::Left;
-			this->textBox10->Location = System::Drawing::Point(56, 440);
-			this->textBox10->Margin = System::Windows::Forms::Padding(3, 10, 3, 3);
-			this->textBox10->Name = L"textBox10";
-			this->textBox10->Size = System::Drawing::Size(185, 20);
-			this->textBox10->TabIndex = 29;
-			this->textBox10->TextChanged += gcnew System::EventHandler(this, &MainForm::textBox10_TextChanged);
+			this->textBox4->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->textBox4->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->textBox4->Cursor = System::Windows::Forms::Cursors::Arrow;
+			this->textBox4->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->textBox4->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->textBox4->ForeColor = System::Drawing::SystemColors::Menu;
+			this->textBox4->Location = System::Drawing::Point(103, 3);
+			this->textBox4->Multiline = true;
+			this->textBox4->Name = L"textBox4";
+			this->textBox4->ReadOnly = true;
+			this->textBox4->ScrollBars = System::Windows::Forms::ScrollBars::Both;
+			this->textBox4->Size = System::Drawing::Size(229, 195);
+			this->textBox4->TabIndex = 1;
 			// 
-			// button1
+			// tableLayoutPanel4
 			// 
-			this->button1->Enabled = false;
-			this->button1->Location = System::Drawing::Point(56, 553);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(144, 23);
-			this->button1->TabIndex = 25;
-			this->button1->Text = L"Аннулировать";
-			this->button1->UseVisualStyleBackColor = true;
+			this->tableLayoutPanel4->BackColor = System::Drawing::SystemColors::ControlDarkDark;
+			this->tableLayoutPanel4->ColumnCount = 2;
+			this->tableLayoutPanel4->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
+				100)));
+			this->tableLayoutPanel4->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
+				236)));
+			this->tableLayoutPanel4->Controls->Add(this->pictureBox3, 0, 0);
+			this->tableLayoutPanel4->Controls->Add(this->textBox3, 1, 0);
+			this->tableLayoutPanel4->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->tableLayoutPanel4->Location = System::Drawing::Point(680, 2);
+			this->tableLayoutPanel4->Margin = System::Windows::Forms::Padding(2);
+			this->tableLayoutPanel4->MinimumSize = System::Drawing::Size(269, 155);
+			this->tableLayoutPanel4->Name = L"tableLayoutPanel4";
+			this->tableLayoutPanel4->RowCount = 1;
+			this->tableLayoutPanel4->RowStyles->Add((gcnew System::Windows::Forms::RowStyle()));
+			this->tableLayoutPanel4->Size = System::Drawing::Size(336, 201);
+			this->tableLayoutPanel4->TabIndex = 5;
+			this->tableLayoutPanel4->Visible = false;
 			// 
-			// button2
+			// pictureBox3
 			// 
-			this->button2->Enabled = false;
-			this->button2->Location = System::Drawing::Point(56, 513);
-			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(144, 23);
-			this->button2->TabIndex = 26;
-			this->button2->Text = L"Забронировать";
-			this->button2->UseVisualStyleBackColor = true;
-			this->button2->Click += gcnew System::EventHandler(this, &MainForm::button2_Click);
+			this->pictureBox3->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->pictureBox3->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->pictureBox3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox3.Image")));
+			this->pictureBox3->Location = System::Drawing::Point(2, 2);
+			this->pictureBox3->Margin = System::Windows::Forms::Padding(2);
+			this->pictureBox3->Name = L"pictureBox3";
+			this->pictureBox3->Size = System::Drawing::Size(96, 197);
+			this->pictureBox3->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->pictureBox3->TabIndex = 0;
+			this->pictureBox3->TabStop = false;
+			this->pictureBox3->Click += gcnew System::EventHandler(this, &MainForm::pictureBox3_Click);
 			// 
-			// button3
+			// textBox3
 			// 
-			this->button3->Enabled = false;
-			this->button3->Location = System::Drawing::Point(56, 473);
-			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(144, 23);
-			this->button3->TabIndex = 27;
-			this->button3->Text = L"Оплатить";
-			this->button3->UseVisualStyleBackColor = true;
+			this->textBox3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->textBox3->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->textBox3->Cursor = System::Windows::Forms::Cursors::Arrow;
+			this->textBox3->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->textBox3->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->textBox3->ForeColor = System::Drawing::SystemColors::Menu;
+			this->textBox3->Location = System::Drawing::Point(103, 3);
+			this->textBox3->Multiline = true;
+			this->textBox3->Name = L"textBox3";
+			this->textBox3->ReadOnly = true;
+			this->textBox3->ScrollBars = System::Windows::Forms::ScrollBars::Both;
+			this->textBox3->Size = System::Drawing::Size(230, 195);
+			this->textBox3->TabIndex = 1;
 			// 
-			// toolStrip1
+			// tableLayoutPanel3
 			// 
-			this->toolStrip1->BackColor = System::Drawing::SystemColors::ControlLightLight;
-			this->toolStrip1->GripMargin = System::Windows::Forms::Padding(0);
-			this->toolStrip1->GripStyle = System::Windows::Forms::ToolStripGripStyle::Hidden;
-			this->toolStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {
-				this->toolStripButton2,
-					this->toolStripSeparator4, this->toolStripComboBox1
-			});
-			this->toolStrip1->Location = System::Drawing::Point(0, 0);
-			this->toolStrip1->Name = L"toolStrip1";
-			this->toolStrip1->RenderMode = System::Windows::Forms::ToolStripRenderMode::Professional;
-			this->toolStrip1->Size = System::Drawing::Size(254, 25);
-			this->toolStrip1->TabIndex = 1;
-			this->toolStrip1->Text = L"toolStrip1";
+			this->tableLayoutPanel3->BackColor = System::Drawing::SystemColors::ControlDarkDark;
+			this->tableLayoutPanel3->ColumnCount = 2;
+			this->tableLayoutPanel3->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
+				100)));
+			this->tableLayoutPanel3->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
+				235)));
+			this->tableLayoutPanel3->Controls->Add(this->pictureBox2, 0, 0);
+			this->tableLayoutPanel3->Controls->Add(this->textBox2, 1, 0);
+			this->tableLayoutPanel3->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->tableLayoutPanel3->Location = System::Drawing::Point(341, 2);
+			this->tableLayoutPanel3->Margin = System::Windows::Forms::Padding(2);
+			this->tableLayoutPanel3->MinimumSize = System::Drawing::Size(269, 155);
+			this->tableLayoutPanel3->Name = L"tableLayoutPanel3";
+			this->tableLayoutPanel3->RowCount = 1;
+			this->tableLayoutPanel3->RowStyles->Add((gcnew System::Windows::Forms::RowStyle()));
+			this->tableLayoutPanel3->Size = System::Drawing::Size(335, 201);
+			this->tableLayoutPanel3->TabIndex = 4;
+			this->tableLayoutPanel3->Visible = false;
 			// 
-			// toolStripButton2
+			// pictureBox2
 			// 
-			this->toolStripButton2->DisplayStyle = System::Windows::Forms::ToolStripItemDisplayStyle::Image;
-			this->toolStripButton2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"toolStripButton2.Image")));
-			this->toolStripButton2->ImageTransparentColor = System::Drawing::Color::Magenta;
-			this->toolStripButton2->Name = L"toolStripButton2";
-			this->toolStripButton2->Size = System::Drawing::Size(23, 22);
-			this->toolStripButton2->Text = L"toolStripButton2";
-			this->toolStripButton2->ToolTipText = L"Назад";
-			this->toolStripButton2->Click += gcnew System::EventHandler(this, &MainForm::toolStripButton2_Click);
+			this->pictureBox2->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->pictureBox2->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->pictureBox2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox2.Image")));
+			this->pictureBox2->Location = System::Drawing::Point(2, 2);
+			this->pictureBox2->Margin = System::Windows::Forms::Padding(2);
+			this->pictureBox2->Name = L"pictureBox2";
+			this->pictureBox2->Size = System::Drawing::Size(96, 197);
+			this->pictureBox2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->pictureBox2->TabIndex = 0;
+			this->pictureBox2->TabStop = false;
+			this->pictureBox2->Click += gcnew System::EventHandler(this, &MainForm::pictureBox2_Click);
 			// 
-			// toolStripSeparator4
+			// textBox2
 			// 
-			this->toolStripSeparator4->Name = L"toolStripSeparator4";
-			this->toolStripSeparator4->Size = System::Drawing::Size(6, 25);
+			this->textBox2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->textBox2->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->textBox2->Cursor = System::Windows::Forms::Cursors::Arrow;
+			this->textBox2->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->textBox2->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->textBox2->ForeColor = System::Drawing::SystemColors::Menu;
+			this->textBox2->Location = System::Drawing::Point(103, 3);
+			this->textBox2->Multiline = true;
+			this->textBox2->Name = L"textBox2";
+			this->textBox2->ReadOnly = true;
+			this->textBox2->ScrollBars = System::Windows::Forms::ScrollBars::Both;
+			this->textBox2->Size = System::Drawing::Size(229, 195);
+			this->textBox2->TabIndex = 1;
 			// 
-			// toolStripComboBox1
+			// tableLayoutPanel2
 			// 
-			this->toolStripComboBox1->BackColor = System::Drawing::SystemColors::ControlLightLight;
-			this->toolStripComboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(1) { L"Фильм 1" });
-			this->toolStripComboBox1->Name = L"toolStripComboBox1";
-			this->toolStripComboBox1->Size = System::Drawing::Size(180, 25);
-			this->toolStripComboBox1->SelectedIndexChanged += gcnew System::EventHandler(this, &MainForm::toolStripComboBox1_SelectedIndexChanged);
+			this->tableLayoutPanel2->BackColor = System::Drawing::SystemColors::ControlDarkDark;
+			this->tableLayoutPanel2->ColumnCount = 2;
+			this->tableLayoutPanel2->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
+				100)));
+			this->tableLayoutPanel2->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
+				235)));
+			this->tableLayoutPanel2->Controls->Add(this->pictureBox1, 0, 0);
+			this->tableLayoutPanel2->Controls->Add(this->textBox1, 1, 0);
+			this->tableLayoutPanel2->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->tableLayoutPanel2->Location = System::Drawing::Point(2, 2);
+			this->tableLayoutPanel2->Margin = System::Windows::Forms::Padding(2);
+			this->tableLayoutPanel2->MinimumSize = System::Drawing::Size(269, 155);
+			this->tableLayoutPanel2->Name = L"tableLayoutPanel2";
+			this->tableLayoutPanel2->RowCount = 1;
+			this->tableLayoutPanel2->RowStyles->Add((gcnew System::Windows::Forms::RowStyle()));
+			this->tableLayoutPanel2->Size = System::Drawing::Size(335, 201);
+			this->tableLayoutPanel2->TabIndex = 3;
+			this->tableLayoutPanel2->Visible = false;
+			// 
+			// pictureBox1
+			// 
+			this->pictureBox1->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->pictureBox1->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
+			this->pictureBox1->Location = System::Drawing::Point(2, 2);
+			this->pictureBox1->Margin = System::Windows::Forms::Padding(2);
+			this->pictureBox1->Name = L"pictureBox1";
+			this->pictureBox1->Size = System::Drawing::Size(96, 197);
+			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->pictureBox1->TabIndex = 0;
+			this->pictureBox1->TabStop = false;
+			this->pictureBox1->Click += gcnew System::EventHandler(this, &MainForm::pictureBox1_Click);
+			// 
+			// textBox1
+			// 
+			this->textBox1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->textBox1->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->textBox1->Cursor = System::Windows::Forms::Cursors::Arrow;
+			this->textBox1->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->textBox1->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->textBox1->ForeColor = System::Drawing::SystemColors::Menu;
+			this->textBox1->Location = System::Drawing::Point(103, 3);
+			this->textBox1->Multiline = true;
+			this->textBox1->Name = L"textBox1";
+			this->textBox1->ReadOnly = true;
+			this->textBox1->ScrollBars = System::Windows::Forms::ScrollBars::Both;
+			this->textBox1->Size = System::Drawing::Size(229, 195);
+			this->textBox1->TabIndex = 1;
+			// 
+			// panelPlus
+			// 
+			this->panelPlus->BackColor = System::Drawing::SystemColors::ButtonFace;
+			this->panelPlus->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"panelPlus.BackgroundImage")));
+			this->panelPlus->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Center;
+			this->panelPlus->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->panelPlus->Location = System::Drawing::Point(95, 66);
+			this->panelPlus->Name = L"panelPlus";
+			this->panelPlus->Size = System::Drawing::Size(335, 201);
+			this->panelPlus->TabIndex = 7;
+			this->panelPlus->Click += gcnew System::EventHandler(this, &MainForm::panelPlus_Click);
 			// 
 			// tableLayoutPanel13
 			// 
 			this->tableLayoutPanel13->ColumnCount = 1;
 			this->tableLayoutPanel13->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent,
 				100)));
-			this->tableLayoutPanel13->Controls->Add(this->label31, 0, 3);
 			this->tableLayoutPanel13->Controls->Add(this->label5, 0, 1);
 			this->tableLayoutPanel13->Controls->Add(this->label4, 0, 0);
 			this->tableLayoutPanel13->Controls->Add(this->tableLayoutPanel14, 0, 2);
+			this->tableLayoutPanel13->Controls->Add(this->label31, 0, 3);
 			this->tableLayoutPanel13->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->tableLayoutPanel13->Location = System::Drawing::Point(254, 0);
 			this->tableLayoutPanel13->Margin = System::Windows::Forms::Padding(0);
@@ -1287,19 +1625,6 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->tableLayoutPanel13->Size = System::Drawing::Size(764, 616);
 			this->tableLayoutPanel13->TabIndex = 1;
 			this->tableLayoutPanel13->Visible = false;
-			// 
-			// label31
-			// 
-			this->label31->AutoSize = true;
-			this->label31->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->label31->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
-			this->label31->Location = System::Drawing::Point(3, 576);
-			this->label31->Name = L"label31";
-			this->label31->Size = System::Drawing::Size(758, 40);
-			this->label31->TabIndex = 3;
-			this->label31->Text = L"Кол-во билетов на сумму";
-			this->label31->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// label5
 			// 
@@ -3208,525 +3533,367 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel105->TabIndex = 128;
 			this->panel105->Click += gcnew System::EventHandler(this, &MainForm::panel105_Click);
 			// 
-			// tableLayoutPanel1
+			// label31
 			// 
-			this->tableLayoutPanel1->BackColor = System::Drawing::SystemColors::ControlDark;
-			this->tableLayoutPanel1->ColumnCount = 3;
-			this->tableLayoutPanel1->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent,
-				33.33333F)));
-			this->tableLayoutPanel1->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent,
-				33.33334F)));
-			this->tableLayoutPanel1->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent,
-				33.33334F)));
-			this->tableLayoutPanel1->Controls->Add(this->tableLayoutPanel10, 2, 2);
-			this->tableLayoutPanel1->Controls->Add(this->tableLayoutPanel9, 1, 2);
-			this->tableLayoutPanel1->Controls->Add(this->tableLayoutPanel8, 0, 2);
-			this->tableLayoutPanel1->Controls->Add(this->tableLayoutPanel7, 2, 1);
-			this->tableLayoutPanel1->Controls->Add(this->tableLayoutPanel6, 1, 1);
-			this->tableLayoutPanel1->Controls->Add(this->tableLayoutPanel5, 0, 1);
-			this->tableLayoutPanel1->Controls->Add(this->tableLayoutPanel4, 2, 0);
-			this->tableLayoutPanel1->Controls->Add(this->tableLayoutPanel3, 1, 0);
-			this->tableLayoutPanel1->Controls->Add(this->tableLayoutPanel2, 0, 0);
-			this->tableLayoutPanel1->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->tableLayoutPanel1->GrowStyle = System::Windows::Forms::TableLayoutPanelGrowStyle::FixedSize;
-			this->tableLayoutPanel1->Location = System::Drawing::Point(0, 24);
-			this->tableLayoutPanel1->Margin = System::Windows::Forms::Padding(2);
-			this->tableLayoutPanel1->Name = L"tableLayoutPanel1";
-			this->tableLayoutPanel1->RowCount = 3;
-			this->tableLayoutPanel1->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 33.33333F)));
-			this->tableLayoutPanel1->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 33.33333F)));
-			this->tableLayoutPanel1->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 33.33333F)));
-			this->tableLayoutPanel1->Size = System::Drawing::Size(1018, 616);
-			this->tableLayoutPanel1->TabIndex = 6;
-			this->tableLayoutPanel1->Visible = false;
-			// 
-			// tableLayoutPanel10
-			// 
-			this->tableLayoutPanel10->BackColor = System::Drawing::SystemColors::ControlDarkDark;
-			this->tableLayoutPanel10->ColumnCount = 2;
-			this->tableLayoutPanel10->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
-				100)));
-			this->tableLayoutPanel10->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
-				236)));
-			this->tableLayoutPanel10->Controls->Add(this->pictureBox9, 0, 0);
-			this->tableLayoutPanel10->Controls->Add(this->textBox9, 1, 0);
-			this->tableLayoutPanel10->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->tableLayoutPanel10->Location = System::Drawing::Point(680, 412);
-			this->tableLayoutPanel10->Margin = System::Windows::Forms::Padding(2);
-			this->tableLayoutPanel10->MinimumSize = System::Drawing::Size(269, 155);
-			this->tableLayoutPanel10->Name = L"tableLayoutPanel10";
-			this->tableLayoutPanel10->RowCount = 1;
-			this->tableLayoutPanel10->RowStyles->Add((gcnew System::Windows::Forms::RowStyle()));
-			this->tableLayoutPanel10->Size = System::Drawing::Size(336, 202);
-			this->tableLayoutPanel10->TabIndex = 11;
-			this->tableLayoutPanel10->Visible = false;
-			// 
-			// pictureBox9
-			// 
-			this->pictureBox9->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->pictureBox9->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->pictureBox9->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox9.Image")));
-			this->pictureBox9->Location = System::Drawing::Point(2, 2);
-			this->pictureBox9->Margin = System::Windows::Forms::Padding(2);
-			this->pictureBox9->Name = L"pictureBox9";
-			this->pictureBox9->Size = System::Drawing::Size(96, 198);
-			this->pictureBox9->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->pictureBox9->TabIndex = 0;
-			this->pictureBox9->TabStop = false;
-			this->pictureBox9->Click += gcnew System::EventHandler(this, &MainForm::pictureBox9_Click);
-			// 
-			// textBox9
-			// 
-			this->textBox9->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
-				static_cast<System::Int32>(static_cast<System::Byte>(64)));
-			this->textBox9->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->textBox9->Cursor = System::Windows::Forms::Cursors::Arrow;
-			this->textBox9->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->textBox9->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label31->AutoSize = true;
+			this->label31->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->label31->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->textBox9->ForeColor = System::Drawing::SystemColors::Menu;
-			this->textBox9->Location = System::Drawing::Point(103, 3);
-			this->textBox9->Multiline = true;
-			this->textBox9->Name = L"textBox9";
-			this->textBox9->ReadOnly = true;
-			this->textBox9->ScrollBars = System::Windows::Forms::ScrollBars::Both;
-			this->textBox9->Size = System::Drawing::Size(230, 196);
-			this->textBox9->TabIndex = 1;
+			this->label31->Location = System::Drawing::Point(3, 576);
+			this->label31->Name = L"label31";
+			this->label31->Size = System::Drawing::Size(758, 40);
+			this->label31->TabIndex = 3;
+			this->label31->Text = L"Кол-во билетов на сумму";
+			this->label31->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
-			// tableLayoutPanel9
+			// panel1
 			// 
-			this->tableLayoutPanel9->BackColor = System::Drawing::SystemColors::ControlDarkDark;
-			this->tableLayoutPanel9->ColumnCount = 2;
-			this->tableLayoutPanel9->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
+			this->panel1->BackColor = System::Drawing::SystemColors::ControlLightLight;
+			this->panel1->Controls->Add(this->tableLayoutPanel12);
+			this->panel1->Controls->Add(this->toolStrip1);
+			this->panel1->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->panel1->Location = System::Drawing::Point(0, 0);
+			this->panel1->Margin = System::Windows::Forms::Padding(0);
+			this->panel1->Name = L"panel1";
+			this->panel1->Size = System::Drawing::Size(254, 616);
+			this->panel1->TabIndex = 0;
+			// 
+			// tableLayoutPanel12
+			// 
+			this->tableLayoutPanel12->BackColor = System::Drawing::SystemColors::Control;
+			this->tableLayoutPanel12->ColumnCount = 2;
+			this->tableLayoutPanel12->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
+				53)));
+			this->tableLayoutPanel12->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
+				201)));
+			this->tableLayoutPanel12->Controls->Add(this->label32, 0, 7);
+			this->tableLayoutPanel12->Controls->Add(this->label3, 0, 9);
+			this->tableLayoutPanel12->Controls->Add(this->panel5, 0, 6);
+			this->tableLayoutPanel12->Controls->Add(this->panel4, 0, 5);
+			this->tableLayoutPanel12->Controls->Add(this->panel3, 0, 4);
+			this->tableLayoutPanel12->Controls->Add(this->label12, 1, 6);
+			this->tableLayoutPanel12->Controls->Add(this->label10, 1, 5);
+			this->tableLayoutPanel12->Controls->Add(this->label8, 1, 4);
+			this->tableLayoutPanel12->Controls->Add(this->label6, 1, 3);
+			this->tableLayoutPanel12->Controls->Add(this->label2, 0, 1);
+			this->tableLayoutPanel12->Controls->Add(this->comboBox2, 1, 1);
+			this->tableLayoutPanel12->Controls->Add(this->label1, 0, 0);
+			this->tableLayoutPanel12->Controls->Add(this->comboBox1, 1, 0);
+			this->tableLayoutPanel12->Controls->Add(this->panel2, 0, 3);
+			this->tableLayoutPanel12->Controls->Add(this->textBox10, 1, 9);
+			this->tableLayoutPanel12->Controls->Add(this->button1, 1, 12);
+			this->tableLayoutPanel12->Controls->Add(this->button2, 1, 11);
+			this->tableLayoutPanel12->Controls->Add(this->button3, 1, 10);
+			this->tableLayoutPanel12->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->tableLayoutPanel12->Location = System::Drawing::Point(0, 25);
+			this->tableLayoutPanel12->Name = L"tableLayoutPanel12";
+			this->tableLayoutPanel12->RowCount = 13;
+			this->tableLayoutPanel12->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Absolute,
+				25)));
+			this->tableLayoutPanel12->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Absolute,
+				25)));
+			this->tableLayoutPanel12->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 50)));
+			this->tableLayoutPanel12->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Absolute,
+				40)));
+			this->tableLayoutPanel12->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Absolute,
+				40)));
+			this->tableLayoutPanel12->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Absolute,
+				40)));
+			this->tableLayoutPanel12->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Absolute,
+				40)));
+			this->tableLayoutPanel12->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Absolute,
+				40)));
+			this->tableLayoutPanel12->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 50)));
+			this->tableLayoutPanel12->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Absolute,
+				40)));
+			this->tableLayoutPanel12->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Absolute,
+				40)));
+			this->tableLayoutPanel12->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Absolute,
+				40)));
+			this->tableLayoutPanel12->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Absolute,
+				40)));
+			this->tableLayoutPanel12->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Absolute,
+				20)));
+			this->tableLayoutPanel12->Size = System::Drawing::Size(254, 591);
+			this->tableLayoutPanel12->TabIndex = 2;
+			// 
+			// label32
+			// 
+			this->label32->AutoSize = true;
+			this->tableLayoutPanel12->SetColumnSpan(this->label32, 2);
+			this->label32->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->label32->Location = System::Drawing::Point(3, 303);
+			this->label32->Margin = System::Windows::Forms::Padding(3);
+			this->label32->Name = L"label32";
+			this->label32->Size = System::Drawing::Size(248, 34);
+			this->label32->TabIndex = 30;
+			this->label32->Text = L"Цена билета: 0 руб.";
+			this->label32->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			// 
+			// label3
+			// 
+			this->label3->AutoSize = true;
+			this->label3->Dock = System::Windows::Forms::DockStyle::Top;
+			this->label3->Location = System::Drawing::Point(3, 437);
+			this->label3->Margin = System::Windows::Forms::Padding(3, 7, 3, 0);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(47, 26);
+			this->label3->TabIndex = 28;
+			this->label3->Text = L"Код заказа:";
+			this->label3->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			// 
+			// panel5
+			// 
+			this->panel5->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
+			this->panel5->BackColor = System::Drawing::Color::Brown;
+			this->panel5->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel5->Location = System::Drawing::Point(20, 265);
+			this->panel5->Margin = System::Windows::Forms::Padding(10, 5, 3, 3);
+			this->panel5->MaximumSize = System::Drawing::Size(30, 30);
+			this->panel5->Name = L"panel5";
+			this->panel5->Size = System::Drawing::Size(30, 30);
+			this->panel5->TabIndex = 24;
+			// 
+			// panel4
+			// 
+			this->panel4->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
+			this->panel4->BackColor = System::Drawing::SystemColors::ControlLightLight;
+			this->panel4->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel4->Location = System::Drawing::Point(20, 225);
+			this->panel4->Margin = System::Windows::Forms::Padding(10, 5, 3, 3);
+			this->panel4->MaximumSize = System::Drawing::Size(30, 30);
+			this->panel4->Name = L"panel4";
+			this->panel4->Size = System::Drawing::Size(30, 30);
+			this->panel4->TabIndex = 23;
+			// 
+			// panel3
+			// 
+			this->panel3->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
+			this->panel3->BackColor = System::Drawing::Color::LightGreen;
+			this->panel3->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel3->Location = System::Drawing::Point(20, 185);
+			this->panel3->Margin = System::Windows::Forms::Padding(10, 5, 3, 3);
+			this->panel3->MaximumSize = System::Drawing::Size(30, 30);
+			this->panel3->Name = L"panel3";
+			this->panel3->Size = System::Drawing::Size(30, 30);
+			this->panel3->TabIndex = 22;
+			// 
+			// label12
+			// 
+			this->label12->AutoSize = true;
+			this->label12->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->label12->Location = System::Drawing::Point(56, 263);
+			this->label12->Margin = System::Windows::Forms::Padding(3);
+			this->label12->Name = L"label12";
+			this->label12->Size = System::Drawing::Size(195, 34);
+			this->label12->TabIndex = 14;
+			this->label12->Text = L"Выбрано";
+			this->label12->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			// 
+			// label10
+			// 
+			this->label10->AutoSize = true;
+			this->label10->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->label10->Location = System::Drawing::Point(56, 223);
+			this->label10->Margin = System::Windows::Forms::Padding(3);
+			this->label10->Name = L"label10";
+			this->label10->Size = System::Drawing::Size(195, 34);
+			this->label10->TabIndex = 12;
+			this->label10->Text = L"Свободно";
+			this->label10->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			// 
+			// label8
+			// 
+			this->label8->AutoSize = true;
+			this->label8->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->label8->Location = System::Drawing::Point(56, 183);
+			this->label8->Margin = System::Windows::Forms::Padding(3);
+			this->label8->Name = L"label8";
+			this->label8->Size = System::Drawing::Size(195, 34);
+			this->label8->TabIndex = 10;
+			this->label8->Text = L"Забронировано";
+			this->label8->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			// 
+			// label6
+			// 
+			this->label6->AutoSize = true;
+			this->label6->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->label6->Location = System::Drawing::Point(56, 143);
+			this->label6->Margin = System::Windows::Forms::Padding(3);
+			this->label6->Name = L"label6";
+			this->label6->Size = System::Drawing::Size(195, 34);
+			this->label6->TabIndex = 8;
+			this->label6->Text = L"Занято";
+			this->label6->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->Dock = System::Windows::Forms::DockStyle::Top;
+			this->label2->Location = System::Drawing::Point(3, 32);
+			this->label2->Margin = System::Windows::Forms::Padding(3, 7, 3, 0);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(47, 13);
+			this->label2->TabIndex = 4;
+			this->label2->Text = L"Время: ";
+			this->label2->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			// 
+			// comboBox2
+			// 
+			this->comboBox2->Dock = System::Windows::Forms::DockStyle::Left;
+			this->comboBox2->FormattingEnabled = true;
+			this->comboBox2->Location = System::Drawing::Point(56, 28);
+			this->comboBox2->Name = L"comboBox2";
+			this->comboBox2->Size = System::Drawing::Size(185, 21);
+			this->comboBox2->TabIndex = 3;
+			this->comboBox2->SelectedIndexChanged += gcnew System::EventHandler(this, &MainForm::comboBox2_SelectedIndexChanged);
+			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->Dock = System::Windows::Forms::DockStyle::Top;
+			this->label1->Location = System::Drawing::Point(3, 7);
+			this->label1->Margin = System::Windows::Forms::Padding(3, 7, 3, 0);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(47, 13);
+			this->label1->TabIndex = 0;
+			this->label1->Text = L"Дата: ";
+			this->label1->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			// 
+			// comboBox1
+			// 
+			this->comboBox1->Dock = System::Windows::Forms::DockStyle::Left;
+			this->comboBox1->FormattingEnabled = true;
+			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"Сегодня", L"Завтра", L"Послезавтра" });
+			this->comboBox1->Location = System::Drawing::Point(56, 3);
+			this->comboBox1->Name = L"comboBox1";
+			this->comboBox1->Size = System::Drawing::Size(185, 21);
+			this->comboBox1->TabIndex = 1;
+			this->comboBox1->SelectedIndexChanged += gcnew System::EventHandler(this, &MainForm::comboBox1_SelectedIndexChanged);
+			// 
+			// panel2
+			// 
+			this->panel2->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
+			this->panel2->BackColor = System::Drawing::SystemColors::ControlDarkDark;
+			this->panel2->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel2->Location = System::Drawing::Point(20, 145);
+			this->panel2->Margin = System::Windows::Forms::Padding(10, 5, 3, 3);
+			this->panel2->MaximumSize = System::Drawing::Size(30, 30);
+			this->panel2->Name = L"panel2";
+			this->panel2->Size = System::Drawing::Size(30, 30);
+			this->panel2->TabIndex = 21;
+			// 
+			// textBox10
+			// 
+			this->textBox10->Dock = System::Windows::Forms::DockStyle::Left;
+			this->textBox10->Location = System::Drawing::Point(56, 440);
+			this->textBox10->Margin = System::Windows::Forms::Padding(3, 10, 3, 3);
+			this->textBox10->Name = L"textBox10";
+			this->textBox10->Size = System::Drawing::Size(185, 20);
+			this->textBox10->TabIndex = 29;
+			this->textBox10->TextChanged += gcnew System::EventHandler(this, &MainForm::textBox10_TextChanged);
+			// 
+			// button1
+			// 
+			this->button1->Enabled = false;
+			this->button1->Location = System::Drawing::Point(56, 553);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(144, 23);
+			this->button1->TabIndex = 25;
+			this->button1->Text = L"Аннулировать";
+			this->button1->UseVisualStyleBackColor = true;
+			// 
+			// button2
+			// 
+			this->button2->Enabled = false;
+			this->button2->Location = System::Drawing::Point(56, 513);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(144, 23);
+			this->button2->TabIndex = 26;
+			this->button2->Text = L"Забронировать";
+			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &MainForm::button2_Click);
+			// 
+			// button3
+			// 
+			this->button3->Enabled = false;
+			this->button3->Location = System::Drawing::Point(56, 473);
+			this->button3->Name = L"button3";
+			this->button3->Size = System::Drawing::Size(144, 23);
+			this->button3->TabIndex = 27;
+			this->button3->Text = L"Оплатить";
+			this->button3->UseVisualStyleBackColor = true;
+			// 
+			// toolStrip1
+			// 
+			this->toolStrip1->BackColor = System::Drawing::SystemColors::ControlLightLight;
+			this->toolStrip1->GripMargin = System::Windows::Forms::Padding(0);
+			this->toolStrip1->GripStyle = System::Windows::Forms::ToolStripGripStyle::Hidden;
+			this->toolStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {
+				this->toolStripButton2,
+					this->toolStripSeparator4, this->toolStripComboBox1
+			});
+			this->toolStrip1->Location = System::Drawing::Point(0, 0);
+			this->toolStrip1->Name = L"toolStrip1";
+			this->toolStrip1->RenderMode = System::Windows::Forms::ToolStripRenderMode::Professional;
+			this->toolStrip1->Size = System::Drawing::Size(254, 25);
+			this->toolStrip1->TabIndex = 1;
+			this->toolStrip1->Text = L"toolStrip1";
+			// 
+			// toolStripButton2
+			// 
+			this->toolStripButton2->DisplayStyle = System::Windows::Forms::ToolStripItemDisplayStyle::Image;
+			this->toolStripButton2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"toolStripButton2.Image")));
+			this->toolStripButton2->ImageTransparentColor = System::Drawing::Color::Magenta;
+			this->toolStripButton2->Name = L"toolStripButton2";
+			this->toolStripButton2->Size = System::Drawing::Size(23, 22);
+			this->toolStripButton2->Text = L"toolStripButton2";
+			this->toolStripButton2->ToolTipText = L"Назад";
+			this->toolStripButton2->Click += gcnew System::EventHandler(this, &MainForm::toolStripButton2_Click);
+			// 
+			// toolStripSeparator4
+			// 
+			this->toolStripSeparator4->Name = L"toolStripSeparator4";
+			this->toolStripSeparator4->Size = System::Drawing::Size(6, 25);
+			// 
+			// toolStripComboBox1
+			// 
+			this->toolStripComboBox1->BackColor = System::Drawing::SystemColors::ControlLightLight;
+			this->toolStripComboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(1) { L"Фильм 1" });
+			this->toolStripComboBox1->Name = L"toolStripComboBox1";
+			this->toolStripComboBox1->Size = System::Drawing::Size(180, 25);
+			this->toolStripComboBox1->SelectedIndexChanged += gcnew System::EventHandler(this, &MainForm::toolStripComboBox1_SelectedIndexChanged);
+			// 
+			// tableLayoutPanel11
+			// 
+			this->tableLayoutPanel11->BackColor = System::Drawing::Color::Silver;
+			this->tableLayoutPanel11->ColumnCount = 2;
+			this->tableLayoutPanel11->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
+				254)));
+			this->tableLayoutPanel11->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent,
 				100)));
-			this->tableLayoutPanel9->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
-				235)));
-			this->tableLayoutPanel9->Controls->Add(this->pictureBox8, 0, 0);
-			this->tableLayoutPanel9->Controls->Add(this->textBox8, 1, 0);
-			this->tableLayoutPanel9->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->tableLayoutPanel9->Location = System::Drawing::Point(341, 412);
-			this->tableLayoutPanel9->Margin = System::Windows::Forms::Padding(2);
-			this->tableLayoutPanel9->MinimumSize = System::Drawing::Size(269, 155);
-			this->tableLayoutPanel9->Name = L"tableLayoutPanel9";
-			this->tableLayoutPanel9->RowCount = 1;
-			this->tableLayoutPanel9->RowStyles->Add((gcnew System::Windows::Forms::RowStyle()));
-			this->tableLayoutPanel9->Size = System::Drawing::Size(335, 202);
-			this->tableLayoutPanel9->TabIndex = 10;
-			this->tableLayoutPanel9->Visible = false;
-			// 
-			// pictureBox8
-			// 
-			this->pictureBox8->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->pictureBox8->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->pictureBox8->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox8.Image")));
-			this->pictureBox8->Location = System::Drawing::Point(2, 2);
-			this->pictureBox8->Margin = System::Windows::Forms::Padding(2);
-			this->pictureBox8->Name = L"pictureBox8";
-			this->pictureBox8->Size = System::Drawing::Size(96, 198);
-			this->pictureBox8->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->pictureBox8->TabIndex = 0;
-			this->pictureBox8->TabStop = false;
-			this->pictureBox8->Click += gcnew System::EventHandler(this, &MainForm::pictureBox8_Click);
-			// 
-			// textBox8
-			// 
-			this->textBox8->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
-				static_cast<System::Int32>(static_cast<System::Byte>(64)));
-			this->textBox8->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->textBox8->Cursor = System::Windows::Forms::Cursors::Arrow;
-			this->textBox8->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->textBox8->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
-			this->textBox8->ForeColor = System::Drawing::SystemColors::Menu;
-			this->textBox8->Location = System::Drawing::Point(103, 3);
-			this->textBox8->Multiline = true;
-			this->textBox8->Name = L"textBox8";
-			this->textBox8->ReadOnly = true;
-			this->textBox8->ScrollBars = System::Windows::Forms::ScrollBars::Both;
-			this->textBox8->Size = System::Drawing::Size(229, 196);
-			this->textBox8->TabIndex = 1;
-			// 
-			// tableLayoutPanel8
-			// 
-			this->tableLayoutPanel8->BackColor = System::Drawing::SystemColors::ControlDarkDark;
-			this->tableLayoutPanel8->ColumnCount = 2;
-			this->tableLayoutPanel8->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
-				100)));
-			this->tableLayoutPanel8->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
-				235)));
-			this->tableLayoutPanel8->Controls->Add(this->pictureBox7, 0, 0);
-			this->tableLayoutPanel8->Controls->Add(this->textBox7, 1, 0);
-			this->tableLayoutPanel8->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->tableLayoutPanel8->Location = System::Drawing::Point(2, 412);
-			this->tableLayoutPanel8->Margin = System::Windows::Forms::Padding(2);
-			this->tableLayoutPanel8->MinimumSize = System::Drawing::Size(269, 155);
-			this->tableLayoutPanel8->Name = L"tableLayoutPanel8";
-			this->tableLayoutPanel8->RowCount = 1;
-			this->tableLayoutPanel8->RowStyles->Add((gcnew System::Windows::Forms::RowStyle()));
-			this->tableLayoutPanel8->Size = System::Drawing::Size(335, 202);
-			this->tableLayoutPanel8->TabIndex = 9;
-			this->tableLayoutPanel8->Visible = false;
-			// 
-			// pictureBox7
-			// 
-			this->pictureBox7->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->pictureBox7->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->pictureBox7->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox7.Image")));
-			this->pictureBox7->Location = System::Drawing::Point(2, 2);
-			this->pictureBox7->Margin = System::Windows::Forms::Padding(2);
-			this->pictureBox7->Name = L"pictureBox7";
-			this->pictureBox7->Size = System::Drawing::Size(96, 198);
-			this->pictureBox7->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->pictureBox7->TabIndex = 0;
-			this->pictureBox7->TabStop = false;
-			this->pictureBox7->Click += gcnew System::EventHandler(this, &MainForm::pictureBox7_Click);
-			// 
-			// textBox7
-			// 
-			this->textBox7->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
-				static_cast<System::Int32>(static_cast<System::Byte>(64)));
-			this->textBox7->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->textBox7->Cursor = System::Windows::Forms::Cursors::Arrow;
-			this->textBox7->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->textBox7->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
-			this->textBox7->ForeColor = System::Drawing::SystemColors::Menu;
-			this->textBox7->Location = System::Drawing::Point(103, 3);
-			this->textBox7->Multiline = true;
-			this->textBox7->Name = L"textBox7";
-			this->textBox7->ReadOnly = true;
-			this->textBox7->ScrollBars = System::Windows::Forms::ScrollBars::Both;
-			this->textBox7->Size = System::Drawing::Size(229, 196);
-			this->textBox7->TabIndex = 1;
-			// 
-			// tableLayoutPanel7
-			// 
-			this->tableLayoutPanel7->BackColor = System::Drawing::SystemColors::ControlDarkDark;
-			this->tableLayoutPanel7->ColumnCount = 2;
-			this->tableLayoutPanel7->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
-				100)));
-			this->tableLayoutPanel7->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
-				236)));
-			this->tableLayoutPanel7->Controls->Add(this->pictureBox6, 0, 0);
-			this->tableLayoutPanel7->Controls->Add(this->textBox6, 1, 0);
-			this->tableLayoutPanel7->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->tableLayoutPanel7->Location = System::Drawing::Point(680, 207);
-			this->tableLayoutPanel7->Margin = System::Windows::Forms::Padding(2);
-			this->tableLayoutPanel7->MinimumSize = System::Drawing::Size(269, 155);
-			this->tableLayoutPanel7->Name = L"tableLayoutPanel7";
-			this->tableLayoutPanel7->RowCount = 1;
-			this->tableLayoutPanel7->RowStyles->Add((gcnew System::Windows::Forms::RowStyle()));
-			this->tableLayoutPanel7->Size = System::Drawing::Size(336, 201);
-			this->tableLayoutPanel7->TabIndex = 8;
-			this->tableLayoutPanel7->Visible = false;
-			// 
-			// pictureBox6
-			// 
-			this->pictureBox6->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->pictureBox6->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->pictureBox6->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox6.Image")));
-			this->pictureBox6->Location = System::Drawing::Point(2, 2);
-			this->pictureBox6->Margin = System::Windows::Forms::Padding(2);
-			this->pictureBox6->Name = L"pictureBox6";
-			this->pictureBox6->Size = System::Drawing::Size(96, 197);
-			this->pictureBox6->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->pictureBox6->TabIndex = 0;
-			this->pictureBox6->TabStop = false;
-			this->pictureBox6->Click += gcnew System::EventHandler(this, &MainForm::pictureBox6_Click);
-			// 
-			// textBox6
-			// 
-			this->textBox6->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
-				static_cast<System::Int32>(static_cast<System::Byte>(64)));
-			this->textBox6->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->textBox6->Cursor = System::Windows::Forms::Cursors::Arrow;
-			this->textBox6->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->textBox6->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
-			this->textBox6->ForeColor = System::Drawing::SystemColors::Menu;
-			this->textBox6->Location = System::Drawing::Point(103, 3);
-			this->textBox6->Multiline = true;
-			this->textBox6->Name = L"textBox6";
-			this->textBox6->ReadOnly = true;
-			this->textBox6->ScrollBars = System::Windows::Forms::ScrollBars::Both;
-			this->textBox6->Size = System::Drawing::Size(230, 195);
-			this->textBox6->TabIndex = 1;
-			// 
-			// tableLayoutPanel6
-			// 
-			this->tableLayoutPanel6->BackColor = System::Drawing::SystemColors::ControlDarkDark;
-			this->tableLayoutPanel6->ColumnCount = 2;
-			this->tableLayoutPanel6->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
-				100)));
-			this->tableLayoutPanel6->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
-				235)));
-			this->tableLayoutPanel6->Controls->Add(this->pictureBox5, 0, 0);
-			this->tableLayoutPanel6->Controls->Add(this->textBox5, 1, 0);
-			this->tableLayoutPanel6->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->tableLayoutPanel6->Location = System::Drawing::Point(341, 207);
-			this->tableLayoutPanel6->Margin = System::Windows::Forms::Padding(2);
-			this->tableLayoutPanel6->MinimumSize = System::Drawing::Size(269, 155);
-			this->tableLayoutPanel6->Name = L"tableLayoutPanel6";
-			this->tableLayoutPanel6->RowCount = 1;
-			this->tableLayoutPanel6->RowStyles->Add((gcnew System::Windows::Forms::RowStyle()));
-			this->tableLayoutPanel6->Size = System::Drawing::Size(335, 201);
-			this->tableLayoutPanel6->TabIndex = 7;
-			this->tableLayoutPanel6->Visible = false;
-			// 
-			// pictureBox5
-			// 
-			this->pictureBox5->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->pictureBox5->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->pictureBox5->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox5.Image")));
-			this->pictureBox5->Location = System::Drawing::Point(2, 2);
-			this->pictureBox5->Margin = System::Windows::Forms::Padding(2);
-			this->pictureBox5->Name = L"pictureBox5";
-			this->pictureBox5->Size = System::Drawing::Size(96, 197);
-			this->pictureBox5->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->pictureBox5->TabIndex = 0;
-			this->pictureBox5->TabStop = false;
-			this->pictureBox5->Click += gcnew System::EventHandler(this, &MainForm::pictureBox5_Click);
-			// 
-			// textBox5
-			// 
-			this->textBox5->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
-				static_cast<System::Int32>(static_cast<System::Byte>(64)));
-			this->textBox5->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->textBox5->Cursor = System::Windows::Forms::Cursors::Arrow;
-			this->textBox5->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->textBox5->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
-			this->textBox5->ForeColor = System::Drawing::SystemColors::Menu;
-			this->textBox5->Location = System::Drawing::Point(103, 3);
-			this->textBox5->Multiline = true;
-			this->textBox5->Name = L"textBox5";
-			this->textBox5->ReadOnly = true;
-			this->textBox5->ScrollBars = System::Windows::Forms::ScrollBars::Both;
-			this->textBox5->Size = System::Drawing::Size(229, 195);
-			this->textBox5->TabIndex = 1;
-			// 
-			// tableLayoutPanel5
-			// 
-			this->tableLayoutPanel5->BackColor = System::Drawing::SystemColors::ControlDarkDark;
-			this->tableLayoutPanel5->ColumnCount = 2;
-			this->tableLayoutPanel5->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
-				100)));
-			this->tableLayoutPanel5->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
-				235)));
-			this->tableLayoutPanel5->Controls->Add(this->pictureBox4, 0, 0);
-			this->tableLayoutPanel5->Controls->Add(this->textBox4, 1, 0);
-			this->tableLayoutPanel5->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->tableLayoutPanel5->Location = System::Drawing::Point(2, 207);
-			this->tableLayoutPanel5->Margin = System::Windows::Forms::Padding(2);
-			this->tableLayoutPanel5->MinimumSize = System::Drawing::Size(269, 155);
-			this->tableLayoutPanel5->Name = L"tableLayoutPanel5";
-			this->tableLayoutPanel5->RowCount = 1;
-			this->tableLayoutPanel5->RowStyles->Add((gcnew System::Windows::Forms::RowStyle()));
-			this->tableLayoutPanel5->Size = System::Drawing::Size(335, 201);
-			this->tableLayoutPanel5->TabIndex = 6;
-			this->tableLayoutPanel5->Visible = false;
-			// 
-			// pictureBox4
-			// 
-			this->pictureBox4->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->pictureBox4->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->pictureBox4->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox4.Image")));
-			this->pictureBox4->Location = System::Drawing::Point(2, 2);
-			this->pictureBox4->Margin = System::Windows::Forms::Padding(2);
-			this->pictureBox4->Name = L"pictureBox4";
-			this->pictureBox4->Size = System::Drawing::Size(96, 197);
-			this->pictureBox4->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->pictureBox4->TabIndex = 0;
-			this->pictureBox4->TabStop = false;
-			this->pictureBox4->Click += gcnew System::EventHandler(this, &MainForm::pictureBox4_Click);
-			// 
-			// textBox4
-			// 
-			this->textBox4->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
-				static_cast<System::Int32>(static_cast<System::Byte>(64)));
-			this->textBox4->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->textBox4->Cursor = System::Windows::Forms::Cursors::Arrow;
-			this->textBox4->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->textBox4->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
-			this->textBox4->ForeColor = System::Drawing::SystemColors::Menu;
-			this->textBox4->Location = System::Drawing::Point(103, 3);
-			this->textBox4->Multiline = true;
-			this->textBox4->Name = L"textBox4";
-			this->textBox4->ReadOnly = true;
-			this->textBox4->ScrollBars = System::Windows::Forms::ScrollBars::Both;
-			this->textBox4->Size = System::Drawing::Size(229, 195);
-			this->textBox4->TabIndex = 1;
-			// 
-			// tableLayoutPanel4
-			// 
-			this->tableLayoutPanel4->BackColor = System::Drawing::SystemColors::ControlDarkDark;
-			this->tableLayoutPanel4->ColumnCount = 2;
-			this->tableLayoutPanel4->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
-				100)));
-			this->tableLayoutPanel4->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
-				236)));
-			this->tableLayoutPanel4->Controls->Add(this->pictureBox3, 0, 0);
-			this->tableLayoutPanel4->Controls->Add(this->textBox3, 1, 0);
-			this->tableLayoutPanel4->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->tableLayoutPanel4->Location = System::Drawing::Point(680, 2);
-			this->tableLayoutPanel4->Margin = System::Windows::Forms::Padding(2);
-			this->tableLayoutPanel4->MinimumSize = System::Drawing::Size(269, 155);
-			this->tableLayoutPanel4->Name = L"tableLayoutPanel4";
-			this->tableLayoutPanel4->RowCount = 1;
-			this->tableLayoutPanel4->RowStyles->Add((gcnew System::Windows::Forms::RowStyle()));
-			this->tableLayoutPanel4->Size = System::Drawing::Size(336, 201);
-			this->tableLayoutPanel4->TabIndex = 5;
-			this->tableLayoutPanel4->Visible = false;
-			// 
-			// pictureBox3
-			// 
-			this->pictureBox3->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->pictureBox3->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->pictureBox3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox3.Image")));
-			this->pictureBox3->Location = System::Drawing::Point(2, 2);
-			this->pictureBox3->Margin = System::Windows::Forms::Padding(2);
-			this->pictureBox3->Name = L"pictureBox3";
-			this->pictureBox3->Size = System::Drawing::Size(96, 197);
-			this->pictureBox3->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->pictureBox3->TabIndex = 0;
-			this->pictureBox3->TabStop = false;
-			this->pictureBox3->Click += gcnew System::EventHandler(this, &MainForm::pictureBox3_Click);
-			// 
-			// textBox3
-			// 
-			this->textBox3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
-				static_cast<System::Int32>(static_cast<System::Byte>(64)));
-			this->textBox3->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->textBox3->Cursor = System::Windows::Forms::Cursors::Arrow;
-			this->textBox3->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->textBox3->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
-			this->textBox3->ForeColor = System::Drawing::SystemColors::Menu;
-			this->textBox3->Location = System::Drawing::Point(103, 3);
-			this->textBox3->Multiline = true;
-			this->textBox3->Name = L"textBox3";
-			this->textBox3->ReadOnly = true;
-			this->textBox3->ScrollBars = System::Windows::Forms::ScrollBars::Both;
-			this->textBox3->Size = System::Drawing::Size(230, 195);
-			this->textBox3->TabIndex = 1;
-			// 
-			// tableLayoutPanel3
-			// 
-			this->tableLayoutPanel3->BackColor = System::Drawing::SystemColors::ControlDarkDark;
-			this->tableLayoutPanel3->ColumnCount = 2;
-			this->tableLayoutPanel3->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
-				100)));
-			this->tableLayoutPanel3->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
-				235)));
-			this->tableLayoutPanel3->Controls->Add(this->pictureBox2, 0, 0);
-			this->tableLayoutPanel3->Controls->Add(this->textBox2, 1, 0);
-			this->tableLayoutPanel3->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->tableLayoutPanel3->Location = System::Drawing::Point(341, 2);
-			this->tableLayoutPanel3->Margin = System::Windows::Forms::Padding(2);
-			this->tableLayoutPanel3->MinimumSize = System::Drawing::Size(269, 155);
-			this->tableLayoutPanel3->Name = L"tableLayoutPanel3";
-			this->tableLayoutPanel3->RowCount = 1;
-			this->tableLayoutPanel3->RowStyles->Add((gcnew System::Windows::Forms::RowStyle()));
-			this->tableLayoutPanel3->Size = System::Drawing::Size(335, 201);
-			this->tableLayoutPanel3->TabIndex = 4;
-			this->tableLayoutPanel3->Visible = false;
-			// 
-			// pictureBox2
-			// 
-			this->pictureBox2->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->pictureBox2->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->pictureBox2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox2.Image")));
-			this->pictureBox2->Location = System::Drawing::Point(2, 2);
-			this->pictureBox2->Margin = System::Windows::Forms::Padding(2);
-			this->pictureBox2->Name = L"pictureBox2";
-			this->pictureBox2->Size = System::Drawing::Size(96, 197);
-			this->pictureBox2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->pictureBox2->TabIndex = 0;
-			this->pictureBox2->TabStop = false;
-			this->pictureBox2->Click += gcnew System::EventHandler(this, &MainForm::pictureBox2_Click);
-			// 
-			// textBox2
-			// 
-			this->textBox2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
-				static_cast<System::Int32>(static_cast<System::Byte>(64)));
-			this->textBox2->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->textBox2->Cursor = System::Windows::Forms::Cursors::Arrow;
-			this->textBox2->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->textBox2->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
-			this->textBox2->ForeColor = System::Drawing::SystemColors::Menu;
-			this->textBox2->Location = System::Drawing::Point(103, 3);
-			this->textBox2->Multiline = true;
-			this->textBox2->Name = L"textBox2";
-			this->textBox2->ReadOnly = true;
-			this->textBox2->ScrollBars = System::Windows::Forms::ScrollBars::Both;
-			this->textBox2->Size = System::Drawing::Size(229, 195);
-			this->textBox2->TabIndex = 1;
-			// 
-			// tableLayoutPanel2
-			// 
-			this->tableLayoutPanel2->BackColor = System::Drawing::SystemColors::ControlDarkDark;
-			this->tableLayoutPanel2->ColumnCount = 2;
-			this->tableLayoutPanel2->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
-				100)));
-			this->tableLayoutPanel2->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
-				235)));
-			this->tableLayoutPanel2->Controls->Add(this->pictureBox1, 0, 0);
-			this->tableLayoutPanel2->Controls->Add(this->textBox1, 1, 0);
-			this->tableLayoutPanel2->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->tableLayoutPanel2->Location = System::Drawing::Point(2, 2);
-			this->tableLayoutPanel2->Margin = System::Windows::Forms::Padding(2);
-			this->tableLayoutPanel2->MinimumSize = System::Drawing::Size(269, 155);
-			this->tableLayoutPanel2->Name = L"tableLayoutPanel2";
-			this->tableLayoutPanel2->RowCount = 1;
-			this->tableLayoutPanel2->RowStyles->Add((gcnew System::Windows::Forms::RowStyle()));
-			this->tableLayoutPanel2->Size = System::Drawing::Size(335, 201);
-			this->tableLayoutPanel2->TabIndex = 3;
-			this->tableLayoutPanel2->Visible = false;
-			// 
-			// pictureBox1
-			// 
-			this->pictureBox1->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->pictureBox1->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(2, 2);
-			this->pictureBox1->Margin = System::Windows::Forms::Padding(2);
-			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(96, 197);
-			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->pictureBox1->TabIndex = 0;
-			this->pictureBox1->TabStop = false;
-			this->pictureBox1->Click += gcnew System::EventHandler(this, &MainForm::pictureBox1_Click);
-			// 
-			// textBox1
-			// 
-			this->textBox1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
-				static_cast<System::Int32>(static_cast<System::Byte>(64)));
-			this->textBox1->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->textBox1->Cursor = System::Windows::Forms::Cursors::Arrow;
-			this->textBox1->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->textBox1->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
-			this->textBox1->ForeColor = System::Drawing::SystemColors::Menu;
-			this->textBox1->Location = System::Drawing::Point(103, 3);
-			this->textBox1->Multiline = true;
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->ReadOnly = true;
-			this->textBox1->ScrollBars = System::Windows::Forms::ScrollBars::Both;
-			this->textBox1->Size = System::Drawing::Size(229, 195);
-			this->textBox1->TabIndex = 1;
+			this->tableLayoutPanel11->Controls->Add(this->panel1, 0, 0);
+			this->tableLayoutPanel11->Controls->Add(this->tableLayoutPanel13, 1, 0);
+			this->tableLayoutPanel11->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->tableLayoutPanel11->Location = System::Drawing::Point(0, 24);
+			this->tableLayoutPanel11->Name = L"tableLayoutPanel11";
+			this->tableLayoutPanel11->RowCount = 1;
+			this->tableLayoutPanel11->RowStyles->Add((gcnew System::Windows::Forms::RowStyle()));
+			this->tableLayoutPanel11->Size = System::Drawing::Size(1018, 616);
+			this->tableLayoutPanel11->TabIndex = 4;
+			this->tableLayoutPanel11->Visible = false;
 			// 
 			// MainForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1018, 662);
+			this->Controls->Add(this->panelPlus);
 			this->Controls->Add(this->tableLayoutPanel11);
 			this->Controls->Add(this->tableLayoutPanel1);
 			this->Controls->Add(this->statusStrip1);
-			this->Controls->Add(this->menustrip_main);
 			this->Controls->Add(this->label_center);
+			this->Controls->Add(this->menustrip_main);
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->MainMenuStrip = this->menustrip_main;
 			this->Margin = System::Windows::Forms::Padding(2);
@@ -3743,17 +3910,6 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->menustrip_main->PerformLayout();
 			this->statusStrip1->ResumeLayout(false);
 			this->statusStrip1->PerformLayout();
-			this->tableLayoutPanel11->ResumeLayout(false);
-			this->panel1->ResumeLayout(false);
-			this->panel1->PerformLayout();
-			this->tableLayoutPanel12->ResumeLayout(false);
-			this->tableLayoutPanel12->PerformLayout();
-			this->toolStrip1->ResumeLayout(false);
-			this->toolStrip1->PerformLayout();
-			this->tableLayoutPanel13->ResumeLayout(false);
-			this->tableLayoutPanel13->PerformLayout();
-			this->tableLayoutPanel14->ResumeLayout(false);
-			this->tableLayoutPanel14->PerformLayout();
 			this->tableLayoutPanel1->ResumeLayout(false);
 			this->tableLayoutPanel10->ResumeLayout(false);
 			this->tableLayoutPanel10->PerformLayout();
@@ -3782,6 +3938,17 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->tableLayoutPanel2->ResumeLayout(false);
 			this->tableLayoutPanel2->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
+			this->tableLayoutPanel13->ResumeLayout(false);
+			this->tableLayoutPanel13->PerformLayout();
+			this->tableLayoutPanel14->ResumeLayout(false);
+			this->tableLayoutPanel14->PerformLayout();
+			this->panel1->ResumeLayout(false);
+			this->panel1->PerformLayout();
+			this->tableLayoutPanel12->ResumeLayout(false);
+			this->tableLayoutPanel12->PerformLayout();
+			this->toolStrip1->ResumeLayout(false);
+			this->toolStrip1->PerformLayout();
+			this->tableLayoutPanel11->ResumeLayout(false);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -3947,6 +4114,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 
 	//Запуск программы
 	private: System::Void MainForm_Load(System::Object^ sender, System::EventArgs^ e) {
+		panelPlus->Visible = false;
 		seats = gcnew cli::array<System::Windows::Forms::Panel^>(100);
 		for (int i = 0; i < 100; i++) 
 		{
@@ -4353,8 +4521,8 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 		//Если пароль верный
 		if (p->DialogResult == System::Windows::Forms::DialogResult::OK) {
 			MessageBox::Show(L"Вы вошли в режим администратора!");
-			this->QuitToolStripMenuItem->Visible = true;
 			this->EnterToolStripMenuItem->Visible = false;
+			this->QuitToolStripMenuItem->Visible = true;
 			this->CreateToolStripMenuItem->Enabled = true;
 			this->button1->Enabled = true;
 		}
@@ -4464,7 +4632,13 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 	}
 	
 	private: System::Void MainForm_ResizeEnd(System::Object^ sender, System::EventArgs^ e) {
-		
+		if (this->panelPlus)
+		{
+			this->panelPlus->Size = this->tableLayoutPanel2->Size;
+		}
+
+		PlusChangeLocation();
+
 		if (this->tableLayoutPanel1->Visible)
 		{
 			if (this->tableLayoutPanel2->Visible)
@@ -4974,6 +5148,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			textBox10->Text = "";
 		}
 	}
+
 	private: System::Void NewMovieToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 		FilmForm^ p = gcnew FilmForm();
 		p->ShowDialog();
@@ -4987,6 +5162,36 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			file_stream->Write(*cinema);
 			open_file();
 		}
+	}
+
+	private: System::Void PlusChangeLocation()
+	{
+		if (EnterToolStripMenuItem->Visible)
+		{
+			panelPlus->Visible = false;
+		}
+		else
+		{
+			if (tableLayoutPanel1->Visible)
+			{
+				if (cinema->films_number == 9)
+				{
+					panelPlus->Visible = false;
+					NewMovieToolStripMenuItem->Enabled = false;
+				}
+				else
+				{
+					panelPlus->Left = (cinema->films_number % 3) * (panelPlus->Width + 5);
+					panelPlus->Top = menustrip_main->Height + (cinema->films_number / 3) * (panelPlus->Height + 5);
+					panelPlus->Visible = true;
+					NewMovieToolStripMenuItem->Enabled = true;
+				}
+			}
+		}
+	}
+
+	private: System::Void panelPlus_Click(System::Object^ sender, System::EventArgs^ e) {
+		NewMovieToolStripMenuItem_Click(sender, e);
 	}
 };
 }
