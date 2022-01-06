@@ -7,6 +7,17 @@
 #include "FilmForm.h"
 #include <msclr\marshal.h>
 #include "Time.h"
+#include "ChangeForm.h"
+#include "resource.h"
+
+
+#include <windows.h>
+#include <stdlib.h>
+#include <string.h>
+#include "resource.h"
+#include <tchar.h>
+
+
 using namespace msclr::interop;
 /*#include "HelloForm.h"
 #include "InfoForm.h"*/
@@ -658,7 +669,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 					this->CorrectMovieToolStripMenuItem, this->DelMovieToolStripMenuItem
 			});
 			this->MovieToolStripMenuItem->Name = L"MovieToolStripMenuItem";
-			this->MovieToolStripMenuItem->Size = System::Drawing::Size(132, 22);
+			this->MovieToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->MovieToolStripMenuItem->Text = L"&Фильм";
 			// 
 			// NewMovieToolStripMenuItem
@@ -687,7 +698,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 					this->CorrectPromoToolStripMenuItem, this->DelPromoToolStripMenuItem
 			});
 			this->PromoToolStripMenuItem->Name = L"PromoToolStripMenuItem";
-			this->PromoToolStripMenuItem->Size = System::Drawing::Size(132, 22);
+			this->PromoToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->PromoToolStripMenuItem->Text = L"&Промокод";
 			// 
 			// NewPromoToolStripMenuItem
@@ -715,37 +726,39 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 					this->AddressToolStripMenuItem, this->CashiersToolStripMenuItem, this->INNToolStripMenuItem, this->RNMToolStripMenuItem
 			});
 			this->CinemaToolStripMenuItem->Name = L"CinemaToolStripMenuItem";
-			this->CinemaToolStripMenuItem->Size = System::Drawing::Size(132, 22);
+			this->CinemaToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->CinemaToolStripMenuItem->Text = L"&Кинотеатр";
+			this->CinemaToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::CinemaToolStripMenuItem_Click);
 			// 
 			// NameToolStripMenuItem
 			// 
 			this->NameToolStripMenuItem->Name = L"NameToolStripMenuItem";
-			this->NameToolStripMenuItem->Size = System::Drawing::Size(126, 22);
+			this->NameToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->NameToolStripMenuItem->Text = L"&Название";
+			this->NameToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::NameToolStripMenuItem_Click);
 			// 
 			// AddressToolStripMenuItem
 			// 
 			this->AddressToolStripMenuItem->Name = L"AddressToolStripMenuItem";
-			this->AddressToolStripMenuItem->Size = System::Drawing::Size(126, 22);
+			this->AddressToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->AddressToolStripMenuItem->Text = L"&Адрес";
 			// 
 			// CashiersToolStripMenuItem
 			// 
 			this->CashiersToolStripMenuItem->Name = L"CashiersToolStripMenuItem";
-			this->CashiersToolStripMenuItem->Size = System::Drawing::Size(126, 22);
+			this->CashiersToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->CashiersToolStripMenuItem->Text = L"&Кассиры";
 			// 
 			// INNToolStripMenuItem
 			// 
 			this->INNToolStripMenuItem->Name = L"INNToolStripMenuItem";
-			this->INNToolStripMenuItem->Size = System::Drawing::Size(126, 22);
+			this->INNToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->INNToolStripMenuItem->Text = L"&ИНН";
 			// 
 			// RNMToolStripMenuItem
 			// 
 			this->RNMToolStripMenuItem->Name = L"RNMToolStripMenuItem";
-			this->RNMToolStripMenuItem->Size = System::Drawing::Size(126, 22);
+			this->RNMToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->RNMToolStripMenuItem->Text = L"&РНМ";
 			// 
 			// ReportToolStripMenuItem
@@ -4073,6 +4086,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 		}
 	}
 
+
 		   //Открытие файла
 	private: System::Void open_file() {
 		srand(time(0));
@@ -4106,6 +4120,40 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			//Если файл не пустой
 			else 
 			{
+				//чтение ресурсов
+				System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MainForm::typeid));
+				HRSRC   hRes = FindResource(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_PNG1), TEXT("PNG"));		//поиск ресурса в исполняемом файле
+				
+
+				DWORD dwSize = SizeofResource(NULL, hRes);	//получение размера ресурса
+				HGLOBAL hResMem = LoadResource(GetModuleHandle(NULL), hRes);	//загрузка ресурса
+				LPVOID pData;
+				/*
+				pData = LockResource(hResMem);	//фиксация ресурса в памяти
+				HANDLE File = CreateFile("data.jpg", GENERIC_WRITE, FILE_SHARE_WRITE, 0, OPEN_ALWAYS, 0, 0);	//создание файла, в который будет производиться запись ресурса
+				DWORD Written = 0;	//переменная для записи в файл
+
+
+				HBITMAP hBmp = LoadBitmap(NULL, MAKEINTRESOURCE(IDB_PNG1));
+				BITMAP   bmp;
+				GetObject(hBmp, sizeof(BITMAP), (LPSTR)&bmp);
+
+				Bitmap^ bmp = gcnew Bitmap(450, 350);
+				Graphics^ g = Graphics::FromImage(bmp); // холст для рисования
+				this->pictureBox1->Image = bmp; // закрепление к pictureBox
+
+				Bitmap^ image1; // фото загрузки в pictureBox
+
+				image1 = gcnew Bitmap("logo.bmp"); // инициализация файл с фото
+
+				pictureBox1->Image = image1;
+				*/
+				/*
+				Image1->Picture->LoadFromFile("b.bmp");
+				delete ptRes;
+				*/
+				//char* data = (char*)LockResource(hResMem);
+
 				if ((lines->Length - 10) % 129 == 0)            //форматирование верно
 				{
 					file_stream->kol_vo_film = (lines->Length - 10) / 129;
@@ -4125,12 +4173,20 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 					{
 						this->textBox1->Text = SetFilmInfo(cinema->films[0]);
 						this->tableLayoutPanel2->Visible = true;
+
+
 						/*
 						FileName = msclr::interop::marshal_as<System::String^>(cinema->films[0].path);
 						this->pictureBox1->Image = Image::FromFile(FileName);
 						*/
-						this->pictureBox1->Image = Image::FromFile(msclr::interop::marshal_as<System::String^>(cinema->films[0].path));
 
+
+						//this->pictureBox1->Image = Image::FromFile(msclr::interop::marshal_as<System::String^>(cinema->films[0].path));	//стандартное изображение
+						//this->pictureBox1->Image = ("kino.png", 0, 1);
+						/*
+						System::Drawing::Image^ image = getImageFromRes(IDB_PNG1);
+						if (image != nullptr) button1->BackgroundImage = image;
+						*/
 
 						if (file_stream->kol_vo_film >= 2)
 						{
@@ -4885,6 +4941,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 					seats[i]->BackColor = panel3->BackColor;
 					cinema->films[this->toolStripComboBox1->SelectedIndex].mesta[this->comboBox2->SelectedIndex + this->comboBox1->SelectedIndex * 3][i] = '1';
 					cinema->bron[cinema->broni_number][7] = cinema->bron[cinema->broni_number][7] + to_string(i) + " ";
+
 				}
 			}
 			cinema->bron[cinema->broni_number][1] = cinema->id_cinema;
@@ -4935,5 +4992,15 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 		else if (p->DialogResult == System::Windows::Forms::DialogResult::OK)
 			GameToolStripMenuItem_Click(sender, e);*/
 	}
+private: System::Void NameToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+
+}
+private: System::Void CinemaToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	ChangeForm^ p = gcnew ChangeForm(*cinema);
+
+	p->ShowDialog();
+	
+
+}
 };
 }

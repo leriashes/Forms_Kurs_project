@@ -42,6 +42,9 @@
     <ClInclude Include="FilmForm.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
+    <ClInclude Include="ChangeForm.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Forms_Kurs_project.rc">
@@ -73,5 +76,16 @@
     <ClCompile Include="FilmForm.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="ChangeForm.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="kino.png">
+      <Filter>Файлы заголовков</Filter>
+    </Image>
+    <Image Include="popcorn.ico">
+      <Filter>Файлы ресурсов</Filter>
+    </Image>
   </ItemGroup>
 </Project>
