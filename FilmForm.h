@@ -19,14 +19,15 @@ namespace FormsKursproject {
 	{
 	public:
 		Film* film;
+		Cinema* cinema;
+		int index;
 
-		FilmForm(void)
+		FilmForm(Cinema* cinema, int* index)
 		{
 			InitializeComponent();
-			film = new Film();
-			//
-			//TODO: добавьте код конструктора
-			//
+			film = new Film(cinema->films[*index]);
+			this->cinema = cinema;
+			this->index = *index;
 		}
 
 		Film Result()
@@ -548,10 +549,7 @@ namespace FormsKursproject {
 			// comboBox1
 			// 
 			this->comboBox1->FormattingEnabled = true;
-			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(9) {
-				L"1", L"2", L"3", L"4", L"5", L"6", L"7", L"8",
-					L"9"
-			});
+			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(1) { L"Номер зала" });
 			this->comboBox1->Location = System::Drawing::Point(517, 246);
 			this->comboBox1->Name = L"comboBox1";
 			this->comboBox1->Size = System::Drawing::Size(127, 21);
@@ -641,6 +639,7 @@ namespace FormsKursproject {
 			this->SizeGripStyle = System::Windows::Forms::SizeGripStyle::Hide;
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterParent;
 			this->Text = L"Фильм";
+			this->Load += gcnew System::EventHandler(this, &FilmForm::FilmForm_Load);
 			this->groupBox1->ResumeLayout(false);
 			this->groupBox1->PerformLayout();
 			this->groupBox2->ResumeLayout(false);
@@ -1081,6 +1080,34 @@ namespace FormsKursproject {
 		film->time[1] = film->time[4] = film->time[7] = msclr::interop::marshal_as<std::string>(maskedTextBox3->Text);
 		film->time[2] = film->time[5] = film->time[8] = msclr::interop::marshal_as<std::string>(maskedTextBox4->Text);
 		film->path = msclr::interop::marshal_as<std::string>(textBox11->Text);
+	}
+
+	private: System::Void FilmForm_Load(System::Object^ sender, System::EventArgs^ e) {
+		this->comboBox1->Items->Clear();
+
+		bool empty;
+
+		for (int i = 1; i < 10; i++)
+		{
+			empty = true;
+			for (int j = 0; j < cinema->films_number && empty; j++)
+			{
+				if (index != j && cinema->films[j].number_zal[0] == i + 48)
+				{
+					empty = false;
+				}
+			}
+
+			if (empty)
+			{
+				this->comboBox1->Items->Add((System::Object^)i.ToString());
+
+				if (index < cinema->films_number && cinema->films[index].number_zal[0] == i + 48)
+				{
+					this->comboBox1->SelectedIndex = i - 1;
+				}
+			}
+		}
 	}
 };
 }

@@ -5242,13 +5242,12 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 	}
 
 	private: System::Void NewMovieToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
-		FilmForm^ p = gcnew FilmForm();
+		FilmForm^ p = gcnew FilmForm(cinema, &cinema->films_number);
 		p->ShowDialog();
 		
 		if (p->DialogResult == System::Windows::Forms::DialogResult::OK)
 		{
-			Film film = p->Result();
-			cinema->films[cinema->films_number] = film;
+			cinema->films[cinema->films_number] = p->Result();
 			cinema->NewHallCinema(cinema->films_number);
 			cinema->films_number += 1;
 			file_stream->Write(*cinema);
