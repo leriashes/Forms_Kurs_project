@@ -669,7 +669,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 					this->CorrectMovieToolStripMenuItem, this->DelMovieToolStripMenuItem
 			});
 			this->MovieToolStripMenuItem->Name = L"MovieToolStripMenuItem";
-			this->MovieToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->MovieToolStripMenuItem->Size = System::Drawing::Size(132, 22);
 			this->MovieToolStripMenuItem->Text = L"&Фильм";
 			// 
 			// NewMovieToolStripMenuItem
@@ -698,7 +698,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 					this->CorrectPromoToolStripMenuItem, this->DelPromoToolStripMenuItem
 			});
 			this->PromoToolStripMenuItem->Name = L"PromoToolStripMenuItem";
-			this->PromoToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->PromoToolStripMenuItem->Size = System::Drawing::Size(132, 22);
 			this->PromoToolStripMenuItem->Text = L"&Промокод";
 			// 
 			// NewPromoToolStripMenuItem
@@ -726,39 +726,39 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 					this->AddressToolStripMenuItem, this->CashiersToolStripMenuItem, this->INNToolStripMenuItem, this->RNMToolStripMenuItem
 			});
 			this->CinemaToolStripMenuItem->Name = L"CinemaToolStripMenuItem";
-			this->CinemaToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->CinemaToolStripMenuItem->Size = System::Drawing::Size(132, 22);
 			this->CinemaToolStripMenuItem->Text = L"&Кинотеатр";
 			this->CinemaToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::CinemaToolStripMenuItem_Click);
 			// 
 			// NameToolStripMenuItem
 			// 
 			this->NameToolStripMenuItem->Name = L"NameToolStripMenuItem";
-			this->NameToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->NameToolStripMenuItem->Size = System::Drawing::Size(126, 22);
 			this->NameToolStripMenuItem->Text = L"&Название";
 			this->NameToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::NameToolStripMenuItem_Click);
 			// 
 			// AddressToolStripMenuItem
 			// 
 			this->AddressToolStripMenuItem->Name = L"AddressToolStripMenuItem";
-			this->AddressToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->AddressToolStripMenuItem->Size = System::Drawing::Size(126, 22);
 			this->AddressToolStripMenuItem->Text = L"&Адрес";
 			// 
 			// CashiersToolStripMenuItem
 			// 
 			this->CashiersToolStripMenuItem->Name = L"CashiersToolStripMenuItem";
-			this->CashiersToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->CashiersToolStripMenuItem->Size = System::Drawing::Size(126, 22);
 			this->CashiersToolStripMenuItem->Text = L"&Кассиры";
 			// 
 			// INNToolStripMenuItem
 			// 
 			this->INNToolStripMenuItem->Name = L"INNToolStripMenuItem";
-			this->INNToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->INNToolStripMenuItem->Size = System::Drawing::Size(126, 22);
 			this->INNToolStripMenuItem->Text = L"&ИНН";
 			// 
 			// RNMToolStripMenuItem
 			// 
 			this->RNMToolStripMenuItem->Name = L"RNMToolStripMenuItem";
-			this->RNMToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->RNMToolStripMenuItem->Size = System::Drawing::Size(126, 22);
 			this->RNMToolStripMenuItem->Text = L"&РНМ";
 			// 
 			// ReportToolStripMenuItem

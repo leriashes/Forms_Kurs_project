@@ -1,6 +1,7 @@
 #pragma once
 #include "Cinema.h"
 #include <msclr\marshal.h>
+#include "msclr\marshal_cppstd.h"
 using namespace msclr::interop;
 
 namespace FormsKursproject {
@@ -22,7 +23,7 @@ namespace FormsKursproject {
 		ChangeForm(Cinema& cinema1)
 		{
 			
-			this->cinema = cinema1;
+			this->cinema = &cinema1;
 			InitializeComponent();
 			//
 			//TODO: добавьте код конструктора
@@ -351,24 +352,70 @@ namespace FormsKursproject {
 #pragma endregion
 	private: System::Void ChangeForm_Load(System::Object^ sender, System::EventArgs^ e) {
 		
-
 		this->button_1Del->Visible = false;
 		this->button_2Del->Visible = false;
 		this->button_3Del->Visible = false;
 		this->button_4Del->Visible = false;
 		this->button_5Del->Visible = false;
-
+		
 		this->button_1New->Visible = false;
 		this->button_2New->Visible = false;
 		this->button_3New->Visible = false;
 		this->button_4New->Visible = false;
 		this->button_5New->Visible = false;
-		
+
 		this->textBox_1->Visible = false;
 		this->textBox_2->Visible = false;
 		this->textBox_3->Visible = false;
 		this->textBox_4->Visible = false;
 		this->textBox_5->Visible = false;
+
+
+		this->textBox1->Text = msclr::interop::marshal_as<System::String^>(cinema->name);
+		this->textBox2->Text = msclr::interop::marshal_as<System::String^>(cinema->address);
+		this->textBox3->Text = msclr::interop::marshal_as<System::String^>(cinema->inn);
+		this->textBox4->Text = msclr::interop::marshal_as<System::String^>(cinema->rnm);
+		//this->textBox1->Text = cinema->cashiers_number.ToString();
+		if (cinema->cashiers_number > 0)
+		{
+			this->button_1Del->Visible = true;
+			this->button_1New->Visible = false;
+			this->button_2New->Visible = true;
+			this->textBox_1->Visible = true;
+			this->textBox_1->Text = msclr::interop::marshal_as<System::String^>(cinema->cashiers[1]);
+			if (cinema->cashiers_number > 1)
+			{
+				this->button_2Del->Visible = true;
+				this->button_2New->Visible = false;
+				this->button_3New->Visible = true;
+				this->textBox_2->Visible = true;
+				this->textBox_2->Text = msclr::interop::marshal_as<System::String^>(cinema->cashiers[2]);
+			}
+			if (cinema->cashiers_number > 2)
+			{
+				this->button_3Del->Visible = true;
+				this->button_3New->Visible = false;
+				this->button_4New->Visible = true;
+				this->textBox_3->Visible = true;
+				this->textBox_3->Text = msclr::interop::marshal_as<System::String^>(cinema->cashiers[3]);
+			}
+			if (cinema->cashiers_number > 3)
+			{
+				this->button_4Del->Visible = true;
+				this->button_4New->Visible = false;
+				this->button_5New->Visible = true;
+				this->textBox_4->Visible = true;
+				this->textBox_4->Text = msclr::interop::marshal_as<System::String^>(cinema->cashiers[4]);
+			}
+			if (cinema->cashiers_number > 3)
+			{
+				this->button_5Del->Visible = true;
+				this->button_5New->Visible = false;
+				this->textBox_5->Visible = true;
+				this->textBox_5->Text = msclr::interop::marshal_as<System::String^>(cinema->cashiers[5]);
+			}
+		}
+		
 //		this->textBox1->Text = msclr::interop::marshal_as<System::String^>(cinema->name.c_str());
 
 	}
