@@ -4722,6 +4722,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 					{
 						this->textBox1->Text = SetFilmInfo(cinema->films[0]);
 						this->tableLayoutPanel2->Visible = true;
+						this->pictureBox1->Image = Image::FromFile(msclr::interop::marshal_as<System::String^>(cinema->films[0].path));
 
 
 						/*
