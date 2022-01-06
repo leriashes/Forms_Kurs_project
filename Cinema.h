@@ -10,6 +10,8 @@ class Cinema
 {
 public:
 	int films_number;	//количество фильмов в прокате
+	int broni_number = 0;	//количество забронированных билетов
+	int broni_zapis = 0;	//количество забронированных билетов под запись в файл
 	string name;	//название кинотеатра
 	string address;	//адрес кинотеатра
 	string cashiers[5];	//кассиры кинотеатра		// сделать класс кассиров с информацией о них?
@@ -23,11 +25,12 @@ public:
 	string promo[10][2];	//промокоды
 	int promo_number = 0;
 	int cashiers_number = 0;
-	int broni_number = 0;
 
 	Film films[10];
 	
 public:
+	
+
 	int SearchBron(string code);	//поиск брони по номеру
 	void List_bron();	//вывод всех бронирований
 	void ChangeName();	//измение названия кинотеатра

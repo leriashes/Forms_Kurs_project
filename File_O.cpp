@@ -165,6 +165,294 @@ void File_O::ReadBron(Cinema& cinema) //считывание данных из файла бронировани€
     return;
 }*/
 
+void File_O::ReadBron(Cinema& cinema)
+{
+    bool result = false;
+    ifstream f1;
+    cinema.broni_number = 0;
+    cinema.broni_zapis = 0;
+    f1.open(path_bron);
+    if (!(f1.is_open()))
+    {
+        //создать файл
+        /*cout << "\n‘айл не найден\n";
+        _getch();
+        */
+        //создание файла, заполнение всех данных
+
+    }
+    else
+    {
+        //считывание данных о бронировании в массив или в строку
+        int i = 0;
+        string str;
+        string temp;
+        while (!f1.eof())   //узнать количество строк в файле
+        {
+            getline(f1, str);
+            i++;
+        }
+
+        bool reads;
+        f1.seekg(0, std::ios::beg);     //переход в начало файла
+        for (int u = 0; u < i; u++)
+        {
+            getline(f1, cinema.bron[u][0]);
+            string rez[8];
+            //разбор брони на составл€ющие
+            string sep = "|";   // строка или символ разделитель
+            size_t sep_size = sep.size();
+            string original = cinema.bron[u][0];
+            string tempura;
+            int h = 1;
+            while (true)
+            {
+                tempura = original.substr(0, original.find(sep));
+                if (tempura.size() != 0)   // можно добавить доп. проверку дл€ строк из пробелов
+                {
+                    rez[h] = "";
+                    rez[h] = tempura;
+                    if (h == 7)
+                    {
+                        if ((rez[1] + "\0") == cinema.id_cinema)
+                        {
+                            if (rez[6] == Time::RetDate(0, 1))
+                            {
+                                if (cinema.DeConvert_Time(rez[5]) + 30 > cinema.DeConvert_Time(Time::RetTime(0)))
+                                {
+                                    reads = true;
+
+                                }
+                                else
+                                {
+                                    reads = false;
+                                }
+                            }
+                            else
+                            {
+                                reads = true;
+                            }
+                            if (reads == true)
+                            {
+                                for (int e = 1; e < 8; e++)
+                                {
+                                    cinema.bron[cinema.broni_number][e] = rez[e];
+                                }
+                                cinema.broni_number++;
+                            }
+                        }
+                    }
+                    h++;
+                }
+                if (tempura.size() == original.size())
+                {
+                    break;
+                }
+                else
+                {
+                    original = original.substr(tempura.size() + sep_size);
+                }
+            }
+        }
+        f1.close();
+
+        //cout << "‘айл найден!";
+        WriteBron(cinema);
+        result = true;
+    }
+
+    return;
+}
+
+void File_O::WriteBron(Cinema& cinema)
+{
+    string path_cop = path_bron;
+    path_cop.resize(path_cop.size() - 4);
+    path_cop = path_cop + "_copy.txt\0";
+        
+    //скопировать исходный файл
+    std::ifstream    inFile(path_bron);
+    std::ofstream    outFile(path_cop);
+
+
+    outFile << inFile.rdbuf();
+    outFile.close();
+    inFile.close();
+    //Clean(path_bron);
+    //std::ofstream fileStrm(path_bron, std::ios::out);
+
+    /*fstream file;
+    file.open(path_bron, ios::out);
+    file << "";
+    file.close();
+    */
+
+    if (remove(path_bron.c_str()) != 0)             // удаление файла file.txt
+    {
+        //std::cout << "ќшибка удалени€ файла\n";
+    }
+    else
+    {
+        //std::cout << "‘айл успешно удалЄн\n";
+    }
+    //_getch();
+
+    ofstream outFiles(path_bron);
+    ifstream f1;
+    int num = 0;
+    f1.open(path_cop);
+    string str, write;
+    bool writes;
+    while (!f1.eof())
+    {
+        getline(f1, str);
+        if (str.size() > 5)
+        {
+            write = str;
+            //str.resize(str.size() - 5);
+            str.erase(5, str.size());
+            /*
+            cout << str;
+            _getch();
+            */
+            if (str != cinema.id_cinema)
+            {
+                //проверка на дату сеанса
+                string rez[8];
+                //разбор брони на составл€ющие
+                string sep = "|";   // строка или символ разделитель
+                size_t sep_size = sep.size();
+                string original = write;
+                string tempura;
+                int h = 1;
+                while (true)
+                {
+                    tempura = original.substr(0, original.find(sep));
+                    if (tempura.size() != 0)   // можно добавить доп. проверку дл€ строк из пробелов
+                    {
+                        rez[h] = "";
+                        rez[h] = tempura;
+                        if (h == 7)
+                        {
+                            if (rez[6] == Time::RetDate(0, 1) || rez[6] == Time::RetDate(1, 1) || rez[6] == Time::RetDate(2, 1))
+                            {
+                                if (rez[6] == Time::RetDate(0, 1))
+                                {
+                                    if (cinema.DeConvert_Time(rez[5]) + 30 > cinema.DeConvert_Time(Time::RetTime(0)))       //проверка дл€ 30-ти минутного аннулировани€ брони
+                                    {
+
+                                        /*
+                                        cout << cinema.DeConvert_Time(rez[5]);
+                                        cout << "\n\n";
+                                        cout << cinema.DeConvert_Time(Time::RetTime(0));
+                                        _getch();
+                                        */
+                                        writes = true;
+                                    }
+                                    else
+                                    {
+                                        writes = false;
+                                    }
+                                }
+                                else
+                                {
+                                    writes = true;
+                                }
+                                if (writes == true)
+                                {
+                                    //запись в новый файл
+                                    if (num != 0)
+                                    {
+                                        outFiles << endl;
+                                    }
+                                    outFiles << write;
+                                    num++;
+                                }
+                            }
+                        }
+                        h++;
+                    }
+                    if (tempura.size() == original.size())
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        original = original.substr(tempura.size() + sep_size);
+                    }
+                }
+            }
+        }
+    }
+    for (int d = 0; d < cinema.broni_number; d++)
+    {
+        if (cinema.bron[d][6] == Time::RetDate(0, 1) || cinema.bron[d][6] == Time::RetDate(1, 1) || cinema.bron[d][6] == Time::RetDate(2, 1))
+        {
+        }
+        else
+        {
+            for (int h = 1; h < 8; h++)
+            {
+                cinema.bron[d][h] = cinema.bron[d + 1][h];
+            }
+            cinema.broni_number = cinema.broni_number - 1;
+        }
+    }
+
+    if (cinema.broni_number != 0 && num != 0 && (cinema.broni_number - cinema.broni_number != 0))
+    {
+        if (num != 0)
+        {
+            outFiles << endl;
+        }
+    }
+    outFiles.close();
+    f1.close();
+    Clean(path_cop);    //удалить файл копию
+    cinema.broni_zapis = cinema.broni_number;
+    WriteNewBron(cinema);
+}
+
+void File_O::WriteNewBron(Cinema& cinema)
+{
+    std::ofstream f;                    //создаем поток 
+    f.open(path_bron, std::ios::app);  // открываем файл дл€ записи в конец
+
+    fstream file_s(path_bron);
+    int size = 0;
+    file_s.seekg(0, std::ios::end);
+    size = file_s.tellg();
+    /*
+    cout << "SIZE:  " << size;
+    _getch();
+    */
+
+    bool writes;
+    if (size != 0 && cinema.broni_number != 0)
+    {
+        f << endl;
+    }
+    for (int y = (cinema.broni_number - cinema.broni_zapis); y < cinema.broni_number; y++)
+    {
+
+        for (int t = 1; t < 8; t++)
+        {
+            f << cinema.bron[y][t];
+            if (t != 7)
+            {
+                f << "|";
+            }
+            //f << "    " << cinema.broni_number;
+        }
+        if (y < cinema.broni_number - 1)
+        {
+            f << endl;
+        }
+    }
+    f.close();
+    cinema.broni_zapis = 0;
+}
+
 bool File_O::CheckPath()
 {
     bool result = false;
@@ -204,27 +492,15 @@ void File_O::Read(Cinema& cinema)
     cinema.promo_number = 0;
     getline(file, temp);    //чтение id кинотеатра (если имеетс€)
     cinema.id_cinema = "";
-    if (temp[0] == 'i' && temp[1] == 'd' && temp[2] == ':')
+    for (int g = 0; g < temp.size(); g++)
     {
-        for (int g = 0; g < temp.size(); g++)
+        if (g > 3)
         {
-            if (g > 3)
-            {
-                cinema.id_cinema = cinema.id_cinema + temp[g];
-            }
+            cinema.id_cinema = cinema.id_cinema + temp[g];
         }
-        getline(file, cinema.name); //чтение названи€ кинотеатра
     }
-    else     //создание id файла
-    {
-        cinema.name = temp;
-        string str = "";
-        for (int i = 0; i < 5; ++i)
-        {
-            str += to_string(rand() % 10);
-        }
-        cinema.id_cinema = str;
-    }
+    getline(file, cinema.name); //чтение названи€ кинотеатра
+   
 
     //заполнение информации о кинотеатре
 
@@ -355,6 +631,7 @@ void File_O::Read(Cinema& cinema)
         getline(file, cinema.films[i].main_role);
         getline(file, cinema.films[i].rejisser);
         getline(file, cinema.films[i].number_zal);
+        getline(file, cinema.films[i].path);
 
         for (j = 0; j < 9; j++)
         {
@@ -391,7 +668,6 @@ void File_O::Read(Cinema& cinema)
 
             getline(file, cinema.films[i].price[j]);
             getline(file, cinema.films[i].time[j]);
-            getline(file, cinema.films[i].rand[j]);
 
             //string mesta_sdvig;
 
@@ -491,10 +767,14 @@ bool File_O::CheckCompound()        //проверка форматировани€ текстового файла
     }
     base.close();
     delete[] str;
+    
+    ofstream    outFile("7.txt");
+    outFile << i;
+    outFile.close();
 
-    if (((i - 11) % 137 == 0) || ((i - 10) % 137 == 0))            //форматирование верно
+    if ((i - 10) % 129 == 0)             //форматирование верно
     {
-        kol_vo_film = (i - 11) / 137;
+        kol_vo_film = (i - 10) / 129;
         result = true;
     }
     return result;
@@ -521,7 +801,7 @@ void File_O::Write(Cinema& cinema)
     inFile.close();
     outFile.close();
 
-    Clean();   //удаление всех данных из файла
+    Clean(path);   //удаление всех данных из файла
 
     //запись в файл
     ofstream  f;
@@ -583,6 +863,7 @@ void File_O::Write(Cinema& cinema)
             f << cinema.films[i].main_role << endl;  //запись главных актеров фильма
             f << cinema.films[i].rejisser << endl;   //запись режиссеров фильма
             f << cinema.films[i].number_zal << endl;   //запись номер зала
+            f << cinema.films[i].path << endl;   //запись путь к обложке
             f << endl;  //пуста€ строка
 
             for (int j = 0; j < 9; j++)
@@ -595,7 +876,6 @@ void File_O::Write(Cinema& cinema)
 
                 f << cinema.films[i].price[j] << endl;   //запись стоиомсти билета
                 f << cinema.films[i].time[j] << endl;   //запись времени сеанса
-                f << cinema.films[i].rand[j] << endl;   //запись точки (флажка) генерации
 
                 for (int o = 0; o < 10; o++)
                 {
@@ -625,10 +905,10 @@ void File_O::Write(Cinema& cinema)
     return;
 }
 
-void File_O::Clean()
+void File_O::Clean(string pat)
 {
     fstream ofs;
-    ofs.open(path, ios::out | ios::trunc);
+    ofs.open(pat, ios::out | ios::trunc);
     ofs.close();
 
     return;

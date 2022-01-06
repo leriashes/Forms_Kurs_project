@@ -5,6 +5,18 @@
 #include "AdminForm.h"
 #include "ExitForm.h"
 #include "FilmForm.h"
+#include "ChangeForm.h"
+#include "resource.h"
+
+
+#include <windows.h>
+#include <stdlib.h>
+#include <string.h>
+#include "resource.h"
+#include <tchar.h>
+
+
+using namespace msclr::interop;
 /*#include "HelloForm.h"
 #include "InfoForm.h"*/
 
@@ -969,12 +981,14 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->CinemaToolStripMenuItem->Name = L"CinemaToolStripMenuItem";
 			this->CinemaToolStripMenuItem->Size = System::Drawing::Size(132, 22);
 			this->CinemaToolStripMenuItem->Text = L"&Кинотеатр";
+			this->CinemaToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::CinemaToolStripMenuItem_Click);
 			// 
 			// NameToolStripMenuItem
 			// 
 			this->NameToolStripMenuItem->Name = L"NameToolStripMenuItem";
 			this->NameToolStripMenuItem->Size = System::Drawing::Size(126, 22);
 			this->NameToolStripMenuItem->Text = L"&Название";
+			this->NameToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::NameToolStripMenuItem_Click);
 			// 
 			// AddressToolStripMenuItem
 			// 
@@ -1622,7 +1636,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->tableLayoutPanel13->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 100)));
 			this->tableLayoutPanel13->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Absolute,
 				40)));
-			this->tableLayoutPanel13->Size = System::Drawing::Size(764, 616);
+			this->tableLayoutPanel13->Size = System::Drawing::Size(771, 619);
 			this->tableLayoutPanel13->TabIndex = 1;
 			this->tableLayoutPanel13->Visible = false;
 			// 
@@ -4341,6 +4355,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 
 		   //Открытие файла
 	private: System::Void open_file() {
+		srand(time(0));
 		this->changes = false;
 		Boolean good = true;
 		
@@ -4371,64 +4386,116 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			//Если файл не пустой
 			else 
 			{
-				if (((lines->Length - 10) % 137 == 0) || ((lines->Length - 9) % 137 == 0))            //форматирование верно
+				//чтение ресурсов
+				System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MainForm::typeid));
+				HRSRC   hRes = FindResource(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_PNG1), TEXT("PNG"));		//поиск ресурса в исполняемом файле
+				
+
+				DWORD dwSize = SizeofResource(NULL, hRes);	//получение размера ресурса
+				HGLOBAL hResMem = LoadResource(GetModuleHandle(NULL), hRes);	//загрузка ресурса
+				LPVOID pData;
+				/*
+				pData = LockResource(hResMem);	//фиксация ресурса в памяти
+				HANDLE File = CreateFile("data.jpg", GENERIC_WRITE, FILE_SHARE_WRITE, 0, OPEN_ALWAYS, 0, 0);	//создание файла, в который будет производиться запись ресурса
+				DWORD Written = 0;	//переменная для записи в файл
+
+
+				HBITMAP hBmp = LoadBitmap(NULL, MAKEINTRESOURCE(IDB_PNG1));
+				BITMAP   bmp;
+				GetObject(hBmp, sizeof(BITMAP), (LPSTR)&bmp);
+
+				Bitmap^ bmp = gcnew Bitmap(450, 350);
+				Graphics^ g = Graphics::FromImage(bmp); // холст для рисования
+				this->pictureBox1->Image = bmp; // закрепление к pictureBox
+
+				Bitmap^ image1; // фото загрузки в pictureBox
+
+				image1 = gcnew Bitmap("logo.bmp"); // инициализация файл с фото
+
+				pictureBox1->Image = image1;
+				*/
+				/*
+				Image1->Picture->LoadFromFile("b.bmp");
+				delete ptRes;
+				*/
+				//char* data = (char*)LockResource(hResMem);
+
+				if ((lines->Length - 10) % 129 == 0)            //форматирование верно
 				{
-					file_stream->kol_vo_film = (lines->Length - 10) / 137;
+					file_stream->kol_vo_film = (lines->Length - 10) / 129;
 					good = true;
 
 					file_stream->Read(*cinema);
 
 					this->toolStripComboBox1->Items->Clear();
-
+					file_stream->ReadBron(*cinema);
 					for (int i = 0; i < file_stream->kol_vo_film; i++)
 					{
 						this->toolStripComboBox1->Items->Add((System::Object^)msclr::interop::marshal_as<System::String^>(cinema->films[i].name));
 					}
-
+					
+					String^ FileName;
 					if (file_stream->kol_vo_film >= 1)
 					{
 						this->textBox1->Text = SetFilmInfo(cinema->films[0]);
 						this->tableLayoutPanel2->Visible = true;
 
+
+						/*
+						FileName = msclr::interop::marshal_as<System::String^>(cinema->films[0].path);
+						this->pictureBox1->Image = Image::FromFile(FileName);
+						*/
+
+
+						//this->pictureBox1->Image = Image::FromFile(msclr::interop::marshal_as<System::String^>(cinema->films[0].path));	//стандартное изображение
+						//this->pictureBox1->Image = ("kino.png", 0, 1);
+						/*
+						System::Drawing::Image^ image = getImageFromRes(IDB_PNG1);
+						if (image != nullptr) button1->BackgroundImage = image;
+						*/
+
 						if (file_stream->kol_vo_film >= 2)
 						{
 							this->textBox2->Text = SetFilmInfo(cinema->films[1]);
 							this->tableLayoutPanel3->Visible = true;
-
+							this->pictureBox2->Image = Image::FromFile(msclr::interop::marshal_as<System::String^>(cinema->films[1].path));
 							if (file_stream->kol_vo_film >= 3)
 							{
 								this->textBox3->Text = SetFilmInfo(cinema->films[2]);
 								this->tableLayoutPanel4->Visible = true;
 
+								this->pictureBox3->Image = Image::FromFile(msclr::interop::marshal_as<System::String^>(cinema->films[2].path));
 								if (file_stream->kol_vo_film >= 4)
 								{
 									this->textBox4->Text = SetFilmInfo(cinema->films[3]);
 									this->tableLayoutPanel5->Visible = true;
-
+									this->pictureBox4->Image = Image::FromFile(msclr::interop::marshal_as<System::String^>(cinema->films[3].path));
 									if (file_stream->kol_vo_film >= 5)
 									{
 										this->textBox5->Text = SetFilmInfo(cinema->films[4]);
 										this->tableLayoutPanel6->Visible = true;
-
+										this->pictureBox5->Image = Image::FromFile(msclr::interop::marshal_as<System::String^>(cinema->films[4].path));
 										if (file_stream->kol_vo_film >= 6)
 										{
 											this->textBox6->Text = SetFilmInfo(cinema->films[5]);
 											this->tableLayoutPanel7->Visible = true;
 
+											this->pictureBox6->Image = Image::FromFile(msclr::interop::marshal_as<System::String^>(cinema->films[5].path));
 											if (file_stream->kol_vo_film >= 7)
 											{
 												this->textBox7->Text = SetFilmInfo(cinema->films[6]);
 												this->tableLayoutPanel8->Visible = true;
-
+												this->pictureBox7->Image = Image::FromFile(msclr::interop::marshal_as<System::String^>(cinema->films[6].path));
 												if (file_stream->kol_vo_film >= 8)
 												{
 													this->textBox8->Text = SetFilmInfo(cinema->films[7]);
 													this->tableLayoutPanel9->Visible = true;
-
+													this->pictureBox8->Image = Image::FromFile(msclr::interop::marshal_as<System::String^>(cinema->films[7].path));
 													if (file_stream->kol_vo_film >= 9)
 													{
 														this->textBox9->Text = SetFilmInfo(cinema->films[8]);
 														this->tableLayoutPanel10->Visible = true;
+														this->pictureBox9->Image = Image::FromFile(msclr::interop::marshal_as<System::String^>(cinema->films[8].path));
 													}
 												}
 											}
@@ -5124,20 +5191,42 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 	
 		   //Бронирование
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-		String^ message = L"Выбранные места забронированы. За 30 минут до начала сеанса бронь аннулируется. \n\nПри оплате заказа назовите код: 12345";
+		String^ message = L"Выбранные места забронированы. За 30 минут до начала сеанса бронь аннулируется. \n\nПри оплате заказа назовите код: ";
 		String^ caption = L"";
+
+		int str = 0;
+		for (int i = 0; i < 5; ++i)
+		{
+			str = str * 10 + (rand() % 10);
+		}
+		message = message + str.ToString();
+
 		if (MessageBox::Show(message, caption, MessageBoxButtons::OK) == System::Windows::Forms::DialogResult::OK)
 		{
 			toolStripButton2_Click(sender, e);
+			cinema->bron[cinema->broni_number][7] = "";
 			for (int i = 0; i < 100; i++)
 			{
 				if (seats[i]->BackColor == panel5->BackColor)
 				{
 					seats[i]->BackColor = panel3->BackColor;
 					cinema->films[this->toolStripComboBox1->SelectedIndex].mesta[this->comboBox2->SelectedIndex + this->comboBox1->SelectedIndex * 3][i] = '1';
+					cinema->bron[cinema->broni_number][7] = cinema->bron[cinema->broni_number][7] + to_string(i) + " ";
+
 				}
 			}
+			cinema->bron[cinema->broni_number][1] = cinema->id_cinema;
+			cinema->bron[cinema->broni_number][2] = to_string(str);
+			cinema->bron[cinema->broni_number][3] = msclr::interop::marshal_as< std::string >(this->label4->Text);;
+			cinema->bron[cinema->broni_number][4] = Time::RetDate(0, 1);
+			cinema->bron[cinema->broni_number][5] = cinema->films[this->toolStripComboBox1->SelectedIndex].time[this->comboBox1->SelectedIndex];
+			cinema->bron[cinema->broni_number][6] = cinema->films[this->toolStripComboBox1->SelectedIndex].date[this->comboBox1->SelectedIndex];
+			cinema->broni_number = cinema->broni_number + 1;
+			cinema->broni_zapis = cinema->broni_zapis + 1;
+			file_stream->WriteBron(*cinema);
 			file_stream->Write(*cinema);
+			
+
 		}
 	}
 
@@ -5193,5 +5282,15 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 	private: System::Void panelPlus_Click(System::Object^ sender, System::EventArgs^ e) {
 		NewMovieToolStripMenuItem_Click(sender, e);
 	}
+private: System::Void NameToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+
+}
+private: System::Void CinemaToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	ChangeForm^ p = gcnew ChangeForm(*cinema);
+
+	p->ShowDialog();
+	
+
+}
 };
 }
