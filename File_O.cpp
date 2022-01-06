@@ -801,7 +801,7 @@ void File_O::Write(Cinema& cinema)
     inFile.close();
     outFile.close();
 
-    Clean();   //удаление всех данных из файла
+    Clean(path);   //удаление всех данных из файла
 
     //запись в файл
     ofstream  f;
