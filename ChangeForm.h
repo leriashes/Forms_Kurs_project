@@ -17,8 +17,10 @@ namespace FormsKursproject {
 	/// </summary>
 	public ref class ChangeForm : public System::Windows::Forms::Form
 	{
+	private:
+		Cinema* cinema;
+
 	public:
-		//ChangeForm(void)
 		ChangeForm(Cinema& cinema1)
 		{
 			
@@ -28,7 +30,6 @@ namespace FormsKursproject {
 			//TODO: добавьте код конструктора
 			//
 		}
-		Cinema* cinema;
 
 	protected:
 		/// <summary>
