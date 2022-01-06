@@ -6,6 +6,7 @@
 #include "ExitForm.h"
 #include "FilmForm.h"
 #include "ChangeForm.h"
+#include "ChooseForm.h"
 #include "resource.h"
 
 
@@ -233,11 +234,11 @@ private: System::Windows::Forms::ToolStripMenuItem^ DelMovieToolStripMenuItem;
 private: System::Windows::Forms::ToolStripMenuItem^ NewPromoToolStripMenuItem;
 private: System::Windows::Forms::ToolStripMenuItem^ CorrectPromoToolStripMenuItem;
 private: System::Windows::Forms::ToolStripMenuItem^ DelPromoToolStripMenuItem;
-private: System::Windows::Forms::ToolStripMenuItem^ NameToolStripMenuItem;
-private: System::Windows::Forms::ToolStripMenuItem^ AddressToolStripMenuItem;
-private: System::Windows::Forms::ToolStripMenuItem^ CashiersToolStripMenuItem;
-private: System::Windows::Forms::ToolStripMenuItem^ INNToolStripMenuItem;
-private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
+
+
+
+
+
 private: System::Windows::Forms::Panel^ panelPlus;
 
 private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel13;
@@ -579,11 +580,6 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->CorrectPromoToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->DelPromoToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->CinemaToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->NameToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->AddressToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->CashiersToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->INNToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->RNMToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->ReportToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->TodayReportToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->AllTimeReportToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -922,26 +918,27 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 					this->CorrectMovieToolStripMenuItem, this->DelMovieToolStripMenuItem
 			});
 			this->MovieToolStripMenuItem->Name = L"MovieToolStripMenuItem";
-			this->MovieToolStripMenuItem->Size = System::Drawing::Size(132, 22);
+			this->MovieToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->MovieToolStripMenuItem->Text = L"&Фильм";
 			// 
 			// NewMovieToolStripMenuItem
 			// 
 			this->NewMovieToolStripMenuItem->Name = L"NewMovieToolStripMenuItem";
-			this->NewMovieToolStripMenuItem->Size = System::Drawing::Size(165, 22);
+			this->NewMovieToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->NewMovieToolStripMenuItem->Text = L"&Добавить новый";
 			this->NewMovieToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::NewMovieToolStripMenuItem_Click);
 			// 
 			// CorrectMovieToolStripMenuItem
 			// 
 			this->CorrectMovieToolStripMenuItem->Name = L"CorrectMovieToolStripMenuItem";
-			this->CorrectMovieToolStripMenuItem->Size = System::Drawing::Size(165, 22);
+			this->CorrectMovieToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->CorrectMovieToolStripMenuItem->Text = L"&Изменить";
+			this->CorrectMovieToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::CorrectMovieToolStripMenuItem_Click);
 			// 
 			// DelMovieToolStripMenuItem
 			// 
 			this->DelMovieToolStripMenuItem->Name = L"DelMovieToolStripMenuItem";
-			this->DelMovieToolStripMenuItem->Size = System::Drawing::Size(165, 22);
+			this->DelMovieToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->DelMovieToolStripMenuItem->Text = L"&Удалить";
 			// 
 			// PromoToolStripMenuItem
@@ -951,67 +948,33 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 					this->CorrectPromoToolStripMenuItem, this->DelPromoToolStripMenuItem
 			});
 			this->PromoToolStripMenuItem->Name = L"PromoToolStripMenuItem";
-			this->PromoToolStripMenuItem->Size = System::Drawing::Size(132, 22);
+			this->PromoToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->PromoToolStripMenuItem->Text = L"&Промокод";
 			// 
 			// NewPromoToolStripMenuItem
 			// 
 			this->NewPromoToolStripMenuItem->Name = L"NewPromoToolStripMenuItem";
-			this->NewPromoToolStripMenuItem->Size = System::Drawing::Size(165, 22);
+			this->NewPromoToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->NewPromoToolStripMenuItem->Text = L"&Добавить новый";
 			// 
 			// CorrectPromoToolStripMenuItem
 			// 
 			this->CorrectPromoToolStripMenuItem->Name = L"CorrectPromoToolStripMenuItem";
-			this->CorrectPromoToolStripMenuItem->Size = System::Drawing::Size(165, 22);
+			this->CorrectPromoToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->CorrectPromoToolStripMenuItem->Text = L"&Изменить";
 			// 
 			// DelPromoToolStripMenuItem
 			// 
 			this->DelPromoToolStripMenuItem->Name = L"DelPromoToolStripMenuItem";
-			this->DelPromoToolStripMenuItem->Size = System::Drawing::Size(165, 22);
+			this->DelPromoToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->DelPromoToolStripMenuItem->Text = L"&Удалить";
 			// 
 			// CinemaToolStripMenuItem
 			// 
-			this->CinemaToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(5) {
-				this->NameToolStripMenuItem,
-					this->AddressToolStripMenuItem, this->CashiersToolStripMenuItem, this->INNToolStripMenuItem, this->RNMToolStripMenuItem
-			});
 			this->CinemaToolStripMenuItem->Name = L"CinemaToolStripMenuItem";
-			this->CinemaToolStripMenuItem->Size = System::Drawing::Size(132, 22);
+			this->CinemaToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->CinemaToolStripMenuItem->Text = L"&Кинотеатр";
 			this->CinemaToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::CinemaToolStripMenuItem_Click);
-			// 
-			// NameToolStripMenuItem
-			// 
-			this->NameToolStripMenuItem->Name = L"NameToolStripMenuItem";
-			this->NameToolStripMenuItem->Size = System::Drawing::Size(126, 22);
-			this->NameToolStripMenuItem->Text = L"&Название";
-			// 
-			// AddressToolStripMenuItem
-			// 
-			this->AddressToolStripMenuItem->Name = L"AddressToolStripMenuItem";
-			this->AddressToolStripMenuItem->Size = System::Drawing::Size(126, 22);
-			this->AddressToolStripMenuItem->Text = L"&Адрес";
-			// 
-			// CashiersToolStripMenuItem
-			// 
-			this->CashiersToolStripMenuItem->Name = L"CashiersToolStripMenuItem";
-			this->CashiersToolStripMenuItem->Size = System::Drawing::Size(126, 22);
-			this->CashiersToolStripMenuItem->Text = L"&Кассиры";
-			// 
-			// INNToolStripMenuItem
-			// 
-			this->INNToolStripMenuItem->Name = L"INNToolStripMenuItem";
-			this->INNToolStripMenuItem->Size = System::Drawing::Size(126, 22);
-			this->INNToolStripMenuItem->Text = L"&ИНН";
-			// 
-			// RNMToolStripMenuItem
-			// 
-			this->RNMToolStripMenuItem->Name = L"RNMToolStripMenuItem";
-			this->RNMToolStripMenuItem->Size = System::Drawing::Size(126, 22);
-			this->RNMToolStripMenuItem->Text = L"&РНМ";
 			// 
 			// ReportToolStripMenuItem
 			// 
@@ -1027,13 +990,13 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			// TodayReportToolStripMenuItem
 			// 
 			this->TodayReportToolStripMenuItem->Name = L"TodayReportToolStripMenuItem";
-			this->TodayReportToolStripMenuItem->Size = System::Drawing::Size(178, 22);
+			this->TodayReportToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->TodayReportToolStripMenuItem->Text = L"&Отчёт за день";
 			// 
 			// AllTimeReportToolStripMenuItem
 			// 
 			this->AllTimeReportToolStripMenuItem->Name = L"AllTimeReportToolStripMenuItem";
-			this->AllTimeReportToolStripMenuItem->Size = System::Drawing::Size(178, 22);
+			this->AllTimeReportToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->AllTimeReportToolStripMenuItem->Text = L"О&тчёт за всё время";
 			// 
 			// InfoToolStripMenuItem
@@ -4755,7 +4718,6 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 						this->toolStripComboBox1->Items->Add((System::Object^)msclr::interop::marshal_as<System::String^>(cinema->films[i].name));
 					}
 					
-					String^ FileName;
 					if (file_stream->kol_vo_film >= 1)
 					{
 						this->textBox1->Text = SetFilmInfo(cinema->films[0]);
@@ -5297,6 +5259,25 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 
 	private: System::Void tableLayoutPanel11_VisibleChanged(System::Object^ sender, System::EventArgs^ e) {
 		PlusChangeLocation();
+	}
+
+	private: System::Void CorrectMovieToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+		ChooseForm^ p = gcnew ChooseForm(cinema);
+		p->ShowDialog();
+		int index = p->Result();
+
+		if (p->DialogResult == System::Windows::Forms::DialogResult::OK)
+		{
+			FilmForm^ p1 = gcnew FilmForm(cinema, &index);
+			p1->ShowDialog();
+
+			if (p1->DialogResult == System::Windows::Forms::DialogResult::OK)
+			{
+				cinema->films[index] = p1->Result();
+				file_stream->Write(*cinema);
+				open_file();
+			}
+		}
 	}
 };
 }
