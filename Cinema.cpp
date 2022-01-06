@@ -6,6 +6,7 @@
 
 int Cinema::SearchBron(string code)
 {
+	
 	for (int i = 0; i < broni_number; i++)
 	{
 		if (code == bron[i][1])
@@ -34,7 +35,7 @@ void Cinema::ChangeName()
 
 void Cinema::ChangeAdress()
 {
-	cout << "Текущий адес кинотеатра: " << address << "";
+	cout << "Текущий адрес кинотеатра: " << address << "";
 	InputAdress();
 	return;
 }
@@ -886,7 +887,6 @@ void Cinema::NewHallCinema(int number_film)
 {
 	for (int i = 0; i < 9; i++)
 	{
-		films[number_film].rand[i] = "0";
 		films[number_film].mesta[i] = NewHall();
 	}
 

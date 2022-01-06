@@ -5,6 +5,9 @@
 #include "AdminForm.h"
 #include "ExitForm.h"
 #include "FilmForm.h"
+#include <msclr\marshal.h>
+#include "Time.h"
+using namespace msclr::interop;
 /*#include "HelloForm.h"
 #include "InfoForm.h"*/
 
@@ -227,40 +230,6 @@ private: System::Windows::Forms::ToolStripMenuItem^ CashiersToolStripMenuItem;
 private: System::Windows::Forms::ToolStripMenuItem^ INNToolStripMenuItem;
 private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 		   Cinema* cinema;
 	public:
 		MainForm(void)
@@ -300,81 +269,14 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 	private: System::Windows::Forms::OpenFileDialog^ openFileDialog1;
 	private: System::Windows::Forms::ToolStripMenuItem^ SaveToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ SaveAsToolStripMenuItem;
-
-
-
-
-
-
-
-
-
 	private: System::Windows::Forms::ToolStripSeparator^ toolStripSeparator2;
 	private: System::Windows::Forms::ToolStripSeparator^ toolStripSeparator3;
-
-
 	private: System::Windows::Forms::ToolStripMenuItem^ CorrectToolStripMenuItem;
-
-
 	private: System::Windows::Forms::ToolStripMenuItem^ InfoToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ QuitToolStripMenuItem;
-
-
 	private: System::Windows::Forms::ToolStripSeparator^ toolStripSeparator1;
 	private: System::Windows::Forms::ToolStripMenuItem^ CloseToolStripMenuItem;
 	private: System::Windows::Forms::SaveFileDialog^ saveFileDialog1;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -648,7 +550,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->menustrip_main->Location = System::Drawing::Point(0, 0);
 			this->menustrip_main->Name = L"menustrip_main";
 			this->menustrip_main->Padding = System::Windows::Forms::Padding(3, 1, 0, 1);
-			this->menustrip_main->Size = System::Drawing::Size(1018, 24);
+			this->menustrip_main->Size = System::Drawing::Size(1025, 24);
 			this->menustrip_main->TabIndex = 0;
 			this->menustrip_main->Text = L"menuStrip1";
 			// 
@@ -890,10 +792,10 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			// 
 			this->statusStrip1->ImageScalingSize = System::Drawing::Size(28, 28);
 			this->statusStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->toolStripStatusLabel_filename });
-			this->statusStrip1->Location = System::Drawing::Point(0, 640);
+			this->statusStrip1->Location = System::Drawing::Point(0, 643);
 			this->statusStrip1->Name = L"statusStrip1";
 			this->statusStrip1->Padding = System::Windows::Forms::Padding(1, 0, 8, 0);
-			this->statusStrip1->Size = System::Drawing::Size(1018, 22);
+			this->statusStrip1->Size = System::Drawing::Size(1025, 22);
 			this->statusStrip1->TabIndex = 1;
 			this->statusStrip1->Text = L"statusStrip1";
 			// 
@@ -921,7 +823,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->label_center->Location = System::Drawing::Point(0, 0);
 			this->label_center->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label_center->Name = L"label_center";
-			this->label_center->Size = System::Drawing::Size(1018, 662);
+			this->label_center->Size = System::Drawing::Size(1025, 665);
 			this->label_center->TabIndex = 3;
 			this->label_center->Text = L"Файл не выбран";
 			this->label_center->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -941,7 +843,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->tableLayoutPanel11->Name = L"tableLayoutPanel11";
 			this->tableLayoutPanel11->RowCount = 1;
 			this->tableLayoutPanel11->RowStyles->Add((gcnew System::Windows::Forms::RowStyle()));
-			this->tableLayoutPanel11->Size = System::Drawing::Size(1018, 616);
+			this->tableLayoutPanel11->Size = System::Drawing::Size(1025, 619);
 			this->tableLayoutPanel11->TabIndex = 4;
 			this->tableLayoutPanel11->Visible = false;
 			// 
@@ -954,7 +856,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel1->Location = System::Drawing::Point(0, 0);
 			this->panel1->Margin = System::Windows::Forms::Padding(0);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(254, 616);
+			this->panel1->Size = System::Drawing::Size(254, 619);
 			this->panel1->TabIndex = 0;
 			// 
 			// tableLayoutPanel12
@@ -1013,7 +915,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 				40)));
 			this->tableLayoutPanel12->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Absolute,
 				20)));
-			this->tableLayoutPanel12->Size = System::Drawing::Size(254, 591);
+			this->tableLayoutPanel12->Size = System::Drawing::Size(254, 594);
 			this->tableLayoutPanel12->TabIndex = 2;
 			// 
 			// label32
@@ -1021,7 +923,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->label32->AutoSize = true;
 			this->tableLayoutPanel12->SetColumnSpan(this->label32, 2);
 			this->label32->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->label32->Location = System::Drawing::Point(3, 303);
+			this->label32->Location = System::Drawing::Point(3, 305);
 			this->label32->Margin = System::Windows::Forms::Padding(3);
 			this->label32->Name = L"label32";
 			this->label32->Size = System::Drawing::Size(248, 34);
@@ -1033,7 +935,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			// 
 			this->label3->AutoSize = true;
 			this->label3->Dock = System::Windows::Forms::DockStyle::Top;
-			this->label3->Location = System::Drawing::Point(3, 437);
+			this->label3->Location = System::Drawing::Point(3, 441);
 			this->label3->Margin = System::Windows::Forms::Padding(3, 7, 3, 0);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(47, 26);
@@ -1046,7 +948,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel5->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel5->BackColor = System::Drawing::Color::Brown;
 			this->panel5->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->panel5->Location = System::Drawing::Point(20, 265);
+			this->panel5->Location = System::Drawing::Point(20, 267);
 			this->panel5->Margin = System::Windows::Forms::Padding(10, 5, 3, 3);
 			this->panel5->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel5->Name = L"panel5";
@@ -1058,7 +960,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel4->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel4->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel4->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->panel4->Location = System::Drawing::Point(20, 225);
+			this->panel4->Location = System::Drawing::Point(20, 227);
 			this->panel4->Margin = System::Windows::Forms::Padding(10, 5, 3, 3);
 			this->panel4->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel4->Name = L"panel4";
@@ -1070,7 +972,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel3->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel3->BackColor = System::Drawing::Color::LightGreen;
 			this->panel3->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->panel3->Location = System::Drawing::Point(20, 185);
+			this->panel3->Location = System::Drawing::Point(20, 187);
 			this->panel3->Margin = System::Windows::Forms::Padding(10, 5, 3, 3);
 			this->panel3->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel3->Name = L"panel3";
@@ -1081,7 +983,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			// 
 			this->label12->AutoSize = true;
 			this->label12->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->label12->Location = System::Drawing::Point(56, 263);
+			this->label12->Location = System::Drawing::Point(56, 265);
 			this->label12->Margin = System::Windows::Forms::Padding(3);
 			this->label12->Name = L"label12";
 			this->label12->Size = System::Drawing::Size(195, 34);
@@ -1093,7 +995,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			// 
 			this->label10->AutoSize = true;
 			this->label10->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->label10->Location = System::Drawing::Point(56, 223);
+			this->label10->Location = System::Drawing::Point(56, 225);
 			this->label10->Margin = System::Windows::Forms::Padding(3);
 			this->label10->Name = L"label10";
 			this->label10->Size = System::Drawing::Size(195, 34);
@@ -1105,7 +1007,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			// 
 			this->label8->AutoSize = true;
 			this->label8->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->label8->Location = System::Drawing::Point(56, 183);
+			this->label8->Location = System::Drawing::Point(56, 185);
 			this->label8->Margin = System::Windows::Forms::Padding(3);
 			this->label8->Name = L"label8";
 			this->label8->Size = System::Drawing::Size(195, 34);
@@ -1117,7 +1019,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			// 
 			this->label6->AutoSize = true;
 			this->label6->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->label6->Location = System::Drawing::Point(56, 143);
+			this->label6->Location = System::Drawing::Point(56, 145);
 			this->label6->Margin = System::Windows::Forms::Padding(3);
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(195, 34);
@@ -1175,7 +1077,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel2->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel2->BackColor = System::Drawing::SystemColors::ControlDarkDark;
 			this->panel2->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->panel2->Location = System::Drawing::Point(20, 145);
+			this->panel2->Location = System::Drawing::Point(20, 147);
 			this->panel2->Margin = System::Windows::Forms::Padding(10, 5, 3, 3);
 			this->panel2->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel2->Name = L"panel2";
@@ -1185,7 +1087,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			// textBox10
 			// 
 			this->textBox10->Dock = System::Windows::Forms::DockStyle::Left;
-			this->textBox10->Location = System::Drawing::Point(56, 440);
+			this->textBox10->Location = System::Drawing::Point(56, 444);
 			this->textBox10->Margin = System::Windows::Forms::Padding(3, 10, 3, 3);
 			this->textBox10->Name = L"textBox10";
 			this->textBox10->Size = System::Drawing::Size(185, 20);
@@ -1195,7 +1097,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			// button1
 			// 
 			this->button1->Enabled = false;
-			this->button1->Location = System::Drawing::Point(56, 553);
+			this->button1->Location = System::Drawing::Point(56, 557);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(144, 23);
 			this->button1->TabIndex = 25;
@@ -1205,7 +1107,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			// button2
 			// 
 			this->button2->Enabled = false;
-			this->button2->Location = System::Drawing::Point(56, 513);
+			this->button2->Location = System::Drawing::Point(56, 517);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(144, 23);
 			this->button2->TabIndex = 26;
@@ -1216,7 +1118,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			// button3
 			// 
 			this->button3->Enabled = false;
-			this->button3->Location = System::Drawing::Point(56, 473);
+			this->button3->Location = System::Drawing::Point(56, 477);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(144, 23);
 			this->button3->TabIndex = 27;
@@ -1284,7 +1186,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->tableLayoutPanel13->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 100)));
 			this->tableLayoutPanel13->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Absolute,
 				40)));
-			this->tableLayoutPanel13->Size = System::Drawing::Size(764, 616);
+			this->tableLayoutPanel13->Size = System::Drawing::Size(771, 619);
 			this->tableLayoutPanel13->TabIndex = 1;
 			this->tableLayoutPanel13->Visible = false;
 			// 
@@ -1294,9 +1196,9 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->label31->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->label31->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label31->Location = System::Drawing::Point(3, 576);
+			this->label31->Location = System::Drawing::Point(3, 579);
 			this->label31->Name = L"label31";
-			this->label31->Size = System::Drawing::Size(758, 40);
+			this->label31->Size = System::Drawing::Size(765, 40);
 			this->label31->TabIndex = 3;
 			this->label31->Text = L"Кол-во билетов на сумму";
 			this->label31->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -1309,7 +1211,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 				static_cast<System::Byte>(204)));
 			this->label5->Location = System::Drawing::Point(3, 50);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(758, 30);
+			this->label5->Size = System::Drawing::Size(765, 30);
 			this->label5->TabIndex = 1;
 			this->label5->Text = L"Дата и время, Кинотеатр, Зал";
 			this->label5->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -1322,7 +1224,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 				static_cast<System::Byte>(204)));
 			this->label4->Location = System::Drawing::Point(3, 0);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(758, 50);
+			this->label4->Size = System::Drawing::Size(765, 50);
 			this->label4->TabIndex = 0;
 			this->label4->Text = L"Название фильма";
 			this->label4->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -1510,7 +1412,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->tableLayoutPanel14->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Absolute,
 				40)));
 			this->tableLayoutPanel14->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 50)));
-			this->tableLayoutPanel14->Size = System::Drawing::Size(764, 496);
+			this->tableLayoutPanel14->Size = System::Drawing::Size(771, 499);
 			this->tableLayoutPanel14->TabIndex = 2;
 			// 
 			// label30
@@ -1521,7 +1423,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->label30->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->label30->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label30->Location = System::Drawing::Point(185, 17);
+			this->label30->Location = System::Drawing::Point(188, 19);
 			this->label30->Margin = System::Windows::Forms::Padding(3);
 			this->label30->Name = L"label30";
 			this->label30->Size = System::Drawing::Size(394, 21);
@@ -1535,7 +1437,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->label29->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->label29->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label29->Location = System::Drawing::Point(145, 84);
+			this->label29->Location = System::Drawing::Point(148, 86);
 			this->label29->Margin = System::Windows::Forms::Padding(3);
 			this->label29->Name = L"label29";
 			this->label29->Size = System::Drawing::Size(34, 34);
@@ -1549,7 +1451,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->label28->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->label28->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label28->Location = System::Drawing::Point(145, 204);
+			this->label28->Location = System::Drawing::Point(148, 206);
 			this->label28->Margin = System::Windows::Forms::Padding(3);
 			this->label28->Name = L"label28";
 			this->label28->Size = System::Drawing::Size(34, 34);
@@ -1563,7 +1465,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->label27->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->label27->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label27->Location = System::Drawing::Point(145, 124);
+			this->label27->Location = System::Drawing::Point(148, 126);
 			this->label27->Margin = System::Windows::Forms::Padding(3);
 			this->label27->Name = L"label27";
 			this->label27->Size = System::Drawing::Size(34, 34);
@@ -1577,7 +1479,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->label26->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->label26->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label26->Location = System::Drawing::Point(145, 164);
+			this->label26->Location = System::Drawing::Point(148, 166);
 			this->label26->Margin = System::Windows::Forms::Padding(3);
 			this->label26->Name = L"label26";
 			this->label26->Size = System::Drawing::Size(34, 34);
@@ -1591,7 +1493,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->label25->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->label25->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label25->Location = System::Drawing::Point(145, 364);
+			this->label25->Location = System::Drawing::Point(148, 366);
 			this->label25->Margin = System::Windows::Forms::Padding(3);
 			this->label25->Name = L"label25";
 			this->label25->Size = System::Drawing::Size(34, 34);
@@ -1605,7 +1507,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->label24->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->label24->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label24->Location = System::Drawing::Point(145, 324);
+			this->label24->Location = System::Drawing::Point(148, 326);
 			this->label24->Margin = System::Windows::Forms::Padding(3);
 			this->label24->Name = L"label24";
 			this->label24->Size = System::Drawing::Size(34, 34);
@@ -1619,7 +1521,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->label23->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->label23->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label23->Location = System::Drawing::Point(145, 444);
+			this->label23->Location = System::Drawing::Point(148, 446);
 			this->label23->Margin = System::Windows::Forms::Padding(3);
 			this->label23->Name = L"label23";
 			this->label23->Size = System::Drawing::Size(34, 34);
@@ -1633,7 +1535,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->label22->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->label22->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label22->Location = System::Drawing::Point(145, 404);
+			this->label22->Location = System::Drawing::Point(148, 406);
 			this->label22->Margin = System::Windows::Forms::Padding(3);
 			this->label22->Name = L"label22";
 			this->label22->Size = System::Drawing::Size(34, 34);
@@ -1647,7 +1549,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->label21->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->label21->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label21->Location = System::Drawing::Point(145, 284);
+			this->label21->Location = System::Drawing::Point(148, 286);
 			this->label21->Margin = System::Windows::Forms::Padding(3);
 			this->label21->Name = L"label21";
 			this->label21->Size = System::Drawing::Size(34, 34);
@@ -1661,7 +1563,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->label20->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->label20->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label20->Location = System::Drawing::Point(145, 244);
+			this->label20->Location = System::Drawing::Point(148, 246);
 			this->label20->Margin = System::Windows::Forms::Padding(3);
 			this->label20->Name = L"label20";
 			this->label20->Size = System::Drawing::Size(34, 34);
@@ -1675,7 +1577,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->label19->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->label19->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label19->Location = System::Drawing::Point(305, 44);
+			this->label19->Location = System::Drawing::Point(308, 46);
 			this->label19->Margin = System::Windows::Forms::Padding(3);
 			this->label19->Name = L"label19";
 			this->label19->Size = System::Drawing::Size(34, 34);
@@ -1689,7 +1591,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->label18->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->label18->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label18->Location = System::Drawing::Point(545, 44);
+			this->label18->Location = System::Drawing::Point(548, 46);
 			this->label18->Margin = System::Windows::Forms::Padding(3);
 			this->label18->Name = L"label18";
 			this->label18->Size = System::Drawing::Size(34, 34);
@@ -1703,7 +1605,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->label17->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->label17->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label17->Location = System::Drawing::Point(465, 44);
+			this->label17->Location = System::Drawing::Point(468, 46);
 			this->label17->Margin = System::Windows::Forms::Padding(3);
 			this->label17->Name = L"label17";
 			this->label17->Size = System::Drawing::Size(34, 34);
@@ -1717,7 +1619,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->label16->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->label16->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label16->Location = System::Drawing::Point(425, 44);
+			this->label16->Location = System::Drawing::Point(428, 46);
 			this->label16->Margin = System::Windows::Forms::Padding(3);
 			this->label16->Name = L"label16";
 			this->label16->Size = System::Drawing::Size(34, 34);
@@ -1731,7 +1633,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->label15->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->label15->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label15->Location = System::Drawing::Point(345, 44);
+			this->label15->Location = System::Drawing::Point(348, 46);
 			this->label15->Margin = System::Windows::Forms::Padding(3);
 			this->label15->Name = L"label15";
 			this->label15->Size = System::Drawing::Size(34, 34);
@@ -1745,7 +1647,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->label14->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->label14->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label14->Location = System::Drawing::Point(505, 44);
+			this->label14->Location = System::Drawing::Point(508, 46);
 			this->label14->Margin = System::Windows::Forms::Padding(3);
 			this->label14->Name = L"label14";
 			this->label14->Size = System::Drawing::Size(34, 34);
@@ -1759,7 +1661,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->label13->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->label13->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label13->Location = System::Drawing::Point(265, 44);
+			this->label13->Location = System::Drawing::Point(268, 46);
 			this->label13->Margin = System::Windows::Forms::Padding(3);
 			this->label13->Name = L"label13";
 			this->label13->Size = System::Drawing::Size(34, 34);
@@ -1773,7 +1675,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->label11->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->label11->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label11->Location = System::Drawing::Point(385, 44);
+			this->label11->Location = System::Drawing::Point(388, 46);
 			this->label11->Margin = System::Windows::Forms::Padding(3);
 			this->label11->Name = L"label11";
 			this->label11->Size = System::Drawing::Size(34, 34);
@@ -1787,7 +1689,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->label9->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->label9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label9->Location = System::Drawing::Point(225, 44);
+			this->label9->Location = System::Drawing::Point(228, 46);
 			this->label9->Margin = System::Windows::Forms::Padding(3);
 			this->label9->Name = L"label9";
 			this->label9->Size = System::Drawing::Size(34, 34);
@@ -1801,7 +1703,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->label7->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label7->Location = System::Drawing::Point(185, 44);
+			this->label7->Location = System::Drawing::Point(188, 46);
 			this->label7->Margin = System::Windows::Forms::Padding(3);
 			this->label7->Name = L"label7";
 			this->label7->Size = System::Drawing::Size(34, 34);
@@ -1815,7 +1717,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel7->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel7->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel7->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel7->Location = System::Drawing::Point(229, 446);
+			this->panel7->Location = System::Drawing::Point(232, 448);
 			this->panel7->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel7->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel7->Name = L"panel7";
@@ -1829,7 +1731,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel8->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel8->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel8->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel8->Location = System::Drawing::Point(269, 446);
+			this->panel8->Location = System::Drawing::Point(272, 448);
 			this->panel8->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel8->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel8->Name = L"panel8";
@@ -1842,7 +1744,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel6->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel6->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel6->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel6->Location = System::Drawing::Point(187, 446);
+			this->panel6->Location = System::Drawing::Point(190, 448);
 			this->panel6->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel6->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel6->Name = L"panel6";
@@ -1856,7 +1758,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel9->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel9->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel9->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel9->Location = System::Drawing::Point(309, 446);
+			this->panel9->Location = System::Drawing::Point(312, 448);
 			this->panel9->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel9->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel9->Name = L"panel9";
@@ -1870,7 +1772,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel10->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel10->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel10->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel10->Location = System::Drawing::Point(349, 446);
+			this->panel10->Location = System::Drawing::Point(352, 448);
 			this->panel10->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel10->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel10->Name = L"panel10";
@@ -1884,7 +1786,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel11->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel11->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel11->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel11->Location = System::Drawing::Point(389, 446);
+			this->panel11->Location = System::Drawing::Point(392, 448);
 			this->panel11->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel11->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel11->Name = L"panel11";
@@ -1898,7 +1800,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel12->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel12->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel12->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel12->Location = System::Drawing::Point(429, 446);
+			this->panel12->Location = System::Drawing::Point(432, 448);
 			this->panel12->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel12->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel12->Name = L"panel12";
@@ -1912,7 +1814,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel13->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel13->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel13->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel13->Location = System::Drawing::Point(469, 446);
+			this->panel13->Location = System::Drawing::Point(472, 448);
 			this->panel13->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel13->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel13->Name = L"panel13";
@@ -1926,7 +1828,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel14->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel14->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel14->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel14->Location = System::Drawing::Point(509, 446);
+			this->panel14->Location = System::Drawing::Point(512, 448);
 			this->panel14->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel14->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel14->Name = L"panel14";
@@ -1940,7 +1842,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel15->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel15->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel15->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel15->Location = System::Drawing::Point(549, 446);
+			this->panel15->Location = System::Drawing::Point(552, 448);
 			this->panel15->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel15->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel15->Name = L"panel15";
@@ -1954,7 +1856,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel16->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel16->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel16->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel16->Location = System::Drawing::Point(189, 86);
+			this->panel16->Location = System::Drawing::Point(192, 88);
 			this->panel16->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel16->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel16->Name = L"panel16";
@@ -1968,7 +1870,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel17->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel17->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel17->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel17->Location = System::Drawing::Point(229, 86);
+			this->panel17->Location = System::Drawing::Point(232, 88);
 			this->panel17->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel17->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel17->Name = L"panel17";
@@ -1982,7 +1884,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel18->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel18->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel18->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel18->Location = System::Drawing::Point(269, 86);
+			this->panel18->Location = System::Drawing::Point(272, 88);
 			this->panel18->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel18->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel18->Name = L"panel18";
@@ -1996,7 +1898,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel19->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel19->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel19->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel19->Location = System::Drawing::Point(309, 86);
+			this->panel19->Location = System::Drawing::Point(312, 88);
 			this->panel19->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel19->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel19->Name = L"panel19";
@@ -2010,7 +1912,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel20->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel20->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel20->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel20->Location = System::Drawing::Point(349, 86);
+			this->panel20->Location = System::Drawing::Point(352, 88);
 			this->panel20->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel20->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel20->Name = L"panel20";
@@ -2024,7 +1926,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel21->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel21->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel21->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel21->Location = System::Drawing::Point(389, 86);
+			this->panel21->Location = System::Drawing::Point(392, 88);
 			this->panel21->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel21->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel21->Name = L"panel21";
@@ -2038,7 +1940,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel22->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel22->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel22->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel22->Location = System::Drawing::Point(429, 86);
+			this->panel22->Location = System::Drawing::Point(432, 88);
 			this->panel22->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel22->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel22->Name = L"panel22";
@@ -2052,7 +1954,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel23->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel23->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel23->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel23->Location = System::Drawing::Point(469, 86);
+			this->panel23->Location = System::Drawing::Point(472, 88);
 			this->panel23->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel23->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel23->Name = L"panel23";
@@ -2066,7 +1968,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel24->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel24->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel24->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel24->Location = System::Drawing::Point(509, 86);
+			this->panel24->Location = System::Drawing::Point(512, 88);
 			this->panel24->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel24->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel24->Name = L"panel24";
@@ -2080,7 +1982,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel25->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel25->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel25->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel25->Location = System::Drawing::Point(549, 86);
+			this->panel25->Location = System::Drawing::Point(552, 88);
 			this->panel25->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel25->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel25->Name = L"panel25";
@@ -2094,7 +1996,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel26->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel26->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel26->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel26->Location = System::Drawing::Point(189, 126);
+			this->panel26->Location = System::Drawing::Point(192, 128);
 			this->panel26->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel26->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel26->Name = L"panel26";
@@ -2108,7 +2010,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel27->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel27->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel27->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel27->Location = System::Drawing::Point(229, 126);
+			this->panel27->Location = System::Drawing::Point(232, 128);
 			this->panel27->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel27->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel27->Name = L"panel27";
@@ -2122,7 +2024,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel28->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel28->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel28->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel28->Location = System::Drawing::Point(269, 126);
+			this->panel28->Location = System::Drawing::Point(272, 128);
 			this->panel28->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel28->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel28->Name = L"panel28";
@@ -2136,7 +2038,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel29->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel29->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel29->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel29->Location = System::Drawing::Point(309, 126);
+			this->panel29->Location = System::Drawing::Point(312, 128);
 			this->panel29->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel29->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel29->Name = L"panel29";
@@ -2150,7 +2052,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel30->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel30->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel30->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel30->Location = System::Drawing::Point(349, 126);
+			this->panel30->Location = System::Drawing::Point(352, 128);
 			this->panel30->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel30->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel30->Name = L"panel30";
@@ -2164,7 +2066,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel32->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel32->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel32->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel32->Location = System::Drawing::Point(429, 126);
+			this->panel32->Location = System::Drawing::Point(432, 128);
 			this->panel32->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel32->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel32->Name = L"panel32";
@@ -2178,7 +2080,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel31->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel31->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel31->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel31->Location = System::Drawing::Point(389, 126);
+			this->panel31->Location = System::Drawing::Point(392, 128);
 			this->panel31->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel31->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel31->Name = L"panel31";
@@ -2192,7 +2094,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel33->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel33->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel33->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel33->Location = System::Drawing::Point(469, 126);
+			this->panel33->Location = System::Drawing::Point(472, 128);
 			this->panel33->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel33->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel33->Name = L"panel33";
@@ -2206,7 +2108,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel34->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel34->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel34->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel34->Location = System::Drawing::Point(509, 126);
+			this->panel34->Location = System::Drawing::Point(512, 128);
 			this->panel34->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel34->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel34->Name = L"panel34";
@@ -2220,7 +2122,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel35->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel35->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel35->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel35->Location = System::Drawing::Point(549, 126);
+			this->panel35->Location = System::Drawing::Point(552, 128);
 			this->panel35->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel35->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel35->Name = L"panel35";
@@ -2234,7 +2136,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel36->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel36->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel36->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel36->Location = System::Drawing::Point(189, 166);
+			this->panel36->Location = System::Drawing::Point(192, 168);
 			this->panel36->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel36->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel36->Name = L"panel36";
@@ -2248,7 +2150,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel37->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel37->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel37->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel37->Location = System::Drawing::Point(229, 166);
+			this->panel37->Location = System::Drawing::Point(232, 168);
 			this->panel37->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel37->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel37->Name = L"panel37";
@@ -2262,7 +2164,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel38->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel38->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel38->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel38->Location = System::Drawing::Point(269, 166);
+			this->panel38->Location = System::Drawing::Point(272, 168);
 			this->panel38->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel38->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel38->Name = L"panel38";
@@ -2276,7 +2178,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel39->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel39->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel39->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel39->Location = System::Drawing::Point(309, 166);
+			this->panel39->Location = System::Drawing::Point(312, 168);
 			this->panel39->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel39->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel39->Name = L"panel39";
@@ -2290,7 +2192,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel40->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel40->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel40->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel40->Location = System::Drawing::Point(349, 166);
+			this->panel40->Location = System::Drawing::Point(352, 168);
 			this->panel40->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel40->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel40->Name = L"panel40";
@@ -2304,7 +2206,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel41->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel41->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel41->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel41->Location = System::Drawing::Point(389, 166);
+			this->panel41->Location = System::Drawing::Point(392, 168);
 			this->panel41->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel41->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel41->Name = L"panel41";
@@ -2318,7 +2220,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel42->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel42->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel42->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel42->Location = System::Drawing::Point(429, 166);
+			this->panel42->Location = System::Drawing::Point(432, 168);
 			this->panel42->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel42->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel42->Name = L"panel42";
@@ -2332,7 +2234,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel43->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel43->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel43->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel43->Location = System::Drawing::Point(469, 166);
+			this->panel43->Location = System::Drawing::Point(472, 168);
 			this->panel43->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel43->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel43->Name = L"panel43";
@@ -2346,7 +2248,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel44->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel44->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel44->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel44->Location = System::Drawing::Point(509, 166);
+			this->panel44->Location = System::Drawing::Point(512, 168);
 			this->panel44->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel44->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel44->Name = L"panel44";
@@ -2360,7 +2262,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel45->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel45->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel45->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel45->Location = System::Drawing::Point(549, 166);
+			this->panel45->Location = System::Drawing::Point(552, 168);
 			this->panel45->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel45->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel45->Name = L"panel45";
@@ -2374,7 +2276,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel46->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel46->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel46->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel46->Location = System::Drawing::Point(189, 206);
+			this->panel46->Location = System::Drawing::Point(192, 208);
 			this->panel46->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel46->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel46->Name = L"panel46";
@@ -2388,7 +2290,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel47->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel47->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel47->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel47->Location = System::Drawing::Point(229, 206);
+			this->panel47->Location = System::Drawing::Point(232, 208);
 			this->panel47->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel47->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel47->Name = L"panel47";
@@ -2402,7 +2304,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel48->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel48->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel48->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel48->Location = System::Drawing::Point(269, 206);
+			this->panel48->Location = System::Drawing::Point(272, 208);
 			this->panel48->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel48->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel48->Name = L"panel48";
@@ -2416,7 +2318,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel49->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel49->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel49->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel49->Location = System::Drawing::Point(309, 206);
+			this->panel49->Location = System::Drawing::Point(312, 208);
 			this->panel49->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel49->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel49->Name = L"panel49";
@@ -2430,7 +2332,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel50->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel50->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel50->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel50->Location = System::Drawing::Point(349, 206);
+			this->panel50->Location = System::Drawing::Point(352, 208);
 			this->panel50->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel50->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel50->Name = L"panel50";
@@ -2444,7 +2346,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel51->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel51->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel51->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel51->Location = System::Drawing::Point(389, 206);
+			this->panel51->Location = System::Drawing::Point(392, 208);
 			this->panel51->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel51->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel51->Name = L"panel51";
@@ -2458,7 +2360,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel52->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel52->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel52->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel52->Location = System::Drawing::Point(429, 206);
+			this->panel52->Location = System::Drawing::Point(432, 208);
 			this->panel52->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel52->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel52->Name = L"panel52";
@@ -2472,7 +2374,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel53->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel53->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel53->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel53->Location = System::Drawing::Point(469, 206);
+			this->panel53->Location = System::Drawing::Point(472, 208);
 			this->panel53->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel53->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel53->Name = L"panel53";
@@ -2486,7 +2388,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel54->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel54->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel54->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel54->Location = System::Drawing::Point(509, 206);
+			this->panel54->Location = System::Drawing::Point(512, 208);
 			this->panel54->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel54->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel54->Name = L"panel54";
@@ -2500,7 +2402,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel55->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel55->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel55->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel55->Location = System::Drawing::Point(549, 206);
+			this->panel55->Location = System::Drawing::Point(552, 208);
 			this->panel55->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel55->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel55->Name = L"panel55";
@@ -2514,7 +2416,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel56->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel56->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel56->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel56->Location = System::Drawing::Point(189, 246);
+			this->panel56->Location = System::Drawing::Point(192, 248);
 			this->panel56->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel56->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel56->Name = L"panel56";
@@ -2528,7 +2430,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel57->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel57->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel57->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel57->Location = System::Drawing::Point(229, 246);
+			this->panel57->Location = System::Drawing::Point(232, 248);
 			this->panel57->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel57->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel57->Name = L"panel57";
@@ -2542,7 +2444,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel58->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel58->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel58->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel58->Location = System::Drawing::Point(269, 246);
+			this->panel58->Location = System::Drawing::Point(272, 248);
 			this->panel58->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel58->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel58->Name = L"panel58";
@@ -2556,7 +2458,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel59->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel59->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel59->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel59->Location = System::Drawing::Point(309, 246);
+			this->panel59->Location = System::Drawing::Point(312, 248);
 			this->panel59->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel59->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel59->Name = L"panel59";
@@ -2570,7 +2472,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel60->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel60->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel60->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel60->Location = System::Drawing::Point(349, 246);
+			this->panel60->Location = System::Drawing::Point(352, 248);
 			this->panel60->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel60->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel60->Name = L"panel60";
@@ -2584,7 +2486,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel61->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel61->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel61->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel61->Location = System::Drawing::Point(389, 246);
+			this->panel61->Location = System::Drawing::Point(392, 248);
 			this->panel61->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel61->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel61->Name = L"panel61";
@@ -2598,7 +2500,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel62->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel62->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel62->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel62->Location = System::Drawing::Point(429, 246);
+			this->panel62->Location = System::Drawing::Point(432, 248);
 			this->panel62->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel62->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel62->Name = L"panel62";
@@ -2612,7 +2514,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel63->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel63->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel63->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel63->Location = System::Drawing::Point(469, 246);
+			this->panel63->Location = System::Drawing::Point(472, 248);
 			this->panel63->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel63->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel63->Name = L"panel63";
@@ -2626,7 +2528,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel64->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel64->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel64->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel64->Location = System::Drawing::Point(509, 246);
+			this->panel64->Location = System::Drawing::Point(512, 248);
 			this->panel64->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel64->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel64->Name = L"panel64";
@@ -2640,7 +2542,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel65->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel65->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel65->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel65->Location = System::Drawing::Point(549, 246);
+			this->panel65->Location = System::Drawing::Point(552, 248);
 			this->panel65->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel65->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel65->Name = L"panel65";
@@ -2654,7 +2556,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel66->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel66->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel66->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel66->Location = System::Drawing::Point(189, 286);
+			this->panel66->Location = System::Drawing::Point(192, 288);
 			this->panel66->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel66->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel66->Name = L"panel66";
@@ -2668,7 +2570,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel67->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel67->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel67->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel67->Location = System::Drawing::Point(229, 286);
+			this->panel67->Location = System::Drawing::Point(232, 288);
 			this->panel67->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel67->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel67->Name = L"panel67";
@@ -2682,7 +2584,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel70->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel70->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel70->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel70->Location = System::Drawing::Point(349, 286);
+			this->panel70->Location = System::Drawing::Point(352, 288);
 			this->panel70->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel70->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel70->Name = L"panel70";
@@ -2696,7 +2598,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel69->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel69->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel69->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel69->Location = System::Drawing::Point(309, 286);
+			this->panel69->Location = System::Drawing::Point(312, 288);
 			this->panel69->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel69->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel69->Name = L"panel69";
@@ -2710,7 +2612,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel68->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel68->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel68->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel68->Location = System::Drawing::Point(269, 286);
+			this->panel68->Location = System::Drawing::Point(272, 288);
 			this->panel68->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel68->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel68->Name = L"panel68";
@@ -2724,7 +2626,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel71->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel71->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel71->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel71->Location = System::Drawing::Point(389, 286);
+			this->panel71->Location = System::Drawing::Point(392, 288);
 			this->panel71->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel71->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel71->Name = L"panel71";
@@ -2738,7 +2640,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel72->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel72->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel72->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel72->Location = System::Drawing::Point(429, 286);
+			this->panel72->Location = System::Drawing::Point(432, 288);
 			this->panel72->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel72->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel72->Name = L"panel72";
@@ -2752,7 +2654,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel73->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel73->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel73->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel73->Location = System::Drawing::Point(469, 286);
+			this->panel73->Location = System::Drawing::Point(472, 288);
 			this->panel73->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel73->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel73->Name = L"panel73";
@@ -2766,7 +2668,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel74->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel74->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel74->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel74->Location = System::Drawing::Point(509, 286);
+			this->panel74->Location = System::Drawing::Point(512, 288);
 			this->panel74->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel74->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel74->Name = L"panel74";
@@ -2780,7 +2682,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel75->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel75->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel75->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel75->Location = System::Drawing::Point(549, 286);
+			this->panel75->Location = System::Drawing::Point(552, 288);
 			this->panel75->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel75->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel75->Name = L"panel75";
@@ -2794,7 +2696,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel76->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel76->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel76->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel76->Location = System::Drawing::Point(189, 326);
+			this->panel76->Location = System::Drawing::Point(192, 328);
 			this->panel76->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel76->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel76->Name = L"panel76";
@@ -2808,7 +2710,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel77->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel77->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel77->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel77->Location = System::Drawing::Point(229, 326);
+			this->panel77->Location = System::Drawing::Point(232, 328);
 			this->panel77->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel77->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel77->Name = L"panel77";
@@ -2822,7 +2724,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel78->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel78->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel78->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel78->Location = System::Drawing::Point(269, 326);
+			this->panel78->Location = System::Drawing::Point(272, 328);
 			this->panel78->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel78->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel78->Name = L"panel78";
@@ -2836,7 +2738,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel79->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel79->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel79->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel79->Location = System::Drawing::Point(309, 326);
+			this->panel79->Location = System::Drawing::Point(312, 328);
 			this->panel79->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel79->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel79->Name = L"panel79";
@@ -2850,7 +2752,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel80->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel80->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel80->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel80->Location = System::Drawing::Point(349, 326);
+			this->panel80->Location = System::Drawing::Point(352, 328);
 			this->panel80->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel80->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel80->Name = L"panel80";
@@ -2864,7 +2766,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel81->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel81->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel81->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel81->Location = System::Drawing::Point(389, 326);
+			this->panel81->Location = System::Drawing::Point(392, 328);
 			this->panel81->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel81->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel81->Name = L"panel81";
@@ -2878,7 +2780,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel82->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel82->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel82->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel82->Location = System::Drawing::Point(429, 326);
+			this->panel82->Location = System::Drawing::Point(432, 328);
 			this->panel82->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel82->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel82->Name = L"panel82";
@@ -2892,7 +2794,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel83->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel83->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel83->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel83->Location = System::Drawing::Point(469, 326);
+			this->panel83->Location = System::Drawing::Point(472, 328);
 			this->panel83->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel83->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel83->Name = L"panel83";
@@ -2906,7 +2808,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel84->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel84->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel84->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel84->Location = System::Drawing::Point(509, 326);
+			this->panel84->Location = System::Drawing::Point(512, 328);
 			this->panel84->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel84->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel84->Name = L"panel84";
@@ -2920,7 +2822,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel85->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel85->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel85->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel85->Location = System::Drawing::Point(549, 326);
+			this->panel85->Location = System::Drawing::Point(552, 328);
 			this->panel85->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel85->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel85->Name = L"panel85";
@@ -2934,7 +2836,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel86->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel86->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel86->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel86->Location = System::Drawing::Point(189, 366);
+			this->panel86->Location = System::Drawing::Point(192, 368);
 			this->panel86->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel86->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel86->Name = L"panel86";
@@ -2948,7 +2850,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel87->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel87->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel87->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel87->Location = System::Drawing::Point(229, 366);
+			this->panel87->Location = System::Drawing::Point(232, 368);
 			this->panel87->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel87->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel87->Name = L"panel87";
@@ -2962,7 +2864,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel88->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel88->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel88->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel88->Location = System::Drawing::Point(269, 366);
+			this->panel88->Location = System::Drawing::Point(272, 368);
 			this->panel88->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel88->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel88->Name = L"panel88";
@@ -2976,7 +2878,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel89->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel89->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel89->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel89->Location = System::Drawing::Point(309, 366);
+			this->panel89->Location = System::Drawing::Point(312, 368);
 			this->panel89->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel89->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel89->Name = L"panel89";
@@ -2990,7 +2892,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel90->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel90->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel90->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel90->Location = System::Drawing::Point(349, 366);
+			this->panel90->Location = System::Drawing::Point(352, 368);
 			this->panel90->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel90->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel90->Name = L"panel90";
@@ -3004,7 +2906,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel91->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel91->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel91->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel91->Location = System::Drawing::Point(389, 366);
+			this->panel91->Location = System::Drawing::Point(392, 368);
 			this->panel91->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel91->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel91->Name = L"panel91";
@@ -3018,7 +2920,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel92->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel92->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel92->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel92->Location = System::Drawing::Point(429, 366);
+			this->panel92->Location = System::Drawing::Point(432, 368);
 			this->panel92->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel92->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel92->Name = L"panel92";
@@ -3032,7 +2934,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel93->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel93->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel93->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel93->Location = System::Drawing::Point(469, 366);
+			this->panel93->Location = System::Drawing::Point(472, 368);
 			this->panel93->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel93->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel93->Name = L"panel93";
@@ -3046,7 +2948,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel94->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel94->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel94->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel94->Location = System::Drawing::Point(509, 366);
+			this->panel94->Location = System::Drawing::Point(512, 368);
 			this->panel94->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel94->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel94->Name = L"panel94";
@@ -3060,7 +2962,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel95->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel95->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel95->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel95->Location = System::Drawing::Point(549, 366);
+			this->panel95->Location = System::Drawing::Point(552, 368);
 			this->panel95->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel95->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel95->Name = L"panel95";
@@ -3074,7 +2976,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel96->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel96->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel96->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel96->Location = System::Drawing::Point(189, 406);
+			this->panel96->Location = System::Drawing::Point(192, 408);
 			this->panel96->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel96->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel96->Name = L"panel96";
@@ -3088,7 +2990,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel97->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel97->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel97->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel97->Location = System::Drawing::Point(229, 406);
+			this->panel97->Location = System::Drawing::Point(232, 408);
 			this->panel97->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel97->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel97->Name = L"panel97";
@@ -3102,7 +3004,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel98->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel98->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel98->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel98->Location = System::Drawing::Point(269, 406);
+			this->panel98->Location = System::Drawing::Point(272, 408);
 			this->panel98->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel98->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel98->Name = L"panel98";
@@ -3116,7 +3018,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel99->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel99->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel99->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel99->Location = System::Drawing::Point(309, 406);
+			this->panel99->Location = System::Drawing::Point(312, 408);
 			this->panel99->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel99->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel99->Name = L"panel99";
@@ -3130,7 +3032,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel100->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel100->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel100->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel100->Location = System::Drawing::Point(349, 406);
+			this->panel100->Location = System::Drawing::Point(352, 408);
 			this->panel100->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel100->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel100->Name = L"panel100";
@@ -3144,7 +3046,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel101->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel101->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel101->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel101->Location = System::Drawing::Point(389, 406);
+			this->panel101->Location = System::Drawing::Point(392, 408);
 			this->panel101->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel101->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel101->Name = L"panel101";
@@ -3158,7 +3060,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel102->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel102->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel102->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel102->Location = System::Drawing::Point(429, 406);
+			this->panel102->Location = System::Drawing::Point(432, 408);
 			this->panel102->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel102->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel102->Name = L"panel102";
@@ -3172,7 +3074,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel103->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel103->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel103->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel103->Location = System::Drawing::Point(469, 406);
+			this->panel103->Location = System::Drawing::Point(472, 408);
 			this->panel103->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel103->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel103->Name = L"panel103";
@@ -3186,7 +3088,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel104->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel104->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel104->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel104->Location = System::Drawing::Point(509, 406);
+			this->panel104->Location = System::Drawing::Point(512, 408);
 			this->panel104->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel104->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel104->Name = L"panel104";
@@ -3200,7 +3102,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->panel105->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel105->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel105->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel105->Location = System::Drawing::Point(549, 406);
+			this->panel105->Location = System::Drawing::Point(552, 408);
 			this->panel105->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel105->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel105->Name = L"panel105";
@@ -3236,7 +3138,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->tableLayoutPanel1->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 33.33333F)));
 			this->tableLayoutPanel1->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 33.33333F)));
 			this->tableLayoutPanel1->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 33.33333F)));
-			this->tableLayoutPanel1->Size = System::Drawing::Size(1018, 616);
+			this->tableLayoutPanel1->Size = System::Drawing::Size(1025, 619);
 			this->tableLayoutPanel1->TabIndex = 6;
 			this->tableLayoutPanel1->Visible = false;
 			// 
@@ -3247,17 +3149,17 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->tableLayoutPanel10->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
 				100)));
 			this->tableLayoutPanel10->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
-				236)));
+				239)));
 			this->tableLayoutPanel10->Controls->Add(this->pictureBox9, 0, 0);
 			this->tableLayoutPanel10->Controls->Add(this->textBox9, 1, 0);
 			this->tableLayoutPanel10->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->tableLayoutPanel10->Location = System::Drawing::Point(680, 412);
+			this->tableLayoutPanel10->Location = System::Drawing::Point(684, 414);
 			this->tableLayoutPanel10->Margin = System::Windows::Forms::Padding(2);
 			this->tableLayoutPanel10->MinimumSize = System::Drawing::Size(269, 155);
 			this->tableLayoutPanel10->Name = L"tableLayoutPanel10";
 			this->tableLayoutPanel10->RowCount = 1;
 			this->tableLayoutPanel10->RowStyles->Add((gcnew System::Windows::Forms::RowStyle()));
-			this->tableLayoutPanel10->Size = System::Drawing::Size(336, 202);
+			this->tableLayoutPanel10->Size = System::Drawing::Size(339, 203);
 			this->tableLayoutPanel10->TabIndex = 11;
 			this->tableLayoutPanel10->Visible = false;
 			// 
@@ -3269,7 +3171,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->pictureBox9->Location = System::Drawing::Point(2, 2);
 			this->pictureBox9->Margin = System::Windows::Forms::Padding(2);
 			this->pictureBox9->Name = L"pictureBox9";
-			this->pictureBox9->Size = System::Drawing::Size(96, 198);
+			this->pictureBox9->Size = System::Drawing::Size(96, 199);
 			this->pictureBox9->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->pictureBox9->TabIndex = 0;
 			this->pictureBox9->TabStop = false;
@@ -3290,7 +3192,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->textBox9->Name = L"textBox9";
 			this->textBox9->ReadOnly = true;
 			this->textBox9->ScrollBars = System::Windows::Forms::ScrollBars::Both;
-			this->textBox9->Size = System::Drawing::Size(230, 196);
+			this->textBox9->Size = System::Drawing::Size(233, 197);
 			this->textBox9->TabIndex = 1;
 			// 
 			// tableLayoutPanel9
@@ -3300,17 +3202,17 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->tableLayoutPanel9->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
 				100)));
 			this->tableLayoutPanel9->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
-				235)));
+				237)));
 			this->tableLayoutPanel9->Controls->Add(this->pictureBox8, 0, 0);
 			this->tableLayoutPanel9->Controls->Add(this->textBox8, 1, 0);
 			this->tableLayoutPanel9->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->tableLayoutPanel9->Location = System::Drawing::Point(341, 412);
+			this->tableLayoutPanel9->Location = System::Drawing::Point(343, 414);
 			this->tableLayoutPanel9->Margin = System::Windows::Forms::Padding(2);
 			this->tableLayoutPanel9->MinimumSize = System::Drawing::Size(269, 155);
 			this->tableLayoutPanel9->Name = L"tableLayoutPanel9";
 			this->tableLayoutPanel9->RowCount = 1;
 			this->tableLayoutPanel9->RowStyles->Add((gcnew System::Windows::Forms::RowStyle()));
-			this->tableLayoutPanel9->Size = System::Drawing::Size(335, 202);
+			this->tableLayoutPanel9->Size = System::Drawing::Size(337, 203);
 			this->tableLayoutPanel9->TabIndex = 10;
 			this->tableLayoutPanel9->Visible = false;
 			// 
@@ -3322,7 +3224,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->pictureBox8->Location = System::Drawing::Point(2, 2);
 			this->pictureBox8->Margin = System::Windows::Forms::Padding(2);
 			this->pictureBox8->Name = L"pictureBox8";
-			this->pictureBox8->Size = System::Drawing::Size(96, 198);
+			this->pictureBox8->Size = System::Drawing::Size(96, 199);
 			this->pictureBox8->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->pictureBox8->TabIndex = 0;
 			this->pictureBox8->TabStop = false;
@@ -3343,7 +3245,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->textBox8->Name = L"textBox8";
 			this->textBox8->ReadOnly = true;
 			this->textBox8->ScrollBars = System::Windows::Forms::ScrollBars::Both;
-			this->textBox8->Size = System::Drawing::Size(229, 196);
+			this->textBox8->Size = System::Drawing::Size(231, 197);
 			this->textBox8->TabIndex = 1;
 			// 
 			// tableLayoutPanel8
@@ -3353,17 +3255,17 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->tableLayoutPanel8->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
 				100)));
 			this->tableLayoutPanel8->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
-				235)));
+				237)));
 			this->tableLayoutPanel8->Controls->Add(this->pictureBox7, 0, 0);
 			this->tableLayoutPanel8->Controls->Add(this->textBox7, 1, 0);
 			this->tableLayoutPanel8->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->tableLayoutPanel8->Location = System::Drawing::Point(2, 412);
+			this->tableLayoutPanel8->Location = System::Drawing::Point(2, 414);
 			this->tableLayoutPanel8->Margin = System::Windows::Forms::Padding(2);
 			this->tableLayoutPanel8->MinimumSize = System::Drawing::Size(269, 155);
 			this->tableLayoutPanel8->Name = L"tableLayoutPanel8";
 			this->tableLayoutPanel8->RowCount = 1;
 			this->tableLayoutPanel8->RowStyles->Add((gcnew System::Windows::Forms::RowStyle()));
-			this->tableLayoutPanel8->Size = System::Drawing::Size(335, 202);
+			this->tableLayoutPanel8->Size = System::Drawing::Size(337, 203);
 			this->tableLayoutPanel8->TabIndex = 9;
 			this->tableLayoutPanel8->Visible = false;
 			// 
@@ -3375,7 +3277,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->pictureBox7->Location = System::Drawing::Point(2, 2);
 			this->pictureBox7->Margin = System::Windows::Forms::Padding(2);
 			this->pictureBox7->Name = L"pictureBox7";
-			this->pictureBox7->Size = System::Drawing::Size(96, 198);
+			this->pictureBox7->Size = System::Drawing::Size(96, 199);
 			this->pictureBox7->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->pictureBox7->TabIndex = 0;
 			this->pictureBox7->TabStop = false;
@@ -3396,7 +3298,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->textBox7->Name = L"textBox7";
 			this->textBox7->ReadOnly = true;
 			this->textBox7->ScrollBars = System::Windows::Forms::ScrollBars::Both;
-			this->textBox7->Size = System::Drawing::Size(229, 196);
+			this->textBox7->Size = System::Drawing::Size(231, 197);
 			this->textBox7->TabIndex = 1;
 			// 
 			// tableLayoutPanel7
@@ -3406,17 +3308,17 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->tableLayoutPanel7->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
 				100)));
 			this->tableLayoutPanel7->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
-				236)));
+				239)));
 			this->tableLayoutPanel7->Controls->Add(this->pictureBox6, 0, 0);
 			this->tableLayoutPanel7->Controls->Add(this->textBox6, 1, 0);
 			this->tableLayoutPanel7->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->tableLayoutPanel7->Location = System::Drawing::Point(680, 207);
+			this->tableLayoutPanel7->Location = System::Drawing::Point(684, 208);
 			this->tableLayoutPanel7->Margin = System::Windows::Forms::Padding(2);
 			this->tableLayoutPanel7->MinimumSize = System::Drawing::Size(269, 155);
 			this->tableLayoutPanel7->Name = L"tableLayoutPanel7";
 			this->tableLayoutPanel7->RowCount = 1;
 			this->tableLayoutPanel7->RowStyles->Add((gcnew System::Windows::Forms::RowStyle()));
-			this->tableLayoutPanel7->Size = System::Drawing::Size(336, 201);
+			this->tableLayoutPanel7->Size = System::Drawing::Size(339, 202);
 			this->tableLayoutPanel7->TabIndex = 8;
 			this->tableLayoutPanel7->Visible = false;
 			// 
@@ -3428,7 +3330,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->pictureBox6->Location = System::Drawing::Point(2, 2);
 			this->pictureBox6->Margin = System::Windows::Forms::Padding(2);
 			this->pictureBox6->Name = L"pictureBox6";
-			this->pictureBox6->Size = System::Drawing::Size(96, 197);
+			this->pictureBox6->Size = System::Drawing::Size(96, 198);
 			this->pictureBox6->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->pictureBox6->TabIndex = 0;
 			this->pictureBox6->TabStop = false;
@@ -3449,7 +3351,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->textBox6->Name = L"textBox6";
 			this->textBox6->ReadOnly = true;
 			this->textBox6->ScrollBars = System::Windows::Forms::ScrollBars::Both;
-			this->textBox6->Size = System::Drawing::Size(230, 195);
+			this->textBox6->Size = System::Drawing::Size(233, 196);
 			this->textBox6->TabIndex = 1;
 			// 
 			// tableLayoutPanel6
@@ -3459,17 +3361,17 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->tableLayoutPanel6->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
 				100)));
 			this->tableLayoutPanel6->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
-				235)));
+				237)));
 			this->tableLayoutPanel6->Controls->Add(this->pictureBox5, 0, 0);
 			this->tableLayoutPanel6->Controls->Add(this->textBox5, 1, 0);
 			this->tableLayoutPanel6->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->tableLayoutPanel6->Location = System::Drawing::Point(341, 207);
+			this->tableLayoutPanel6->Location = System::Drawing::Point(343, 208);
 			this->tableLayoutPanel6->Margin = System::Windows::Forms::Padding(2);
 			this->tableLayoutPanel6->MinimumSize = System::Drawing::Size(269, 155);
 			this->tableLayoutPanel6->Name = L"tableLayoutPanel6";
 			this->tableLayoutPanel6->RowCount = 1;
 			this->tableLayoutPanel6->RowStyles->Add((gcnew System::Windows::Forms::RowStyle()));
-			this->tableLayoutPanel6->Size = System::Drawing::Size(335, 201);
+			this->tableLayoutPanel6->Size = System::Drawing::Size(337, 202);
 			this->tableLayoutPanel6->TabIndex = 7;
 			this->tableLayoutPanel6->Visible = false;
 			// 
@@ -3481,7 +3383,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->pictureBox5->Location = System::Drawing::Point(2, 2);
 			this->pictureBox5->Margin = System::Windows::Forms::Padding(2);
 			this->pictureBox5->Name = L"pictureBox5";
-			this->pictureBox5->Size = System::Drawing::Size(96, 197);
+			this->pictureBox5->Size = System::Drawing::Size(96, 198);
 			this->pictureBox5->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->pictureBox5->TabIndex = 0;
 			this->pictureBox5->TabStop = false;
@@ -3502,7 +3404,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->textBox5->Name = L"textBox5";
 			this->textBox5->ReadOnly = true;
 			this->textBox5->ScrollBars = System::Windows::Forms::ScrollBars::Both;
-			this->textBox5->Size = System::Drawing::Size(229, 195);
+			this->textBox5->Size = System::Drawing::Size(231, 196);
 			this->textBox5->TabIndex = 1;
 			// 
 			// tableLayoutPanel5
@@ -3512,17 +3414,17 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->tableLayoutPanel5->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
 				100)));
 			this->tableLayoutPanel5->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
-				235)));
+				237)));
 			this->tableLayoutPanel5->Controls->Add(this->pictureBox4, 0, 0);
 			this->tableLayoutPanel5->Controls->Add(this->textBox4, 1, 0);
 			this->tableLayoutPanel5->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->tableLayoutPanel5->Location = System::Drawing::Point(2, 207);
+			this->tableLayoutPanel5->Location = System::Drawing::Point(2, 208);
 			this->tableLayoutPanel5->Margin = System::Windows::Forms::Padding(2);
 			this->tableLayoutPanel5->MinimumSize = System::Drawing::Size(269, 155);
 			this->tableLayoutPanel5->Name = L"tableLayoutPanel5";
 			this->tableLayoutPanel5->RowCount = 1;
 			this->tableLayoutPanel5->RowStyles->Add((gcnew System::Windows::Forms::RowStyle()));
-			this->tableLayoutPanel5->Size = System::Drawing::Size(335, 201);
+			this->tableLayoutPanel5->Size = System::Drawing::Size(337, 202);
 			this->tableLayoutPanel5->TabIndex = 6;
 			this->tableLayoutPanel5->Visible = false;
 			// 
@@ -3534,7 +3436,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->pictureBox4->Location = System::Drawing::Point(2, 2);
 			this->pictureBox4->Margin = System::Windows::Forms::Padding(2);
 			this->pictureBox4->Name = L"pictureBox4";
-			this->pictureBox4->Size = System::Drawing::Size(96, 197);
+			this->pictureBox4->Size = System::Drawing::Size(96, 198);
 			this->pictureBox4->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->pictureBox4->TabIndex = 0;
 			this->pictureBox4->TabStop = false;
@@ -3555,7 +3457,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->textBox4->Name = L"textBox4";
 			this->textBox4->ReadOnly = true;
 			this->textBox4->ScrollBars = System::Windows::Forms::ScrollBars::Both;
-			this->textBox4->Size = System::Drawing::Size(229, 195);
+			this->textBox4->Size = System::Drawing::Size(231, 196);
 			this->textBox4->TabIndex = 1;
 			// 
 			// tableLayoutPanel4
@@ -3565,17 +3467,17 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->tableLayoutPanel4->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
 				100)));
 			this->tableLayoutPanel4->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
-				236)));
+				239)));
 			this->tableLayoutPanel4->Controls->Add(this->pictureBox3, 0, 0);
 			this->tableLayoutPanel4->Controls->Add(this->textBox3, 1, 0);
 			this->tableLayoutPanel4->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->tableLayoutPanel4->Location = System::Drawing::Point(680, 2);
+			this->tableLayoutPanel4->Location = System::Drawing::Point(684, 2);
 			this->tableLayoutPanel4->Margin = System::Windows::Forms::Padding(2);
 			this->tableLayoutPanel4->MinimumSize = System::Drawing::Size(269, 155);
 			this->tableLayoutPanel4->Name = L"tableLayoutPanel4";
 			this->tableLayoutPanel4->RowCount = 1;
 			this->tableLayoutPanel4->RowStyles->Add((gcnew System::Windows::Forms::RowStyle()));
-			this->tableLayoutPanel4->Size = System::Drawing::Size(336, 201);
+			this->tableLayoutPanel4->Size = System::Drawing::Size(339, 202);
 			this->tableLayoutPanel4->TabIndex = 5;
 			this->tableLayoutPanel4->Visible = false;
 			// 
@@ -3587,7 +3489,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->pictureBox3->Location = System::Drawing::Point(2, 2);
 			this->pictureBox3->Margin = System::Windows::Forms::Padding(2);
 			this->pictureBox3->Name = L"pictureBox3";
-			this->pictureBox3->Size = System::Drawing::Size(96, 197);
+			this->pictureBox3->Size = System::Drawing::Size(96, 198);
 			this->pictureBox3->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->pictureBox3->TabIndex = 0;
 			this->pictureBox3->TabStop = false;
@@ -3608,7 +3510,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->textBox3->Name = L"textBox3";
 			this->textBox3->ReadOnly = true;
 			this->textBox3->ScrollBars = System::Windows::Forms::ScrollBars::Both;
-			this->textBox3->Size = System::Drawing::Size(230, 195);
+			this->textBox3->Size = System::Drawing::Size(233, 196);
 			this->textBox3->TabIndex = 1;
 			// 
 			// tableLayoutPanel3
@@ -3618,17 +3520,17 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->tableLayoutPanel3->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
 				100)));
 			this->tableLayoutPanel3->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
-				235)));
+				237)));
 			this->tableLayoutPanel3->Controls->Add(this->pictureBox2, 0, 0);
 			this->tableLayoutPanel3->Controls->Add(this->textBox2, 1, 0);
 			this->tableLayoutPanel3->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->tableLayoutPanel3->Location = System::Drawing::Point(341, 2);
+			this->tableLayoutPanel3->Location = System::Drawing::Point(343, 2);
 			this->tableLayoutPanel3->Margin = System::Windows::Forms::Padding(2);
 			this->tableLayoutPanel3->MinimumSize = System::Drawing::Size(269, 155);
 			this->tableLayoutPanel3->Name = L"tableLayoutPanel3";
 			this->tableLayoutPanel3->RowCount = 1;
 			this->tableLayoutPanel3->RowStyles->Add((gcnew System::Windows::Forms::RowStyle()));
-			this->tableLayoutPanel3->Size = System::Drawing::Size(335, 201);
+			this->tableLayoutPanel3->Size = System::Drawing::Size(337, 202);
 			this->tableLayoutPanel3->TabIndex = 4;
 			this->tableLayoutPanel3->Visible = false;
 			// 
@@ -3640,7 +3542,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->pictureBox2->Location = System::Drawing::Point(2, 2);
 			this->pictureBox2->Margin = System::Windows::Forms::Padding(2);
 			this->pictureBox2->Name = L"pictureBox2";
-			this->pictureBox2->Size = System::Drawing::Size(96, 197);
+			this->pictureBox2->Size = System::Drawing::Size(96, 198);
 			this->pictureBox2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->pictureBox2->TabIndex = 0;
 			this->pictureBox2->TabStop = false;
@@ -3661,7 +3563,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->textBox2->Name = L"textBox2";
 			this->textBox2->ReadOnly = true;
 			this->textBox2->ScrollBars = System::Windows::Forms::ScrollBars::Both;
-			this->textBox2->Size = System::Drawing::Size(229, 195);
+			this->textBox2->Size = System::Drawing::Size(231, 196);
 			this->textBox2->TabIndex = 1;
 			// 
 			// tableLayoutPanel2
@@ -3671,7 +3573,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->tableLayoutPanel2->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
 				100)));
 			this->tableLayoutPanel2->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
-				235)));
+				237)));
 			this->tableLayoutPanel2->Controls->Add(this->pictureBox1, 0, 0);
 			this->tableLayoutPanel2->Controls->Add(this->textBox1, 1, 0);
 			this->tableLayoutPanel2->Dock = System::Windows::Forms::DockStyle::Fill;
@@ -3681,7 +3583,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->tableLayoutPanel2->Name = L"tableLayoutPanel2";
 			this->tableLayoutPanel2->RowCount = 1;
 			this->tableLayoutPanel2->RowStyles->Add((gcnew System::Windows::Forms::RowStyle()));
-			this->tableLayoutPanel2->Size = System::Drawing::Size(335, 201);
+			this->tableLayoutPanel2->Size = System::Drawing::Size(337, 202);
 			this->tableLayoutPanel2->TabIndex = 3;
 			this->tableLayoutPanel2->Visible = false;
 			// 
@@ -3693,7 +3595,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->pictureBox1->Location = System::Drawing::Point(2, 2);
 			this->pictureBox1->Margin = System::Windows::Forms::Padding(2);
 			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(96, 197);
+			this->pictureBox1->Size = System::Drawing::Size(96, 198);
 			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->pictureBox1->TabIndex = 0;
 			this->pictureBox1->TabStop = false;
@@ -3714,14 +3616,14 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->ReadOnly = true;
 			this->textBox1->ScrollBars = System::Windows::Forms::ScrollBars::Both;
-			this->textBox1->Size = System::Drawing::Size(229, 195);
+			this->textBox1->Size = System::Drawing::Size(231, 196);
 			this->textBox1->TabIndex = 1;
 			// 
 			// MainForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1018, 662);
+			this->ClientSize = System::Drawing::Size(1025, 665);
 			this->Controls->Add(this->tableLayoutPanel11);
 			this->Controls->Add(this->tableLayoutPanel1);
 			this->Controls->Add(this->statusStrip1);
@@ -4173,6 +4075,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 
 		   //Открытие файла
 	private: System::Void open_file() {
+		srand(time(0));
 		this->changes = false;
 		Boolean good = true;
 		
@@ -4203,64 +4106,74 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 			//Если файл не пустой
 			else 
 			{
-				if (((lines->Length - 10) % 137 == 0) || ((lines->Length - 9) % 137 == 0))            //форматирование верно
+				if ((lines->Length - 10) % 129 == 0)            //форматирование верно
 				{
-					file_stream->kol_vo_film = (lines->Length - 10) / 137;
+					file_stream->kol_vo_film = (lines->Length - 10) / 129;
 					good = true;
 
 					file_stream->Read(*cinema);
 
 					this->toolStripComboBox1->Items->Clear();
-
+					file_stream->ReadBron(*cinema);
 					for (int i = 0; i < file_stream->kol_vo_film; i++)
 					{
 						this->toolStripComboBox1->Items->Add((System::Object^)msclr::interop::marshal_as<System::String^>(cinema->films[i].name));
 					}
-
+					
+					String^ FileName;
 					if (file_stream->kol_vo_film >= 1)
 					{
 						this->textBox1->Text = SetFilmInfo(cinema->films[0]);
 						this->tableLayoutPanel2->Visible = true;
+						/*
+						FileName = msclr::interop::marshal_as<System::String^>(cinema->films[0].path);
+						this->pictureBox1->Image = Image::FromFile(FileName);
+						*/
+						this->pictureBox1->Image = Image::FromFile(msclr::interop::marshal_as<System::String^>(cinema->films[0].path));
+
 
 						if (file_stream->kol_vo_film >= 2)
 						{
 							this->textBox2->Text = SetFilmInfo(cinema->films[1]);
 							this->tableLayoutPanel3->Visible = true;
-
+							this->pictureBox2->Image = Image::FromFile(msclr::interop::marshal_as<System::String^>(cinema->films[1].path));
 							if (file_stream->kol_vo_film >= 3)
 							{
 								this->textBox3->Text = SetFilmInfo(cinema->films[2]);
 								this->tableLayoutPanel4->Visible = true;
 
+								this->pictureBox3->Image = Image::FromFile(msclr::interop::marshal_as<System::String^>(cinema->films[2].path));
 								if (file_stream->kol_vo_film >= 4)
 								{
 									this->textBox4->Text = SetFilmInfo(cinema->films[3]);
 									this->tableLayoutPanel5->Visible = true;
-
+									this->pictureBox4->Image = Image::FromFile(msclr::interop::marshal_as<System::String^>(cinema->films[3].path));
 									if (file_stream->kol_vo_film >= 5)
 									{
 										this->textBox5->Text = SetFilmInfo(cinema->films[4]);
 										this->tableLayoutPanel6->Visible = true;
-
+										this->pictureBox5->Image = Image::FromFile(msclr::interop::marshal_as<System::String^>(cinema->films[4].path));
 										if (file_stream->kol_vo_film >= 6)
 										{
 											this->textBox6->Text = SetFilmInfo(cinema->films[5]);
 											this->tableLayoutPanel7->Visible = true;
 
+											this->pictureBox6->Image = Image::FromFile(msclr::interop::marshal_as<System::String^>(cinema->films[5].path));
 											if (file_stream->kol_vo_film >= 7)
 											{
 												this->textBox7->Text = SetFilmInfo(cinema->films[6]);
 												this->tableLayoutPanel8->Visible = true;
-
+												this->pictureBox7->Image = Image::FromFile(msclr::interop::marshal_as<System::String^>(cinema->films[6].path));
 												if (file_stream->kol_vo_film >= 8)
 												{
 													this->textBox8->Text = SetFilmInfo(cinema->films[7]);
 													this->tableLayoutPanel9->Visible = true;
-
+													this->pictureBox8->Image = Image::FromFile(msclr::interop::marshal_as<System::String^>(cinema->films[7].path));
 													if (file_stream->kol_vo_film >= 9)
 													{
 														this->textBox9->Text = SetFilmInfo(cinema->films[8]);
 														this->tableLayoutPanel10->Visible = true;
+														this->pictureBox9->Image = Image::FromFile(msclr::interop::marshal_as<System::String^>(cinema->films[8].path));
 													}
 												}
 											}
@@ -4950,20 +4863,42 @@ private: System::Windows::Forms::ToolStripMenuItem^ RNMToolStripMenuItem;
 	
 		   //Бронирование
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-		String^ message = L"Выбранные места забронированы. За 30 минут до начала сеанса бронь аннулируется. \n\nПри оплате заказа назовите код: 12345";
+		//String^ message = L"Выбранные места забронированы. За 30 минут до начала сеанса бронь аннулируется. \n\nПри оплате заказа назовите код: 12345";
+		String^ message = L"Выбранные места забронированы. За 30 минут до начала сеанса бронь аннулируется. \n\nПри оплате заказа назовите код: ";
+		
+		int str = 0;
+		for (int i = 0; i < 5; ++i)
+		{
+			str = str * 10 + (rand() % 10);
+		}
+		message = message + str.ToString();
+
 		String^ caption = L"";
 		if (MessageBox::Show(message, caption, MessageBoxButtons::OK) == System::Windows::Forms::DialogResult::OK)
 		{
 			toolStripButton2_Click(sender, e);
+			cinema->bron[cinema->broni_number][7] = "";
 			for (int i = 0; i < 100; i++)
 			{
 				if (seats[i]->BackColor == panel5->BackColor)
 				{
 					seats[i]->BackColor = panel3->BackColor;
 					cinema->films[this->toolStripComboBox1->SelectedIndex].mesta[this->comboBox2->SelectedIndex + this->comboBox1->SelectedIndex * 3][i] = '1';
+					cinema->bron[cinema->broni_number][7] = cinema->bron[cinema->broni_number][7] + to_string(i) + " ";
 				}
 			}
+			cinema->bron[cinema->broni_number][1] = cinema->id_cinema;
+			cinema->bron[cinema->broni_number][2] = to_string(str);
+			cinema->bron[cinema->broni_number][3] = msclr::interop::marshal_as< std::string >(this->label4->Text);;
+			cinema->bron[cinema->broni_number][4] = Time::RetDate(0, 1);
+			cinema->bron[cinema->broni_number][5] = cinema->films[this->toolStripComboBox1->SelectedIndex].time[this->comboBox1->SelectedIndex];
+			cinema->bron[cinema->broni_number][6] = cinema->films[this->toolStripComboBox1->SelectedIndex].date[this->comboBox1->SelectedIndex];
+			cinema->broni_number = cinema->broni_number + 1;
+			cinema->broni_zapis = cinema->broni_zapis + 1;
+			file_stream->WriteBron(*cinema);
 			file_stream->Write(*cinema);
+			
+
 		}
 	}
 
