@@ -988,7 +988,6 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->NameToolStripMenuItem->Name = L"NameToolStripMenuItem";
 			this->NameToolStripMenuItem->Size = System::Drawing::Size(126, 22);
 			this->NameToolStripMenuItem->Text = L"&Название";
-			this->NameToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::NameToolStripMenuItem_Click);
 			// 
 			// AddressToolStripMenuItem
 			// 
@@ -3896,6 +3895,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->tableLayoutPanel11->Size = System::Drawing::Size(1018, 616);
 			this->tableLayoutPanel11->TabIndex = 4;
 			this->tableLayoutPanel11->Visible = false;
+			this->tableLayoutPanel11->VisibleChanged += gcnew System::EventHandler(this, &MainForm::tableLayoutPanel11_VisibleChanged);
 			// 
 			// MainForm
 			// 
@@ -3969,6 +3969,327 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 		}
 #pragma endregion
 	private: Boolean changes = false;
+
+		   //Ряд 1
+	private: System::Void panel16_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(0);
+	}
+	private: System::Void panel17_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(1);
+	}
+	private: System::Void panel18_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(2);
+	}
+	private: System::Void panel19_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(3);
+	}
+	private: System::Void panel20_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(4);
+	}
+	private: System::Void panel21_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(5);
+	}
+	private: System::Void panel22_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(6);
+	}
+	private: System::Void panel23_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(7);
+	}
+	private: System::Void panel24_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(8);
+	}
+	private: System::Void panel25_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(9);
+	}
+
+		   //Ряд 2
+	private: System::Void panel26_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(10);
+	}
+	private: System::Void panel27_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(11);
+	}
+	private: System::Void panel28_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(12);
+	}
+	private: System::Void panel29_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(13);
+	}
+	private: System::Void panel30_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(14);
+	}
+	private: System::Void panel31_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(15);
+	}
+	private: System::Void panel32_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(16);
+	}
+	private: System::Void panel33_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(17);
+	}
+	private: System::Void panel34_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(18);
+	}
+	private: System::Void panel35_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(19);
+	}
+
+		   //Ряд3
+	private: System::Void panel36_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(20);
+	}
+	private: System::Void panel37_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(21);
+	}
+	private: System::Void panel38_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(22);
+	}
+	private: System::Void panel39_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(23);
+	}
+	private: System::Void panel40_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(24);
+	}
+	private: System::Void panel41_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(25);
+	}
+	private: System::Void panel42_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(26);
+	}
+	private: System::Void panel43_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(27);
+	}
+	private: System::Void panel44_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(28);
+	}
+	private: System::Void panel45_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(29);
+	}
+
+		   //Ряд 4
+	private: System::Void panel46_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(30);
+	}
+	private: System::Void panel47_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(31);
+	}
+	private: System::Void panel48_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(32);
+	}
+	private: System::Void panel49_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(33);
+	}
+	private: System::Void panel50_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(34);
+	}
+	private: System::Void panel51_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(35);
+	}
+	private: System::Void panel52_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(36);
+	}
+	private: System::Void panel53_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(37);
+	}
+	private: System::Void panel54_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(38);
+	}
+	private: System::Void panel55_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(39);
+	}
+
+		   //Ряд 5
+	private: System::Void panel56_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(40);
+	}
+	private: System::Void panel57_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(41);
+	}
+	private: System::Void panel58_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(42);
+	}
+	private: System::Void panel59_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(43);
+	}
+	private: System::Void panel60_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(44);
+	}
+	private: System::Void panel61_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(45);
+	}
+	private: System::Void panel62_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(46);
+	}
+	private: System::Void panel63_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(47);
+	}
+	private: System::Void panel64_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(48);
+	}
+	private: System::Void panel65_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(49);
+	}
+
+		   //Ряд 6
+	private: System::Void panel66_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(50);
+	}
+	private: System::Void panel67_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(51);
+	}
+	private: System::Void panel68_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(52);
+	}
+	private: System::Void panel69_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(53);
+	}
+	private: System::Void panel70_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(54);
+	}
+	private: System::Void panel71_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(55);
+	}
+	private: System::Void panel72_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(56);
+	}
+	private: System::Void panel73_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(57);
+	}
+	private: System::Void panel74_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(58);
+	}
+	private: System::Void panel75_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(59);
+	}
+
+		   //Ряд 7
+	private: System::Void panel76_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(60);
+	}
+	private: System::Void panel77_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(61);
+	}
+	private: System::Void panel78_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(62);
+	}
+	private: System::Void panel79_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(63);
+	}
+	private: System::Void panel80_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(64);
+	}
+	private: System::Void panel81_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(65);
+	}
+	private: System::Void panel82_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(66);
+	}
+	private: System::Void panel83_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(67);
+	}
+	private: System::Void panel84_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(68);
+	}
+	private: System::Void panel85_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(69);
+	}
+
+		   //Ряд 8
+	private: System::Void panel86_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(70);
+	}
+	private: System::Void panel87_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(71);
+	}
+	private: System::Void panel88_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(72);
+	}
+	private: System::Void panel89_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(73);
+	}
+	private: System::Void panel90_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(74);
+	}
+	private: System::Void panel91_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(75);
+	}
+	private: System::Void panel92_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(76);
+	}
+	private: System::Void panel93_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(77);
+	}
+	private: System::Void panel94_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(78);
+	}
+	private: System::Void panel95_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(79);
+	}
+
+		   //Ряд 9
+	private: System::Void panel96_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(80);
+	}
+	private: System::Void panel97_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(81);
+	}
+	private: System::Void panel98_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(82);
+	}
+	private: System::Void panel99_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(83);
+	}
+	private: System::Void panel100_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(84);
+	}
+	private: System::Void panel101_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(85);
+	}
+	private: System::Void panel102_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(86);
+	}
+	private: System::Void panel103_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(87);
+	}
+	private: System::Void panel104_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(88);
+	}
+	private: System::Void panel105_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(89);
+	}
+
+		   //Ряд 10
+	private: System::Void panel6_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(90);
+	}
+	private: System::Void panel7_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(91);
+	}
+	private: System::Void panel8_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(92);
+	}
+	private: System::Void panel9_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(93);
+	}
+	private: System::Void panel10_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(94);
+	}
+	private: System::Void panel11_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(95);
+	}
+	private: System::Void panel12_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(96);
+	}
+	private: System::Void panel13_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(97);
+	}
+	private: System::Void panel14_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(98);
+	}
+	private: System::Void panel15_Click(System::Object^ sender, System::EventArgs^ e) {
+		SeatClick(99);
+	}
+
 
 	private: System::Void SeatClick(int number)
 	{
@@ -4650,6 +4971,8 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 		}
 		else
 			this->toolStripStatusLabel_filename->Visible = false;
+
+		PlusChangeLocation();
 	}
 
 		   //Сохранение файла при помощи кнопки "Сохранить"
@@ -4869,326 +5192,6 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 		CheckIndex();
 	}
 			
-		   //Ряд 1
-	private: System::Void panel16_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(0);
-	}
-	private: System::Void panel17_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(1);
-	}
-	private: System::Void panel18_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(2);
-	}
-	private: System::Void panel19_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(3);
-	}
-	private: System::Void panel20_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(4);
-	}
-	private: System::Void panel21_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(5);
-	}
-	private: System::Void panel22_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(6);
-	}
-	private: System::Void panel23_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(7);
-	}
-	private: System::Void panel24_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(8);
-	}
-	private: System::Void panel25_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(9);
-	}
-
-		   //Ряд 2
-	private: System::Void panel26_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(10);
-	}
-	private: System::Void panel27_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(11);
-	}
-	private: System::Void panel28_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(12);
-	}
-	private: System::Void panel29_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(13);
-	}
-	private: System::Void panel30_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(14);
-	}
-	private: System::Void panel31_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(15);
-	}
-	private: System::Void panel32_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(16);
-	}
-	private: System::Void panel33_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(17);
-	}
-	private: System::Void panel34_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(18);
-	}
-	private: System::Void panel35_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(19);
-	}
-
-		   //Ряд3
-	private: System::Void panel36_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(20);
-	}
-	private: System::Void panel37_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(21);
-	}
-	private: System::Void panel38_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(22);
-	}
-	private: System::Void panel39_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(23);
-	}
-	private: System::Void panel40_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(24);
-	}
-	private: System::Void panel41_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(25);
-	}
-	private: System::Void panel42_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(26);
-	}
-	private: System::Void panel43_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(27);
-	}
-	private: System::Void panel44_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(28);
-	}
-	private: System::Void panel45_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(29);
-	}
-
-		   //Ряд 4
-	private: System::Void panel46_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(30);
-	}
-	private: System::Void panel47_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(31);
-	}
-	private: System::Void panel48_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(32);
-	}
-	private: System::Void panel49_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(33);
-	}
-	private: System::Void panel50_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(34);
-	}
-	private: System::Void panel51_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(35);
-	}
-	private: System::Void panel52_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(36);
-	}
-	private: System::Void panel53_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(37);
-	}
-	private: System::Void panel54_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(38);
-	}
-	private: System::Void panel55_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(39);
-	}
-
-		   //Ряд 5
-	private: System::Void panel56_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(40);
-	}
-	private: System::Void panel57_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(41);
-	}
-	private: System::Void panel58_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(42);
-	}
-	private: System::Void panel59_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(43);
-	}
-	private: System::Void panel60_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(44);
-	}
-	private: System::Void panel61_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(45);
-	}
-	private: System::Void panel62_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(46);
-	}
-	private: System::Void panel63_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(47);
-	}
-	private: System::Void panel64_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(48);
-	}
-	private: System::Void panel65_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(49);
-	}
-
-		   //Ряд 6
-	private: System::Void panel66_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(50);
-	}
-	private: System::Void panel67_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(51);
-	}
-	private: System::Void panel68_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(52);
-	}
-	private: System::Void panel69_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(53);
-	}
-	private: System::Void panel70_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(54);
-	}
-	private: System::Void panel71_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(55);
-	}
-	private: System::Void panel72_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(56);
-	}
-	private: System::Void panel73_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(57);
-	}
-	private: System::Void panel74_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(58);
-	}
-	private: System::Void panel75_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(59);
-	}
-
-		   //Ряд 7
-	private: System::Void panel76_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(60);
-	}
-	private: System::Void panel77_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(61);
-	}
-	private: System::Void panel78_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(62);
-	}
-	private: System::Void panel79_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(63);
-	}
-	private: System::Void panel80_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(64);
-	}
-	private: System::Void panel81_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(65);
-	}
-	private: System::Void panel82_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(66);
-	}
-	private: System::Void panel83_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(67);
-	}
-	private: System::Void panel84_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(68);
-	}
-	private: System::Void panel85_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(69);
-	}
-
-		   //Ряд 8
-	private: System::Void panel86_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(70);
-	}
-	private: System::Void panel87_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(71);
-	}
-	private: System::Void panel88_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(72);
-	}
-	private: System::Void panel89_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(73);
-	}
-	private: System::Void panel90_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(74);
-	}
-	private: System::Void panel91_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(75);
-	}
-	private: System::Void panel92_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(76);
-	}
-	private: System::Void panel93_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(77);
-	}
-	private: System::Void panel94_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(78);
-	}
-	private: System::Void panel95_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(79);
-	}
-
-		   //Ряд 9
-	private: System::Void panel96_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(80);
-	}
-	private: System::Void panel97_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(81);
-	}
-	private: System::Void panel98_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(82);
-	}
-	private: System::Void panel99_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(83);
-	}
-	private: System::Void panel100_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(84);
-	}
-	private: System::Void panel101_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(85);
-	}
-	private: System::Void panel102_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(86);
-	}
-	private: System::Void panel103_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(87);
-	}
-	private: System::Void panel104_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(88);
-	}
-	private: System::Void panel105_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(89);
-	}
-
-		   //Ряд 10
-	private: System::Void panel6_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(90);
-	}
-	private: System::Void panel7_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(91);
-	}
-	private: System::Void panel8_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(92);
-	}
-	private: System::Void panel9_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(93);
-	}
-	private: System::Void panel10_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(94);
-	}
-	private: System::Void panel11_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(95);
-	}
-	private: System::Void panel12_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(96);
-	}
-	private: System::Void panel13_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(97);
-	}
-	private: System::Void panel14_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(98);
-	}
-	private: System::Void panel15_Click(System::Object^ sender, System::EventArgs^ e) {
-		SeatClick(99);
-	}
-	
 		   //Бронирование
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 		String^ message = L"Выбранные места забронированы. За 30 минут до начала сеанса бронь аннулируется. \n\nПри оплате заказа назовите код: ";
@@ -5255,7 +5258,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 
 	private: System::Void PlusChangeLocation()
 	{
-		if (EnterToolStripMenuItem->Visible)
+		if (EnterToolStripMenuItem->Visible || tableLayoutPanel11->Visible || label_center->Visible)
 		{
 			panelPlus->Visible = false;
 		}
@@ -5270,6 +5273,11 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 				}
 				else
 				{
+					if (toolStripStatusLabel_filename->Text == "Новый файл")
+					{
+						cinema->films_number = 0;
+					}
+
 					panelPlus->Left = (cinema->films_number % 3) * (panelPlus->Width + 5);
 					panelPlus->Top = menustrip_main->Height + (cinema->films_number / 3) * (panelPlus->Height + 5);
 					panelPlus->Visible = true;
@@ -5282,15 +5290,14 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 	private: System::Void panelPlus_Click(System::Object^ sender, System::EventArgs^ e) {
 		NewMovieToolStripMenuItem_Click(sender, e);
 	}
-private: System::Void NameToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 
-}
-private: System::Void CinemaToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
-	ChangeForm^ p = gcnew ChangeForm(*cinema);
+	private: System::Void CinemaToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+		ChangeForm^ p = gcnew ChangeForm(*cinema);
+		p->ShowDialog();
+	}
 
-	p->ShowDialog();
-	
-
-}
+	private: System::Void tableLayoutPanel11_VisibleChanged(System::Object^ sender, System::EventArgs^ e) {
+		PlusChangeLocation();
+	}
 };
 }

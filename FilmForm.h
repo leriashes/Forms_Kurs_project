@@ -1080,6 +1080,7 @@ namespace FormsKursproject {
 		film->time[0] = film->time[3] = film->time[6] = msclr::interop::marshal_as<std::string>(maskedTextBox2->Text);
 		film->time[1] = film->time[4] = film->time[7] = msclr::interop::marshal_as<std::string>(maskedTextBox3->Text);
 		film->time[2] = film->time[5] = film->time[8] = msclr::interop::marshal_as<std::string>(maskedTextBox4->Text);
+		film->path = msclr::interop::marshal_as<std::string>(textBox11->Text);
 	}
 };
 }
