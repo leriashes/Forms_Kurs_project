@@ -16,7 +16,7 @@
 #include "resource.h"
 #include <tchar.h>
 
-
+using namespace System;
 using namespace msclr::interop;
 /*#include "HelloForm.h"
 #include "InfoForm.h"*/
@@ -4544,6 +4544,49 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 		}
 	}
 
+		   public: System::Drawing::Image^ getImageFromRes(long resource_ID) {
+			   
+			   HMODULE hInst = NULL;//Load the resource module:
+			   
+			   HRSRC hResource = ::FindResource(hInst, MAKEINTRESOURCE(resource_ID), L"PNG");	// Find the resource using the resource ID from file "resource.h"
+			   if (!hResource) return nullptr;
+
+			   
+			   DWORD Size = SizeofResource(hInst, hResource);	// Load the resource and save the total size.
+			   HGLOBAL MemoryHandle = LoadResource(hInst, hResource);
+			   if (MemoryHandle == NULL) return nullptr;
+
+			   
+			   cli::array<BYTE>^ MemPtr = gcnew cli::array<BYTE>(Size + 2);//Create a cli::array of byte with size = total size + 2	
+
+			   
+			   char* lkr = (char*)(LockResource(MemoryHandle));		//Cast from LPVOID to char *
+
+			   
+			   System::Runtime::InteropServices::Marshal::Copy((IntPtr)lkr, MemPtr, 0, Size);		//Copy from unmanaged memory to managed array
+
+			   
+			   System::IO::MemoryStream^ stream = gcnew System::IO::MemoryStream(MemPtr);		// Create a new MemoryStream with size = MemPtr
+
+			   
+			   stream->Write(MemPtr, 0, Size);		//Write in the MemoryStream
+
+			   
+			   stream->Position = 0;		//Set the position for read the stream
+
+			   
+			   FreeLibrary(hInst);		//Free allocated resources
+	
+			   
+			   System::Drawing::Image^ ptrPNG;		//Create an Image abstract class pointer
+
+
+
+			   //Assign the stream to abstract class pointer
+			   ptrPNG = System::Drawing::Image::FromStream(stream);
+			   return ptrPNG;
+		   }
+
 		   //Открытие файла
 	private: System::Void open_file() {
 		srand(time(0));
@@ -4577,6 +4620,16 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			//Если файл не пустой
 			else 
 			{
+
+
+				/*
+				HBITMAP hBitMap = (HBITMAP)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_PNG1), IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE);
+				Bitmap^ bitMap = Bitmap::FromHbitmap((IntPtr)hBitMap);
+				DeleteObject(hBitMap);
+				this->pictureBox1->Image = (System::Drawing::Image^)bitMap;
+				*/
+
+				/*
 				//чтение ресурсов
 				System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MainForm::typeid));
 				HRSRC   hRes = FindResource(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_PNG1), TEXT("PNG"));		//поиск ресурса в исполняемом файле
@@ -4630,8 +4683,15 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 						this->textBox1->Text = SetFilmInfo(cinema->films[0]);
 						this->tableLayoutPanel2->Visible = true;
 						this->pictureBox1->Image = Image::FromFile(msclr::interop::marshal_as<System::String^>(cinema->films[0].path));
-
-
+						
+						System::Drawing::Image^ image = getImageFromRes(IDB_PNG1);
+						if (image != nullptr) pictureBox1->Image = image;
+						/*
+						HBITMAP hBitMap = (HBITMAP)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_PNG1), IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE);
+						Bitmap^ bitMap = Bitmap::FromHbitmap((IntPtr)hBitMap);
+						DeleteObject(hBitMap);
+						this->pictureBox1->Image = (System::Drawing::Image^)bitMap;
+						*/
 						/*
 						FileName = msclr::interop::marshal_as<System::String^>(cinema->films[0].path);
 						this->pictureBox1->Image = Image::FromFile(FileName);

@@ -278,15 +278,6 @@ void File_O::WriteBron(Cinema& cinema)
     outFile << inFile.rdbuf();
     outFile.close();
     inFile.close();
-    //Clean(path_bron);
-    //std::ofstream fileStrm(path_bron, std::ios::out);
-
-    /*fstream file;
-    file.open(path_bron, ios::out);
-    file << "";
-    file.close();
-    */
-
     if (remove(path_bron.c_str()) != 0)             // удаление файла file.txt
     {
         //std::cout << "Ошибка удаления файла\n";
@@ -295,7 +286,7 @@ void File_O::WriteBron(Cinema& cinema)
     {
         //std::cout << "Файл успешно удалён\n";
     }
-    //_getch();
+    //_getch(); 
 
     ofstream outFiles(path_bron);
     ifstream f1;
