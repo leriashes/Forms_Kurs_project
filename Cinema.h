@@ -14,9 +14,11 @@ public:
 	int broni_zapis = 0;	//количество забронированных билетов под запись в файл
 	string name;	//название кинотеатра
 	string address;	//адрес кинотеатра
-	string cashiers[5];	//кассиры кинотеатра		// сделать класс кассиров с информацией о них?
+	string cashiers[6];	//кассиры кинотеатра		// сделать класс кассиров с информацией о них?
 	string id_cinema;
 	string bron[100][7];
+	string temp_inf[10];
+	int inf_temp;
 
 	string inn;		//данные для чека
 	string rnm;		//данные для чека

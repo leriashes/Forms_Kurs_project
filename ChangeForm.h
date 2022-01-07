@@ -2,6 +2,11 @@
 #include "Cinema.h"
 #include <msclr\marshal.h>
 #include "msclr\marshal_cppstd.h"
+#include <thread>
+
+using namespace System;
+using namespace System::Threading;
+
 using namespace msclr::interop;
 
 namespace FormsKursproject {
@@ -22,14 +27,21 @@ namespace FormsKursproject {
 		//ChangeForm(void)
 		ChangeForm(Cinema& cinema1)
 		{
-			
+			change = false;
 			this->cinema = &cinema1;
 			InitializeComponent();
 			//
 			//TODO: добавьте код конструктора
 			//
 		}
-		Cinema* cinema;
+	private: System::Windows::Forms::MaskedTextBox^ maskedTextBox1;
+	public:
+	private: System::Windows::Forms::MaskedTextBox^ maskedTextBox2;
+	private: System::Windows::Forms::Button^ Button_Save;
+	private: System::Windows::Forms::Button^ button2;
+	private: System::Windows::Forms::LinkLabel^ linkLabel1;
+		   bool change;
+		   Cinema* cinema;
 
 	protected:
 		/// <summary>
@@ -42,6 +54,9 @@ namespace FormsKursproject {
 				delete components;
 			}
 		}
+	private: cli::array<System::Windows::Forms::Button^>^ but_del;
+	private: cli::array<System::Windows::Forms::Button^>^ but_new;
+	private: cli::array<System::Windows::Forms::TextBox^>^ Text_cash;
 	private: System::Windows::Forms::Label^ label_Name;
 	protected:
 	private: System::Windows::Forms::Label^ label_Adress;
@@ -49,8 +64,8 @@ namespace FormsKursproject {
 	private: System::Windows::Forms::Label^ label_Rnm;
 	private: System::Windows::Forms::TextBox^ textBox1;
 	private: System::Windows::Forms::TextBox^ textBox2;
-	private: System::Windows::Forms::TextBox^ textBox3;
-	private: System::Windows::Forms::TextBox^ textBox4;
+
+
 	private: System::Windows::Forms::GroupBox^ groupBox1;
 	private: System::Windows::Forms::Button^ button_5New;
 	private: System::Windows::Forms::Button^ button_4New;
@@ -92,9 +107,8 @@ namespace FormsKursproject {
 			this->label_Rnm = (gcnew System::Windows::Forms::Label());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
+			this->linkLabel1 = (gcnew System::Windows::Forms::LinkLabel());
 			this->button_5New = (gcnew System::Windows::Forms::Button());
 			this->button_4New = (gcnew System::Windows::Forms::Button());
 			this->button_3New = (gcnew System::Windows::Forms::Button());
@@ -110,6 +124,10 @@ namespace FormsKursproject {
 			this->textBox_3 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox_2 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox_1 = (gcnew System::Windows::Forms::TextBox());
+			this->maskedTextBox1 = (gcnew System::Windows::Forms::MaskedTextBox());
+			this->maskedTextBox2 = (gcnew System::Windows::Forms::MaskedTextBox());
+			this->Button_Save = (gcnew System::Windows::Forms::Button());
+			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->groupBox1->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -153,32 +171,21 @@ namespace FormsKursproject {
 			// 
 			this->textBox1->Location = System::Drawing::Point(127, 55);
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(100, 20);
+			this->textBox1->Size = System::Drawing::Size(182, 20);
 			this->textBox1->TabIndex = 5;
+			this->textBox1->TextChanged += gcnew System::EventHandler(this, &ChangeForm::textBox1_TextChanged);
 			// 
 			// textBox2
 			// 
 			this->textBox2->Location = System::Drawing::Point(127, 98);
 			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(100, 20);
+			this->textBox2->Size = System::Drawing::Size(182, 20);
 			this->textBox2->TabIndex = 6;
-			// 
-			// textBox3
-			// 
-			this->textBox3->Location = System::Drawing::Point(127, 141);
-			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(100, 20);
-			this->textBox3->TabIndex = 7;
-			// 
-			// textBox4
-			// 
-			this->textBox4->Location = System::Drawing::Point(127, 189);
-			this->textBox4->Name = L"textBox4";
-			this->textBox4->Size = System::Drawing::Size(100, 20);
-			this->textBox4->TabIndex = 8;
+			this->textBox2->TextChanged += gcnew System::EventHandler(this, &ChangeForm::textBox2_TextChanged);
 			// 
 			// groupBox1
 			// 
+			this->groupBox1->Controls->Add(this->linkLabel1);
 			this->groupBox1->Controls->Add(this->button_5New);
 			this->groupBox1->Controls->Add(this->button_4New);
 			this->groupBox1->Controls->Add(this->button_3New);
@@ -201,50 +208,65 @@ namespace FormsKursproject {
 			this->groupBox1->TabStop = false;
 			this->groupBox1->Text = L"Кассиры";
 			// 
+			// linkLabel1
+			// 
+			this->linkLabel1->AutoSize = true;
+			this->linkLabel1->Location = System::Drawing::Point(181, 71);
+			this->linkLabel1->Name = L"linkLabel1";
+			this->linkLabel1->Size = System::Drawing::Size(55, 13);
+			this->linkLabel1->TabIndex = 15;
+			this->linkLabel1->TabStop = true;
+			this->linkLabel1->Text = L"linkLabel1";
+			// 
 			// button_5New
 			// 
-			this->button_5New->Location = System::Drawing::Point(52, 210);
+			this->button_5New->Location = System::Drawing::Point(52, 194);
 			this->button_5New->Name = L"button_5New";
 			this->button_5New->Size = System::Drawing::Size(75, 23);
 			this->button_5New->TabIndex = 14;
 			this->button_5New->Text = L"Добавить";
 			this->button_5New->UseVisualStyleBackColor = true;
+			this->button_5New->Click += gcnew System::EventHandler(this, &ChangeForm::button_5New_Click);
 			// 
 			// button_4New
 			// 
-			this->button_4New->Location = System::Drawing::Point(52, 180);
+			this->button_4New->Location = System::Drawing::Point(52, 151);
 			this->button_4New->Name = L"button_4New";
 			this->button_4New->Size = System::Drawing::Size(75, 23);
 			this->button_4New->TabIndex = 13;
 			this->button_4New->Text = L"Добавить";
 			this->button_4New->UseVisualStyleBackColor = true;
+			this->button_4New->Click += gcnew System::EventHandler(this, &ChangeForm::button_4New_Click);
 			// 
 			// button_3New
 			// 
-			this->button_3New->Location = System::Drawing::Point(52, 140);
+			this->button_3New->Location = System::Drawing::Point(52, 113);
 			this->button_3New->Name = L"button_3New";
 			this->button_3New->Size = System::Drawing::Size(75, 23);
 			this->button_3New->TabIndex = 12;
 			this->button_3New->Text = L"Добавить";
 			this->button_3New->UseVisualStyleBackColor = true;
+			this->button_3New->Click += gcnew System::EventHandler(this, &ChangeForm::button_3New_Click);
 			// 
 			// button_2New
 			// 
-			this->button_2New->Location = System::Drawing::Point(52, 97);
+			this->button_2New->Location = System::Drawing::Point(52, 70);
 			this->button_2New->Name = L"button_2New";
 			this->button_2New->Size = System::Drawing::Size(75, 23);
 			this->button_2New->TabIndex = 11;
 			this->button_2New->Text = L"Добавить";
 			this->button_2New->UseVisualStyleBackColor = true;
+			this->button_2New->Click += gcnew System::EventHandler(this, &ChangeForm::button_2New_Click);
 			// 
 			// button_1New
 			// 
-			this->button_1New->Location = System::Drawing::Point(52, 41);
+			this->button_1New->Location = System::Drawing::Point(52, 27);
 			this->button_1New->Name = L"button_1New";
 			this->button_1New->Size = System::Drawing::Size(75, 23);
 			this->button_1New->TabIndex = 10;
 			this->button_1New->Text = L"Добавить";
 			this->button_1New->UseVisualStyleBackColor = true;
+			this->button_1New->Click += gcnew System::EventHandler(this, &ChangeForm::button_1New_Click);
 			// 
 			// button_5Del
 			// 
@@ -254,6 +276,7 @@ namespace FormsKursproject {
 			this->button_5Del->TabIndex = 9;
 			this->button_5Del->Text = L"Удалить";
 			this->button_5Del->UseVisualStyleBackColor = true;
+			this->button_5Del->Click += gcnew System::EventHandler(this, &ChangeForm::button_5Del_Click);
 			// 
 			// button_4Del
 			// 
@@ -263,6 +286,7 @@ namespace FormsKursproject {
 			this->button_4Del->TabIndex = 8;
 			this->button_4Del->Text = L"Удалить";
 			this->button_4Del->UseVisualStyleBackColor = true;
+			this->button_4Del->Click += gcnew System::EventHandler(this, &ChangeForm::button_4Del_Click);
 			// 
 			// button_3Del
 			// 
@@ -272,6 +296,7 @@ namespace FormsKursproject {
 			this->button_3Del->TabIndex = 7;
 			this->button_3Del->Text = L"Удалить";
 			this->button_3Del->UseVisualStyleBackColor = true;
+			this->button_3Del->Click += gcnew System::EventHandler(this, &ChangeForm::button_3Del_Click);
 			// 
 			// button_2Del
 			// 
@@ -281,6 +306,7 @@ namespace FormsKursproject {
 			this->button_2Del->TabIndex = 6;
 			this->button_2Del->Text = L"Удалить";
 			this->button_2Del->UseVisualStyleBackColor = true;
+			this->button_2Del->Click += gcnew System::EventHandler(this, &ChangeForm::button_2Del_Click);
 			// 
 			// button_1Del
 			// 
@@ -290,6 +316,7 @@ namespace FormsKursproject {
 			this->button_1Del->TabIndex = 5;
 			this->button_1Del->Text = L"Удалить";
 			this->button_1Del->UseVisualStyleBackColor = true;
+			this->button_1Del->Click += gcnew System::EventHandler(this, &ChangeForm::button_1Del_Click);
 			// 
 			// textBox_5
 			// 
@@ -297,6 +324,7 @@ namespace FormsKursproject {
 			this->textBox_5->Name = L"textBox_5";
 			this->textBox_5->Size = System::Drawing::Size(100, 20);
 			this->textBox_5->TabIndex = 4;
+			this->textBox_5->TextChanged += gcnew System::EventHandler(this, &ChangeForm::textBox_5_TextChanged);
 			// 
 			// textBox_4
 			// 
@@ -304,6 +332,7 @@ namespace FormsKursproject {
 			this->textBox_4->Name = L"textBox_4";
 			this->textBox_4->Size = System::Drawing::Size(100, 20);
 			this->textBox_4->TabIndex = 3;
+			this->textBox_4->TextChanged += gcnew System::EventHandler(this, &ChangeForm::textBox_4_TextChanged);
 			// 
 			// textBox_3
 			// 
@@ -311,6 +340,7 @@ namespace FormsKursproject {
 			this->textBox_3->Name = L"textBox_3";
 			this->textBox_3->Size = System::Drawing::Size(100, 20);
 			this->textBox_3->TabIndex = 2;
+			this->textBox_3->TextChanged += gcnew System::EventHandler(this, &ChangeForm::textBox_3_TextChanged);
 			// 
 			// textBox_2
 			// 
@@ -318,6 +348,7 @@ namespace FormsKursproject {
 			this->textBox_2->Name = L"textBox_2";
 			this->textBox_2->Size = System::Drawing::Size(100, 20);
 			this->textBox_2->TabIndex = 1;
+			this->textBox_2->TextChanged += gcnew System::EventHandler(this, &ChangeForm::textBox_2_TextChanged);
 			// 
 			// textBox_1
 			// 
@@ -325,15 +356,56 @@ namespace FormsKursproject {
 			this->textBox_1->Name = L"textBox_1";
 			this->textBox_1->Size = System::Drawing::Size(100, 20);
 			this->textBox_1->TabIndex = 0;
+			this->textBox_1->TextChanged += gcnew System::EventHandler(this, &ChangeForm::textBox_1_TextChanged);
+			// 
+			// maskedTextBox1
+			// 
+			this->maskedTextBox1->Location = System::Drawing::Point(127, 141);
+			this->maskedTextBox1->Mask = L"000000000000";
+			this->maskedTextBox1->Name = L"maskedTextBox1";
+			this->maskedTextBox1->Size = System::Drawing::Size(182, 20);
+			this->maskedTextBox1->TabIndex = 10;
+			this->maskedTextBox1->ValidatingType = System::Int32::typeid;
+			this->maskedTextBox1->MaskInputRejected += gcnew System::Windows::Forms::MaskInputRejectedEventHandler(this, &ChangeForm::maskedTextBox1_MaskInputRejected);
+			// 
+			// maskedTextBox2
+			// 
+			this->maskedTextBox2->Location = System::Drawing::Point(127, 189);
+			this->maskedTextBox2->Mask = L"0000000000000000";
+			this->maskedTextBox2->Name = L"maskedTextBox2";
+			this->maskedTextBox2->Size = System::Drawing::Size(182, 20);
+			this->maskedTextBox2->TabIndex = 11;
+			this->maskedTextBox2->MaskInputRejected += gcnew System::Windows::Forms::MaskInputRejectedEventHandler(this, &ChangeForm::maskedTextBox2_MaskInputRejected);
+			// 
+			// Button_Save
+			// 
+			this->Button_Save->Location = System::Drawing::Point(109, 299);
+			this->Button_Save->Name = L"Button_Save";
+			this->Button_Save->Size = System::Drawing::Size(138, 37);
+			this->Button_Save->TabIndex = 12;
+			this->Button_Save->Text = L"Сохранить";
+			this->Button_Save->UseVisualStyleBackColor = true;
+			this->Button_Save->Click += gcnew System::EventHandler(this, &ChangeForm::Button_Save_Click);
+			// 
+			// button2
+			// 
+			this->button2->Location = System::Drawing::Point(494, 329);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(75, 23);
+			this->button2->TabIndex = 13;
+			this->button2->Text = L"button2";
+			this->button2->UseVisualStyleBackColor = true;
 			// 
 			// ChangeForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(803, 394);
+			this->Controls->Add(this->button2);
+			this->Controls->Add(this->Button_Save);
+			this->Controls->Add(this->maskedTextBox2);
+			this->Controls->Add(this->maskedTextBox1);
 			this->Controls->Add(this->groupBox1);
-			this->Controls->Add(this->textBox4);
-			this->Controls->Add(this->textBox3);
 			this->Controls->Add(this->textBox2);
 			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->label_Rnm);
@@ -342,6 +414,7 @@ namespace FormsKursproject {
 			this->Controls->Add(this->label_Name);
 			this->Name = L"ChangeForm";
 			this->Text = L"Данные о кинотеатре";
+			this->FormClosing += gcnew System::Windows::Forms::FormClosingEventHandler(this, &ChangeForm::ChangeForm_FormClosing);
 			this->Load += gcnew System::EventHandler(this, &ChangeForm::ChangeForm_Load);
 			this->groupBox1->ResumeLayout(false);
 			this->groupBox1->PerformLayout();
@@ -352,31 +425,96 @@ namespace FormsKursproject {
 #pragma endregion
 	private: System::Void ChangeForm_Load(System::Object^ sender, System::EventArgs^ e) {
 		
+		but_del = gcnew cli::array<System::Windows::Forms::Button^>(5);
+		but_new = gcnew cli::array<System::Windows::Forms::Button^>(5);
+		Text_cash = gcnew cli::array<System::Windows::Forms::TextBox^>(5);
+		for (int i = 0; i < 5; i++)
+		{
+			but_del[i] = gcnew System::Windows::Forms::Button;
+			but_new[i] = gcnew System::Windows::Forms::Button;
+			Text_cash[i] = gcnew System::Windows::Forms::TextBox;
+		}
+		but_del[0] = this->button_1Del;
+		but_del[1] = this->button_2Del;
+		but_del[2] = this->button_3Del;
+		but_del[3] = this->button_4Del;
+		but_del[4] = this->button_5Del;
+
+		but_new[0] = this->button_1New;
+		but_new[1] = this->button_2New;
+		but_new[2] = this->button_3New;
+		but_new[3] = this->button_4New;
+		but_new[4] = this->button_5New;
+
+		Text_cash[0] = this->textBox_1;
+		Text_cash[1] = this->textBox_2;
+		Text_cash[2] = this->textBox_3;
+		Text_cash[3] = this->textBox_4;
+		Text_cash[4] = this->textBox_5;
+
+		for (int u = 0; u < 5; u++)
+		{
+			but_del[u]->Visible = false;
+			but_new[u]->Visible = false;
+			Text_cash[u]->Visible = false;
+		}
+		/*
 		this->button_1Del->Visible = false;
 		this->button_2Del->Visible = false;
 		this->button_3Del->Visible = false;
 		this->button_4Del->Visible = false;
 		this->button_5Del->Visible = false;
+		*/
 		
+		/*
 		this->button_1New->Visible = false;
 		this->button_2New->Visible = false;
 		this->button_3New->Visible = false;
 		this->button_4New->Visible = false;
 		this->button_5New->Visible = false;
+		*/
 
+		/*
 		this->textBox_1->Visible = false;
 		this->textBox_2->Visible = false;
 		this->textBox_3->Visible = false;
 		this->textBox_4->Visible = false;
 		this->textBox_5->Visible = false;
+		*/
+		cinema->temp_inf[0] = cinema->name;
+		cinema->temp_inf[1] = cinema->address;
+		cinema->temp_inf[2] = cinema->inn;
+		cinema->temp_inf[3] = cinema->rnm;
+		cinema->inf_temp = cinema->cashiers_number;
+		for (int h = 0; h < cinema->inf_temp; h++)
+		{
+			cinema->temp_inf[h + 4] = cinema->cashiers[h + 1];
+		}
 
+		this->linkLabel1->Visible = false;
 
-		this->textBox1->Text = msclr::interop::marshal_as<System::String^>(cinema->name);
-		this->textBox2->Text = msclr::interop::marshal_as<System::String^>(cinema->address);
-		this->textBox3->Text = msclr::interop::marshal_as<System::String^>(cinema->inn);
-		this->textBox4->Text = msclr::interop::marshal_as<System::String^>(cinema->rnm);
+		this->textBox1->Text = msclr::interop::marshal_as<System::String^>(cinema->temp_inf[0]);
+		this->textBox2->Text = msclr::interop::marshal_as<System::String^>(cinema->temp_inf[1]);
+		this->maskedTextBox1->Text = msclr::interop::marshal_as<System::String^>(cinema->temp_inf[2]);
+		this->maskedTextBox2->Text = msclr::interop::marshal_as<System::String^>(cinema->temp_inf[3]);
+		
+		this->textBox_1->BackColor = DefaultBackColor;
+		this->textBox_2->BackColor = DefaultBackColor;
+		this->maskedTextBox1->BackColor = DefaultBackColor;
+		this->maskedTextBox2->BackColor = DefaultBackColor;
+
 		//this->textBox1->Text = cinema->cashiers_number.ToString();
-		if (cinema->cashiers_number > 0)
+		for (int y = 0; y < cinema->inf_temp; y++)
+		{
+			but_del[y]->Visible = true;
+			but_new[y]->Visible = false;
+			Text_cash[y]->Visible = true;
+			Text_cash[y]->Text = msclr::interop::marshal_as<System::String^>(cinema->temp_inf[y + 4]);
+			Text_cash[y]->BackColor = DefaultBackColor;
+		}
+		but_new[cinema->cashiers_number]->Visible = true;
+		//Text_cash[cinema->cashiers_number]->Visible = true;
+		/*if (cinema->cashiers_number > 0)
 		{
 			this->button_1Del->Visible = true;
 			this->button_1New->Visible = false;
@@ -390,33 +528,411 @@ namespace FormsKursproject {
 				this->button_3New->Visible = true;
 				this->textBox_2->Visible = true;
 				this->textBox_2->Text = msclr::interop::marshal_as<System::String^>(cinema->cashiers[2]);
-			}
-			if (cinema->cashiers_number > 2)
-			{
-				this->button_3Del->Visible = true;
-				this->button_3New->Visible = false;
-				this->button_4New->Visible = true;
-				this->textBox_3->Visible = true;
-				this->textBox_3->Text = msclr::interop::marshal_as<System::String^>(cinema->cashiers[3]);
-			}
-			if (cinema->cashiers_number > 3)
-			{
-				this->button_4Del->Visible = true;
-				this->button_4New->Visible = false;
-				this->button_5New->Visible = true;
-				this->textBox_4->Visible = true;
-				this->textBox_4->Text = msclr::interop::marshal_as<System::String^>(cinema->cashiers[4]);
-			}
-			if (cinema->cashiers_number > 3)
-			{
-				this->button_5Del->Visible = true;
-				this->button_5New->Visible = false;
-				this->textBox_5->Visible = true;
-				this->textBox_5->Text = msclr::interop::marshal_as<System::String^>(cinema->cashiers[5]);
+				if (cinema->cashiers_number > 2)
+				{
+					this->button_3Del->Visible = true;
+					this->button_3New->Visible = false;
+					this->button_4New->Visible = true;
+					this->textBox_3->Visible = true;
+					this->textBox_3->Text = msclr::interop::marshal_as<System::String^>(cinema->cashiers[3]);
+					if (cinema->cashiers_number > 3)
+					{
+						this->button_4Del->Visible = true;
+						this->button_4New->Visible = false;
+						this->button_5New->Visible = true;
+						this->textBox_4->Visible = true;
+						this->textBox_4->Text = msclr::interop::marshal_as<System::String^>(cinema->cashiers[4]);
+						if (cinema->cashiers_number > 4)
+						{
+							this->button_5Del->Visible = true;
+							this->button_5New->Visible = false;
+							this->textBox_5->Visible = true;
+							this->textBox_5->Text = msclr::interop::marshal_as<System::String^>(cinema->cashiers[5]);
+						}
+					}
+				}
 			}
 		}
+		*/
 		
 //		this->textBox1->Text = msclr::interop::marshal_as<System::String^>(cinema->name.c_str());
+
+	}
+		   private: System::Void new_cashiers(int num_but)
+		   {
+			   if ((num_but == 0) || (Text_cash[num_but - 1]->Text != "" && num_but != 0))
+			   {
+					but_new[num_but]->Visible = false;
+					but_new[num_but + 1]->Visible = true;
+					but_del[num_but]->Visible = true;
+					Text_cash[num_but]->Visible = true;
+					Text_cash[num_but]->Text = "";
+					cinema->inf_temp = cinema->inf_temp + 1;
+					Text_cash[num_but]->BackColor = DefaultBackColor;
+			   }
+		   }
+
+		   private: System::Void Sdvig(int num_but)
+		   {
+				but_new[cinema->inf_temp]->Visible = false;
+				
+				int h = num_but;
+				do
+				{
+					Text_cash[h]->Text = Text_cash[h + 1]->Text;
+					cinema->temp_inf[h + 1] = cinema->temp_inf[h + 2];
+					h++;
+				} while (h < cinema->inf_temp - 1);
+				/*
+				for (int h = num_but; h < cinema->cashiers_number - 1; h++)
+				{
+					Text_cash[h]->Text = Text_cash[h + 1]->Text;
+				}
+				*/
+				but_del[cinema->inf_temp - 1]->Visible = false;
+				but_new[cinema->inf_temp - 1]->Visible = true;
+				Text_cash[cinema->inf_temp - 1]->Visible = false;
+				cinema->inf_temp = cinema->inf_temp - 1;
+				//but_new[cinema->cashiers_number - 2]->Visible = true;
+				
+				//работа с массивом из класса cinema
+		   }
+
+	private: System::Void button_1Del_Click(System::Object^ sender, System::EventArgs^ e) {
+		Sdvig(0);
+	}
+
+	private: System::Void button_2Del_Click(System::Object^ sender, System::EventArgs^ e) {
+		Sdvig(1);
+	}
+
+	private: System::Void button_3Del_Click(System::Object^ sender, System::EventArgs^ e) {
+		Sdvig(2);
+	}
+
+	private: System::Void button_4Del_Click(System::Object^ sender, System::EventArgs^ e) {
+		Sdvig(3);
+	}
+
+	private: System::Void button_5Del_Click(System::Object^ sender, System::EventArgs^ e) {
+		Sdvig(4);
+	}
+
+	private: System::Void button_1New_Click(System::Object^ sender, System::EventArgs^ e) {
+		new_cashiers(0);
+	}
+	private: System::Void button_2New_Click(System::Object^ sender, System::EventArgs^ e) {
+		new_cashiers(1);
+	}
+	private: System::Void button_3New_Click(System::Object^ sender, System::EventArgs^ e) {
+		new_cashiers(2);
+	}
+	private: System::Void button_4New_Click(System::Object^ sender, System::EventArgs^ e) {
+		new_cashiers(3);
+	}
+	private: System::Void button_5New_Click(System::Object^ sender, System::EventArgs^ e) {
+		new_cashiers(4);
+	}
+	/*
+	private: void ColorChange()
+	{
+		Thread^ current = Thread::CurrentThread;
+		Thread::Sleep(2500);
+		if (current->Name == "Thread1")
+		{
+			this->maskedTextBox1->BackColor = DefaultBackColor;
+		}
+		else
+		{
+			this->maskedTextBox2->BackColor = DefaultBackColor;
+		}
+	}
+	*/
+		   private: System::Boolean CheckTable()
+		   {
+			   bool bad = false;
+			   this->textBox1->BackColor = Color::White;
+			   if (this->textBox1->Text->Length == 0)
+			   {
+				   bad = true;
+				   this->textBox1->BackColor = Color::Red;
+			   }
+			   else
+			   {
+				   cinema->temp_inf[0] = msclr::interop::marshal_as< std::string >(this->textBox1->Text);
+			   }
+
+			   if (this->textBox2->Text->Length == 0)
+			   {
+				   bad = true;
+				   this->textBox2->BackColor = Color::Red;
+			   }
+			   else
+			   {
+				   cinema->temp_inf[1] = msclr::interop::marshal_as< std::string >(this->textBox2->Text);
+			   }
+
+			   if (!(this->maskedTextBox1->MaskCompleted))
+			   //if ((this->maskedTextBox1->Text)->Length < 12)
+			   {
+				   bad = true;
+				   this->maskedTextBox1->BackColor = Color::Red;
+				   /*
+				   Thread^ Thread1 = gcnew Thread(gcnew ThreadStart(this, &ChangeForm::ColorChange));
+				   Thread1->Name = "Thread1";
+				   Thread1->Start();
+				   */
+				   //thread t(ChangeForm::ColorChange(1));
+			   }
+			   else
+			   {
+				   cinema->temp_inf[2] = msclr::interop::marshal_as< std::string >(this->maskedTextBox1->Text);
+			   }
+
+			   if (!(this->maskedTextBox2->MaskCompleted))
+			   {
+				   bad = true;
+				   this->maskedTextBox2->BackColor = Color::Red;
+			   }
+			   else
+			   {
+				   cinema->temp_inf[3] = msclr::interop::marshal_as< std::string >(this->maskedTextBox2->Text);
+			   }
+			   
+			   if (cinema->inf_temp == 0)
+			   {
+				   this->Text_cash[0]->Visible = true;
+				   this->but_new[0]->Visible = false;
+				   this->but_new[1]->Visible = true;
+				   this->but_del[0]->Visible = true;
+				   this->linkLabel1->Visible = true;
+				   this->linkLabel1->Text = "Заполните данные как минимум \nоб одном кассире";
+				   this->linkLabel1->LinkColor = Color::Red;
+				   this->linkLabel1->ForeColor = Color::Orange;
+				   cinema->inf_temp = cinema->inf_temp + 1;
+				   bad = true;
+			   }
+			   else
+			   {
+				   for (int y = 1; y <= cinema->inf_temp; y++)
+				   {
+					   if (this->Text_cash[y - 1]->TextLength != 0)
+					   {
+						   cinema->temp_inf[y + 3] = msclr::interop::marshal_as< std::string >(this->Text_cash[y - 1]->Text);
+					   }
+					   else
+					   {
+						   this->Text_cash[y - 1]->BackColor = Color::Red;
+						   bad = true;
+					   }
+				   }
+			   }
+			   return bad;
+		   }
+	private: System::Void Button_Save_Click(System::Object^ sender, System::EventArgs^ e) {
+		bool bad = false;
+		this->textBox1->BackColor = Color::White;
+		if (this->textBox1->TextLength == 0)
+			//if (this->textBox1->Text == "")
+		{
+			bad = true;
+			this->textBox1->BackColor = Color::Red;
+		}
+		//if (this->textBox2->TextLength == 0)
+		if (this->textBox2->TextLength == 0)
+			//if (this->textBox2->Text == "")
+		{
+			bad = true;
+			this->textBox2->BackColor = Color::Red;
+		}
+		if (!(this->maskedTextBox1->MaskCompleted))
+			//if ((this->maskedTextBox1->Text)->Length < 12)
+		{
+			bad = true;
+			this->maskedTextBox1->BackColor = Color::Red;
+			/*
+			Thread^ Thread1 = gcnew Thread(gcnew ThreadStart(this, &ChangeForm::ColorChange));
+			Thread1->Name = "Thread1";
+			Thread1->Start();
+			*/
+			//thread t(ChangeForm::ColorChange(1));
+		}
+		if (!(this->maskedTextBox2->MaskCompleted))
+			//if ((this->maskedTextBox2->Text)->Length < 16)
+		{
+			bad = true;
+			this->maskedTextBox2->BackColor = Color::Red;
+		}
+		cinema->temp_inf[0] = msclr::interop::marshal_as< std::string >(this->textBox1->Text);
+		cinema->temp_inf[1] = msclr::interop::marshal_as< std::string >(this->textBox2->Text);
+		cinema->temp_inf[2] = msclr::interop::marshal_as< std::string >(this->maskedTextBox1->Text);
+		cinema->temp_inf[3] = msclr::interop::marshal_as< std::string >(this->maskedTextBox2->Text);
+		if (cinema->inf_temp == 0)
+		{
+			this->Text_cash[0]->Visible = true;
+			this->but_new[0]->Visible = false;
+			this->but_new[1]->Visible = true;
+			this->but_del[0]->Visible = true;
+			this->linkLabel1->Visible = true;
+			this->linkLabel1->Text = "Заполните данные как минимум \nоб одном кассире";
+			this->linkLabel1->LinkColor = Color::Red;
+			this->linkLabel1->ForeColor = Color::Orange;
+			cinema->inf_temp = cinema->inf_temp + 1;
+			bad = true;
+		}
+		else
+		{
+			for (int y = 1; y <= cinema->inf_temp; y++)
+			{
+				if (this->Text_cash[y - 1]->TextLength != 0)
+				{
+					cinema->temp_inf[y + 3] = msclr::interop::marshal_as< std::string >(this->Text_cash[y - 1]->Text);
+				}
+				else
+				{
+					this->Text_cash[y - 1]->BackColor = Color::Red;
+					bad = true;
+				}
+			}
+		}
+		if (bad == true)
+		{
+			change = true;
+		}
+		else if (bad == false) 
+		{
+			change = false;
+			cinema->name = cinema->temp_inf[0];
+			cinema->address = cinema->temp_inf[1];
+			cinema->inn = cinema->temp_inf[2];
+			cinema->rnm = cinema->temp_inf[3];
+			cinema->cashiers_number = cinema->inf_temp;
+			for (int h = 0; h < cinema->inf_temp; h++)
+			{
+				 cinema->cashiers[h + 1] = cinema->temp_inf[h + 4];
+			}
+			//внесение всех изменений в данные
+
+		}
+		/*
+		if (this->textBox1->TextLength == 0)
+		{
+			this->textBox1->BackColor = Color::Red;
+		}
+		if (this->textBox2->TextLength == 0)
+		{
+			this->textBox2->BackColor = Color::Red;
+		}
+		if ((this->maskedTextBox1->Text)->Length < 12)
+		{
+			this->maskedTextBox1->BackColor = Color::Red;
+			/*
+			Thread^ Thread1 = gcnew Thread(gcnew ThreadStart(this, &ChangeForm::ColorChange));
+			Thread1->Name = "Thread1";
+			Thread1->Start();
+			*/
+			//thread t(ChangeForm::ColorChange(1));
+		/* }
+		if ((this->maskedTextBox2->Text)->Length < 16)
+		{
+			this->maskedTextBox2->BackColor = Color::Red;
+		}
+		cinema->name = msclr::interop::marshal_as< std::string >(this->textBox1->Text);
+		cinema->address = msclr::interop::marshal_as< std::string >(this->textBox2->Text);
+		cinema->inn = msclr::interop::marshal_as< std::string >(this->maskedTextBox1->Text);
+		cinema->rnm = msclr::interop::marshal_as< std::string >(this->maskedTextBox2->Text);
+		if (cinema->cashiers_number == 0)
+		{
+			this->Text_cash[0]->Visible = true;
+			this->but_new[0]->Visible = false;
+			this->but_new[1]->Visible = true;
+			this->but_del[0]->Visible = true;
+			this->linkLabel1->Visible = true;
+			this->linkLabel1->Text = "Заполните данные как минимум \nоб одном кассире";
+			this->linkLabel1->LinkColor = Color::Red;
+			this->linkLabel1->ForeColor = Color::Orange;
+		}
+		else
+		{
+			for (int y = 1; y <= cinema->cashiers_number; y++)
+			{
+				if (this->Text_cash[y - 1]->TextLength != 0)
+				{
+					cinema->cashiers[y] = msclr::interop::marshal_as< std::string >(this->Text_cash[y - 1]->Text);
+				}
+				else
+				{
+					this->Text_cash[y - 1]->BackColor = Color::Red;
+				}
+			}
+		}
+		*/
+	}
+
+	private: System::Void textBox_1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+		this->textBox_1->BackColor = DefaultBackColor;
+		this->linkLabel1->Visible = false;
+		this->change = true;
+	}
+
+	private: System::Void textBox_2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+		this->textBox_2->BackColor = DefaultBackColor;
+		this->change = true;
+	}
+
+	private: System::Void textBox_3_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+		this->textBox_3->BackColor = DefaultBackColor;
+		this->change = true;
+	}
+
+	private: System::Void textBox_4_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+		this->textBox_4->BackColor = DefaultBackColor;
+		this->change = true;
+	}
+
+	private: System::Void textBox_5_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+		this->textBox_5->BackColor = DefaultBackColor;
+		this->change = true;
+	}
+
+	private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+		this->textBox1->BackColor = DefaultBackColor;
+		this->change = true;
+	}
+
+	private: System::Void textBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+		this->textBox2->BackColor = DefaultBackColor;
+		this->change = true;
+	}
+
+	private: System::Void maskedTextBox1_MaskInputRejected(System::Object^ sender, System::Windows::Forms::MaskInputRejectedEventArgs^ e) {
+		this->maskedTextBox1->BackColor = DefaultBackColor;
+		this->change = true;
+	}
+	private: System::Void maskedTextBox2_MaskInputRejected(System::Object^ sender, System::Windows::Forms::MaskInputRejectedEventArgs^ e) {
+		this->maskedTextBox2->BackColor = DefaultBackColor;
+		this->change = true;
+	}
+	private: System::Void ChangeForm_FormClosing(System::Object^ sender, System::Windows::Forms::FormClosingEventArgs^ e) {
+		e->Cancel = true;
+		
+		if (this->change == true)
+		{
+			String^ message = L"Вы уверены, что хотите выйти без сохранения изменений?";
+			String^ caption = L"Вы уверены?";
+			if (MessageBox::Show(message, caption, MessageBoxButtons::YesNo) == System::Windows::Forms::DialogResult::Yes)
+			{
+				e->Cancel = false;
+			}
+			else
+			{
+
+			}
+		}
+		else
+		{
+			e->Cancel = false;
+		}
 
 	}
 };

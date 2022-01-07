@@ -395,37 +395,6 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 		   Cinema* cinema;
 	public:
 		MainForm(void)
@@ -467,17 +436,8 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 	private: System::Windows::Forms::ToolStripMenuItem^ SaveAsToolStripMenuItem;
 
 
-
-
-
-
-
-
-
 	private: System::Windows::Forms::ToolStripSeparator^ toolStripSeparator2;
 	private: System::Windows::Forms::ToolStripSeparator^ toolStripSeparator3;
-
-
 	private: System::Windows::Forms::ToolStripMenuItem^ CorrectToolStripMenuItem;
 
 
@@ -488,59 +448,6 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 	private: System::Windows::Forms::ToolStripSeparator^ toolStripSeparator1;
 	private: System::Windows::Forms::ToolStripMenuItem^ CloseToolStripMenuItem;
 	private: System::Windows::Forms::SaveFileDialog^ saveFileDialog1;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 	private:
@@ -1636,7 +1543,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->tableLayoutPanel13->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 100)));
 			this->tableLayoutPanel13->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Absolute,
 				40)));
-			this->tableLayoutPanel13->Size = System::Drawing::Size(771, 619);
+			this->tableLayoutPanel13->Size = System::Drawing::Size(764, 619);
 			this->tableLayoutPanel13->TabIndex = 1;
 			this->tableLayoutPanel13->Visible = false;
 			// 
@@ -1849,7 +1756,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->tableLayoutPanel14->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Absolute,
 				40)));
 			this->tableLayoutPanel14->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 50)));
-			this->tableLayoutPanel14->Size = System::Drawing::Size(764, 496);
+			this->tableLayoutPanel14->Size = System::Drawing::Size(764, 499);
 			this->tableLayoutPanel14->TabIndex = 2;
 			// 
 			// label30
@@ -1860,7 +1767,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->label30->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->label30->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label30->Location = System::Drawing::Point(185, 17);
+			this->label30->Location = System::Drawing::Point(185, 19);
 			this->label30->Margin = System::Windows::Forms::Padding(3);
 			this->label30->Name = L"label30";
 			this->label30->Size = System::Drawing::Size(394, 21);
@@ -1874,7 +1781,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->label29->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->label29->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label29->Location = System::Drawing::Point(145, 84);
+			this->label29->Location = System::Drawing::Point(145, 86);
 			this->label29->Margin = System::Windows::Forms::Padding(3);
 			this->label29->Name = L"label29";
 			this->label29->Size = System::Drawing::Size(34, 34);
@@ -1888,7 +1795,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->label28->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->label28->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label28->Location = System::Drawing::Point(145, 204);
+			this->label28->Location = System::Drawing::Point(145, 206);
 			this->label28->Margin = System::Windows::Forms::Padding(3);
 			this->label28->Name = L"label28";
 			this->label28->Size = System::Drawing::Size(34, 34);
@@ -1902,7 +1809,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->label27->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->label27->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label27->Location = System::Drawing::Point(145, 124);
+			this->label27->Location = System::Drawing::Point(145, 126);
 			this->label27->Margin = System::Windows::Forms::Padding(3);
 			this->label27->Name = L"label27";
 			this->label27->Size = System::Drawing::Size(34, 34);
@@ -1916,7 +1823,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->label26->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->label26->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label26->Location = System::Drawing::Point(145, 164);
+			this->label26->Location = System::Drawing::Point(145, 166);
 			this->label26->Margin = System::Windows::Forms::Padding(3);
 			this->label26->Name = L"label26";
 			this->label26->Size = System::Drawing::Size(34, 34);
@@ -1930,7 +1837,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->label25->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->label25->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label25->Location = System::Drawing::Point(145, 364);
+			this->label25->Location = System::Drawing::Point(145, 366);
 			this->label25->Margin = System::Windows::Forms::Padding(3);
 			this->label25->Name = L"label25";
 			this->label25->Size = System::Drawing::Size(34, 34);
@@ -1944,7 +1851,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->label24->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->label24->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label24->Location = System::Drawing::Point(145, 324);
+			this->label24->Location = System::Drawing::Point(145, 326);
 			this->label24->Margin = System::Windows::Forms::Padding(3);
 			this->label24->Name = L"label24";
 			this->label24->Size = System::Drawing::Size(34, 34);
@@ -1958,7 +1865,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->label23->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->label23->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label23->Location = System::Drawing::Point(145, 444);
+			this->label23->Location = System::Drawing::Point(145, 446);
 			this->label23->Margin = System::Windows::Forms::Padding(3);
 			this->label23->Name = L"label23";
 			this->label23->Size = System::Drawing::Size(34, 34);
@@ -1972,7 +1879,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->label22->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->label22->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label22->Location = System::Drawing::Point(145, 404);
+			this->label22->Location = System::Drawing::Point(145, 406);
 			this->label22->Margin = System::Windows::Forms::Padding(3);
 			this->label22->Name = L"label22";
 			this->label22->Size = System::Drawing::Size(34, 34);
@@ -1986,7 +1893,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->label21->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->label21->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label21->Location = System::Drawing::Point(145, 284);
+			this->label21->Location = System::Drawing::Point(145, 286);
 			this->label21->Margin = System::Windows::Forms::Padding(3);
 			this->label21->Name = L"label21";
 			this->label21->Size = System::Drawing::Size(34, 34);
@@ -2000,7 +1907,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->label20->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->label20->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label20->Location = System::Drawing::Point(145, 244);
+			this->label20->Location = System::Drawing::Point(145, 246);
 			this->label20->Margin = System::Windows::Forms::Padding(3);
 			this->label20->Name = L"label20";
 			this->label20->Size = System::Drawing::Size(34, 34);
@@ -2014,7 +1921,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->label19->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->label19->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label19->Location = System::Drawing::Point(305, 44);
+			this->label19->Location = System::Drawing::Point(305, 46);
 			this->label19->Margin = System::Windows::Forms::Padding(3);
 			this->label19->Name = L"label19";
 			this->label19->Size = System::Drawing::Size(34, 34);
@@ -2028,7 +1935,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->label18->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->label18->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label18->Location = System::Drawing::Point(545, 44);
+			this->label18->Location = System::Drawing::Point(545, 46);
 			this->label18->Margin = System::Windows::Forms::Padding(3);
 			this->label18->Name = L"label18";
 			this->label18->Size = System::Drawing::Size(34, 34);
@@ -2042,7 +1949,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->label17->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->label17->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label17->Location = System::Drawing::Point(465, 44);
+			this->label17->Location = System::Drawing::Point(465, 46);
 			this->label17->Margin = System::Windows::Forms::Padding(3);
 			this->label17->Name = L"label17";
 			this->label17->Size = System::Drawing::Size(34, 34);
@@ -2056,7 +1963,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->label16->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->label16->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label16->Location = System::Drawing::Point(425, 44);
+			this->label16->Location = System::Drawing::Point(425, 46);
 			this->label16->Margin = System::Windows::Forms::Padding(3);
 			this->label16->Name = L"label16";
 			this->label16->Size = System::Drawing::Size(34, 34);
@@ -2070,7 +1977,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->label15->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->label15->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label15->Location = System::Drawing::Point(345, 44);
+			this->label15->Location = System::Drawing::Point(345, 46);
 			this->label15->Margin = System::Windows::Forms::Padding(3);
 			this->label15->Name = L"label15";
 			this->label15->Size = System::Drawing::Size(34, 34);
@@ -2084,7 +1991,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->label14->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->label14->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label14->Location = System::Drawing::Point(505, 44);
+			this->label14->Location = System::Drawing::Point(505, 46);
 			this->label14->Margin = System::Windows::Forms::Padding(3);
 			this->label14->Name = L"label14";
 			this->label14->Size = System::Drawing::Size(34, 34);
@@ -2098,7 +2005,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->label13->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->label13->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label13->Location = System::Drawing::Point(265, 44);
+			this->label13->Location = System::Drawing::Point(265, 46);
 			this->label13->Margin = System::Windows::Forms::Padding(3);
 			this->label13->Name = L"label13";
 			this->label13->Size = System::Drawing::Size(34, 34);
@@ -2112,7 +2019,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->label11->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->label11->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label11->Location = System::Drawing::Point(385, 44);
+			this->label11->Location = System::Drawing::Point(385, 46);
 			this->label11->Margin = System::Windows::Forms::Padding(3);
 			this->label11->Name = L"label11";
 			this->label11->Size = System::Drawing::Size(34, 34);
@@ -2126,7 +2033,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->label9->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->label9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label9->Location = System::Drawing::Point(225, 44);
+			this->label9->Location = System::Drawing::Point(225, 46);
 			this->label9->Margin = System::Windows::Forms::Padding(3);
 			this->label9->Name = L"label9";
 			this->label9->Size = System::Drawing::Size(34, 34);
@@ -2140,7 +2047,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->label7->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label7->Location = System::Drawing::Point(185, 44);
+			this->label7->Location = System::Drawing::Point(185, 46);
 			this->label7->Margin = System::Windows::Forms::Padding(3);
 			this->label7->Name = L"label7";
 			this->label7->Size = System::Drawing::Size(34, 34);
@@ -2154,7 +2061,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel7->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel7->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel7->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel7->Location = System::Drawing::Point(229, 446);
+			this->panel7->Location = System::Drawing::Point(229, 448);
 			this->panel7->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel7->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel7->Name = L"panel7";
@@ -2168,7 +2075,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel8->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel8->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel8->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel8->Location = System::Drawing::Point(269, 446);
+			this->panel8->Location = System::Drawing::Point(269, 448);
 			this->panel8->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel8->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel8->Name = L"panel8";
@@ -2181,7 +2088,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel6->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel6->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel6->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel6->Location = System::Drawing::Point(187, 446);
+			this->panel6->Location = System::Drawing::Point(187, 448);
 			this->panel6->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel6->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel6->Name = L"panel6";
@@ -2195,7 +2102,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel9->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel9->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel9->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel9->Location = System::Drawing::Point(309, 446);
+			this->panel9->Location = System::Drawing::Point(309, 448);
 			this->panel9->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel9->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel9->Name = L"panel9";
@@ -2209,7 +2116,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel10->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel10->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel10->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel10->Location = System::Drawing::Point(349, 446);
+			this->panel10->Location = System::Drawing::Point(349, 448);
 			this->panel10->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel10->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel10->Name = L"panel10";
@@ -2223,7 +2130,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel11->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel11->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel11->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel11->Location = System::Drawing::Point(389, 446);
+			this->panel11->Location = System::Drawing::Point(389, 448);
 			this->panel11->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel11->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel11->Name = L"panel11";
@@ -2237,7 +2144,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel12->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel12->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel12->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel12->Location = System::Drawing::Point(429, 446);
+			this->panel12->Location = System::Drawing::Point(429, 448);
 			this->panel12->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel12->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel12->Name = L"panel12";
@@ -2251,7 +2158,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel13->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel13->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel13->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel13->Location = System::Drawing::Point(469, 446);
+			this->panel13->Location = System::Drawing::Point(469, 448);
 			this->panel13->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel13->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel13->Name = L"panel13";
@@ -2265,7 +2172,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel14->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel14->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel14->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel14->Location = System::Drawing::Point(509, 446);
+			this->panel14->Location = System::Drawing::Point(509, 448);
 			this->panel14->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel14->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel14->Name = L"panel14";
@@ -2279,7 +2186,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel15->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel15->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel15->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel15->Location = System::Drawing::Point(549, 446);
+			this->panel15->Location = System::Drawing::Point(549, 448);
 			this->panel15->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel15->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel15->Name = L"panel15";
@@ -2293,7 +2200,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel16->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel16->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel16->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel16->Location = System::Drawing::Point(189, 86);
+			this->panel16->Location = System::Drawing::Point(189, 88);
 			this->panel16->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel16->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel16->Name = L"panel16";
@@ -2307,7 +2214,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel17->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel17->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel17->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel17->Location = System::Drawing::Point(229, 86);
+			this->panel17->Location = System::Drawing::Point(229, 88);
 			this->panel17->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel17->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel17->Name = L"panel17";
@@ -2321,7 +2228,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel18->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel18->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel18->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel18->Location = System::Drawing::Point(269, 86);
+			this->panel18->Location = System::Drawing::Point(269, 88);
 			this->panel18->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel18->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel18->Name = L"panel18";
@@ -2335,7 +2242,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel19->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel19->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel19->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel19->Location = System::Drawing::Point(309, 86);
+			this->panel19->Location = System::Drawing::Point(309, 88);
 			this->panel19->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel19->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel19->Name = L"panel19";
@@ -2349,7 +2256,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel20->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel20->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel20->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel20->Location = System::Drawing::Point(349, 86);
+			this->panel20->Location = System::Drawing::Point(349, 88);
 			this->panel20->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel20->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel20->Name = L"panel20";
@@ -2363,7 +2270,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel21->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel21->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel21->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel21->Location = System::Drawing::Point(389, 86);
+			this->panel21->Location = System::Drawing::Point(389, 88);
 			this->panel21->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel21->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel21->Name = L"panel21";
@@ -2377,7 +2284,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel22->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel22->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel22->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel22->Location = System::Drawing::Point(429, 86);
+			this->panel22->Location = System::Drawing::Point(429, 88);
 			this->panel22->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel22->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel22->Name = L"panel22";
@@ -2391,7 +2298,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel23->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel23->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel23->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel23->Location = System::Drawing::Point(469, 86);
+			this->panel23->Location = System::Drawing::Point(469, 88);
 			this->panel23->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel23->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel23->Name = L"panel23";
@@ -2405,7 +2312,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel24->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel24->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel24->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel24->Location = System::Drawing::Point(509, 86);
+			this->panel24->Location = System::Drawing::Point(509, 88);
 			this->panel24->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel24->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel24->Name = L"panel24";
@@ -2419,7 +2326,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel25->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel25->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel25->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel25->Location = System::Drawing::Point(549, 86);
+			this->panel25->Location = System::Drawing::Point(549, 88);
 			this->panel25->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel25->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel25->Name = L"panel25";
@@ -2433,7 +2340,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel26->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel26->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel26->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel26->Location = System::Drawing::Point(189, 126);
+			this->panel26->Location = System::Drawing::Point(189, 128);
 			this->panel26->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel26->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel26->Name = L"panel26";
@@ -2447,7 +2354,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel27->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel27->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel27->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel27->Location = System::Drawing::Point(229, 126);
+			this->panel27->Location = System::Drawing::Point(229, 128);
 			this->panel27->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel27->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel27->Name = L"panel27";
@@ -2461,7 +2368,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel28->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel28->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel28->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel28->Location = System::Drawing::Point(269, 126);
+			this->panel28->Location = System::Drawing::Point(269, 128);
 			this->panel28->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel28->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel28->Name = L"panel28";
@@ -2475,7 +2382,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel29->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel29->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel29->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel29->Location = System::Drawing::Point(309, 126);
+			this->panel29->Location = System::Drawing::Point(309, 128);
 			this->panel29->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel29->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel29->Name = L"panel29";
@@ -2489,7 +2396,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel30->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel30->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel30->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel30->Location = System::Drawing::Point(349, 126);
+			this->panel30->Location = System::Drawing::Point(349, 128);
 			this->panel30->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel30->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel30->Name = L"panel30";
@@ -2503,7 +2410,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel32->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel32->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel32->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel32->Location = System::Drawing::Point(429, 126);
+			this->panel32->Location = System::Drawing::Point(429, 128);
 			this->panel32->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel32->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel32->Name = L"panel32";
@@ -2517,7 +2424,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel31->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel31->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel31->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel31->Location = System::Drawing::Point(389, 126);
+			this->panel31->Location = System::Drawing::Point(389, 128);
 			this->panel31->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel31->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel31->Name = L"panel31";
@@ -2531,7 +2438,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel33->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel33->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel33->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel33->Location = System::Drawing::Point(469, 126);
+			this->panel33->Location = System::Drawing::Point(469, 128);
 			this->panel33->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel33->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel33->Name = L"panel33";
@@ -2545,7 +2452,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel34->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel34->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel34->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel34->Location = System::Drawing::Point(509, 126);
+			this->panel34->Location = System::Drawing::Point(509, 128);
 			this->panel34->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel34->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel34->Name = L"panel34";
@@ -2559,7 +2466,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel35->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel35->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel35->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel35->Location = System::Drawing::Point(549, 126);
+			this->panel35->Location = System::Drawing::Point(549, 128);
 			this->panel35->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel35->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel35->Name = L"panel35";
@@ -2573,7 +2480,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel36->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel36->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel36->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel36->Location = System::Drawing::Point(189, 166);
+			this->panel36->Location = System::Drawing::Point(189, 168);
 			this->panel36->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel36->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel36->Name = L"panel36";
@@ -2587,7 +2494,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel37->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel37->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel37->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel37->Location = System::Drawing::Point(229, 166);
+			this->panel37->Location = System::Drawing::Point(229, 168);
 			this->panel37->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel37->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel37->Name = L"panel37";
@@ -2601,7 +2508,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel38->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel38->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel38->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel38->Location = System::Drawing::Point(269, 166);
+			this->panel38->Location = System::Drawing::Point(269, 168);
 			this->panel38->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel38->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel38->Name = L"panel38";
@@ -2615,7 +2522,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel39->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel39->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel39->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel39->Location = System::Drawing::Point(309, 166);
+			this->panel39->Location = System::Drawing::Point(309, 168);
 			this->panel39->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel39->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel39->Name = L"panel39";
@@ -2629,7 +2536,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel40->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel40->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel40->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel40->Location = System::Drawing::Point(349, 166);
+			this->panel40->Location = System::Drawing::Point(349, 168);
 			this->panel40->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel40->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel40->Name = L"panel40";
@@ -2643,7 +2550,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel41->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel41->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel41->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel41->Location = System::Drawing::Point(389, 166);
+			this->panel41->Location = System::Drawing::Point(389, 168);
 			this->panel41->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel41->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel41->Name = L"panel41";
@@ -2657,7 +2564,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel42->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel42->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel42->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel42->Location = System::Drawing::Point(429, 166);
+			this->panel42->Location = System::Drawing::Point(429, 168);
 			this->panel42->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel42->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel42->Name = L"panel42";
@@ -2671,7 +2578,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel43->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel43->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel43->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel43->Location = System::Drawing::Point(469, 166);
+			this->panel43->Location = System::Drawing::Point(469, 168);
 			this->panel43->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel43->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel43->Name = L"panel43";
@@ -2685,7 +2592,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel44->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel44->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel44->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel44->Location = System::Drawing::Point(509, 166);
+			this->panel44->Location = System::Drawing::Point(509, 168);
 			this->panel44->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel44->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel44->Name = L"panel44";
@@ -2699,7 +2606,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel45->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel45->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel45->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel45->Location = System::Drawing::Point(549, 166);
+			this->panel45->Location = System::Drawing::Point(549, 168);
 			this->panel45->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel45->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel45->Name = L"panel45";
@@ -2713,7 +2620,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel46->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel46->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel46->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel46->Location = System::Drawing::Point(189, 206);
+			this->panel46->Location = System::Drawing::Point(189, 208);
 			this->panel46->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel46->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel46->Name = L"panel46";
@@ -2727,7 +2634,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel47->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel47->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel47->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel47->Location = System::Drawing::Point(229, 206);
+			this->panel47->Location = System::Drawing::Point(229, 208);
 			this->panel47->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel47->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel47->Name = L"panel47";
@@ -2741,7 +2648,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel48->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel48->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel48->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel48->Location = System::Drawing::Point(269, 206);
+			this->panel48->Location = System::Drawing::Point(269, 208);
 			this->panel48->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel48->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel48->Name = L"panel48";
@@ -2755,7 +2662,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel49->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel49->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel49->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel49->Location = System::Drawing::Point(309, 206);
+			this->panel49->Location = System::Drawing::Point(309, 208);
 			this->panel49->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel49->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel49->Name = L"panel49";
@@ -2769,7 +2676,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel50->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel50->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel50->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel50->Location = System::Drawing::Point(349, 206);
+			this->panel50->Location = System::Drawing::Point(349, 208);
 			this->panel50->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel50->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel50->Name = L"panel50";
@@ -2783,7 +2690,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel51->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel51->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel51->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel51->Location = System::Drawing::Point(389, 206);
+			this->panel51->Location = System::Drawing::Point(389, 208);
 			this->panel51->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel51->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel51->Name = L"panel51";
@@ -2797,7 +2704,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel52->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel52->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel52->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel52->Location = System::Drawing::Point(429, 206);
+			this->panel52->Location = System::Drawing::Point(429, 208);
 			this->panel52->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel52->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel52->Name = L"panel52";
@@ -2811,7 +2718,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel53->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel53->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel53->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel53->Location = System::Drawing::Point(469, 206);
+			this->panel53->Location = System::Drawing::Point(469, 208);
 			this->panel53->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel53->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel53->Name = L"panel53";
@@ -2825,7 +2732,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel54->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel54->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel54->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel54->Location = System::Drawing::Point(509, 206);
+			this->panel54->Location = System::Drawing::Point(509, 208);
 			this->panel54->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel54->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel54->Name = L"panel54";
@@ -2839,7 +2746,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel55->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel55->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel55->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel55->Location = System::Drawing::Point(549, 206);
+			this->panel55->Location = System::Drawing::Point(549, 208);
 			this->panel55->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel55->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel55->Name = L"panel55";
@@ -2853,7 +2760,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel56->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel56->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel56->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel56->Location = System::Drawing::Point(189, 246);
+			this->panel56->Location = System::Drawing::Point(189, 248);
 			this->panel56->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel56->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel56->Name = L"panel56";
@@ -2867,7 +2774,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel57->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel57->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel57->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel57->Location = System::Drawing::Point(229, 246);
+			this->panel57->Location = System::Drawing::Point(229, 248);
 			this->panel57->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel57->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel57->Name = L"panel57";
@@ -2881,7 +2788,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel58->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel58->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel58->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel58->Location = System::Drawing::Point(269, 246);
+			this->panel58->Location = System::Drawing::Point(269, 248);
 			this->panel58->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel58->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel58->Name = L"panel58";
@@ -2895,7 +2802,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel59->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel59->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel59->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel59->Location = System::Drawing::Point(309, 246);
+			this->panel59->Location = System::Drawing::Point(309, 248);
 			this->panel59->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel59->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel59->Name = L"panel59";
@@ -2909,7 +2816,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel60->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel60->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel60->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel60->Location = System::Drawing::Point(349, 246);
+			this->panel60->Location = System::Drawing::Point(349, 248);
 			this->panel60->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel60->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel60->Name = L"panel60";
@@ -2923,7 +2830,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel61->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel61->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel61->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel61->Location = System::Drawing::Point(389, 246);
+			this->panel61->Location = System::Drawing::Point(389, 248);
 			this->panel61->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel61->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel61->Name = L"panel61";
@@ -2937,7 +2844,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel62->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel62->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel62->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel62->Location = System::Drawing::Point(429, 246);
+			this->panel62->Location = System::Drawing::Point(429, 248);
 			this->panel62->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel62->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel62->Name = L"panel62";
@@ -2951,7 +2858,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel63->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel63->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel63->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel63->Location = System::Drawing::Point(469, 246);
+			this->panel63->Location = System::Drawing::Point(469, 248);
 			this->panel63->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel63->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel63->Name = L"panel63";
@@ -2965,7 +2872,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel64->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel64->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel64->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel64->Location = System::Drawing::Point(509, 246);
+			this->panel64->Location = System::Drawing::Point(509, 248);
 			this->panel64->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel64->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel64->Name = L"panel64";
@@ -2979,7 +2886,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel65->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel65->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel65->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel65->Location = System::Drawing::Point(549, 246);
+			this->panel65->Location = System::Drawing::Point(549, 248);
 			this->panel65->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel65->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel65->Name = L"panel65";
@@ -2993,7 +2900,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel66->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel66->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel66->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel66->Location = System::Drawing::Point(189, 286);
+			this->panel66->Location = System::Drawing::Point(189, 288);
 			this->panel66->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel66->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel66->Name = L"panel66";
@@ -3007,7 +2914,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel67->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel67->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel67->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel67->Location = System::Drawing::Point(229, 286);
+			this->panel67->Location = System::Drawing::Point(229, 288);
 			this->panel67->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel67->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel67->Name = L"panel67";
@@ -3021,7 +2928,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel70->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel70->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel70->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel70->Location = System::Drawing::Point(349, 286);
+			this->panel70->Location = System::Drawing::Point(349, 288);
 			this->panel70->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel70->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel70->Name = L"panel70";
@@ -3035,7 +2942,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel69->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel69->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel69->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel69->Location = System::Drawing::Point(309, 286);
+			this->panel69->Location = System::Drawing::Point(309, 288);
 			this->panel69->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel69->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel69->Name = L"panel69";
@@ -3049,7 +2956,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel68->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel68->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel68->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel68->Location = System::Drawing::Point(269, 286);
+			this->panel68->Location = System::Drawing::Point(269, 288);
 			this->panel68->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel68->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel68->Name = L"panel68";
@@ -3063,7 +2970,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel71->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel71->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel71->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel71->Location = System::Drawing::Point(389, 286);
+			this->panel71->Location = System::Drawing::Point(389, 288);
 			this->panel71->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel71->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel71->Name = L"panel71";
@@ -3077,7 +2984,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel72->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel72->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel72->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel72->Location = System::Drawing::Point(429, 286);
+			this->panel72->Location = System::Drawing::Point(429, 288);
 			this->panel72->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel72->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel72->Name = L"panel72";
@@ -3091,7 +2998,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel73->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel73->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel73->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel73->Location = System::Drawing::Point(469, 286);
+			this->panel73->Location = System::Drawing::Point(469, 288);
 			this->panel73->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel73->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel73->Name = L"panel73";
@@ -3105,7 +3012,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel74->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel74->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel74->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel74->Location = System::Drawing::Point(509, 286);
+			this->panel74->Location = System::Drawing::Point(509, 288);
 			this->panel74->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel74->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel74->Name = L"panel74";
@@ -3119,7 +3026,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel75->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel75->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel75->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel75->Location = System::Drawing::Point(549, 286);
+			this->panel75->Location = System::Drawing::Point(549, 288);
 			this->panel75->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel75->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel75->Name = L"panel75";
@@ -3133,7 +3040,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel76->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel76->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel76->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel76->Location = System::Drawing::Point(189, 326);
+			this->panel76->Location = System::Drawing::Point(189, 328);
 			this->panel76->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel76->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel76->Name = L"panel76";
@@ -3147,7 +3054,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel77->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel77->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel77->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel77->Location = System::Drawing::Point(229, 326);
+			this->panel77->Location = System::Drawing::Point(229, 328);
 			this->panel77->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel77->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel77->Name = L"panel77";
@@ -3161,7 +3068,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel78->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel78->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel78->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel78->Location = System::Drawing::Point(269, 326);
+			this->panel78->Location = System::Drawing::Point(269, 328);
 			this->panel78->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel78->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel78->Name = L"panel78";
@@ -3175,7 +3082,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel79->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel79->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel79->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel79->Location = System::Drawing::Point(309, 326);
+			this->panel79->Location = System::Drawing::Point(309, 328);
 			this->panel79->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel79->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel79->Name = L"panel79";
@@ -3189,7 +3096,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel80->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel80->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel80->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel80->Location = System::Drawing::Point(349, 326);
+			this->panel80->Location = System::Drawing::Point(349, 328);
 			this->panel80->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel80->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel80->Name = L"panel80";
@@ -3203,7 +3110,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel81->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel81->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel81->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel81->Location = System::Drawing::Point(389, 326);
+			this->panel81->Location = System::Drawing::Point(389, 328);
 			this->panel81->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel81->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel81->Name = L"panel81";
@@ -3217,7 +3124,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel82->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel82->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel82->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel82->Location = System::Drawing::Point(429, 326);
+			this->panel82->Location = System::Drawing::Point(429, 328);
 			this->panel82->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel82->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel82->Name = L"panel82";
@@ -3231,7 +3138,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel83->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel83->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel83->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel83->Location = System::Drawing::Point(469, 326);
+			this->panel83->Location = System::Drawing::Point(469, 328);
 			this->panel83->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel83->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel83->Name = L"panel83";
@@ -3245,7 +3152,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel84->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel84->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel84->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel84->Location = System::Drawing::Point(509, 326);
+			this->panel84->Location = System::Drawing::Point(509, 328);
 			this->panel84->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel84->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel84->Name = L"panel84";
@@ -3259,7 +3166,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel85->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel85->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel85->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel85->Location = System::Drawing::Point(549, 326);
+			this->panel85->Location = System::Drawing::Point(549, 328);
 			this->panel85->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel85->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel85->Name = L"panel85";
@@ -3273,7 +3180,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel86->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel86->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel86->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel86->Location = System::Drawing::Point(189, 366);
+			this->panel86->Location = System::Drawing::Point(189, 368);
 			this->panel86->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel86->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel86->Name = L"panel86";
@@ -3287,7 +3194,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel87->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel87->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel87->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel87->Location = System::Drawing::Point(229, 366);
+			this->panel87->Location = System::Drawing::Point(229, 368);
 			this->panel87->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel87->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel87->Name = L"panel87";
@@ -3301,7 +3208,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel88->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel88->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel88->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel88->Location = System::Drawing::Point(269, 366);
+			this->panel88->Location = System::Drawing::Point(269, 368);
 			this->panel88->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel88->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel88->Name = L"panel88";
@@ -3315,7 +3222,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel89->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel89->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel89->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel89->Location = System::Drawing::Point(309, 366);
+			this->panel89->Location = System::Drawing::Point(309, 368);
 			this->panel89->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel89->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel89->Name = L"panel89";
@@ -3329,7 +3236,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel90->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel90->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel90->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel90->Location = System::Drawing::Point(349, 366);
+			this->panel90->Location = System::Drawing::Point(349, 368);
 			this->panel90->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel90->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel90->Name = L"panel90";
@@ -3343,7 +3250,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel91->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel91->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel91->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel91->Location = System::Drawing::Point(389, 366);
+			this->panel91->Location = System::Drawing::Point(389, 368);
 			this->panel91->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel91->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel91->Name = L"panel91";
@@ -3357,7 +3264,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel92->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel92->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel92->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel92->Location = System::Drawing::Point(429, 366);
+			this->panel92->Location = System::Drawing::Point(429, 368);
 			this->panel92->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel92->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel92->Name = L"panel92";
@@ -3371,7 +3278,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel93->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel93->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel93->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel93->Location = System::Drawing::Point(469, 366);
+			this->panel93->Location = System::Drawing::Point(469, 368);
 			this->panel93->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel93->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel93->Name = L"panel93";
@@ -3385,7 +3292,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel94->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel94->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel94->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel94->Location = System::Drawing::Point(509, 366);
+			this->panel94->Location = System::Drawing::Point(509, 368);
 			this->panel94->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel94->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel94->Name = L"panel94";
@@ -3399,7 +3306,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel95->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel95->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel95->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel95->Location = System::Drawing::Point(549, 366);
+			this->panel95->Location = System::Drawing::Point(549, 368);
 			this->panel95->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel95->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel95->Name = L"panel95";
@@ -3413,7 +3320,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel96->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel96->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel96->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel96->Location = System::Drawing::Point(189, 406);
+			this->panel96->Location = System::Drawing::Point(189, 408);
 			this->panel96->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel96->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel96->Name = L"panel96";
@@ -3427,7 +3334,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel97->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel97->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel97->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel97->Location = System::Drawing::Point(229, 406);
+			this->panel97->Location = System::Drawing::Point(229, 408);
 			this->panel97->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel97->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel97->Name = L"panel97";
@@ -3441,7 +3348,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel98->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel98->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel98->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel98->Location = System::Drawing::Point(269, 406);
+			this->panel98->Location = System::Drawing::Point(269, 408);
 			this->panel98->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel98->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel98->Name = L"panel98";
@@ -3455,7 +3362,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel99->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel99->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel99->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel99->Location = System::Drawing::Point(309, 406);
+			this->panel99->Location = System::Drawing::Point(309, 408);
 			this->panel99->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel99->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel99->Name = L"panel99";
@@ -3469,7 +3376,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel100->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel100->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel100->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel100->Location = System::Drawing::Point(349, 406);
+			this->panel100->Location = System::Drawing::Point(349, 408);
 			this->panel100->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel100->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel100->Name = L"panel100";
@@ -3483,7 +3390,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel101->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel101->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel101->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel101->Location = System::Drawing::Point(389, 406);
+			this->panel101->Location = System::Drawing::Point(389, 408);
 			this->panel101->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel101->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel101->Name = L"panel101";
@@ -3497,7 +3404,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel102->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel102->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel102->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel102->Location = System::Drawing::Point(429, 406);
+			this->panel102->Location = System::Drawing::Point(429, 408);
 			this->panel102->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel102->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel102->Name = L"panel102";
@@ -3511,7 +3418,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel103->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel103->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel103->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel103->Location = System::Drawing::Point(469, 406);
+			this->panel103->Location = System::Drawing::Point(469, 408);
 			this->panel103->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel103->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel103->Name = L"panel103";
@@ -3525,7 +3432,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel104->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel104->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel104->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel104->Location = System::Drawing::Point(509, 406);
+			this->panel104->Location = System::Drawing::Point(509, 408);
 			this->panel104->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel104->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel104->Name = L"panel104";
@@ -3539,7 +3446,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel105->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel105->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel105->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel105->Location = System::Drawing::Point(549, 406);
+			this->panel105->Location = System::Drawing::Point(549, 408);
 			this->panel105->Margin = System::Windows::Forms::Padding(5, 5, 3, 3);
 			this->panel105->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel105->Name = L"panel105";
@@ -3553,7 +3460,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->label31->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->label31->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label31->Location = System::Drawing::Point(3, 576);
+			this->label31->Location = System::Drawing::Point(3, 579);
 			this->label31->Name = L"label31";
 			this->label31->Size = System::Drawing::Size(758, 40);
 			this->label31->TabIndex = 3;
@@ -3569,7 +3476,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel1->Location = System::Drawing::Point(0, 0);
 			this->panel1->Margin = System::Windows::Forms::Padding(0);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(254, 616);
+			this->panel1->Size = System::Drawing::Size(254, 619);
 			this->panel1->TabIndex = 0;
 			// 
 			// tableLayoutPanel12
@@ -3628,7 +3535,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 				40)));
 			this->tableLayoutPanel12->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Absolute,
 				20)));
-			this->tableLayoutPanel12->Size = System::Drawing::Size(254, 591);
+			this->tableLayoutPanel12->Size = System::Drawing::Size(254, 594);
 			this->tableLayoutPanel12->TabIndex = 2;
 			// 
 			// label32
@@ -3636,7 +3543,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->label32->AutoSize = true;
 			this->tableLayoutPanel12->SetColumnSpan(this->label32, 2);
 			this->label32->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->label32->Location = System::Drawing::Point(3, 303);
+			this->label32->Location = System::Drawing::Point(3, 305);
 			this->label32->Margin = System::Windows::Forms::Padding(3);
 			this->label32->Name = L"label32";
 			this->label32->Size = System::Drawing::Size(248, 34);
@@ -3648,7 +3555,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			// 
 			this->label3->AutoSize = true;
 			this->label3->Dock = System::Windows::Forms::DockStyle::Top;
-			this->label3->Location = System::Drawing::Point(3, 437);
+			this->label3->Location = System::Drawing::Point(3, 441);
 			this->label3->Margin = System::Windows::Forms::Padding(3, 7, 3, 0);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(47, 26);
@@ -3661,7 +3568,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel5->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel5->BackColor = System::Drawing::Color::Brown;
 			this->panel5->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->panel5->Location = System::Drawing::Point(20, 265);
+			this->panel5->Location = System::Drawing::Point(20, 267);
 			this->panel5->Margin = System::Windows::Forms::Padding(10, 5, 3, 3);
 			this->panel5->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel5->Name = L"panel5";
@@ -3673,7 +3580,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel4->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel4->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel4->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->panel4->Location = System::Drawing::Point(20, 225);
+			this->panel4->Location = System::Drawing::Point(20, 227);
 			this->panel4->Margin = System::Windows::Forms::Padding(10, 5, 3, 3);
 			this->panel4->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel4->Name = L"panel4";
@@ -3685,7 +3592,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel3->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel3->BackColor = System::Drawing::Color::LightGreen;
 			this->panel3->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->panel3->Location = System::Drawing::Point(20, 185);
+			this->panel3->Location = System::Drawing::Point(20, 187);
 			this->panel3->Margin = System::Windows::Forms::Padding(10, 5, 3, 3);
 			this->panel3->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel3->Name = L"panel3";
@@ -3696,7 +3603,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			// 
 			this->label12->AutoSize = true;
 			this->label12->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->label12->Location = System::Drawing::Point(56, 263);
+			this->label12->Location = System::Drawing::Point(56, 265);
 			this->label12->Margin = System::Windows::Forms::Padding(3);
 			this->label12->Name = L"label12";
 			this->label12->Size = System::Drawing::Size(195, 34);
@@ -3708,7 +3615,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			// 
 			this->label10->AutoSize = true;
 			this->label10->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->label10->Location = System::Drawing::Point(56, 223);
+			this->label10->Location = System::Drawing::Point(56, 225);
 			this->label10->Margin = System::Windows::Forms::Padding(3);
 			this->label10->Name = L"label10";
 			this->label10->Size = System::Drawing::Size(195, 34);
@@ -3720,7 +3627,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			// 
 			this->label8->AutoSize = true;
 			this->label8->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->label8->Location = System::Drawing::Point(56, 183);
+			this->label8->Location = System::Drawing::Point(56, 185);
 			this->label8->Margin = System::Windows::Forms::Padding(3);
 			this->label8->Name = L"label8";
 			this->label8->Size = System::Drawing::Size(195, 34);
@@ -3732,7 +3639,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			// 
 			this->label6->AutoSize = true;
 			this->label6->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->label6->Location = System::Drawing::Point(56, 143);
+			this->label6->Location = System::Drawing::Point(56, 145);
 			this->label6->Margin = System::Windows::Forms::Padding(3);
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(195, 34);
@@ -3790,7 +3697,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->panel2->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->panel2->BackColor = System::Drawing::SystemColors::ControlDarkDark;
 			this->panel2->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->panel2->Location = System::Drawing::Point(20, 145);
+			this->panel2->Location = System::Drawing::Point(20, 147);
 			this->panel2->Margin = System::Windows::Forms::Padding(10, 5, 3, 3);
 			this->panel2->MaximumSize = System::Drawing::Size(30, 30);
 			this->panel2->Name = L"panel2";
@@ -3800,7 +3707,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			// textBox10
 			// 
 			this->textBox10->Dock = System::Windows::Forms::DockStyle::Left;
-			this->textBox10->Location = System::Drawing::Point(56, 440);
+			this->textBox10->Location = System::Drawing::Point(56, 444);
 			this->textBox10->Margin = System::Windows::Forms::Padding(3, 10, 3, 3);
 			this->textBox10->Name = L"textBox10";
 			this->textBox10->Size = System::Drawing::Size(185, 20);
@@ -3810,7 +3717,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			// button1
 			// 
 			this->button1->Enabled = false;
-			this->button1->Location = System::Drawing::Point(56, 553);
+			this->button1->Location = System::Drawing::Point(56, 557);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(144, 23);
 			this->button1->TabIndex = 25;
@@ -3820,7 +3727,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			// button2
 			// 
 			this->button2->Enabled = false;
-			this->button2->Location = System::Drawing::Point(56, 513);
+			this->button2->Location = System::Drawing::Point(56, 517);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(144, 23);
 			this->button2->TabIndex = 26;
@@ -3831,7 +3738,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			// button3
 			// 
 			this->button3->Enabled = false;
-			this->button3->Location = System::Drawing::Point(56, 473);
+			this->button3->Location = System::Drawing::Point(56, 477);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(144, 23);
 			this->button3->TabIndex = 27;
@@ -5289,6 +5196,7 @@ private: System::Void CinemaToolStripMenuItem_Click(System::Object^ sender, Syst
 	ChangeForm^ p = gcnew ChangeForm(*cinema);
 
 	p->ShowDialog();
+	file_stream->Write(*cinema);
 	
 
 }
