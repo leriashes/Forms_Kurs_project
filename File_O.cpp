@@ -257,7 +257,7 @@ void File_O::ReadBron(Cinema& cinema)
         f1.close();
 
         //cout << "Файл найден!";
-        //WriteBron(cinema);
+        WriteBron(cinema);
         result = true;
     }
 
@@ -269,7 +269,7 @@ void File_O::WriteBron(Cinema& cinema)
     string path_cop = path_bron;
     path_cop.resize(path_cop.size() - 4);
     path_cop = path_cop + "_copy.txt\0";
-        
+
     //скопировать исходный файл
     std::ifstream    inFile(path_bron);
     std::ofstream    outFile(path_cop);
@@ -340,7 +340,6 @@ void File_O::WriteBron(Cinema& cinema)
                                 {
                                     if (cinema.DeConvert_Time(rez[5]) + 30 > cinema.DeConvert_Time(Time::RetTime(0)))       //проверка для 30-ти минутного аннулирования брони
                                     {
-
                                         /*
                                         cout << cinema.DeConvert_Time(rez[5]);
                                         cout << "\n\n";
@@ -408,7 +407,6 @@ void File_O::WriteBron(Cinema& cinema)
     }
     outFiles.close();
     f1.close();
-    Clean(path_cop);    //удалить файл копию
     cinema.broni_zapis = cinema.broni_number;
     WriteNewBron(cinema);
 }

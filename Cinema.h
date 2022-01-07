@@ -16,7 +16,7 @@ public:
 	string address;	//адрес кинотеатра
 	string cashiers[6];	//кассиры кинотеатра		// сделать класс кассиров с информацией о них?
 	string id_cinema;
-	string bron[100][7];
+	string bron[100][8];
 	string temp_inf[10];
 	int inf_temp;
 
