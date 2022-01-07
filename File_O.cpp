@@ -257,7 +257,7 @@ void File_O::ReadBron(Cinema& cinema)
         f1.close();
 
         //cout << "Файл найден!";
-        WriteBron(cinema);
+        //WriteBron(cinema);
         result = true;
     }
 
