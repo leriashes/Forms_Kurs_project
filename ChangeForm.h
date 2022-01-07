@@ -25,6 +25,7 @@ namespace FormsKursproject {
 	{
 	private:
 		Cinema* cinema;
+		bool change;
 
 	public:
 		ChangeForm(Cinema& cinema1)
@@ -42,8 +43,7 @@ namespace FormsKursproject {
 	private: System::Windows::Forms::Button^ Button_Save;
 	private: System::Windows::Forms::Button^ button2;
 	private: System::Windows::Forms::LinkLabel^ linkLabel1;
-		   bool change;
-		   Cinema* cinema;
+		   
 
 	protected:
 		/// <summary>
