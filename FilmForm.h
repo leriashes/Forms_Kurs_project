@@ -2,6 +2,11 @@
 #include "Cinema.h"
 #include "msclr\marshal_cppstd.h"
 #include "Time.h"
+#include <windows.h>
+#include <stdlib.h>
+#include <string.h>
+#include "resource.h"
+#include <fstream>
 
 namespace FormsKursproject {
 
@@ -652,6 +657,49 @@ namespace FormsKursproject {
 
 		}
 #pragma endregion
+
+	public: static System::Drawing::Image^ getImageFromRes(long resource_ID) {
+
+		HMODULE hInst = NULL;//Load the resource module:
+
+		HRSRC hResource = ::FindResource(hInst, MAKEINTRESOURCE(resource_ID), L"PNG");	// Find the resource using the resource ID from file "resource.h"
+		if (!hResource) return nullptr;
+
+
+		DWORD Size = SizeofResource(hInst, hResource);	// Load the resource and save the total size.
+		HGLOBAL MemoryHandle = LoadResource(hInst, hResource);
+		if (MemoryHandle == NULL) return nullptr;
+
+
+		cli::array<BYTE>^ MemPtr = gcnew cli::array<BYTE>(Size + 2);//Create a cli::array of byte with size = total size + 2	
+
+
+		char* lkr = (char*)(LockResource(MemoryHandle));		//Cast from LPVOID to char *
+
+
+		System::Runtime::InteropServices::Marshal::Copy((IntPtr)lkr, MemPtr, 0, Size);		//Copy from unmanaged memory to managed array
+
+
+		System::IO::MemoryStream^ stream = gcnew System::IO::MemoryStream(MemPtr);		// Create a new MemoryStream with size = MemPtr
+
+
+		stream->Write(MemPtr, 0, Size);		//Write in the MemoryStream
+
+
+		stream->Position = 0;		//Set the position for read the stream
+
+
+		FreeLibrary(hInst);		//Free allocated resources
+
+
+		System::Drawing::Image^ ptrPNG;		//Create an Image abstract class pointer
+
+
+
+		//Assign the stream to abstract class pointer
+		ptrPNG = System::Drawing::Image::FromStream(stream);
+		return ptrPNG;
+	}
 		   //Проверка всех полей
 	private: System::Void Check(System::Object^ sender, System::EventArgs^ e)
 	{
@@ -1102,8 +1150,20 @@ namespace FormsKursproject {
 			maskedTextBox3->Text = msclr::interop::marshal_as<System::String^>(film->time[1]);
 			maskedTextBox4->Text = msclr::interop::marshal_as<System::String^>(film->time[2]);
 
-			textBox11->Text = msclr::interop::marshal_as<System::String^>(film->path); 
-			this->pictureBox1->ImageLocation = textBox11->Text;
+			std::ifstream file(msclr::interop::marshal_as<std::string>(textBox11->Text), std::ios_base::in);
+			if (file.is_open())
+			{
+				// существует
+				this->pictureBox1->Image = Image::FromFile(msclr::interop::marshal_as<System::String^>(film->path));
+				file.std::ifstream::close();
+				textBox11->Text = msclr::interop::marshal_as<System::String^>(film->path);
+			}
+			else
+			{
+				System::Drawing::Image^ image = getImageFromRes(IDB_PNG1);
+				if (image != nullptr) pictureBox1->Image = image;
+				textBox11->Text = "";
+			}
 		}
 
 		this->comboBox1->Items->Clear();
