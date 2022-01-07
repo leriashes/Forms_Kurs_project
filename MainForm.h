@@ -4465,8 +4465,36 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 		{
 			pict_tabl[i] = gcnew System::Windows::Forms::TableLayoutPanel;
 		}
+		pict_disc[0] = textBox1;
+		pict_disc[1] = textBox2;
+		pict_disc[2] = textBox3;
+		pict_disc[3] = textBox4;
+		pict_disc[4] = textBox5;
+		pict_disc[5] = textBox6;
+		pict_disc[6] = textBox7;
+		pict_disc[7] = textBox8;
+		pict_disc[8] = textBox9;
 
+		pict_film[0] = pictureBox1;
+		pict_film[1] = pictureBox2;
+		pict_film[2] = pictureBox3;
+		pict_film[3] = pictureBox4;
+		pict_film[4] = pictureBox5;
+		pict_film[5] = pictureBox6;
+		pict_film[6] = pictureBox7;
+		pict_film[7] = pictureBox8;
+		pict_film[8] = pictureBox9;
 
+		pict_tabl[0] = tableLayoutPanel2;
+		pict_tabl[1] = tableLayoutPanel3;
+		pict_tabl[2] = tableLayoutPanel4;
+		pict_tabl[3] = tableLayoutPanel5;
+		pict_tabl[4] = tableLayoutPanel6;
+		pict_tabl[5] = tableLayoutPanel7;
+		pict_tabl[6] = tableLayoutPanel8;
+		pict_tabl[7] = tableLayoutPanel9;
+		pict_tabl[8] = tableLayoutPanel10;
+			
 		//seats[0]->BackColor = System::Drawing::SystemColors::ControlDarkDark;
 		//Открытие приветственной формы
 		/*HelloForm^ p = gcnew HelloForm();
@@ -4635,6 +4663,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 
 		if (this->toolStripStatusLabel_filename->Text != L"Новый файл") 
 		{
+			
 			file_stream->path = msclr::interop::marshal_as<std::string>(this->toolStripStatusLabel_filename->Text);
 			cli::array<String^>^ lines = File::ReadAllLines(this->toolStripStatusLabel_filename->Text, System::Text::Encoding::GetEncoding(1251));
 			//Если файл пуст
@@ -4706,8 +4735,23 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 					for (int i = 0; i < file_stream->kol_vo_film; i++)
 					{
 						this->toolStripComboBox1->Items->Add((System::Object^)msclr::interop::marshal_as<System::String^>(cinema->films[i].name));
+						this->pict_disc[i]->Text = SetFilmInfo(cinema->films[0]);
+						this->pict_tabl[i]->Visible = true;
+						std::ifstream file(cinema->films[i].path, std::ios_base::in);
+						if (file.is_open())
+						{
+							// существует
+							this->pict_film[i]->Image = Image::FromFile(msclr::interop::marshal_as<System::String^>(cinema->films[i].path));
+							//this->pictureBox1->Image = Image::FromFile(msclr::interop::marshal_as<System::String^>(cinema->films[0].path));
+							file.close();
+						}
+						else
+						{
+							System::Drawing::Image^ image = getImageFromRes(IDB_PNG1);
+							if (image != nullptr) pictureBox1->Image = image;
+						}
 					}
-					
+					/*
 					if (file_stream->kol_vo_film >= 1)
 					{
 						this->textBox1->Text = SetFilmInfo(cinema->films[0]);
@@ -4724,24 +4768,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 							System::Drawing::Image^ image = getImageFromRes(IDB_PNG1);
 							if (image != nullptr) pictureBox1->Image = image;
 						}
-						/*
-						HBITMAP hBitMap = (HBITMAP)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_PNG1), IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE);
-						Bitmap^ bitMap = Bitmap::FromHbitmap((IntPtr)hBitMap);
-						DeleteObject(hBitMap);
-						this->pictureBox1->Image = (System::Drawing::Image^)bitMap;
-						*/
-						/*
-						FileName = msclr::interop::marshal_as<System::String^>(cinema->films[0].path);
-						this->pictureBox1->Image = Image::FromFile(FileName);
-						*/
-
-
-						//this->pictureBox1->Image = Image::FromFile(msclr::interop::marshal_as<System::String^>(cinema->films[0].path));	//стандартное изображение
-						//this->pictureBox1->Image = ("kino.png", 0, 1);
-						/*
-						System::Drawing::Image^ image = getImageFromRes(IDB_PNG1);
-						if (image != nullptr) button1->BackgroundImage = image;
-						*/
+						
 
 						if (file_stream->kol_vo_film >= 2)
 						{
@@ -4794,6 +4821,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 							}
 						}
 					}
+					*/
 				}
 				else
 				{
