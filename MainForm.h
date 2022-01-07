@@ -8,7 +8,7 @@
 #include "ChangeForm.h"
 #include "ChooseForm.h"
 #include "resource.h"
-
+#include <io.h>
 
 #include <windows.h>
 #include <stdlib.h>
@@ -38,6 +38,10 @@ namespace FormsKursproject {
 	{
 	private: File_O* file_stream;
 	private: cli::array<System::Windows::Forms::Panel^>^ seats;
+	private: cli::array<System::Windows::Forms::PictureBox^>^ pict_film;
+	private: cli::array<System::Windows::Forms::TextBox^>^ pict_disc;
+	private: cli::array<System::Windows::Forms::TableLayoutPanel^>^ pict_tabl;
+
 	private: System::Windows::Forms::Label^ label_center;
 
 	private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel1;
@@ -4445,6 +4449,22 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 		seats[97] = this->panel13;
 		seats[98] = this->panel14;
 		seats[99] = this->panel15;
+		
+		pict_film = gcnew cli::array<System::Windows::Forms::PictureBox^>(9);
+		for (int i = 0; i < 9; i++)
+		{
+			pict_film[i] = gcnew System::Windows::Forms::PictureBox;
+		}
+		pict_disc = gcnew cli::array<System::Windows::Forms::TextBox^>(9);
+		for (int i = 0; i < 9; i++)
+		{
+			pict_disc[i] = gcnew System::Windows::Forms::TextBox;
+		}
+		pict_tabl = gcnew cli::array<System::Windows::Forms::TableLayoutPanel^>(9);
+		for (int i = 0; i < 9; i++)
+		{
+			pict_tabl[i] = gcnew System::Windows::Forms::TableLayoutPanel;
+		}
 
 
 		//seats[0]->BackColor = System::Drawing::SystemColors::ControlDarkDark;
@@ -4692,10 +4712,18 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 					{
 						this->textBox1->Text = SetFilmInfo(cinema->films[0]);
 						this->tableLayoutPanel2->Visible = true;
-						this->pictureBox1->Image = Image::FromFile(msclr::interop::marshal_as<System::String^>(cinema->films[0].path));
-						
-						System::Drawing::Image^ image = getImageFromRes(IDB_PNG1);
-						if (image != nullptr) pictureBox1->Image = image;
+						std::ifstream file(cinema->films[0].path, std::ios_base::in);
+						if (file.is_open())
+						{
+							// существует
+							this->pictureBox1->Image = Image::FromFile(msclr::interop::marshal_as<System::String^>(cinema->films[0].path));
+							file.close();
+						}
+						else
+						{
+							System::Drawing::Image^ image = getImageFromRes(IDB_PNG1);
+							if (image != nullptr) pictureBox1->Image = image;
+						}
 						/*
 						HBITMAP hBitMap = (HBITMAP)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_PNG1), IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE);
 						Bitmap^ bitMap = Bitmap::FromHbitmap((IntPtr)hBitMap);
