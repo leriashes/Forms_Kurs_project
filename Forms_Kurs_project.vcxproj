@@ -44,7 +44,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CLRSupport>true</CLRSupport>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -117,6 +117,9 @@
     <ClInclude Include="ChangeForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="ChooseForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="Cinema.h" />
     <ClInclude Include="ExitForm.h">
       <FileType>CppForm</FileType>
@@ -145,6 +148,7 @@
   <ItemGroup>
     <ClCompile Include="AdminForm.cpp" />
     <ClCompile Include="ChangeForm.cpp" />
+    <ClCompile Include="ChooseForm.cpp" />
     <ClCompile Include="Cinema.cpp" />
     <ClCompile Include="ExitForm.cpp" />
     <ClCompile Include="File_O.cpp" />
@@ -159,6 +163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChangeForm.resx">
       <DependentUpon>ChangeForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChooseForm.resx">
+      <DependentUpon>ChooseForm.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FilmForm.resx">
       <DependentUpon>FilmForm.h</DependentUpon>

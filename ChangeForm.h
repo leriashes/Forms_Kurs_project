@@ -23,8 +23,11 @@ namespace FormsKursproject {
 	/// </summary>
 	public ref class ChangeForm : public System::Windows::Forms::Form
 	{
+	private:
+		Cinema* cinema;
+		bool change;
+
 	public:
-		//ChangeForm(void)
 		ChangeForm(Cinema& cinema1)
 		{
 			change = false;
@@ -40,8 +43,7 @@ namespace FormsKursproject {
 	private: System::Windows::Forms::Button^ Button_Save;
 	private: System::Windows::Forms::Button^ button2;
 	private: System::Windows::Forms::LinkLabel^ linkLabel1;
-		   bool change;
-		   Cinema* cinema;
+		   
 
 	protected:
 		/// <summary>
