@@ -396,37 +396,6 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 		   Cinema* cinema;
 	public:
 		MainForm(void)
@@ -468,17 +437,8 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 	private: System::Windows::Forms::ToolStripMenuItem^ SaveAsToolStripMenuItem;
 
 
-
-
-
-
-
-
-
 	private: System::Windows::Forms::ToolStripSeparator^ toolStripSeparator2;
 	private: System::Windows::Forms::ToolStripSeparator^ toolStripSeparator3;
-
-
 	private: System::Windows::Forms::ToolStripMenuItem^ CorrectToolStripMenuItem;
 
 
@@ -489,59 +449,6 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 	private: System::Windows::Forms::ToolStripSeparator^ toolStripSeparator1;
 	private: System::Windows::Forms::ToolStripMenuItem^ CloseToolStripMenuItem;
 	private: System::Windows::Forms::SaveFileDialog^ saveFileDialog1;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 	private:
@@ -5256,6 +5163,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 	private: System::Void CinemaToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 		ChangeForm^ p = gcnew ChangeForm(*cinema);
 		p->ShowDialog();
+		file_stream->Write(*cinema);
 	}
 
 	private: System::Void tableLayoutPanel11_VisibleChanged(System::Object^ sender, System::EventArgs^ e) {
