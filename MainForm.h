@@ -737,7 +737,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->CreateToolStripMenuItem->Enabled = false;
 			this->CreateToolStripMenuItem->Name = L"CreateToolStripMenuItem";
 			this->CreateToolStripMenuItem->ShortcutKeys = static_cast<System::Windows::Forms::Keys>((System::Windows::Forms::Keys::Control | System::Windows::Forms::Keys::N));
-			this->CreateToolStripMenuItem->Size = System::Drawing::Size(172, 22);
+			this->CreateToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->CreateToolStripMenuItem->Text = L"&Создать";
 			this->CreateToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::CreateToolStripMenuItem_Click);
 			// 
@@ -745,34 +745,34 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			// 
 			this->OpenToolStripMenuItem->Name = L"OpenToolStripMenuItem";
 			this->OpenToolStripMenuItem->ShortcutKeys = static_cast<System::Windows::Forms::Keys>((System::Windows::Forms::Keys::Control | System::Windows::Forms::Keys::O));
-			this->OpenToolStripMenuItem->Size = System::Drawing::Size(172, 22);
+			this->OpenToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->OpenToolStripMenuItem->Text = L"&Открыть";
 			this->OpenToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::OpenToolStripMenuItem_Click);
 			// 
 			// toolStripSeparator1
 			// 
 			this->toolStripSeparator1->Name = L"toolStripSeparator1";
-			this->toolStripSeparator1->Size = System::Drawing::Size(169, 6);
+			this->toolStripSeparator1->Size = System::Drawing::Size(177, 6);
 			// 
 			// CloseToolStripMenuItem
 			// 
 			this->CloseToolStripMenuItem->Enabled = false;
 			this->CloseToolStripMenuItem->Name = L"CloseToolStripMenuItem";
-			this->CloseToolStripMenuItem->Size = System::Drawing::Size(172, 22);
+			this->CloseToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->CloseToolStripMenuItem->Text = L"&Закрыть";
 			this->CloseToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::CloseToolStripMenuItem_Click);
 			// 
 			// toolStripSeparator2
 			// 
 			this->toolStripSeparator2->Name = L"toolStripSeparator2";
-			this->toolStripSeparator2->Size = System::Drawing::Size(169, 6);
+			this->toolStripSeparator2->Size = System::Drawing::Size(177, 6);
 			// 
 			// SaveToolStripMenuItem
 			// 
 			this->SaveToolStripMenuItem->Enabled = false;
 			this->SaveToolStripMenuItem->Name = L"SaveToolStripMenuItem";
 			this->SaveToolStripMenuItem->ShortcutKeys = static_cast<System::Windows::Forms::Keys>((System::Windows::Forms::Keys::Control | System::Windows::Forms::Keys::S));
-			this->SaveToolStripMenuItem->Size = System::Drawing::Size(172, 22);
+			this->SaveToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->SaveToolStripMenuItem->Text = L"Со&хранить";
 			this->SaveToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::SaveToolStripMenuItem_Click);
 			// 
@@ -780,20 +780,20 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			// 
 			this->SaveAsToolStripMenuItem->Enabled = false;
 			this->SaveAsToolStripMenuItem->Name = L"SaveAsToolStripMenuItem";
-			this->SaveAsToolStripMenuItem->Size = System::Drawing::Size(172, 22);
+			this->SaveAsToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->SaveAsToolStripMenuItem->Text = L"Сох&ранить как...";
 			this->SaveAsToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::SaveAsToolStripMenuItem_Click);
 			// 
 			// toolStripSeparator3
 			// 
 			this->toolStripSeparator3->Name = L"toolStripSeparator3";
-			this->toolStripSeparator3->Size = System::Drawing::Size(169, 6);
+			this->toolStripSeparator3->Size = System::Drawing::Size(177, 6);
 			// 
 			// ExitToolStripMenuItem
 			// 
 			this->ExitToolStripMenuItem->Name = L"ExitToolStripMenuItem";
 			this->ExitToolStripMenuItem->ShortcutKeys = static_cast<System::Windows::Forms::Keys>((System::Windows::Forms::Keys::Alt | System::Windows::Forms::Keys::F4));
-			this->ExitToolStripMenuItem->Size = System::Drawing::Size(172, 22);
+			this->ExitToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->ExitToolStripMenuItem->Text = L"&Выход";
 			this->ExitToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::ExitToolStripMenuItem_Click);
 			// 
@@ -847,6 +847,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->DelMovieToolStripMenuItem->Name = L"DelMovieToolStripMenuItem";
 			this->DelMovieToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->DelMovieToolStripMenuItem->Text = L"&Удалить";
+			this->DelMovieToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::DelMovieToolStripMenuItem_Click);
 			// 
 			// PromoToolStripMenuItem
 			// 
@@ -861,19 +862,19 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			// NewPromoToolStripMenuItem
 			// 
 			this->NewPromoToolStripMenuItem->Name = L"NewPromoToolStripMenuItem";
-			this->NewPromoToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->NewPromoToolStripMenuItem->Size = System::Drawing::Size(165, 22);
 			this->NewPromoToolStripMenuItem->Text = L"&Добавить новый";
 			// 
 			// CorrectPromoToolStripMenuItem
 			// 
 			this->CorrectPromoToolStripMenuItem->Name = L"CorrectPromoToolStripMenuItem";
-			this->CorrectPromoToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->CorrectPromoToolStripMenuItem->Size = System::Drawing::Size(165, 22);
 			this->CorrectPromoToolStripMenuItem->Text = L"&Изменить";
 			// 
 			// DelPromoToolStripMenuItem
 			// 
 			this->DelPromoToolStripMenuItem->Name = L"DelPromoToolStripMenuItem";
-			this->DelPromoToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->DelPromoToolStripMenuItem->Size = System::Drawing::Size(165, 22);
 			this->DelPromoToolStripMenuItem->Text = L"&Удалить";
 			// 
 			// CinemaToolStripMenuItem
@@ -897,13 +898,13 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			// TodayReportToolStripMenuItem
 			// 
 			this->TodayReportToolStripMenuItem->Name = L"TodayReportToolStripMenuItem";
-			this->TodayReportToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->TodayReportToolStripMenuItem->Size = System::Drawing::Size(178, 22);
 			this->TodayReportToolStripMenuItem->Text = L"&Отчёт за день";
 			// 
 			// AllTimeReportToolStripMenuItem
 			// 
 			this->AllTimeReportToolStripMenuItem->Name = L"AllTimeReportToolStripMenuItem";
-			this->AllTimeReportToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->AllTimeReportToolStripMenuItem->Size = System::Drawing::Size(178, 22);
 			this->AllTimeReportToolStripMenuItem->Text = L"О&тчёт за всё время";
 			// 
 			// InfoToolStripMenuItem
@@ -1047,6 +1048,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->textBox9->ScrollBars = System::Windows::Forms::ScrollBars::Both;
 			this->textBox9->Size = System::Drawing::Size(230, 196);
 			this->textBox9->TabIndex = 1;
+			this->textBox9->TabStop = false;
 			// 
 			// tableLayoutPanel9
 			// 
@@ -1100,6 +1102,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->textBox8->ScrollBars = System::Windows::Forms::ScrollBars::Both;
 			this->textBox8->Size = System::Drawing::Size(229, 196);
 			this->textBox8->TabIndex = 1;
+			this->textBox8->TabStop = false;
 			// 
 			// tableLayoutPanel8
 			// 
@@ -1153,6 +1156,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->textBox7->ScrollBars = System::Windows::Forms::ScrollBars::Both;
 			this->textBox7->Size = System::Drawing::Size(229, 196);
 			this->textBox7->TabIndex = 1;
+			this->textBox7->TabStop = false;
 			// 
 			// tableLayoutPanel7
 			// 
@@ -1206,6 +1210,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->textBox6->ScrollBars = System::Windows::Forms::ScrollBars::Both;
 			this->textBox6->Size = System::Drawing::Size(230, 195);
 			this->textBox6->TabIndex = 1;
+			this->textBox6->TabStop = false;
 			// 
 			// tableLayoutPanel6
 			// 
@@ -1259,6 +1264,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->textBox5->ScrollBars = System::Windows::Forms::ScrollBars::Both;
 			this->textBox5->Size = System::Drawing::Size(229, 195);
 			this->textBox5->TabIndex = 1;
+			this->textBox5->TabStop = false;
 			// 
 			// tableLayoutPanel5
 			// 
@@ -1312,6 +1318,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->textBox4->ScrollBars = System::Windows::Forms::ScrollBars::Both;
 			this->textBox4->Size = System::Drawing::Size(229, 195);
 			this->textBox4->TabIndex = 1;
+			this->textBox4->TabStop = false;
 			// 
 			// tableLayoutPanel4
 			// 
@@ -1365,6 +1372,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->textBox3->ScrollBars = System::Windows::Forms::ScrollBars::Both;
 			this->textBox3->Size = System::Drawing::Size(230, 195);
 			this->textBox3->TabIndex = 1;
+			this->textBox3->TabStop = false;
 			// 
 			// tableLayoutPanel3
 			// 
@@ -1418,6 +1426,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->textBox2->ScrollBars = System::Windows::Forms::ScrollBars::Both;
 			this->textBox2->Size = System::Drawing::Size(229, 195);
 			this->textBox2->TabIndex = 1;
+			this->textBox2->TabStop = false;
 			// 
 			// tableLayoutPanel2
 			// 
@@ -1471,6 +1480,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			this->textBox1->ScrollBars = System::Windows::Forms::ScrollBars::Both;
 			this->textBox1->Size = System::Drawing::Size(229, 195);
 			this->textBox1->TabIndex = 1;
+			this->textBox1->TabStop = false;
 			// 
 			// panelPlus
 			// 
@@ -5248,5 +5258,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			}
 		}
 	}
+private: System::Void DelMovieToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+}
 };
 }
