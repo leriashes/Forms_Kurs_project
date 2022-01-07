@@ -5258,7 +5258,25 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 			}
 		}
 	}
-private: System::Void DelMovieToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
-}
+
+	private: System::Void DelMovieToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+		ChooseForm^ p = gcnew ChooseForm(cinema);
+		p->ShowDialog();
+		int index = p->Result();
+
+		if (p->DialogResult == System::Windows::Forms::DialogResult::OK)
+		{
+			String^ message = L"¬ы уверены, что хотите удалить фильм? Ёто действие невозможно отменить.";
+			String^ caption = L"";
+
+
+			if (MessageBox::Show(message, caption, MessageBoxButtons::OKCancel) == System::Windows::Forms::DialogResult::OK)
+			{
+				cinema->DelFilm(index);
+				file_stream->Write(*cinema);
+				open_file();
+			}
+		}
+	}
 };
 }
