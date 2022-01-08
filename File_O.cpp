@@ -278,6 +278,8 @@ void File_O::WriteBron(Cinema& cinema)
     outFile << inFile.rdbuf();
     outFile.close();
     inFile.close();
+    
+    /*
     if (remove(path_bron.c_str()) != 0)             // удаление файла file.txt
     {
         //std::cout << "Ошибка удаления файла\n";
@@ -286,6 +288,7 @@ void File_O::WriteBron(Cinema& cinema)
     {
         //std::cout << "Файл успешно удалён\n";
     }
+    */
     //_getch(); 
 
     ofstream outFiles(path_bron);
@@ -398,6 +401,7 @@ void File_O::WriteBron(Cinema& cinema)
     }
     outFiles.close();
     f1.close();
+    remove(path_cop.c_str());
     cinema.broni_zapis = cinema.broni_number;
     WriteNewBron(cinema);
 }

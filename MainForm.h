@@ -9,6 +9,16 @@
 #include "ChooseForm.h"
 #include "resource.h"
 #include <io.h>
+#include <filesystem>
+#include <windows.h>
+#include <stdlib.h>
+#include <string.h>
+#include "resource.h"
+#include <tchar.h>
+using namespace System;
+using namespace msclr::interop;
+/*#include "HelloForm.h"
+#include "InfoForm.h"*/
 
 namespace FormsKursproject {
 
@@ -25,429 +35,243 @@ namespace FormsKursproject {
 	/// </summary>
 	public ref class MainForm : public System::Windows::Forms::Form
 	{
-	private: File_O* file_stream;
-	private: cli::array<System::Windows::Forms::Panel^>^ seats;
-	private: cli::array<System::Windows::Forms::PictureBox^>^ pict_film;
-	private: cli::array<System::Windows::Forms::TextBox^>^ pict_disc;
-	private: cli::array<System::Windows::Forms::TableLayoutPanel^>^ pict_tabl;
-
-	private: System::Windows::Forms::Label^ label_center;
-
-	private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel1;
-	private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel10;
-	private: System::Windows::Forms::PictureBox^ pictureBox9;
-	private: System::Windows::Forms::TextBox^ textBox9;
-	private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel9;
-	private: System::Windows::Forms::PictureBox^ pictureBox8;
-	private: System::Windows::Forms::TextBox^ textBox8;
-	private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel8;
-	private: System::Windows::Forms::PictureBox^ pictureBox7;
-	private: System::Windows::Forms::TextBox^ textBox7;
-	private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel7;
-	private: System::Windows::Forms::PictureBox^ pictureBox6;
-	private: System::Windows::Forms::TextBox^ textBox6;
-	private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel6;
-	private: System::Windows::Forms::PictureBox^ pictureBox5;
-	private: System::Windows::Forms::TextBox^ textBox5;
-	private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel5;
-	private: System::Windows::Forms::PictureBox^ pictureBox4;
-	private: System::Windows::Forms::TextBox^ textBox4;
-	private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel4;
-	private: System::Windows::Forms::PictureBox^ pictureBox3;
-	private: System::Windows::Forms::TextBox^ textBox3;
-	private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel3;
-	private: System::Windows::Forms::PictureBox^ pictureBox2;
-	private: System::Windows::Forms::TextBox^ textBox2;
-	private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel2;
-	private: System::Windows::Forms::PictureBox^ pictureBox1;
-	private: System::Windows::Forms::TextBox^ textBox1;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-private: System::Windows::Forms::ToolStripMenuItem^ ReportToolStripMenuItem;
-private: System::Windows::Forms::ToolStripMenuItem^ TodayReportToolStripMenuItem;
-private: System::Windows::Forms::ToolStripMenuItem^ AllTimeReportToolStripMenuItem;
-private: System::Windows::Forms::ToolStripMenuItem^ MovieToolStripMenuItem;
-private: System::Windows::Forms::ToolStripMenuItem^ PromoToolStripMenuItem;
-private: System::Windows::Forms::ToolStripMenuItem^ CinemaToolStripMenuItem;
-private: System::Windows::Forms::ToolStripMenuItem^ NewMovieToolStripMenuItem;
-private: System::Windows::Forms::ToolStripMenuItem^ CorrectMovieToolStripMenuItem;
-private: System::Windows::Forms::ToolStripMenuItem^ DelMovieToolStripMenuItem;
-private: System::Windows::Forms::ToolStripMenuItem^ NewPromoToolStripMenuItem;
-private: System::Windows::Forms::ToolStripMenuItem^ CorrectPromoToolStripMenuItem;
-private: System::Windows::Forms::ToolStripMenuItem^ DelPromoToolStripMenuItem;
-
-
-
-
-
-private: System::Windows::Forms::Panel^ panelPlus;
-
-private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel13;
-private: System::Windows::Forms::Label^ label5;
-private: System::Windows::Forms::Label^ label4;
-private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel14;
-private: System::Windows::Forms::Label^ label30;
-private: System::Windows::Forms::Label^ label29;
-private: System::Windows::Forms::Label^ label28;
-private: System::Windows::Forms::Label^ label27;
-private: System::Windows::Forms::Label^ label26;
-private: System::Windows::Forms::Label^ label25;
-private: System::Windows::Forms::Label^ label24;
-private: System::Windows::Forms::Label^ label23;
-private: System::Windows::Forms::Label^ label22;
-private: System::Windows::Forms::Label^ label21;
-private: System::Windows::Forms::Label^ label20;
-private: System::Windows::Forms::Label^ label19;
-private: System::Windows::Forms::Label^ label18;
-private: System::Windows::Forms::Label^ label17;
-private: System::Windows::Forms::Label^ label16;
-private: System::Windows::Forms::Label^ label15;
-private: System::Windows::Forms::Label^ label14;
-private: System::Windows::Forms::Label^ label13;
-private: System::Windows::Forms::Label^ label11;
-private: System::Windows::Forms::Label^ label9;
-private: System::Windows::Forms::Label^ label7;
-private: System::Windows::Forms::Panel^ panel7;
-private: System::Windows::Forms::Panel^ panel8;
-private: System::Windows::Forms::Panel^ panel6;
-private: System::Windows::Forms::Panel^ panel9;
-private: System::Windows::Forms::Panel^ panel10;
-private: System::Windows::Forms::Panel^ panel11;
-private: System::Windows::Forms::Panel^ panel12;
-private: System::Windows::Forms::Panel^ panel13;
-private: System::Windows::Forms::Panel^ panel14;
-private: System::Windows::Forms::Panel^ panel15;
-private: System::Windows::Forms::Panel^ panel16;
-private: System::Windows::Forms::Panel^ panel17;
-private: System::Windows::Forms::Panel^ panel18;
-private: System::Windows::Forms::Panel^ panel19;
-private: System::Windows::Forms::Panel^ panel20;
-private: System::Windows::Forms::Panel^ panel21;
-private: System::Windows::Forms::Panel^ panel22;
-private: System::Windows::Forms::Panel^ panel23;
-private: System::Windows::Forms::Panel^ panel24;
-private: System::Windows::Forms::Panel^ panel25;
-private: System::Windows::Forms::Panel^ panel26;
-private: System::Windows::Forms::Panel^ panel27;
-private: System::Windows::Forms::Panel^ panel28;
-private: System::Windows::Forms::Panel^ panel29;
-private: System::Windows::Forms::Panel^ panel30;
-private: System::Windows::Forms::Panel^ panel32;
-private: System::Windows::Forms::Panel^ panel31;
-private: System::Windows::Forms::Panel^ panel33;
-private: System::Windows::Forms::Panel^ panel34;
-private: System::Windows::Forms::Panel^ panel35;
-private: System::Windows::Forms::Panel^ panel36;
-private: System::Windows::Forms::Panel^ panel37;
-private: System::Windows::Forms::Panel^ panel38;
-private: System::Windows::Forms::Panel^ panel39;
-private: System::Windows::Forms::Panel^ panel40;
-private: System::Windows::Forms::Panel^ panel41;
-private: System::Windows::Forms::Panel^ panel42;
-private: System::Windows::Forms::Panel^ panel43;
-private: System::Windows::Forms::Panel^ panel44;
-private: System::Windows::Forms::Panel^ panel45;
-private: System::Windows::Forms::Panel^ panel46;
-private: System::Windows::Forms::Panel^ panel47;
-private: System::Windows::Forms::Panel^ panel48;
-private: System::Windows::Forms::Panel^ panel49;
-private: System::Windows::Forms::Panel^ panel50;
-private: System::Windows::Forms::Panel^ panel51;
-private: System::Windows::Forms::Panel^ panel52;
-private: System::Windows::Forms::Panel^ panel53;
-private: System::Windows::Forms::Panel^ panel54;
-private: System::Windows::Forms::Panel^ panel55;
-private: System::Windows::Forms::Panel^ panel56;
-private: System::Windows::Forms::Panel^ panel57;
-private: System::Windows::Forms::Panel^ panel58;
-private: System::Windows::Forms::Panel^ panel59;
-private: System::Windows::Forms::Panel^ panel60;
-private: System::Windows::Forms::Panel^ panel61;
-private: System::Windows::Forms::Panel^ panel62;
-private: System::Windows::Forms::Panel^ panel63;
-private: System::Windows::Forms::Panel^ panel64;
-private: System::Windows::Forms::Panel^ panel65;
-private: System::Windows::Forms::Panel^ panel66;
-private: System::Windows::Forms::Panel^ panel67;
-private: System::Windows::Forms::Panel^ panel70;
-private: System::Windows::Forms::Panel^ panel69;
-private: System::Windows::Forms::Panel^ panel68;
-private: System::Windows::Forms::Panel^ panel71;
-private: System::Windows::Forms::Panel^ panel72;
-private: System::Windows::Forms::Panel^ panel73;
-private: System::Windows::Forms::Panel^ panel74;
-private: System::Windows::Forms::Panel^ panel75;
-private: System::Windows::Forms::Panel^ panel76;
-private: System::Windows::Forms::Panel^ panel77;
-private: System::Windows::Forms::Panel^ panel78;
-private: System::Windows::Forms::Panel^ panel79;
-private: System::Windows::Forms::Panel^ panel80;
-private: System::Windows::Forms::Panel^ panel81;
-private: System::Windows::Forms::Panel^ panel82;
-private: System::Windows::Forms::Panel^ panel83;
-private: System::Windows::Forms::Panel^ panel84;
-private: System::Windows::Forms::Panel^ panel85;
-private: System::Windows::Forms::Panel^ panel86;
-private: System::Windows::Forms::Panel^ panel87;
-private: System::Windows::Forms::Panel^ panel88;
-private: System::Windows::Forms::Panel^ panel89;
-private: System::Windows::Forms::Panel^ panel90;
-private: System::Windows::Forms::Panel^ panel91;
-private: System::Windows::Forms::Panel^ panel92;
-private: System::Windows::Forms::Panel^ panel93;
-private: System::Windows::Forms::Panel^ panel94;
-private: System::Windows::Forms::Panel^ panel95;
-private: System::Windows::Forms::Panel^ panel96;
-private: System::Windows::Forms::Panel^ panel97;
-private: System::Windows::Forms::Panel^ panel98;
-private: System::Windows::Forms::Panel^ panel99;
-private: System::Windows::Forms::Panel^ panel100;
-private: System::Windows::Forms::Panel^ panel101;
-private: System::Windows::Forms::Panel^ panel102;
-private: System::Windows::Forms::Panel^ panel103;
-private: System::Windows::Forms::Panel^ panel104;
-private: System::Windows::Forms::Panel^ panel105;
-private: System::Windows::Forms::Label^ label31;
-private: System::Windows::Forms::Panel^ panel1;
-private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel12;
-private: System::Windows::Forms::Label^ label32;
-private: System::Windows::Forms::Label^ label3;
-private: System::Windows::Forms::Panel^ panel5;
-private: System::Windows::Forms::Panel^ panel4;
-private: System::Windows::Forms::Panel^ panel3;
-private: System::Windows::Forms::Label^ label12;
-private: System::Windows::Forms::Label^ label10;
-private: System::Windows::Forms::Label^ label8;
-private: System::Windows::Forms::Label^ label6;
-private: System::Windows::Forms::Label^ label2;
-private: System::Windows::Forms::ComboBox^ comboBox2;
-private: System::Windows::Forms::Label^ label1;
-private: System::Windows::Forms::ComboBox^ comboBox1;
-private: System::Windows::Forms::Panel^ panel2;
-private: System::Windows::Forms::TextBox^ textBox10;
-private: System::Windows::Forms::Button^ button1;
-private: System::Windows::Forms::Button^ button2;
-private: System::Windows::Forms::Button^ button3;
-private: System::Windows::Forms::ToolStrip^ toolStrip1;
-private: System::Windows::Forms::ToolStripButton^ toolStripButton2;
-private: System::Windows::Forms::ToolStripSeparator^ toolStripSeparator4;
-private: System::Windows::Forms::ToolStripComboBox^ toolStripComboBox1;
-private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
-
-
-
-
-		   Cinema* cinema;
-	public:
-		MainForm(void)
-		{
-			file_stream = new File_O();
-			cinema = new Cinema();
-			InitializeComponent();
-			//
-			//TODO: добавьте код конструктора
-			//
-		}
-
-	protected:
-		/// <summary>
-		/// Освободить все используемые ресурсы.
-		/// </summary>
-		~MainForm()
-		{
-			delete file_stream;
-			if (components)
+		private: File_O* file_stream;
+		private: cli::array<System::Windows::Forms::Panel^>^ seats;
+		private: cli::array<System::Windows::Forms::PictureBox^>^ pict_film;
+		private: cli::array<System::Windows::Forms::TextBox^>^ pict_disc;
+		private: cli::array<System::Windows::Forms::TableLayoutPanel^>^ pict_tabl;
+		private: System::Windows::Forms::Label^ label_center;
+		private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel1;
+		private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel10;
+		private: System::Windows::Forms::PictureBox^ pictureBox9;
+		private: System::Windows::Forms::TextBox^ textBox9;
+		private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel9;
+		private: System::Windows::Forms::PictureBox^ pictureBox8;
+		private: System::Windows::Forms::TextBox^ textBox8;
+		private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel8;
+		private: System::Windows::Forms::PictureBox^ pictureBox7;
+		private: System::Windows::Forms::TextBox^ textBox7;
+		private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel7;
+		private: System::Windows::Forms::PictureBox^ pictureBox6;
+		private: System::Windows::Forms::TextBox^ textBox6;
+		private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel6;
+		private: System::Windows::Forms::PictureBox^ pictureBox5;
+		private: System::Windows::Forms::TextBox^ textBox5;
+		private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel5;
+		private: System::Windows::Forms::PictureBox^ pictureBox4;
+		private: System::Windows::Forms::TextBox^ textBox4;
+		private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel4;
+		private: System::Windows::Forms::PictureBox^ pictureBox3;
+		private: System::Windows::Forms::TextBox^ textBox3;
+		private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel3;
+		private: System::Windows::Forms::PictureBox^ pictureBox2;
+		private: System::Windows::Forms::TextBox^ textBox2;
+		private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel2;
+		private: System::Windows::Forms::PictureBox^ pictureBox1;
+		private: System::Windows::Forms::TextBox^ textBox1;
+		private: System::Windows::Forms::ToolStripMenuItem^ ReportToolStripMenuItem;
+		private: System::Windows::Forms::ToolStripMenuItem^ TodayReportToolStripMenuItem;
+		private: System::Windows::Forms::ToolStripMenuItem^ AllTimeReportToolStripMenuItem;
+		private: System::Windows::Forms::ToolStripMenuItem^ MovieToolStripMenuItem;
+		private: System::Windows::Forms::ToolStripMenuItem^ PromoToolStripMenuItem;
+		private: System::Windows::Forms::ToolStripMenuItem^ CinemaToolStripMenuItem;
+		private: System::Windows::Forms::ToolStripMenuItem^ NewMovieToolStripMenuItem;
+		private: System::Windows::Forms::ToolStripMenuItem^ CorrectMovieToolStripMenuItem;
+		private: System::Windows::Forms::ToolStripMenuItem^ DelMovieToolStripMenuItem;
+		private: System::Windows::Forms::ToolStripMenuItem^ NewPromoToolStripMenuItem;
+		private: System::Windows::Forms::ToolStripMenuItem^ CorrectPromoToolStripMenuItem;
+		private: System::Windows::Forms::ToolStripMenuItem^ DelPromoToolStripMenuItem;
+		private: System::Windows::Forms::Panel^ panelPlus;
+		private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel13;
+		private: System::Windows::Forms::Label^ label5;
+		private: System::Windows::Forms::Label^ label4;
+		private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel14;
+		private: System::Windows::Forms::Label^ label30;
+		private: System::Windows::Forms::Label^ label29;
+		private: System::Windows::Forms::Label^ label28;
+		private: System::Windows::Forms::Label^ label27;
+		private: System::Windows::Forms::Label^ label26;
+		private: System::Windows::Forms::Label^ label25;
+		private: System::Windows::Forms::Label^ label24;
+		private: System::Windows::Forms::Label^ label23;
+		private: System::Windows::Forms::Label^ label22;
+		private: System::Windows::Forms::Label^ label21;
+		private: System::Windows::Forms::Label^ label20;
+		private: System::Windows::Forms::Label^ label19;
+		private: System::Windows::Forms::Label^ label18;
+		private: System::Windows::Forms::Label^ label17;
+		private: System::Windows::Forms::Label^ label16;
+		private: System::Windows::Forms::Label^ label15;
+		private: System::Windows::Forms::Label^ label14;
+		private: System::Windows::Forms::Label^ label13;
+		private: System::Windows::Forms::Label^ label11;
+		private: System::Windows::Forms::Label^ label9;
+		private: System::Windows::Forms::Label^ label7;
+		private: System::Windows::Forms::Panel^ panel7;
+		private: System::Windows::Forms::Panel^ panel8;
+		private: System::Windows::Forms::Panel^ panel6;
+		private: System::Windows::Forms::Panel^ panel9;
+		private: System::Windows::Forms::Panel^ panel10;
+		private: System::Windows::Forms::Panel^ panel11;
+		private: System::Windows::Forms::Panel^ panel12;
+		private: System::Windows::Forms::Panel^ panel13;
+		private: System::Windows::Forms::Panel^ panel14;
+		private: System::Windows::Forms::Panel^ panel15;
+		private: System::Windows::Forms::Panel^ panel16;
+		private: System::Windows::Forms::Panel^ panel17;
+		private: System::Windows::Forms::Panel^ panel18;
+		private: System::Windows::Forms::Panel^ panel19;
+		private: System::Windows::Forms::Panel^ panel20;
+		private: System::Windows::Forms::Panel^ panel21;
+		private: System::Windows::Forms::Panel^ panel22;
+		private: System::Windows::Forms::Panel^ panel23;
+		private: System::Windows::Forms::Panel^ panel24;
+		private: System::Windows::Forms::Panel^ panel25;
+		private: System::Windows::Forms::Panel^ panel26;
+		private: System::Windows::Forms::Panel^ panel27;
+		private: System::Windows::Forms::Panel^ panel28;
+		private: System::Windows::Forms::Panel^ panel29;
+		private: System::Windows::Forms::Panel^ panel30;
+		private: System::Windows::Forms::Panel^ panel32;
+		private: System::Windows::Forms::Panel^ panel31;
+		private: System::Windows::Forms::Panel^ panel33;
+		private: System::Windows::Forms::Panel^ panel34;
+		private: System::Windows::Forms::Panel^ panel35;
+		private: System::Windows::Forms::Panel^ panel36;
+		private: System::Windows::Forms::Panel^ panel37;
+		private: System::Windows::Forms::Panel^ panel38;
+		private: System::Windows::Forms::Panel^ panel39;
+		private: System::Windows::Forms::Panel^ panel40;
+		private: System::Windows::Forms::Panel^ panel41;
+		private: System::Windows::Forms::Panel^ panel42;
+		private: System::Windows::Forms::Panel^ panel43;
+		private: System::Windows::Forms::Panel^ panel44;
+		private: System::Windows::Forms::Panel^ panel45;
+		private: System::Windows::Forms::Panel^ panel46;
+		private: System::Windows::Forms::Panel^ panel47;
+		private: System::Windows::Forms::Panel^ panel48;
+		private: System::Windows::Forms::Panel^ panel49;
+		private: System::Windows::Forms::Panel^ panel50;
+		private: System::Windows::Forms::Panel^ panel51;
+		private: System::Windows::Forms::Panel^ panel52;
+		private: System::Windows::Forms::Panel^ panel53;
+		private: System::Windows::Forms::Panel^ panel54;
+		private: System::Windows::Forms::Panel^ panel55;
+		private: System::Windows::Forms::Panel^ panel56;
+		private: System::Windows::Forms::Panel^ panel57;
+		private: System::Windows::Forms::Panel^ panel58;
+		private: System::Windows::Forms::Panel^ panel59;
+		private: System::Windows::Forms::Panel^ panel60;
+		private: System::Windows::Forms::Panel^ panel61;
+		private: System::Windows::Forms::Panel^ panel62;
+		private: System::Windows::Forms::Panel^ panel63;
+		private: System::Windows::Forms::Panel^ panel64;
+		private: System::Windows::Forms::Panel^ panel65;
+		private: System::Windows::Forms::Panel^ panel66;
+		private: System::Windows::Forms::Panel^ panel67;
+		private: System::Windows::Forms::Panel^ panel70;
+		private: System::Windows::Forms::Panel^ panel69;
+		private: System::Windows::Forms::Panel^ panel68;
+		private: System::Windows::Forms::Panel^ panel71;
+		private: System::Windows::Forms::Panel^ panel72;
+		private: System::Windows::Forms::Panel^ panel73;
+		private: System::Windows::Forms::Panel^ panel74;
+		private: System::Windows::Forms::Panel^ panel75;
+		private: System::Windows::Forms::Panel^ panel76;
+		private: System::Windows::Forms::Panel^ panel77;
+		private: System::Windows::Forms::Panel^ panel78;
+		private: System::Windows::Forms::Panel^ panel79;
+		private: System::Windows::Forms::Panel^ panel80;
+		private: System::Windows::Forms::Panel^ panel81;
+		private: System::Windows::Forms::Panel^ panel82;
+		private: System::Windows::Forms::Panel^ panel83;
+		private: System::Windows::Forms::Panel^ panel84;
+		private: System::Windows::Forms::Panel^ panel85;
+		private: System::Windows::Forms::Panel^ panel86;
+		private: System::Windows::Forms::Panel^ panel87;
+		private: System::Windows::Forms::Panel^ panel88;
+		private: System::Windows::Forms::Panel^ panel89;
+		private: System::Windows::Forms::Panel^ panel90;
+		private: System::Windows::Forms::Panel^ panel91;
+		private: System::Windows::Forms::Panel^ panel92;
+		private: System::Windows::Forms::Panel^ panel93;
+		private: System::Windows::Forms::Panel^ panel94;
+		private: System::Windows::Forms::Panel^ panel95;
+		private: System::Windows::Forms::Panel^ panel96;
+		private: System::Windows::Forms::Panel^ panel97;
+		private: System::Windows::Forms::Panel^ panel98;
+		private: System::Windows::Forms::Panel^ panel99;
+		private: System::Windows::Forms::Panel^ panel100;
+		private: System::Windows::Forms::Panel^ panel101;
+		private: System::Windows::Forms::Panel^ panel102;
+		private: System::Windows::Forms::Panel^ panel103;
+		private: System::Windows::Forms::Panel^ panel104;
+		private: System::Windows::Forms::Panel^ panel105;
+		private: System::Windows::Forms::Label^ label31;
+		private: System::Windows::Forms::Panel^ panel1;
+		private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel12;
+		private: System::Windows::Forms::Label^ label32;
+		private: System::Windows::Forms::Label^ label3;
+		private: System::Windows::Forms::Panel^ panel5;
+		private: System::Windows::Forms::Panel^ panel4;
+		private: System::Windows::Forms::Panel^ panel3;
+		private: System::Windows::Forms::Label^ label12;
+		private: System::Windows::Forms::Label^ label10;
+		private: System::Windows::Forms::Label^ label8;
+		private: System::Windows::Forms::Label^ label6;
+		private: System::Windows::Forms::Label^ label2;
+		private: System::Windows::Forms::ComboBox^ comboBox2;
+		private: System::Windows::Forms::Label^ label1;
+		private: System::Windows::Forms::ComboBox^ comboBox1;
+		private: System::Windows::Forms::Panel^ panel2;
+		private: System::Windows::Forms::TextBox^ textBox10;
+		private: System::Windows::Forms::Button^ button1;
+		private: System::Windows::Forms::Button^ button2;
+		private: System::Windows::Forms::Button^ button3;
+		private: System::Windows::Forms::ToolStrip^ toolStrip1;
+		private: System::Windows::Forms::ToolStripButton^ toolStripButton2;
+		private: System::Windows::Forms::ToolStripSeparator^ toolStripSeparator4;
+		private: System::Windows::Forms::ToolStripComboBox^ toolStripComboBox1;
+		private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
+			   Cinema* cinema;
+		public:
+			MainForm(void)
 			{
-				delete components;
+				file_stream = new File_O();
+				cinema = new Cinema();
+				InitializeComponent();
 			}
-		}
-	private: System::Windows::Forms::MenuStrip^ menustrip_main;
-	private: System::Windows::Forms::ToolStripMenuItem^ FileToolStripMenuItem;
 
-	protected:
-
-	private: System::Windows::Forms::ToolStripMenuItem^ EnterToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ CreateToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ ExitToolStripMenuItem;
-	private: System::Windows::Forms::StatusStrip^ statusStrip1;
-	private: System::Windows::Forms::ToolStripStatusLabel^ toolStripStatusLabel_filename;
-
-	private: System::Windows::Forms::ToolStripMenuItem^ OpenToolStripMenuItem;
-	private: System::Windows::Forms::OpenFileDialog^ openFileDialog1;
-	private: System::Windows::Forms::ToolStripMenuItem^ SaveToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ SaveAsToolStripMenuItem;
-
-
-	private: System::Windows::Forms::ToolStripSeparator^ toolStripSeparator2;
-	private: System::Windows::Forms::ToolStripSeparator^ toolStripSeparator3;
-	private: System::Windows::Forms::ToolStripMenuItem^ CorrectToolStripMenuItem;
-
-
-	private: System::Windows::Forms::ToolStripMenuItem^ InfoToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ QuitToolStripMenuItem;
-
-
-	private: System::Windows::Forms::ToolStripSeparator^ toolStripSeparator1;
-	private: System::Windows::Forms::ToolStripMenuItem^ CloseToolStripMenuItem;
-	private: System::Windows::Forms::SaveFileDialog^ saveFileDialog1;
-
-
-	private:
-		/// <summary>
-		/// Обязательная переменная конструктора.
-		/// </summary>
+		protected:
+			~MainForm()
+			{
+				delete file_stream;
+				if (components)
+				{
+					delete components;
+				}
+			}
+		private: System::Windows::Forms::MenuStrip^ menustrip_main;
+		private: System::Windows::Forms::ToolStripMenuItem^ FileToolStripMenuItem;
+		protected:
+		private: System::Windows::Forms::ToolStripMenuItem^ EnterToolStripMenuItem;
+		private: System::Windows::Forms::ToolStripMenuItem^ CreateToolStripMenuItem;
+		private: System::Windows::Forms::ToolStripMenuItem^ ExitToolStripMenuItem;
+		private: System::Windows::Forms::StatusStrip^ statusStrip1;
+		private: System::Windows::Forms::ToolStripStatusLabel^ toolStripStatusLabel_filename;
+		private: System::Windows::Forms::ToolStripMenuItem^ OpenToolStripMenuItem;
+		private: System::Windows::Forms::OpenFileDialog^ openFileDialog1;
+		private: System::Windows::Forms::ToolStripMenuItem^ SaveToolStripMenuItem;
+		private: System::Windows::Forms::ToolStripMenuItem^ SaveAsToolStripMenuItem;
+		private: System::Windows::Forms::ToolStripSeparator^ toolStripSeparator2;
+		private: System::Windows::Forms::ToolStripSeparator^ toolStripSeparator3;
+		private: System::Windows::Forms::ToolStripMenuItem^ CorrectToolStripMenuItem;
+		private: System::Windows::Forms::ToolStripMenuItem^ InfoToolStripMenuItem;
+		private: System::Windows::Forms::ToolStripMenuItem^ QuitToolStripMenuItem;
+		private: System::Windows::Forms::ToolStripSeparator^ toolStripSeparator1;
+		private: System::Windows::Forms::ToolStripMenuItem^ CloseToolStripMenuItem;
+		private: System::Windows::Forms::SaveFileDialog^ saveFileDialog1;
+		private:
 		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
@@ -4042,7 +3866,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 					for (int i = 0; i < file_stream->kol_vo_film; i++)
 					{
 						this->toolStripComboBox1->Items->Add((System::Object^)msclr::interop::marshal_as<System::String^>(cinema->films[i].name));
-						this->pict_disc[i]->Text = SetFilmInfo(cinema->films[0]);
+						this->pict_disc[i]->Text = SetFilmInfo(cinema->films[i]);
 						this->pict_tabl[i]->Visible = true;
 						std::ifstream file(cinema->films[i].path, std::ios_base::in);
 						if (file.is_open())
@@ -4550,6 +4374,13 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 		
 		if (p->DialogResult == System::Windows::Forms::DialogResult::OK)
 		{
+			
+
+
+			
+			
+			
+			
 			cinema->films[cinema->films_number] = p->Result();
 
 			const wchar_t* start = (const wchar_t*)file_stream->path.c_str();
