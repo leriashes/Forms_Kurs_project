@@ -1,5 +1,6 @@
 #pragma once
 #include <cctype>
+#include <sys/stat.h>
 #include "File_O.h"
 #include "msclr\marshal_cppstd.h"
 #include "AdminForm.h"
@@ -18,6 +19,12 @@
 #include <string.h>
 #include "resource.h"
 #include <tchar.h>
+
+#include <iostream>
+#include <sys/types.h>
+#include <stdio.h>
+
+
 using namespace System;
 using namespace msclr::interop;
 /*#include "HelloForm.h"
@@ -645,7 +652,7 @@ namespace FormsKursproject {
 					this->CorrectMovieToolStripMenuItem, this->DelMovieToolStripMenuItem
 			});
 			this->MovieToolStripMenuItem->Name = L"MovieToolStripMenuItem";
-			this->MovieToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->MovieToolStripMenuItem->Size = System::Drawing::Size(132, 22);
 			this->MovieToolStripMenuItem->Text = L"&Фильм";
 			// 
 			// NewMovieToolStripMenuItem
@@ -676,32 +683,32 @@ namespace FormsKursproject {
 					this->CorrectPromoToolStripMenuItem, this->DelPromoToolStripMenuItem
 			});
 			this->PromoToolStripMenuItem->Name = L"PromoToolStripMenuItem";
-			this->PromoToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->PromoToolStripMenuItem->Size = System::Drawing::Size(132, 22);
 			this->PromoToolStripMenuItem->Text = L"&Промокод";
 			this->PromoToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::PromoToolStripMenuItem_Click);
 			// 
 			// NewPromoToolStripMenuItem
 			// 
 			this->NewPromoToolStripMenuItem->Name = L"NewPromoToolStripMenuItem";
-			this->NewPromoToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->NewPromoToolStripMenuItem->Size = System::Drawing::Size(165, 22);
 			this->NewPromoToolStripMenuItem->Text = L"&Добавить новый";
 			// 
 			// CorrectPromoToolStripMenuItem
 			// 
 			this->CorrectPromoToolStripMenuItem->Name = L"CorrectPromoToolStripMenuItem";
-			this->CorrectPromoToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->CorrectPromoToolStripMenuItem->Size = System::Drawing::Size(165, 22);
 			this->CorrectPromoToolStripMenuItem->Text = L"&Изменить";
 			// 
 			// DelPromoToolStripMenuItem
 			// 
 			this->DelPromoToolStripMenuItem->Name = L"DelPromoToolStripMenuItem";
-			this->DelPromoToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->DelPromoToolStripMenuItem->Size = System::Drawing::Size(165, 22);
 			this->DelPromoToolStripMenuItem->Text = L"&Удалить";
 			// 
 			// CinemaToolStripMenuItem
 			// 
 			this->CinemaToolStripMenuItem->Name = L"CinemaToolStripMenuItem";
-			this->CinemaToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->CinemaToolStripMenuItem->Size = System::Drawing::Size(132, 22);
 			this->CinemaToolStripMenuItem->Text = L"&Кинотеатр";
 			this->CinemaToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::CinemaToolStripMenuItem_Click);
 			// 
@@ -4386,10 +4393,13 @@ namespace FormsKursproject {
 		   //Создание файла
 	private: System::Void CreateToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 		//Если открыт файл в режиме администратора с несохранёнными изменениями
-		if (this->QuitToolStripMenuItem->Visible && this->toolStripStatusLabel_filename->Visible && this->changes && MessageBox::Show(L"Сохранить изменения?", "", MessageBoxButtons::YesNo) == System::Windows::Forms::DialogResult::Yes) {
+		if (this->QuitToolStripMenuItem->Visible && this->toolStripStatusLabel_filename->Visible && this->changes && MessageBox::Show(L"Сохранить изменения?", "", MessageBoxButtons::YesNo) == System::Windows::Forms::DialogResult::Yes) 
+		{
 			//Сохранение изменений
 			if (this->toolStripStatusLabel_filename->Text == L"Новый файл")
+			{
 				SaveAsToolStripMenuItem_Click(sender, e);
+			}
 			else
 				SaveToolStripMenuItem_Click(sender, e);
 			/*if (full_table()) {
@@ -4398,10 +4408,59 @@ namespace FormsKursproject {
 				open_file();
 			}*/
 		}
-		else {
-			this->toolStripStatusLabel_filename->Text = L"Новый файл";
-			this->toolStripStatusLabel_filename->Visible = true;
-			open_file();
+		else
+		{
+			SaveFileDialog^ saveFileDialog1 = gcnew SaveFileDialog;
+			saveFileDialog1->Filter = "Text File|*.txt";
+			saveFileDialog1->RestoreDirectory = true;
+			if (saveFileDialog1->ShowDialog() == System::Windows::Forms::DialogResult::OK && saveFileDialog1->FileName->Length > 0) 
+			{
+				cinema->NewID();
+				//создаем папку с одноименным id
+				
+				int u;
+				String^ put = "";
+				//проверка заполенности всех пунктов!!!, либо флажок на функцию change		
+				for (int y = saveFileDialog1->FileName->Length - 1; y > 0; y--)
+				{
+					if (saveFileDialog1->FileName[y] == '\\')
+					{
+						
+						for (u = 0; u <= y; u++)
+						{
+							put = put + saveFileDialog1->FileName[u];
+						}
+						y = -100;
+					}
+				}
+				string pt = msclr::interop::marshal_as< std::string >(saveFileDialog1->FileName);
+				pt.erase(0, u);
+				pt = "\\" + pt;
+				Directory::CreateDirectory(put + msclr::interop::marshal_as<System::String^>(cinema->id_cinema));	//создание папки
+				IO::File::WriteAllText(put + msclr::interop::marshal_as<System::String^>(cinema->id_cinema) + msclr::interop::marshal_as<System::String^>(pt), "");		//создание файла
+
+				file_stream->path_dir = msclr::interop::marshal_as< std::string >(put) + cinema->id_cinema;
+				file_stream->path = file_stream->path_dir + pt;
+				this->toolStripStatusLabel_filename->Visible = true;
+				this->toolStripStatusLabel_filename->Text = put + msclr::interop::marshal_as<System::String^>(cinema->id_cinema) + msclr::interop::marshal_as<System::String^>(pt);
+				this->tableLayoutPanel1->Visible = true;
+				cinema->start_day = Time::RetDate(0, 1);
+				ChangeForm^ p = gcnew ChangeForm(*cinema);
+				p->ShowDialog();
+				
+				file_stream->Write(*cinema);
+				open_file();
+			}
+			/*
+			if (this->saveFileDialog1->ShowDialog() == System::Windows::Forms::DialogResult::OK)
+			{
+				this->toolStripStatusLabel_filename->Text = this->saveFileDialog1->FileName;
+				/*
+				this->toolStripStatusLabel_filename->Text = L"Новый файл";
+				this->toolStripStatusLabel_filename->Visible = true;
+				open_file();
+				*/
+			//}
 		}
 	}
 
@@ -4434,7 +4493,13 @@ namespace FormsKursproject {
 
 		   //Открытие файла
 	private: System::Void open_file() {
-		srand(time(0));
+		int  stime;
+		long ltime;
+
+		ltime = time(NULL);
+		stime = (unsigned int)ltime / 2;
+		srand(stime);
+//		srand(time(0));
 		this->changes = false;
 		Boolean good = true;
 		
