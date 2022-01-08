@@ -120,6 +120,9 @@
     <ClInclude Include="CheckForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="ChangePromo.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="ChooseForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -157,6 +160,7 @@
   <ItemGroup>
     <ClCompile Include="AdminForm.cpp" />
     <ClCompile Include="ChangeForm.cpp" />
+    <ClCompile Include="ChangePromo.cpp" />
     <ClCompile Include="CheckForm.cpp" />
     <ClCompile Include="ChooseForm.cpp" />
     <ClCompile Include="Cinema.cpp" />
@@ -175,6 +179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChangeForm.resx">
       <DependentUpon>ChangeForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePromo.resx">
+      <DependentUpon>ChangePromo.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CheckForm.resx">
       <DependentUpon>CheckForm.h</DependentUpon>

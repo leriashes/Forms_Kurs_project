@@ -827,6 +827,17 @@ int Cinema::DeConvert_Time(string time)
 	return times;
 }
 
+void Cinema::NewID()
+{
+	srand(time(NULL));
+	string str = "";
+	for (int i = 0; i < 5; ++i)
+	{
+		str += to_string(rand() % 10);
+	}
+	id_cinema = str;
+}
+
 void Cinema::InputName()
 {
 	do

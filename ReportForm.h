@@ -155,6 +155,7 @@ namespace FormsKursproject {
 			this->button1->TabIndex = 0;
 			this->button1->Text = L"Обнулить";
 			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &ReportForm::button1_Click);
 			// 
 			// groupBox2
 			// 
@@ -233,6 +234,7 @@ namespace FormsKursproject {
 			this->button2->TabIndex = 0;
 			this->button2->Text = L"Обнулить";
 			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &ReportForm::button2_Click);
 			// 
 			// ReportForm
 			// 
@@ -256,6 +258,21 @@ namespace FormsKursproject {
 		this->textBox1->Text = msclr::interop::marshal_as<System::String^>(cinema->otchet_today);
 		this->textBox3->Text = cinema->kolvo_biletov[1].ToString();
 		
+		this->linkLabel1->Text = msclr::interop::marshal_as<System::String^>(cinema->start_day) + " - " + msclr::interop::marshal_as<System::String^>(Time::RetDate(0, 1));
+		this->textBox2->Text = msclr::interop::marshal_as<System::String^>(cinema->otchet_vsego);
+		this->textBox4->Text = cinema->kolvo_biletov[0].ToString();
+	}
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+		cinema->otchet_today = "0";
+		cinema->kolvo_biletov[1] = 0;
+		this->textBox1->Text = msclr::interop::marshal_as<System::String^>(cinema->otchet_today);
+		this->textBox3->Text = cinema->kolvo_biletov[1].ToString();
+	}
+
+	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+		cinema->start_day = Time::RetDate(0, 1);
+		cinema->otchet_vsego = "0";
+		cinema->kolvo_biletov[0] = 0;
 		this->linkLabel1->Text = msclr::interop::marshal_as<System::String^>(cinema->start_day) + " - " + msclr::interop::marshal_as<System::String^>(Time::RetDate(0, 1));
 		this->textBox2->Text = msclr::interop::marshal_as<System::String^>(cinema->otchet_vsego);
 		this->textBox4->Text = cinema->kolvo_biletov[0].ToString();

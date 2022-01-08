@@ -15,7 +15,8 @@ public:
 
 	int error;
 	int kol_vo_film;	//перенести в кинотеатр?
-	string path;
+	string path_dir;
+	string path = "";
 	string path_bron = "bronirovanie.txt";
 
 	void InputPath();		//ввод пути для файла

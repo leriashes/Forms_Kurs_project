@@ -62,6 +62,7 @@ public:
 	string Convert_Time(int time);
 	int DeConvert_Time(string time);
 
+	void NewID();		//генерация нового ID cinema
 	void InputName();	//Ввод названия кинотеатра
 	void InputCashier();	//ввод ФИО кассира
 	void InputINN();		//ввод ИНН
