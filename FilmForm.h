@@ -670,31 +670,14 @@ namespace FormsKursproject {
 		HGLOBAL MemoryHandle = LoadResource(hInst, hResource);
 		if (MemoryHandle == NULL) return nullptr;
 
-
 		cli::array<BYTE>^ MemPtr = gcnew cli::array<BYTE>(Size + 2);//Create a cli::array of byte with size = total size + 2	
-
-
 		char* lkr = (char*)(LockResource(MemoryHandle));		//Cast from LPVOID to char *
-
-
 		System::Runtime::InteropServices::Marshal::Copy((IntPtr)lkr, MemPtr, 0, Size);		//Copy from unmanaged memory to managed array
-
-
 		System::IO::MemoryStream^ stream = gcnew System::IO::MemoryStream(MemPtr);		// Create a new MemoryStream with size = MemPtr
-
-
 		stream->Write(MemPtr, 0, Size);		//Write in the MemoryStream
-
-
 		stream->Position = 0;		//Set the position for read the stream
-
-
 		FreeLibrary(hInst);		//Free allocated resources
-
-
 		System::Drawing::Image^ ptrPNG;		//Create an Image abstract class pointer
-
-
 
 		//Assign the stream to abstract class pointer
 		ptrPNG = System::Drawing::Image::FromStream(stream);
