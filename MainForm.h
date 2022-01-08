@@ -7,6 +7,7 @@
 #include "FilmForm.h"
 #include "ReportForm.h"
 #include "ChangeForm.h"
+#include "ChangePromo.h"
 #include "ChooseForm.h"
 #include "PayForm.h"
 #include "resource.h"
@@ -564,28 +565,34 @@ namespace FormsKursproject {
 			// 
 			this->OpenToolStripMenuItem->Name = L"OpenToolStripMenuItem";
 			this->OpenToolStripMenuItem->ShortcutKeys = static_cast<System::Windows::Forms::Keys>((System::Windows::Forms::Keys::Control | System::Windows::Forms::Keys::O));
-			this->OpenToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->OpenToolStripMenuItem->Size = System::Drawing::Size(172, 22);
 			this->OpenToolStripMenuItem->Text = L"&Открыть";
 			this->OpenToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::OpenToolStripMenuItem_Click);
 			// 
 			// toolStripSeparator1
 			// 
 			this->toolStripSeparator1->Name = L"toolStripSeparator1";
-			this->toolStripSeparator1->Size = System::Drawing::Size(177, 6);
+			this->toolStripSeparator1->Size = System::Drawing::Size(169, 6);
+			// 
+			// CloseToolStripMenuItem
+			// 
 			this->CloseToolStripMenuItem->Enabled = false;
 			this->CloseToolStripMenuItem->Name = L"CloseToolStripMenuItem";
-			this->CloseToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->CloseToolStripMenuItem->Size = System::Drawing::Size(172, 22);
 			this->CloseToolStripMenuItem->Text = L"&Закрыть";
 			this->CloseToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::CloseToolStripMenuItem_Click);
 			// 
 			// toolStripSeparator2
 			// 
 			this->toolStripSeparator2->Name = L"toolStripSeparator2";
-			this->toolStripSeparator2->Size = System::Drawing::Size(177, 6);
+			this->toolStripSeparator2->Size = System::Drawing::Size(169, 6);
+			// 
+			// SaveToolStripMenuItem
+			// 
 			this->SaveToolStripMenuItem->Enabled = false;
 			this->SaveToolStripMenuItem->Name = L"SaveToolStripMenuItem";
 			this->SaveToolStripMenuItem->ShortcutKeys = static_cast<System::Windows::Forms::Keys>((System::Windows::Forms::Keys::Control | System::Windows::Forms::Keys::S));
-			this->SaveToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->SaveToolStripMenuItem->Size = System::Drawing::Size(172, 22);
 			this->SaveToolStripMenuItem->Text = L"Со&хранить";
 			this->SaveToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::SaveToolStripMenuItem_Click);
 			// 
@@ -593,17 +600,20 @@ namespace FormsKursproject {
 			// 
 			this->SaveAsToolStripMenuItem->Enabled = false;
 			this->SaveAsToolStripMenuItem->Name = L"SaveAsToolStripMenuItem";
-			this->SaveAsToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->SaveAsToolStripMenuItem->Size = System::Drawing::Size(172, 22);
 			this->SaveAsToolStripMenuItem->Text = L"Сох&ранить как...";
 			this->SaveAsToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::SaveAsToolStripMenuItem_Click);
 			// 
 			// toolStripSeparator3
 			// 
 			this->toolStripSeparator3->Name = L"toolStripSeparator3";
-			this->toolStripSeparator3->Size = System::Drawing::Size(177, 6);
+			this->toolStripSeparator3->Size = System::Drawing::Size(169, 6);
+			// 
+			// ExitToolStripMenuItem
+			// 
 			this->ExitToolStripMenuItem->Name = L"ExitToolStripMenuItem";
 			this->ExitToolStripMenuItem->ShortcutKeys = static_cast<System::Windows::Forms::Keys>((System::Windows::Forms::Keys::Alt | System::Windows::Forms::Keys::F4));
-			this->ExitToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->ExitToolStripMenuItem->Size = System::Drawing::Size(172, 22);
 			this->ExitToolStripMenuItem->Text = L"&Выход";
 			this->ExitToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::ExitToolStripMenuItem_Click);
 			// 
@@ -641,21 +651,21 @@ namespace FormsKursproject {
 			// NewMovieToolStripMenuItem
 			// 
 			this->NewMovieToolStripMenuItem->Name = L"NewMovieToolStripMenuItem";
-			this->NewMovieToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->NewMovieToolStripMenuItem->Size = System::Drawing::Size(165, 22);
 			this->NewMovieToolStripMenuItem->Text = L"&Добавить новый";
 			this->NewMovieToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::NewMovieToolStripMenuItem_Click);
 			// 
 			// CorrectMovieToolStripMenuItem
 			// 
 			this->CorrectMovieToolStripMenuItem->Name = L"CorrectMovieToolStripMenuItem";
-			this->CorrectMovieToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->CorrectMovieToolStripMenuItem->Size = System::Drawing::Size(165, 22);
 			this->CorrectMovieToolStripMenuItem->Text = L"&Изменить";
 			this->CorrectMovieToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::CorrectMovieToolStripMenuItem_Click);
 			// 
 			// DelMovieToolStripMenuItem
 			// 
 			this->DelMovieToolStripMenuItem->Name = L"DelMovieToolStripMenuItem";
-			this->DelMovieToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->DelMovieToolStripMenuItem->Size = System::Drawing::Size(165, 22);
 			this->DelMovieToolStripMenuItem->Text = L"&Удалить";
 			this->DelMovieToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::DelMovieToolStripMenuItem_Click);
 			// 
@@ -668,23 +678,24 @@ namespace FormsKursproject {
 			this->PromoToolStripMenuItem->Name = L"PromoToolStripMenuItem";
 			this->PromoToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->PromoToolStripMenuItem->Text = L"&Промокод";
+			this->PromoToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::PromoToolStripMenuItem_Click);
 			// 
 			// NewPromoToolStripMenuItem
 			// 
 			this->NewPromoToolStripMenuItem->Name = L"NewPromoToolStripMenuItem";
-			this->NewPromoToolStripMenuItem->Size = System::Drawing::Size(165, 22);
+			this->NewPromoToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->NewPromoToolStripMenuItem->Text = L"&Добавить новый";
 			// 
 			// CorrectPromoToolStripMenuItem
 			// 
 			this->CorrectPromoToolStripMenuItem->Name = L"CorrectPromoToolStripMenuItem";
-			this->CorrectPromoToolStripMenuItem->Size = System::Drawing::Size(165, 22);
+			this->CorrectPromoToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->CorrectPromoToolStripMenuItem->Text = L"&Изменить";
 			// 
 			// DelPromoToolStripMenuItem
 			// 
 			this->DelPromoToolStripMenuItem->Name = L"DelPromoToolStripMenuItem";
-			this->DelPromoToolStripMenuItem->Size = System::Drawing::Size(165, 22);
+			this->DelPromoToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->DelPromoToolStripMenuItem->Text = L"&Удалить";
 			// 
 			// CinemaToolStripMenuItem
@@ -780,11 +791,11 @@ namespace FormsKursproject {
 			this->tableLayoutPanel1->BackColor = System::Drawing::SystemColors::ControlDark;
 			this->tableLayoutPanel1->ColumnCount = 3;
 			this->tableLayoutPanel1->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent,
-				33.33333)));
+				33.33333F)));
 			this->tableLayoutPanel1->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent,
-				33.33334)));
+				33.33334F)));
 			this->tableLayoutPanel1->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent,
-				33.33334)));
+				33.33334F)));
 			this->tableLayoutPanel1->Controls->Add(this->tableLayoutPanel10, 2, 2);
 			this->tableLayoutPanel1->Controls->Add(this->tableLayoutPanel9, 1, 2);
 			this->tableLayoutPanel1->Controls->Add(this->tableLayoutPanel8, 0, 2);
@@ -800,9 +811,9 @@ namespace FormsKursproject {
 			this->tableLayoutPanel1->Margin = System::Windows::Forms::Padding(2);
 			this->tableLayoutPanel1->Name = L"tableLayoutPanel1";
 			this->tableLayoutPanel1->RowCount = 3;
-			this->tableLayoutPanel1->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 33.33333)));
-			this->tableLayoutPanel1->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 33.33333)));
-			this->tableLayoutPanel1->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 33.33333)));
+			this->tableLayoutPanel1->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 33.33333F)));
+			this->tableLayoutPanel1->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 33.33333F)));
+			this->tableLayoutPanel1->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 33.33333F)));
 			this->tableLayoutPanel1->Size = System::Drawing::Size(1018, 616);
 			this->tableLayoutPanel1->TabIndex = 6;
 			this->tableLayoutPanel1->Visible = false;
@@ -849,7 +860,7 @@ namespace FormsKursproject {
 			this->textBox9->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->textBox9->Cursor = System::Windows::Forms::Cursors::Arrow;
 			this->textBox9->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->textBox9->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11.25, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->textBox9->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->textBox9->ForeColor = System::Drawing::SystemColors::Menu;
 			this->textBox9->Location = System::Drawing::Point(103, 3);
@@ -903,7 +914,7 @@ namespace FormsKursproject {
 			this->textBox8->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->textBox8->Cursor = System::Windows::Forms::Cursors::Arrow;
 			this->textBox8->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->textBox8->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11.25, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->textBox8->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->textBox8->ForeColor = System::Drawing::SystemColors::Menu;
 			this->textBox8->Location = System::Drawing::Point(103, 3);
@@ -957,7 +968,7 @@ namespace FormsKursproject {
 			this->textBox7->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->textBox7->Cursor = System::Windows::Forms::Cursors::Arrow;
 			this->textBox7->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->textBox7->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11.25, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->textBox7->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->textBox7->ForeColor = System::Drawing::SystemColors::Menu;
 			this->textBox7->Location = System::Drawing::Point(103, 3);
@@ -1065,7 +1076,7 @@ namespace FormsKursproject {
 			this->textBox5->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->textBox5->Cursor = System::Windows::Forms::Cursors::Arrow;
 			this->textBox5->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->textBox5->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11.25, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->textBox5->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->textBox5->ForeColor = System::Drawing::SystemColors::Menu;
 			this->textBox5->Location = System::Drawing::Point(103, 3);
@@ -1119,7 +1130,7 @@ namespace FormsKursproject {
 			this->textBox4->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->textBox4->Cursor = System::Windows::Forms::Cursors::Arrow;
 			this->textBox4->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->textBox4->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11.25, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->textBox4->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->textBox4->ForeColor = System::Drawing::SystemColors::Menu;
 			this->textBox4->Location = System::Drawing::Point(103, 3);
@@ -1173,7 +1184,7 @@ namespace FormsKursproject {
 			this->textBox3->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->textBox3->Cursor = System::Windows::Forms::Cursors::Arrow;
 			this->textBox3->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->textBox3->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11.25, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->textBox3->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->textBox3->ForeColor = System::Drawing::SystemColors::Menu;
 			this->textBox3->Location = System::Drawing::Point(103, 3);
@@ -1227,7 +1238,7 @@ namespace FormsKursproject {
 			this->textBox2->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->textBox2->Cursor = System::Windows::Forms::Cursors::Arrow;
 			this->textBox2->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->textBox2->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11.25, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->textBox2->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->textBox2->ForeColor = System::Drawing::SystemColors::Menu;
 			this->textBox2->Location = System::Drawing::Point(103, 3);
@@ -1281,7 +1292,7 @@ namespace FormsKursproject {
 			this->textBox1->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->textBox1->Cursor = System::Windows::Forms::Cursors::Arrow;
 			this->textBox1->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->textBox1->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11.25, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->textBox1->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->textBox1->ForeColor = System::Drawing::SystemColors::Menu;
 			this->textBox1->Location = System::Drawing::Point(103, 3);
@@ -1347,7 +1358,7 @@ namespace FormsKursproject {
 			// 
 			this->label4->AutoSize = true;
 			this->label4->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->label4->Location = System::Drawing::Point(3, 0);
 			this->label4->Name = L"label4";
@@ -5163,5 +5174,10 @@ namespace FormsKursproject {
 		file_stream->Write(*cinema);
 		
 	}
+private: System::Void PromoToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	ChangePromo^ p = gcnew ChangePromo(*cinema);
+	p->ShowDialog();
+	file_stream->Write(*cinema);
+}
 };
 }

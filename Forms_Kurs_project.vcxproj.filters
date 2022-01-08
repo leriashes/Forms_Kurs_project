@@ -54,6 +54,9 @@
     <ClInclude Include="ReportForm.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
+    <ClInclude Include="ChangePromo.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Forms_Kurs_project.rc">
@@ -95,6 +98,9 @@
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="ReportForm.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="ChangePromo.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
