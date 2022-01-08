@@ -1,5 +1,6 @@
 #pragma once
 #include "Cinema.h"
+#include "msclr\marshal_cppstd.h"
 
 namespace FormsKursproject {
 
@@ -15,7 +16,7 @@ namespace FormsKursproject {
 	/// </summary>
 	public ref class PayForm : public System::Windows::Forms::Form
 	{
-	private: int cost, num, change, sale;
+	private: int cost, num, change, sale, sum;
 		   int* costp, *changep;
 		   bool* way;
 		   Cinema* cinema;
@@ -28,6 +29,7 @@ namespace FormsKursproject {
 			this->num = num;
 			changep = &change;
 			this->way = &way;
+			sale = this->change = sum = 0;
 			this->cinema = cinema;
 			InitializeComponent();
 		}
@@ -125,6 +127,7 @@ namespace FormsKursproject {
 			this->label2->TabIndex = 1;
 			this->label2->Text = L"0.00";
 			this->label2->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
+			this->label2->TextChanged += gcnew System::EventHandler(this, &PayForm::label2_TextChanged);
 			// 
 			// radioButton1
 			// 
@@ -263,6 +266,7 @@ namespace FormsKursproject {
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(100, 26);
 			this->textBox1->TabIndex = 12;
+			this->textBox1->TextChanged += gcnew System::EventHandler(this, &PayForm::textBox1_TextChanged);
 			// 
 			// label9
 			// 
@@ -332,6 +336,7 @@ namespace FormsKursproject {
 			this->button1->TabIndex = 18;
 			this->button1->Text = L"OK";
 			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &PayForm::button1_Click);
 			// 
 			// button2
 			// 
@@ -355,6 +360,7 @@ namespace FormsKursproject {
 			this->button3->TabIndex = 20;
 			this->button3->Text = L"OK";
 			this->button3->UseVisualStyleBackColor = true;
+			this->button3->Click += gcnew System::EventHandler(this, &PayForm::button3_Click);
 			// 
 			// PayForm
 			// 
@@ -401,6 +407,20 @@ namespace FormsKursproject {
 
 		}
 #pragma endregion
+	private: System::Void CountChange(System::Object^ sender, System::EventArgs^ e) {
+		change = sum - (cost - sale) * num;
+
+		if (change >= 0)
+		{
+			label12->Text = change.ToString() + ".00";
+		}
+		else
+		{
+			label12->Text = "0.00";
+		}
+		
+	}
+
 	private: System::Void radioButton1_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
 		if (radioButton1->Checked)
 		{
@@ -418,6 +438,8 @@ namespace FormsKursproject {
 			maskedTextBox2->Enabled = true;
 			maskedTextBox2->Text = label2->Text;
 		}
+
+		sum = 0;
 	}
 
 	private: System::Void maskedTextBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
@@ -440,10 +462,32 @@ namespace FormsKursproject {
 		}
 		else
 			label6->Text = "    0.00";
+
+		if (maskedTextBox1->Enabled)
+		{
+			sum = 0;
+
+			for (int i = 0; i < label6->Text->Length - 2; i++)
+			{
+				if (label6->Text[i] >= '0' && label6->Text[i] <= '9')
+				{
+					sum = sum * 10 + label6->Text[i] - 48;
+				}
+			}
+		}
+
+		CountChange(sender, e);
 	}
 
 	private: System::Void maskedTextBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 		label7->Text = maskedTextBox2->Text;
+
+		if (maskedTextBox2->Enabled)
+		{
+			sum = (cost - sale) * num;
+		}
+
+		CountChange(sender, e);
 	}
 
 	private: System::Void maskedTextBox1_Leave(System::Object^ sender, System::EventArgs^ e) {
@@ -484,7 +528,7 @@ namespace FormsKursproject {
 	}
 
 	private: System::Void PayForm_Load(System::Object^ sender, System::EventArgs^ e) {
-		label2->Text = (cost * num).ToString() + ".00";
+		label2->Text = ((cost - sale) * num).ToString() + ".00";
 		String^ str = label2->Text;
 
 		for (int i = 0; i < 8 - label2->Text->Length; i++)
@@ -500,6 +544,57 @@ namespace FormsKursproject {
 		{
 			maskedTextBox1_Leave(sender, e);
 		}
+	}
+
+	private: System::Void label2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+		CountChange(sender, e);
+	}
+
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+		maskedTextBox1_Leave(sender, e);
+
+		if (change < 0)
+		{
+			String^ message = L"Недостаточно средств!";
+			String^ caption = L"";
+			MessageBox::Show(message, caption, MessageBoxButtons::OK, MessageBoxIcon::Stop);
+		}
+		else
+		{
+			*costp = cost;
+			*changep = change;
+			*way = radioButton2->Checked;
+			this->DialogResult = System::Windows::Forms::DialogResult::OK;
+		}
+	}
+
+	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+		sale = 0;
+		label10->Text = "0%";
+		for (int i = 0; i < cinema->promo_number; i++)
+		{
+			if (textBox1->Text == msclr::interop::marshal_as<System::String^>(cinema->promo[i + 1][0]))
+			{
+				sale = cost * stoi(cinema->promo[i + 1][1]) / 100;
+				label10->Text = msclr::interop::marshal_as<System::String^>(cinema->promo[i + 1][1]) + "%";
+				break;
+			}
+		}
+
+		if (sale == 0)
+		{
+			textBox1->Text = "";
+		}
+
+		CountChange(sender, e);
+		PayForm_Load(sender, e);
+	}
+
+	private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+		sale = 0;
+		label10->Text = "0%";
+		CountChange(sender, e);
+		PayForm_Load(sender, e);
 	}
 };
 }
