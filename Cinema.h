@@ -24,6 +24,8 @@ public:
 	string rnm;		//данные для чека
 	string otchet_vsego;	//сумма выручки за весь период
 	string otchet_today;	//сумма выручки за сегодняшний день
+	string start_day;		//день начала отсчета периода для отчета
+	int kolvo_biletov[2];	//количество проданных билетов
 	string promo[10][2];	//промокоды
 	int promo_number = 0;
 	int cashiers_number = 0;

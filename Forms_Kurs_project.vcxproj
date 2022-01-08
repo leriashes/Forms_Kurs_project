@@ -132,6 +132,9 @@
     <ClInclude Include="MainForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="ReportForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="PayForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -158,6 +161,7 @@
     <ClCompile Include="Film.cpp" />
     <ClCompile Include="FilmForm.cpp" />
     <ClCompile Include="MainForm.cpp" />
+    <ClCompile Include="ReportForm.cpp" />
     <ClCompile Include="PayForm.cpp" />
     <ClCompile Include="Time.cpp" />
   </ItemGroup>
@@ -177,6 +181,9 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.h</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm.resx">
+      <DependentUpon>ReportForm.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PayForm.resx">
       <DependentUpon>PayForm.h</DependentUpon>
