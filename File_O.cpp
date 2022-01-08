@@ -493,7 +493,7 @@ void File_O::Read(Cinema& cinema)
         }
     }
     getline(file, cinema.name); //чтение названия кинотеатра
-   
+
 
     //заполнение информации о кинотеатре
 
@@ -566,8 +566,44 @@ void File_O::Read(Cinema& cinema)
     }
 
 
-
+    bool good;
     getline(file, cinema.otchet_vsego);     //чтение выручки за период
+    cinema.start_day = "";
+    for (i = 0; i < 10; i++)
+    {
+        cinema.start_day = cinema.start_day + cinema.otchet_vsego[i];
+    }
+    cinema.otchet_vsego.erase(0, 12);   //здесь включено количество билетов
+    for (int h = 0; h < cinema.otchet_vsego.size(); h++)
+    {
+        int d;
+        cinema.kolvo_biletov[0] = 0;
+        if (cinema.otchet_vsego[h] == ' ')
+        {
+            d = h;
+            for (h = h + 1; h < cinema.otchet_vsego.size(); h++)
+            {
+                if (isdigit(cinema.otchet_vsego[h]))
+                {
+                    cinema.kolvo_biletov[0] = cinema.kolvo_biletov[0] * 10 + int(cinema.otchet_vsego[h] - 48);
+                }
+                else
+                {
+                    cinema.kolvo_biletov[0] = 0;
+                    h = cinema.otchet_vsego.size() + 100;
+                }
+            }
+            h = cinema.otchet_vsego.size() + 100;
+            cinema.otchet_vsego.erase(d, cinema.otchet_vsego.size());
+        }
+    }
+    /*
+    if (good == false)
+    {
+        cinema.kolvo_biletov[0] = 0;
+    }
+    */
+
     getline(file, cinema.otchet_today);     //чтение выручки за сегодняшний день
     bool generate = false;
     /*
@@ -602,6 +638,29 @@ void File_O::Read(Cinema& cinema)
     {
         generate = false;
         cinema.otchet_today.erase(0, 12);
+        for (int h = 0; h < cinema.otchet_today.size(); h++)
+        {
+            int d;
+            cinema.kolvo_biletov[1] = 0;
+            if (cinema.otchet_today[h] == ' ')
+            {
+                d = h;
+                for (h = h + 1; h < cinema.otchet_today.size(); h++)
+                {
+                    if (isdigit(cinema.otchet_today[h]))
+                    {
+                        cinema.kolvo_biletov[1] = cinema.kolvo_biletov[1] * 10 + int(cinema.otchet_today[h] - 48);
+                    }
+                    else
+                    {
+                        cinema.kolvo_biletov[1] = 0;
+                        h = cinema.otchet_today.size() + 100;
+                    }
+                }
+                h = cinema.otchet_today.size() + 100;
+                cinema.otchet_today.erase(d, cinema.otchet_today.size());
+            }
+        }
     }
     else
     {
@@ -829,8 +888,8 @@ void File_O::Write(Cinema& cinema)
             }
         }
         f << endl;
-        f << cinema.otchet_vsego << endl;     //запись выручки за весь период
-        f << Time::RetDate(0, 1);
+        f << cinema.start_day << ": " << cinema.otchet_vsego << " " << cinema.kolvo_biletov[0] << endl;     //запись выручки за весь период
+        //f << Time::RetDate(0, 1);
         /*
         if (to_string(da).size() == 1)
         {
@@ -843,7 +902,7 @@ void File_O::Write(Cinema& cinema)
         }
         f << to_string(mo) << '.' << to_string(yea) << ": " << cinema.otchet_today << endl;
         */
-        f << ": " << cinema.otchet_today << endl;     //запись выручки за сегодняшний день
+        f << Time::RetDate(0, 1) << ": " << cinema.otchet_today << " " << cinema.kolvo_biletov[1] << endl;     //запись выручки за сегодняшний день
         f << Time::RetDate(2, 1) << endl;       //запись крайней даты (техническая запись)
 
         for (int i = 0; i < cinema.films_number; i++)
