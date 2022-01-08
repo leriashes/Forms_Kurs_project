@@ -21,6 +21,7 @@ namespace FormsKursproject {
 	{
 	private: int cost, num, sum, change, index;
 		   bool way;
+	private: System::Windows::Forms::Timer^ timer1;
 		   Cinema* cinema;
 	public:
 		CheckForm(int cost, int num, int change, bool way, Cinema* cinema, int film_number)
@@ -118,6 +119,7 @@ namespace FormsKursproject {
 	private: System::Windows::Forms::Label^ label40;
 	private: System::Windows::Forms::Label^ label41;
 	private: System::Windows::Forms::Label^ label42;
+	private: System::ComponentModel::IContainer^ components;
 	protected:
 
 	protected:
@@ -126,7 +128,7 @@ namespace FormsKursproject {
 		/// <summary>
 		/// Обязательная переменная конструктора.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -135,6 +137,7 @@ namespace FormsKursproject {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			this->components = (gcnew System::ComponentModel::Container());
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(CheckForm::typeid));
 			this->labelDateTime = (gcnew System::Windows::Forms::Label());
 			this->label1 = (gcnew System::Windows::Forms::Label());
@@ -204,6 +207,7 @@ namespace FormsKursproject {
 			this->label40 = (gcnew System::Windows::Forms::Label());
 			this->label41 = (gcnew System::Windows::Forms::Label());
 			this->label42 = (gcnew System::Windows::Forms::Label());
+			this->timer1 = (gcnew System::Windows::Forms::Timer(this->components));
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			this->SuspendLayout();
@@ -986,6 +990,11 @@ namespace FormsKursproject {
 			this->label42->Text = L"Подпись кассира";
 			this->label42->Visible = false;
 			// 
+			// timer1
+			// 
+			this->timer1->Interval = 15000;
+			this->timer1->Tick += gcnew System::EventHandler(this, &CheckForm::timer1_Tick);
+			// 
 			// CheckForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -1174,6 +1183,12 @@ namespace FormsKursproject {
 			label41->Visible = true;
 			label42->Visible = true;
 		}
+
+		timer1->Start();
+	}
+
+	private: System::Void timer1_Tick(System::Object^ sender, System::EventArgs^ e) {
+		this->Close();
 	}
 };
 }
