@@ -7,6 +7,7 @@
 #include "FilmForm.h"
 #include "ReportForm.h"
 #include "ChangeForm.h"
+#include "CheckForm.h"
 #include "ChooseForm.h"
 #include "PayForm.h"
 #include "resource.h"
@@ -5091,6 +5092,7 @@ namespace FormsKursproject {
 	}
 
 	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+		int index = toolStripComboBox1->SelectedIndex;
 		int cost = stoi(cinema->films[this->toolStripComboBox1->SelectedIndex].price[this->comboBox2->SelectedIndex + this->comboBox1->SelectedIndex * 3]);
 		int num = 0;
 
@@ -5125,6 +5127,9 @@ namespace FormsKursproject {
 			cinema->kolvo_biletov[0] = cinema->kolvo_biletov[0] + num;
 			cinema->kolvo_biletov[1] = cinema->kolvo_biletov[1] + num;
 			file_stream->Write(*cinema);
+
+			CheckForm^ ch = gcnew CheckForm(cost - sale, num, change, way, cinema, index);
+			ch->ShowDialog();
 		}
 	}
 
