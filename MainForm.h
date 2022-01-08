@@ -9,16 +9,6 @@
 #include "ChooseForm.h"
 #include "resource.h"
 #include <io.h>
-#include <filesystem>
-#include <windows.h>
-#include <stdlib.h>
-#include <string.h>
-#include "resource.h"
-#include <tchar.h>
-using namespace System;
-using namespace msclr::interop;
-/*#include "HelloForm.h"
-#include "InfoForm.h"*/
 
 namespace FormsKursproject {
 
@@ -3962,49 +3952,6 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 		}
 	}
 
-		   public: System::Drawing::Image^ getImageFromRes(long resource_ID) {
-			   
-			   HMODULE hInst = NULL;//Load the resource module:
-			   
-			   HRSRC hResource = ::FindResource(hInst, MAKEINTRESOURCE(resource_ID), L"PNG");	// Find the resource using the resource ID from file "resource.h"
-			   if (!hResource) return nullptr;
-
-			   
-			   DWORD Size = SizeofResource(hInst, hResource);	// Load the resource and save the total size.
-			   HGLOBAL MemoryHandle = LoadResource(hInst, hResource);
-			   if (MemoryHandle == NULL) return nullptr;
-
-			   
-			   cli::array<BYTE>^ MemPtr = gcnew cli::array<BYTE>(Size + 2);//Create a cli::array of byte with size = total size + 2	
-
-			   
-			   char* lkr = (char*)(LockResource(MemoryHandle));		//Cast from LPVOID to char *
-
-			   
-			   System::Runtime::InteropServices::Marshal::Copy((IntPtr)lkr, MemPtr, 0, Size);		//Copy from unmanaged memory to managed array
-
-			   
-			   System::IO::MemoryStream^ stream = gcnew System::IO::MemoryStream(MemPtr);		// Create a new MemoryStream with size = MemPtr
-
-			   
-			   stream->Write(MemPtr, 0, Size);		//Write in the MemoryStream
-
-			   
-			   stream->Position = 0;		//Set the position for read the stream
-
-			   
-			   FreeLibrary(hInst);		//Free allocated resources
-	
-			   
-			   System::Drawing::Image^ ptrPNG;		//Create an Image abstract class pointer
-
-
-
-			   //Assign the stream to abstract class pointer
-			   ptrPNG = System::Drawing::Image::FromStream(stream);
-			   return ptrPNG;
-		   }
-
 		   //Открытие файла
 	private: System::Void open_file() {
 		srand(time(0));
@@ -4107,7 +4054,7 @@ private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
 						}
 						else
 						{
-							System::Drawing::Image^ image = getImageFromRes(IDB_PNG1);
+							System::Drawing::Image^ image = FilmForm::getImageFromRes(IDB_PNG1);
 							if (image != nullptr) pictureBox1->Image = image;
 						}
 					}
