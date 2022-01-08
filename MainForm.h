@@ -4355,9 +4355,15 @@ namespace FormsKursproject {
 		else {
 			e->Cancel = true;
 			String^ message = L"Вы уверены, что хотите выйти?";
+			if (this->toolStripStatusLabel_filename->Visible == true)
+			{
+				message = message + "\nИтого за день : " + msclr::interop::marshal_as<System::String^>(cinema->otchet_today) + " рублей";
+			}
 			String^ caption = L"";
 			if (MessageBox::Show(message, caption, MessageBoxButtons::YesNo) == System::Windows::Forms::DialogResult::Yes)
+			{
 				e->Cancel = false;
+			}
 		}
 	}
 
@@ -4391,11 +4397,16 @@ namespace FormsKursproject {
 		   //Открытие файла
 	private: System::Void OpenToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 		//Если открыт файл в режиме администратора с несохранёнными изменениями
-		if (this->QuitToolStripMenuItem->Visible && this->toolStripStatusLabel_filename->Visible && this->changes && MessageBox::Show(L"Сохранить изменения?", "", MessageBoxButtons::YesNo) == System::Windows::Forms::DialogResult::Yes) {
+		if (this->QuitToolStripMenuItem->Visible && this->toolStripStatusLabel_filename->Visible && this->changes && MessageBox::Show(L"Сохранить изменения?", "", MessageBoxButtons::YesNo) == System::Windows::Forms::DialogResult::Yes) 
+		{
 			if (this->toolStripStatusLabel_filename->Text == L"Новый файл")
+			{
 				SaveAsToolStripMenuItem_Click(sender, e);
+			}
 			else
+			{
 				SaveToolStripMenuItem_Click(sender, e);
+			}
 			/*if (full_table() && this->openFileDialog1->ShowDialog() == System::Windows::Forms::DialogResult::OK) {
 				this->toolStripStatusLabel_filename->Text = this->openFileDialog1->FileName;
 				this->toolStripStatusLabel_filename->Visible = true;
@@ -5149,6 +5160,8 @@ namespace FormsKursproject {
 
 		ReportForm^ p = gcnew ReportForm(*cinema);
 		p->ShowDialog();
+		file_stream->Write(*cinema);
+		
 	}
 };
 }
