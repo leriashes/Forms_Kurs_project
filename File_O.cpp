@@ -675,130 +675,133 @@ void File_O::Read(Cinema& cinema)
     //заполнение информации о фильмах
     do
     {
-        getline(file, temp);
-        getline(file, cinema.films[i].name);
-        getline(file, cinema.films[i].duration);
-        getline(file, cinema.films[i].age);
-        getline(file, cinema.films[i].short_description);
-        getline(file, cinema.films[i].main_role);
-        getline(file, cinema.films[i].rejisser);
-        getline(file, cinema.films[i].number_zal);
-        getline(file, cinema.films[i].path);
-
-        for (j = 0; j < 9; j++)
+        if (kol_vo_film > 0)
         {
             getline(file, temp);
-            if (j % 3 == 0)
-            {
-                getline(file, cinema.films[i].date[j / 3]);
-            }
+            getline(file, cinema.films[i].name);
+            getline(file, cinema.films[i].duration);
+            getline(file, cinema.films[i].age);
+            getline(file, cinema.films[i].short_description);
+            getline(file, cinema.films[i].main_role);
+            getline(file, cinema.films[i].rejisser);
+            getline(file, cinema.films[i].number_zal);
+            getline(file, cinema.films[i].path);
 
-            if (j == 3)
-            {
-                if (old_date == Time::RetDate(0, 1))
-                {
-                    sdvig = 2;
-                    //cout << "2";
-                }
-                else if (old_date == Time::RetDate(1, 1))
-                {
-                    sdvig = 1;
-                    //cout << "1";
-                }
-                else if (old_date == Time::RetDate(2, 1))
-                {
-                    sdvig = 0;
-                    //cout << "0";
-                }
-                else
-                {
-                    sdvig = 3;
-                    //cout << "3";
-                    //cout << Time::RetDate(2, 1);
-                }
-            }
-
-            getline(file, cinema.films[i].price[j]);
-            getline(file, cinema.films[i].time[j]);
-
-            //string mesta_sdvig;
-
-            for (int k = 0; k < 10; k++)
+            for (j = 0; j < 9; j++)
             {
                 getline(file, temp);
-                cinema.films[i].mesta[j] = cinema.films[i].mesta[j] + temp;
-            }
-            if (j == 8)
-            {
-                int o;
-                int d;
-                for (d = 0, o = sdvig * 3; d < (3 - sdvig) * 3; d++, o++)
+                if (j % 3 == 0)
                 {
-                    cinema.films[i].mesta[d] = cinema.films[i].mesta[o];
+                    getline(file, cinema.films[i].date[j / 3]);
                 }
 
-
-                /*if (sdvig == 1)
+                if (j == 3)
                 {
-                    //cout << cinema.films[i].mesta[0];
-                    //cout << cinema.films[i].mesta[0];
-                    //_getch();
-
-                    cinema.films[i].mesta[0] = cinema.films[i].mesta[3];
-                    cinema.films[i].mesta[1] = cinema.films[i].mesta[4];
-                    cinema.films[i].mesta[2] = cinema.films[i].mesta[5];
-
-                    cinema.films[i].mesta[3] = cinema.films[i].mesta[6];
-                    cinema.films[i].mesta[4] = cinema.films[i].mesta[7];
-                    cinema.films[i].mesta[5] = cinema.films[i].mesta[8];
-
-                    /*
-                    for (int k = 6; k < 9; k++)
+                    if (old_date == Time::RetDate(0, 1))
                     {
-                        cinema.films[i].mesta[k] = cinema.NewHall();
+                        sdvig = 2;
+                        //cout << "2";
                     }
-                    */
-                    //}
-                    /*
-                    else if (sdvig == 2)
+                    else if (old_date == Time::RetDate(1, 1))
                     {
-                        cinema.films[i].mesta[0] = cinema.films[i].mesta[6];
-                        cinema.films[i].mesta[1] = cinema.films[i].mesta[7];
-                        cinema.films[i].mesta[2] = cinema.films[i].mesta[8];
+                        sdvig = 1;
+                        //cout << "1";
+                    }
+                    else if (old_date == Time::RetDate(2, 1))
+                    {
+                        sdvig = 0;
+                        //cout << "0";
+                    }
+                    else
+                    {
+                        sdvig = 3;
+                        //cout << "3";
+                        //cout << Time::RetDate(2, 1);
+                    }
+                }
+
+                getline(file, cinema.films[i].price[j]);
+                getline(file, cinema.films[i].time[j]);
+
+                //string mesta_sdvig;
+
+                for (int k = 0; k < 10; k++)
+                {
+                    getline(file, temp);
+                    cinema.films[i].mesta[j] = cinema.films[i].mesta[j] + temp;
+                }
+                if (j == 8)
+                {
+                    int o;
+                    int d;
+                    for (d = 0, o = sdvig * 3; d < (3 - sdvig) * 3; d++, o++)
+                    {
+                        cinema.films[i].mesta[d] = cinema.films[i].mesta[o];
+                    }
+
+
+                    /*if (sdvig == 1)
+                    {
+                        //cout << cinema.films[i].mesta[0];
+                        //cout << cinema.films[i].mesta[0];
+                        //_getch();
+
+                        cinema.films[i].mesta[0] = cinema.films[i].mesta[3];
+                        cinema.films[i].mesta[1] = cinema.films[i].mesta[4];
+                        cinema.films[i].mesta[2] = cinema.films[i].mesta[5];
+
+                        cinema.films[i].mesta[3] = cinema.films[i].mesta[6];
+                        cinema.films[i].mesta[4] = cinema.films[i].mesta[7];
+                        cinema.films[i].mesta[5] = cinema.films[i].mesta[8];
+
                         /*
-                        for (int k = 3; k < 9; k++)
+                        for (int k = 6; k < 9; k++)
                         {
                             cinema.films[i].mesta[k] = cinema.NewHall();
                         }
                         */
                         //}
-
-                        /*else if (sdvig == 3)
+                        /*
+                        else if (sdvig == 2)
                         {
-                            for (int k = 0; k < 9; k++)
+                            cinema.films[i].mesta[0] = cinema.films[i].mesta[6];
+                            cinema.films[i].mesta[1] = cinema.films[i].mesta[7];
+                            cinema.films[i].mesta[2] = cinema.films[i].mesta[8];
+                            /*
+                            for (int k = 3; k < 9; k++)
                             {
-                                //cout << cinema.films[i].mesta[k];
-
-                                //cout << cinema.films[i].mesta[k];
+                                cinema.films[i].mesta[k] = cinema.NewHall();
                             }
-                        }
-                        */
-                for (int l = (3 - sdvig) * 3; l < 9; l++)
-                {
-                    cinema.films[i].mesta[l] = cinema.NewHall();
+                            */
+                            //}
 
+                            /*else if (sdvig == 3)
+                            {
+                                for (int k = 0; k < 9; k++)
+                                {
+                                    //cout << cinema.films[i].mesta[k];
+
+                                    //cout << cinema.films[i].mesta[k];
+                                }
+                            }
+                            */
+                    for (int l = (3 - sdvig) * 3; l < 9; l++)
+                    {
+                        cinema.films[i].mesta[l] = cinema.NewHall();
+
+                    }
                 }
-            }
 
-            /*if (cinema.films[i].rand[j][0] == '0' && generate == true)
-            {
-                cinema.films[i].mesta[j] = cinema.NewHall();
-                Sleep(100);
+                /*if (cinema.films[i].rand[j][0] == '0' && generate == true)
+                {
+                    cinema.films[i].mesta[j] = cinema.NewHall();
+                    Sleep(100);
+                }
+                */
             }
-            */
+            i++;
         }
-        i++;
-    } while (i < kol_vo_film);
+    } while (i < kol_vo_film && i > 0);
     cinema.films_number = i;
     file.close();
     Write(cinema);

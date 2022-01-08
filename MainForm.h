@@ -1306,7 +1306,7 @@ namespace FormsKursproject {
 			// 
 			this->panelPlus->BackColor = System::Drawing::SystemColors::ControlDark;
 			this->panelPlus->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"panelPlus.BackgroundImage")));
-			this->panelPlus->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Center;
+			this->panelPlus->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
 			this->panelPlus->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->panelPlus->Location = System::Drawing::Point(95, 66);
 			this->panelPlus->Name = L"panelPlus";
@@ -4453,50 +4453,6 @@ namespace FormsKursproject {
 			//Если файл не пустой
 			else 
 			{
-
-
-				/*
-				HBITMAP hBitMap = (HBITMAP)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_PNG1), IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE);
-				Bitmap^ bitMap = Bitmap::FromHbitmap((IntPtr)hBitMap);
-				DeleteObject(hBitMap);
-				this->pictureBox1->Image = (System::Drawing::Image^)bitMap;
-				*/
-
-				/*
-				//чтение ресурсов
-				System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MainForm::typeid));
-				HRSRC   hRes = FindResource(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_PNG1), TEXT("PNG"));		//поиск ресурса в исполняемом файле
-				
-
-				DWORD dwSize = SizeofResource(NULL, hRes);	//получение размера ресурса
-				HGLOBAL hResMem = LoadResource(GetModuleHandle(NULL), hRes);	//загрузка ресурса
-				LPVOID pData;
-				/*
-				pData = LockResource(hResMem);	//фиксация ресурса в памяти
-				HANDLE File = CreateFile("data.jpg", GENERIC_WRITE, FILE_SHARE_WRITE, 0, OPEN_ALWAYS, 0, 0);	//создание файла, в который будет производиться запись ресурса
-				DWORD Written = 0;	//переменная для записи в файл
-
-
-				HBITMAP hBmp = LoadBitmap(NULL, MAKEINTRESOURCE(IDB_PNG1));
-				BITMAP   bmp;
-				GetObject(hBmp, sizeof(BITMAP), (LPSTR)&bmp);
-
-				Bitmap^ bmp = gcnew Bitmap(450, 350);
-				Graphics^ g = Graphics::FromImage(bmp); // холст для рисования
-				this->pictureBox1->Image = bmp; // закрепление к pictureBox
-
-				Bitmap^ image1; // фото загрузки в pictureBox
-
-				image1 = gcnew Bitmap("logo.bmp"); // инициализация файл с фото
-
-				pictureBox1->Image = image1;
-				*/
-				/*
-				Image1->Picture->LoadFromFile("b.bmp");
-				delete ptRes;
-				*/
-				//char* data = (char*)LockResource(hResMem);
-
 				if ((lines->Length - 10) % 129 == 0)            //форматирование верно
 				{
 					file_stream->kol_vo_film = (lines->Length - 10) / 129;
