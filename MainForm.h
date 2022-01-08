@@ -5001,8 +5001,6 @@ namespace FormsKursproject {
 			cinema->broni_zapis = cinema->broni_zapis + 1;
 			file_stream->WriteBron(*cinema);
 			file_stream->Write(*cinema);
-			
-
 		}
 	}
 
@@ -5147,15 +5145,30 @@ namespace FormsKursproject {
 				num++;
 			}
 		}
-		int change;
+		int change, sale;
 		bool way;
 
-		PayForm^ p = gcnew PayForm(cost, num, change, way, cinema);
+		PayForm^ p = gcnew PayForm(cost, num, change, sale, way, cinema);
 		p->ShowDialog();
 
 		if (p->DialogResult == System::Windows::Forms::DialogResult::OK)
 		{
-			;
+			toolStripButton2_Click(sender, e);
+
+			for (int i = 0; i < 100; i++)
+			{
+				if (seats[i]->BackColor == panel5->BackColor)
+				{
+					seats[i]->BackColor = panel2->BackColor;
+					cinema->films[this->toolStripComboBox1->SelectedIndex].mesta[this->comboBox2->SelectedIndex + this->comboBox1->SelectedIndex * 3][i] = '2';
+				}
+			}
+
+			cinema->otchet_today = to_string(stoi(cinema->otchet_today.c_str()) + (cost - sale) * num);
+			cinema->otchet_vsego = to_string(stoi(cinema->otchet_vsego.c_str()) + (cost - sale) * num);
+			cinema->kolvo_biletov[0] = cinema->kolvo_biletov[0] + num;
+			cinema->kolvo_biletov[1] = cinema->kolvo_biletov[1] + num;
+			file_stream->Write(*cinema);
 		}
 	}
 

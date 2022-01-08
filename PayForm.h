@@ -17,17 +17,18 @@ namespace FormsKursproject {
 	public ref class PayForm : public System::Windows::Forms::Form
 	{
 	private: int cost, num, change, sale, sum;
-		   int* costp, *changep;
+		   int* costp, *changep, *salep;
 		   bool* way;
 		   Cinema* cinema;
 
 	public:
-		PayForm(int& cost, int& num, int& change, bool& way, Cinema* cinema)
+		PayForm(int& cost, int& num, int& change, int& sale, bool& way, Cinema* cinema)
 		{
 			costp = &cost;
 			this->cost = cost;
 			this->num = num;
 			changep = &change;
+			salep = &sale;
 			this->way = &way;
 			sale = this->change = sum = 0;
 			this->cinema = cinema;
@@ -561,6 +562,7 @@ namespace FormsKursproject {
 		}
 		else
 		{
+			*salep = sale;
 			*costp = cost;
 			*changep = change;
 			*way = radioButton2->Checked;
