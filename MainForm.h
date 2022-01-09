@@ -4427,6 +4427,9 @@ namespace FormsKursproject {
 				this->toolStripStatusLabel_filename->Visible = true;
 				this->toolStripStatusLabel_filename->Text = put + msclr::interop::marshal_as<System::String^>(cinema->id_cinema) + msclr::interop::marshal_as<System::String^>(pt);
 				this->tableLayoutPanel1->Visible = true;
+				cinema->kolvo_biletov[0] = cinema->kolvo_biletov[1] = 0;
+				cinema->otchet_today = "0";
+				cinema->otchet_vsego = "0";
 				cinema->start_day = Time::RetDate(0, 1);
 				ChangeForm^ p = gcnew ChangeForm(*cinema);
 				p->ShowDialog();
@@ -4468,6 +4471,17 @@ namespace FormsKursproject {
 		}
 		else if (this->openFileDialog1->ShowDialog() == System::Windows::Forms::DialogResult::OK) {
 			this->toolStripStatusLabel_filename->Text = this->openFileDialog1->FileName;
+			file_stream->path_dir = msclr::interop::marshal_as< std::string >(this->openFileDialog1->FileName);
+			int h;
+			for (h = (file_stream->path_dir.size()- 1); h > 0; h--)
+			{
+				if (file_stream->path_dir[h] == '\\')
+				{
+					file_stream->path_dir.erase(h, file_stream->path_dir.size() - 1);
+					h = -100;
+				}
+			}
+			
 			this->toolStripStatusLabel_filename->Visible = true;
 			this->tableLayoutPanel1->Visible = true;
 			open_file();
@@ -4528,11 +4542,11 @@ namespace FormsKursproject {
 						this->toolStripComboBox1->Items->Add((System::Object^)msclr::interop::marshal_as<System::String^>(cinema->films[i].name));
 						this->pict_disc[i]->Text = SetFilmInfo(cinema->films[i]);
 						this->pict_tabl[i]->Visible = true;
-						std::ifstream file(cinema->films[i].path, std::ios_base::in);
+						std::ifstream file(file_stream->path_dir + "\\" + cinema->films[i].path, std::ios_base::in);
 						if (file.is_open())
 						{
 							// существует
-							this->pict_film[i]->Image = Image::FromFile(msclr::interop::marshal_as<System::String^>(cinema->films[i].path));
+							this->pict_film[i]->Image = Image::FromFile(msclr::interop::marshal_as<System::String^>(file_stream->path_dir + "\\" + cinema->films[i].path));
 							//this->pictureBox1->Image = Image::FromFile(msclr::interop::marshal_as<System::String^>(cinema->films[0].path));
 							file.close();
 						}
@@ -5031,6 +5045,40 @@ namespace FormsKursproject {
 
 	private: System::Void NewMovieToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 		FilmForm^ p = gcnew FilmForm(cinema, &cinema->films_number);
+		//cinema->films[cinema->films_number].path;
+		//FileInfo^ fleMembers = gcnew FileInfo("C:\\Highlander\\Лампочки\\de080acs-960.jpg");
+		
+
+		//String^ strMyDocuments = Environment::GetFolderPath(Environment::SpecialFolder::Personal);
+		//fleMembers->CopyTo(String::Concat("C:\\Users\\Пользователь\\Downloads\\40261\\", "qwe.jpg"));
+		//генерация id постера
+
+
+		/*
+		FileInfo^ fleMembers = gcnew FileInfo(msclr::interop::marshal_as<System::String^>(cinema->films[cinema->films_number].path));
+		string tre = cinema->id_cinema;
+		cinema->NewID();
+		string hol = cinema->id_cinema;
+		tre = cinema->id_cinema;
+		cinema->id_cinema = hol;
+		tre = tre + ".jpg";
+		fleMembers->CopyTo(String::Concat(msclr::interop::marshal_as<System::String^>(file_stream->path_dir), msclr::interop::marshal_as<System::String^>(tre)));
+		*/
+
+
+		/*
+		const char* fd;
+		fd = tre.c_str();
+
+		std::string qw = file_stream->path_dir + tre;
+		*/
+		
+		//fleMembers->CopyTo(String::Concat(qw, fd));
+		//fleMembers->CopyTo(msclr::interop::marshal_as<System::String^>(qw));
+		//cinema->films[cinema->films_number].path = tre + ".jpg";
+
+
+		//CopyFile(LPCTSTR("C:\\Highlander\\Лампочки\\de080acs-960.jpg"), LPCTSTR("C:\\Users\\Пользователь\\Downloads\\40261\\qwe.jpg"), FALSE);
 		p->ShowDialog();
 		
 		if (p->DialogResult == System::Windows::Forms::DialogResult::OK)
@@ -5038,12 +5086,20 @@ namespace FormsKursproject {
 			
 
 
-			
-			
-			
-			
+
+
 			cinema->films[cinema->films_number] = p->Result();
 
+			FileInfo^ fleMembers = gcnew FileInfo(msclr::interop::marshal_as<System::String^>(cinema->films[cinema->films_number].path));
+			string tre = cinema->id_cinema;
+			cinema->NewID();
+			string hol = cinema->id_cinema;
+			tre = cinema->id_cinema;
+			cinema->id_cinema = hol;
+			tre = tre + ".jpg";
+			fleMembers->CopyTo(String::Concat(msclr::interop::marshal_as<System::String^>(file_stream->path_dir + "\\"), msclr::interop::marshal_as<System::String^>(tre)));
+			cinema->films[cinema->films_number].path = tre;
+			/*
 			const wchar_t* start = (const wchar_t*)file_stream->path.c_str();
 			//const wchar_t* finish = (const wchar_t*)cinema->films[cinema->films_number].path.c_str();
 			//char finish[MAX_PATH];
@@ -5056,10 +5112,12 @@ namespace FormsKursproject {
 
 			start = (const wchar_t*)cinema->films[cinema->films_number].path.c_str();
 
-
+			CopyFile(LPCTSTR("C:\\Highlander\\Лампочки\\de080acs-960.jpg"),LPCTSTR("C:\\Users\\Пользователь\\Downloads\\40261\\qwe.jpg"), FALSE);
+			
 			//CopyFile(start, "\\192.168.2.20\e\Politeh\Politeh 3 semestr\Программирование\Курсовая работа\Forms\1",true);
 
 			CopyFile(start, finish, true);
+			*/
 			cinema->NewHallCinema(cinema->films_number);
 			cinema->films_number += 1;
 			file_stream->Write(*cinema);
@@ -5119,12 +5177,27 @@ namespace FormsKursproject {
 
 		if (p->DialogResult == System::Windows::Forms::DialogResult::OK)
 		{
+
+
+
+
+
 			FilmForm^ p1 = gcnew FilmForm(cinema, &index);
 			p1->ShowDialog();
 
 			if (p1->DialogResult == System::Windows::Forms::DialogResult::OK)
 			{
 				cinema->films[index] = p1->Result();
+				FileInfo^ fleMembers = gcnew FileInfo(msclr::interop::marshal_as<System::String^>(cinema->films[index].path));
+				string tre = cinema->id_cinema;
+				cinema->NewID();
+				string hol = cinema->id_cinema;
+				tre = cinema->id_cinema;
+				cinema->id_cinema = hol;
+				tre = tre + ".jpg";
+				fleMembers->CopyTo(String::Concat(msclr::interop::marshal_as<System::String^>(file_stream->path_dir + "\\"), msclr::interop::marshal_as<System::String^>(tre)));
+				cinema->films[index].path = tre;
+
 				file_stream->Write(*cinema);
 				open_file();
 			}
