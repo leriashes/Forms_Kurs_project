@@ -22,9 +22,6 @@ namespace FormsKursproject {
 		{
 			this->cinema = cinema;
 			InitializeComponent();
-			//
-			//TODO: добавьте код конструктора
-			//
 		}
 
 		int Result()

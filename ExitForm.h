@@ -18,9 +18,6 @@ namespace FormsKursproject {
 		ExitForm(void)
 		{
 			InitializeComponent();
-			//
-			//TODO: добавьте код конструктора
-			//
 		}
 	protected:
 		/// <summary>

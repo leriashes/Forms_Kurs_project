@@ -28,7 +28,6 @@ namespace FormsKursproject {
 
 	public:
 		int cost;
-//		Ticket(Cinema* cinema1, int number, int tic_seat[10], int index, int index2, int cos)
 		Ticket(Cinema* cinema1, int number, int index, int index2, int cos, string seat)
 		{
 			int f = 0;
@@ -53,9 +52,6 @@ namespace FormsKursproject {
 			cost = cos;
 
 			InitializeComponent();
-			//
-			//TODO: добавьте код конструктора
-			//
 		}
 
 	protected:
@@ -114,9 +110,7 @@ namespace FormsKursproject {
 #pragma endregion
 	private: System::Void Ticket_Load(System::Object^ sender, System::EventArgs^ e) {
 		Label^ Lines1 = (gcnew System::Windows::Forms::Label());
-		//Lines1->Location = System::Drawing::Point(-10, 10);
 		Lines1->Location = System::Drawing::Point(14, 10);
-		//Lines1->Size = System::Drawing::Size(400, 10);
 		Lines1->Size = System::Drawing::Size(383, 10);
 		this->Controls->Add(Lines1);
 		Lines1->Text = " - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -";
@@ -125,17 +119,12 @@ namespace FormsKursproject {
 		string alf[10] = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", };
 		for (int i = 0; i < num; i++)
 		{
-			
-			//надпись кинобилет
 			Label^ Label10 = (gcnew System::Windows::Forms::Label());
 			Label10->Location = System::Drawing::Point(300, 30 + i * shag);
 			Label10->Size = System::Drawing::Size(90, 30);
 			this->Controls->Add(Label10);
 			Label10->Text = L"Кинобилет";
-			//Label10->Font = (gcnew System::Drawing::Font(L"Mistral", 15.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,static_cast<System::Byte>(204)));
-			
 
-			//название кинотеатра
 			Label^ Label11 = (gcnew System::Windows::Forms::Label());
 			Label11->Location = System::Drawing::Point(47, 30 + i * shag);
 			Label11->Size = System::Drawing::Size(200, 30);
@@ -143,30 +132,24 @@ namespace FormsKursproject {
 			Label11->Text = "Кинотеатр   " + msclr::interop::marshal_as<System::String^>(cinema->name);
 			Label11->Font = (gcnew System::Drawing::Font(L"Mistral", 15.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(204)));
 
-			//название фильма
 			Label^ Label12 = (gcnew System::Windows::Forms::Label());
 			Label12->Location = System::Drawing::Point(47, 70 + i * shag);
 			Label12->Size = System::Drawing::Size(300, 23);
 			this->Controls->Add(Label12);
 			Label12->Text = msclr::interop::marshal_as<System::String^>(cinema->films[index1].name);
 
-			
-
-			//номер зала
 			Label^ Label13 = (gcnew System::Windows::Forms::Label());
 			Label13->Location = System::Drawing::Point(47, 110 + i * shag);
 			Label13->Size = System::Drawing::Size(50, 23);
 			this->Controls->Add(Label13);
 			Label13->Text = L"Зал " + msclr::interop::marshal_as<System::String^>(cinema->films[index1].number_zal);
 
-			//номер места
 			Label^ Label14 = (gcnew System::Windows::Forms::Label());
 			Label14->Location = System::Drawing::Point(150, 110 + i * shag);
 			Label14->Size = System::Drawing::Size(80, 23);
 			this->Controls->Add(Label14);
 			Label14->Text = L"Место " + msclr::interop::marshal_as<System::String^>(alf[mesta[i] / 10]);
 
-			//номер ряда
 			Label^ Label15 = (gcnew System::Windows::Forms::Label());
 			Label15->Location = System::Drawing::Point(250, 110 + i * shag);
 			Label15->Size = System::Drawing::Size(50, 23);
@@ -174,22 +157,18 @@ namespace FormsKursproject {
 			char t = ((mesta[i] / 10) + 65);
 			Label15->Text = L"Ряд " + ((mesta[i] % 10) + 1).ToString();
 
-			//дата сеанса
 			Label^ Label16 = (gcnew System::Windows::Forms::Label());
 			Label16->Location = System::Drawing::Point(47, 150 + i * shag);
 			Label16->Size = System::Drawing::Size(150, 23);
 			this->Controls->Add(Label16);
 			Label16->Text = L"Дата: " + msclr::interop::marshal_as<System::String^>(Time::RetDate(index12 / 3, 1));
 
-
-			//время сеанса
 			Label^ Label17 = (gcnew System::Windows::Forms::Label());
 			Label17->Location = System::Drawing::Point(250, 150 + i * shag);
 			Label17->Size = System::Drawing::Size(100, 23);
 			this->Controls->Add(Label17);
 			Label17->Text = L"Начало: " + msclr::interop::marshal_as<System::String^>(cinema->films[index1].time[index12 % 3]);
 
-			//стомость билета
 			Label^ Label18 = (gcnew System::Windows::Forms::Label());
 			Label18->Location = System::Drawing::Point(47, 190 + i * shag);
 			Label18->Size = System::Drawing::Size(200, 23);
@@ -197,9 +176,7 @@ namespace FormsKursproject {
 			Label18->Text = L"Цена билета: " + cost.ToString() + " рублей";
 
 			Label^ Lines2 = (gcnew System::Windows::Forms::Label());
-			//Lines2->Location = System::Drawing::Point(-10, 220 + i * shag);
 			Lines2->Location = System::Drawing::Point(14, 220 + i * shag);
-			//Lines2->Size = System::Drawing::Size(400, 10);
 			Lines2->Size = System::Drawing::Size(383, 10);
 			this->Controls->Add(Lines2);
 			Lines2->Text = " - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -";

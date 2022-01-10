@@ -33,9 +33,6 @@ namespace FormsKursproject {
 			change = false;
 			this->cinema = &cinema1;
 			InitializeComponent();
-			//
-			//TODO: добавьте код конструктора
-			//
 		}
 	private: System::Windows::Forms::MaskedTextBox^ maskedTextBox1;
 	public:
@@ -478,29 +475,7 @@ namespace FormsKursproject {
 			but_new[u]->Visible = false;
 			Text_cash[u]->Visible = false;
 		}
-		/*
-		this->button_1Del->Visible = false;
-		this->button_2Del->Visible = false;
-		this->button_3Del->Visible = false;
-		this->button_4Del->Visible = false;
-		this->button_5Del->Visible = false;
-		*/
-		
-		/*
-		this->button_1New->Visible = false;
-		this->button_2New->Visible = false;
-		this->button_3New->Visible = false;
-		this->button_4New->Visible = false;
-		this->button_5New->Visible = false;
-		*/
 
-		/*
-		this->textBox_1->Visible = false;
-		this->textBox_2->Visible = false;
-		this->textBox_3->Visible = false;
-		this->textBox_4->Visible = false;
-		this->textBox_5->Visible = false;
-		*/
 		cinema->temp_inf[0] = cinema->name;
 		cinema->temp_inf[1] = cinema->address;
 		cinema->temp_inf[2] = cinema->inn;
@@ -523,7 +498,6 @@ namespace FormsKursproject {
 		this->maskedTextBox1->BackColor = DefaultBackColor;
 		this->maskedTextBox2->BackColor = DefaultBackColor;
 
-		//this->textBox1->Text = cinema->cashiers_number.ToString();
 		for (int y = 0; y < cinema->inf_temp; y++)
 		{
 			but_del[y]->Visible = true;
@@ -533,49 +507,6 @@ namespace FormsKursproject {
 			Text_cash[y]->BackColor = DefaultBackColor;
 		}
 		but_new[cinema->cashiers_number]->Visible = true;
-		//Text_cash[cinema->cashiers_number]->Visible = true;
-		/*if (cinema->cashiers_number > 0)
-		{
-			this->button_1Del->Visible = true;
-			this->button_1New->Visible = false;
-			this->button_2New->Visible = true;
-			this->textBox_1->Visible = true;
-			this->textBox_1->Text = msclr::interop::marshal_as<System::String^>(cinema->cashiers[1]);
-			if (cinema->cashiers_number > 1)
-			{
-				this->button_2Del->Visible = true;
-				this->button_2New->Visible = false;
-				this->button_3New->Visible = true;
-				this->textBox_2->Visible = true;
-				this->textBox_2->Text = msclr::interop::marshal_as<System::String^>(cinema->cashiers[2]);
-				if (cinema->cashiers_number > 2)
-				{
-					this->button_3Del->Visible = true;
-					this->button_3New->Visible = false;
-					this->button_4New->Visible = true;
-					this->textBox_3->Visible = true;
-					this->textBox_3->Text = msclr::interop::marshal_as<System::String^>(cinema->cashiers[3]);
-					if (cinema->cashiers_number > 3)
-					{
-						this->button_4Del->Visible = true;
-						this->button_4New->Visible = false;
-						this->button_5New->Visible = true;
-						this->textBox_4->Visible = true;
-						this->textBox_4->Text = msclr::interop::marshal_as<System::String^>(cinema->cashiers[4]);
-						if (cinema->cashiers_number > 4)
-						{
-							this->button_5Del->Visible = true;
-							this->button_5New->Visible = false;
-							this->textBox_5->Visible = true;
-							this->textBox_5->Text = msclr::interop::marshal_as<System::String^>(cinema->cashiers[5]);
-						}
-					}
-				}
-			}
-		}
-		*/
-		
-//		this->textBox1->Text = msclr::interop::marshal_as<System::String^>(cinema->name.c_str());
 
 	}
 		   private: System::Void new_cashiers(int num_but)
@@ -603,19 +534,10 @@ namespace FormsKursproject {
 					cinema->temp_inf[h + 1] = cinema->temp_inf[h + 2];
 					h++;
 				} while (h < cinema->inf_temp - 1);
-				/*
-				for (int h = num_but; h < cinema->cashiers_number - 1; h++)
-				{
-					Text_cash[h]->Text = Text_cash[h + 1]->Text;
-				}
-				*/
 				but_del[cinema->inf_temp - 1]->Visible = false;
 				but_new[cinema->inf_temp - 1]->Visible = true;
 				Text_cash[cinema->inf_temp - 1]->Visible = false;
 				cinema->inf_temp = cinema->inf_temp - 1;
-				//but_new[cinema->cashiers_number - 2]->Visible = true;
-				
-				//работа с массивом из класса cinema
 		   }
 
 	private: System::Void button_1Del_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -653,21 +575,6 @@ namespace FormsKursproject {
 	private: System::Void button_5New_Click(System::Object^ sender, System::EventArgs^ e) {
 		new_cashiers(4);
 	}
-	/*
-	private: void ColorChange()
-	{
-		Thread^ current = Thread::CurrentThread;
-		Thread::Sleep(2500);
-		if (current->Name == "Thread1")
-		{
-			this->maskedTextBox1->BackColor = DefaultBackColor;
-		}
-		else
-		{
-			this->maskedTextBox2->BackColor = DefaultBackColor;
-		}
-	}
-	*/
 		   private: System::Boolean CheckTable()
 		   {
 			   bool bad = false;
@@ -693,16 +600,9 @@ namespace FormsKursproject {
 			   }
 
 			   if (!(this->maskedTextBox1->MaskCompleted))
-			   //if ((this->maskedTextBox1->Text)->Length < 12)
 			   {
 				   bad = true;
 				   this->maskedTextBox1->BackColor = Color::Red;
-				   /*
-				   Thread^ Thread1 = gcnew Thread(gcnew ThreadStart(this, &ChangeForm::ColorChange));
-				   Thread1->Name = "Thread1";
-				   Thread1->Start();
-				   */
-				   //thread t(ChangeForm::ColorChange(1));
 			   }
 			   else
 			   {
@@ -758,27 +658,18 @@ namespace FormsKursproject {
 			bad = true;
 			this->textBox1->BackColor = Color::Red;
 		}
-		//if (this->textBox2->TextLength == 0)
+
 		if (this->textBox2->TextLength == 0)
-			//if (this->textBox2->Text == "")
 		{
 			bad = true;
 			this->textBox2->BackColor = Color::Red;
 		}
 		if (!(this->maskedTextBox1->MaskCompleted))
-			//if ((this->maskedTextBox1->Text)->Length < 12)
 		{
 			bad = true;
 			this->maskedTextBox1->BackColor = Color::Red;
-			/*
-			Thread^ Thread1 = gcnew Thread(gcnew ThreadStart(this, &ChangeForm::ColorChange));
-			Thread1->Name = "Thread1";
-			Thread1->Start();
-			*/
-			//thread t(ChangeForm::ColorChange(1));
 		}
 		if (!(this->maskedTextBox2->MaskCompleted))
-			//if ((this->maskedTextBox2->Text)->Length < 16)
 		{
 			bad = true;
 			this->maskedTextBox2->BackColor = Color::Red;
@@ -831,62 +722,7 @@ namespace FormsKursproject {
 			{
 				 cinema->cashiers[h + 1] = cinema->temp_inf[h + 4];
 			}
-			//внесение всех изменений в данные
-
 		}
-		/*
-		if (this->textBox1->TextLength == 0)
-		{
-			this->textBox1->BackColor = Color::Red;
-		}
-		if (this->textBox2->TextLength == 0)
-		{
-			this->textBox2->BackColor = Color::Red;
-		}
-		if ((this->maskedTextBox1->Text)->Length < 12)
-		{
-			this->maskedTextBox1->BackColor = Color::Red;
-			/*
-			Thread^ Thread1 = gcnew Thread(gcnew ThreadStart(this, &ChangeForm::ColorChange));
-			Thread1->Name = "Thread1";
-			Thread1->Start();
-			*/
-			//thread t(ChangeForm::ColorChange(1));
-		/* }
-		if ((this->maskedTextBox2->Text)->Length < 16)
-		{
-			this->maskedTextBox2->BackColor = Color::Red;
-		}
-		cinema->name = msclr::interop::marshal_as< std::string >(this->textBox1->Text);
-		cinema->address = msclr::interop::marshal_as< std::string >(this->textBox2->Text);
-		cinema->inn = msclr::interop::marshal_as< std::string >(this->maskedTextBox1->Text);
-		cinema->rnm = msclr::interop::marshal_as< std::string >(this->maskedTextBox2->Text);
-		if (cinema->cashiers_number == 0)
-		{
-			this->Text_cash[0]->Visible = true;
-			this->but_new[0]->Visible = false;
-			this->but_new[1]->Visible = true;
-			this->but_del[0]->Visible = true;
-			this->linkLabel1->Visible = true;
-			this->linkLabel1->Text = "«аполните данные как минимум \nоб одном кассире";
-			this->linkLabel1->LinkColor = Color::Red;
-			this->linkLabel1->ForeColor = Color::Orange;
-		}
-		else
-		{
-			for (int y = 1; y <= cinema->cashiers_number; y++)
-			{
-				if (this->Text_cash[y - 1]->TextLength != 0)
-				{
-					cinema->cashiers[y] = msclr::interop::marshal_as< std::string >(this->Text_cash[y - 1]->Text);
-				}
-				else
-				{
-					this->Text_cash[y - 1]->BackColor = Color::Red;
-				}
-			}
-		}
-		*/
 	}
 
 	private: System::Void textBox_1_TextChanged(System::Object^ sender, System::EventArgs^ e) {

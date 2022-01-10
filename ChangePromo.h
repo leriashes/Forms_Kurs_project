@@ -37,9 +37,6 @@ namespace FormsKursproject {
 		{
 			this->cinema = &cinema1;
 			InitializeComponent();
-			//
-			//TODO: добавьте код конструктора
-			//
 		}
 
 	protected:
@@ -278,7 +275,6 @@ namespace FormsKursproject {
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
 			this->Margin = System::Windows::Forms::Padding(6, 6, 6, 6);
-			this->Name = L"ChangePromo";
 			this->ShowIcon = false;
 			this->Text = L"Редактирование информации о промокодах";
 			this->FormClosing += gcnew System::Windows::Forms::FormClosingEventHandler(this, &ChangePromo::ChangePromo_FormClosing);
@@ -327,13 +323,6 @@ namespace FormsKursproject {
 		this->label3->Visible = false;
 		this->linkLabel4->Text = "Скрыть";
 		LoadPromo();
-		/*
-		for (int k = 1; k <= cinema->promo_number; k++)
-		{
-			this->comboBox1->Items->Add(msclr::interop::marshal_as<System::String^>((cinema->promo[k][0]).c_str()) + " (" + msclr::interop::marshal_as<System::String^>((cinema->promo[k][1]).c_str()) + "%)");
-		}
-		this->comboBox1->Items->Add("Создать новый");
-		*/
 	}
 	
 
@@ -429,13 +418,7 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 				bad = true;
 			}
 		}
-		/*
-		if (this->maskedTextBox1->TextLength == 0)
-		{
-			this->maskedTextBox1->BackColor = Color::Red;
-			bad = true;
-		}
-		*/
+
 		if (bad == true)
 		{
 
@@ -473,8 +456,6 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 				cinema->promo_number = cinema->promo_number + 1;
 				cinema->promo[cinema->promo_number][0] = msclr::interop::marshal_as< std::string >(this->textBox1->Text);
 				cinema->promo[cinema->promo_number][1] = itog;
-				//создан новый промокод
-				//this->button1->Text = "NEW";
 			}
 			else
 			{
@@ -485,7 +466,7 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 			this->textBox1->Text = "";
 			this->maskedTextBox1->Text = "";
 			this->comboBox1->Text = "";
-			//label изменения успешно сохранены (в течение n секунд)
+
 			this->linkLabel2->Visible = true;
 			this->linkLabel2->ForeColor = Color::Green;
 			this->linkLabel2->Text = "Изменения успешно сохранены";
@@ -537,7 +518,6 @@ private: System::Void linkLabel4_LinkClicked(System::Object^ sender, System::Win
 	{
 		this->dataGridView1->Visible = true;
 		this->linkLabel4->Text = "Скрыть";
-
 	}
 }
 };

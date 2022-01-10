@@ -20,18 +20,10 @@
 #include <windows.h>
 #include <stdlib.h>
 #include <string.h>
-#include "resource.h"
 #include <tchar.h>
-
 #include <iostream>
 #include <sys/types.h>
 #include <stdio.h>
-
-
-using namespace System;
-using namespace msclr::interop;
-/*#include "HelloForm.h"
-#include "InfoForm.h"*/
 
 namespace FormsKursproject {
 
@@ -42,6 +34,7 @@ namespace FormsKursproject {
 	using namespace System::Data;
 	using namespace System::Drawing;
 	using namespace System::IO;
+	using namespace msclr::interop;
 
 	/// <summary>
 	/// Сводка для MainForm
@@ -605,7 +598,6 @@ private: System::Windows::Forms::ToolStripMenuItem^ PayToolStripMenuItem;
 			this->SaveToolStripMenuItem->ShortcutKeys = static_cast<System::Windows::Forms::Keys>((System::Windows::Forms::Keys::Control | System::Windows::Forms::Keys::S));
 			this->SaveToolStripMenuItem->Size = System::Drawing::Size(172, 22);
 			this->SaveToolStripMenuItem->Text = L"Со&хранить";
-			this->SaveToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::SaveToolStripMenuItem_Click);
 			// 
 			// SaveAsToolStripMenuItem
 			// 
@@ -613,7 +605,6 @@ private: System::Windows::Forms::ToolStripMenuItem^ PayToolStripMenuItem;
 			this->SaveAsToolStripMenuItem->Name = L"SaveAsToolStripMenuItem";
 			this->SaveAsToolStripMenuItem->Size = System::Drawing::Size(172, 22);
 			this->SaveAsToolStripMenuItem->Text = L"Сох&ранить как...";
-			this->SaveAsToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::SaveAsToolStripMenuItem_Click);
 			// 
 			// toolStripSeparator3
 			// 
@@ -729,7 +720,6 @@ private: System::Windows::Forms::ToolStripMenuItem^ PayToolStripMenuItem;
 			this->InfoToolStripMenuItem->Name = L"InfoToolStripMenuItem";
 			this->InfoToolStripMenuItem->Size = System::Drawing::Size(65, 22);
 			this->InfoToolStripMenuItem->Text = L"&Справка";
-			this->InfoToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::InfoToolStripMenuItem_Click);
 			// 
 			// QuitToolStripMenuItem
 			// 
@@ -4158,15 +4148,6 @@ private: System::Windows::Forms::ToolStripMenuItem^ PayToolStripMenuItem;
 
 		return;
 	}
-		   //Проверка на наличие пустых ячеек в файле
-	/*private: Boolean full_table() {
-		Boolean full = true;
-		for (Int32 i = 0; i < this->dataGridView1->Rows->Count - 1 && full; i++)
-			for (Int16 j = 0; j < 5 && full; j++)
-				if (this->dataGridView1->Rows[i]->Cells[j]->Style->BackColor == System::Drawing::Color::LightCyan)
-					full = false;
-		return full;
-	}*/
 
 	//Запуск программы
 	private: System::Void MainForm_Load(System::Object^ sender, System::EventArgs^ e) {
@@ -4331,68 +4312,20 @@ private: System::Windows::Forms::ToolStripMenuItem^ PayToolStripMenuItem;
 		pict_tabl[6] = tableLayoutPanel8;
 		pict_tabl[7] = tableLayoutPanel9;
 		pict_tabl[8] = tableLayoutPanel10;
-			
-		//seats[0]->BackColor = System::Drawing::SystemColors::ControlDarkDark;
-		//Открытие приветственной формы
-		/*HelloForm^ p = gcnew HelloForm();
-		p->ShowDialog();
-
-		//Выход
-		if (p->DialogResult == System::Windows::Forms::DialogResult::Cancel) {
-			this->Close();
-			if (this->Visible)
-				MainForm_Load(sender, e);
-		}
-		//Открыть файл
-		else if (p->DialogResult == System::Windows::Forms::DialogResult::No) {
-			OpenToolStripMenuItem_Click(sender, e);
-			if (!this->toolStripStatusLabel_filename->Visible)
-				MainForm_Load(sender, e);
-		}
-		//Вход в режим администратора
-		else if (p->DialogResult == System::Windows::Forms::DialogResult::Yes) {
-			EnterToolStripMenuItem_Click(sender, e);
-			if (this->EnterToolStripMenuItem->Visible)
-				MainForm_Load(sender, e);
-		}
-		//Запуск игры
-		else if (p->DialogResult == System::Windows::Forms::DialogResult::OK)
-			GameToolStripMenuItem_Click(sender, e);*/
 	}
 
 		   //Закрытие формы
 	private: System::Void MainForm_FormClosing(System::Object^ sender, System::Windows::Forms::FormClosingEventArgs^ e) {
-		//Если выполенен вход в режим администратора и открыт файл
-		if (this->toolStripStatusLabel_filename->Visible && this->QuitToolStripMenuItem->Visible && this->changes) {
-			/*e->Cancel = true;
-			ExitForm^ p = gcnew ExitForm();
-			p->ShowDialog();
-			if (p->DialogResult == System::Windows::Forms::DialogResult::No)
-				e->Cancel = false;
-			//Сохранение изменений
-			else if (p->DialogResult == System::Windows::Forms::DialogResult::Yes) {
-				if (this->toolStripStatusLabel_filename->Visible) {
-					if (this->toolStripStatusLabel_filename->Text == L"Новый файл")
-						SaveAsToolStripMenuItem_Click(sender, e);
-					else
-						SaveToolStripMenuItem_Click(sender, e);
-				}
-				if (!this->changes)
-					e->Cancel = false;
-			}*/
+		e->Cancel = true;
+		String^ message = L"Вы уверены, что хотите выйти?";
+		if (this->toolStripStatusLabel_filename->Visible == true)
+		{
+			message = message + "\nИтого за день: " + msclr::interop::marshal_as<System::String^>(cinema->otchet_today) + " руб.";
 		}
-		else {
-			e->Cancel = true;
-			String^ message = L"Вы уверены, что хотите выйти?";
-			if (this->toolStripStatusLabel_filename->Visible == true)
-			{
-				message = message + "\nИтого за день: " + msclr::interop::marshal_as<System::String^>(cinema->otchet_today) + " руб.";
-			}
-			String^ caption = L"";
-			if (MessageBox::Show(message, caption, MessageBoxButtons::YesNo) == System::Windows::Forms::DialogResult::Yes)
-			{
-				e->Cancel = false;
-			}
+		String^ caption = L"";
+		if (MessageBox::Show(message, caption, MessageBoxButtons::YesNo) == System::Windows::Forms::DialogResult::Yes)
+		{
+			e->Cancel = false;
 		}
 	}
 
@@ -4403,101 +4336,53 @@ private: System::Windows::Forms::ToolStripMenuItem^ PayToolStripMenuItem;
 
 		   //Создание файла
 	private: System::Void CreateToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
-		//Если открыт файл в режиме администратора с несохранёнными изменениями
-		if (this->QuitToolStripMenuItem->Visible && this->toolStripStatusLabel_filename->Visible && this->changes && MessageBox::Show(L"Сохранить изменения?", "", MessageBoxButtons::YesNo) == System::Windows::Forms::DialogResult::Yes) 
+		SaveFileDialog^ saveFileDialog1 = gcnew SaveFileDialog;
+		saveFileDialog1->Filter = "Text File|*.txt";
+		saveFileDialog1->RestoreDirectory = true;
+		if (saveFileDialog1->ShowDialog() == System::Windows::Forms::DialogResult::OK && saveFileDialog1->FileName->Length > 0)
 		{
-			//Сохранение изменений
-			if (this->toolStripStatusLabel_filename->Text == L"Новый файл")
-			{
-				SaveAsToolStripMenuItem_Click(sender, e);
-			}
-			else
-				SaveToolStripMenuItem_Click(sender, e);
-			/*if (full_table()) {
-				this->toolStripStatusLabel_filename->Text = L"Новый файл";
-				this->toolStripStatusLabel_filename->Visible = true;
-				open_file();
-			}*/
-		}
-		else
-		{
-			SaveFileDialog^ saveFileDialog1 = gcnew SaveFileDialog;
-			saveFileDialog1->Filter = "Text File|*.txt";
-			saveFileDialog1->RestoreDirectory = true;
-			if (saveFileDialog1->ShowDialog() == System::Windows::Forms::DialogResult::OK && saveFileDialog1->FileName->Length > 0) 
-			{
-				cinema->NewID();
-				//создаем папку с одноименным id
-				
-				int u;
-				String^ put = "";
-				//проверка заполенности всех пунктов!!!, либо флажок на функцию change		
-				for (int y = saveFileDialog1->FileName->Length - 1; y > 0; y--)
-				{
-					if (saveFileDialog1->FileName[y] == '\\')
-					{
-						
-						for (u = 0; u <= y; u++)
-						{
-							put = put + saveFileDialog1->FileName[u];
-						}
-						y = -100;
-					}
-				}
-				string pt = msclr::interop::marshal_as< std::string >(saveFileDialog1->FileName);
-				pt.erase(0, u);
-				pt = "\\" + pt;
-				Directory::CreateDirectory(put + msclr::interop::marshal_as<System::String^>(cinema->id_cinema));	//создание папки
-				IO::File::WriteAllText(put + msclr::interop::marshal_as<System::String^>(cinema->id_cinema) + msclr::interop::marshal_as<System::String^>(pt), "");		//создание файла
+			cinema->NewID();
 
-				file_stream->path_dir = msclr::interop::marshal_as< std::string >(put) + cinema->id_cinema;
-				file_stream->path = file_stream->path_dir + pt;
-				this->toolStripStatusLabel_filename->Visible = true;
-				this->toolStripStatusLabel_filename->Text = put + msclr::interop::marshal_as<System::String^>(cinema->id_cinema) + msclr::interop::marshal_as<System::String^>(pt);
-				this->tableLayoutPanel1->Visible = true;
-				cinema->kolvo_biletov[0] = cinema->kolvo_biletov[1] = 0;
-				cinema->otchet_today = "0";
-				cinema->otchet_vsego = "0";
-				cinema->start_day = Time::RetDate(0, 1);
-				ChangeForm^ p = gcnew ChangeForm(*cinema);
-				p->ShowDialog();
-				
-				file_stream->Write(*cinema);
-				open_file();
-			}
-			/*
-			if (this->saveFileDialog1->ShowDialog() == System::Windows::Forms::DialogResult::OK)
+			int u;
+			String^ put = "";
+			for (int y = saveFileDialog1->FileName->Length - 1; y > 0; y--)
 			{
-				this->toolStripStatusLabel_filename->Text = this->saveFileDialog1->FileName;
-				/*
-				this->toolStripStatusLabel_filename->Text = L"Новый файл";
-				this->toolStripStatusLabel_filename->Visible = true;
-				open_file();
-				*/
-			//}
+				if (saveFileDialog1->FileName[y] == '\\')
+				{
+
+					for (u = 0; u <= y; u++)
+					{
+						put = put + saveFileDialog1->FileName[u];
+					}
+					y = -100;
+				}
+			}
+			string pt = msclr::interop::marshal_as< std::string >(saveFileDialog1->FileName);
+			pt.erase(0, u);
+			pt = "\\" + pt;
+			Directory::CreateDirectory(put + msclr::interop::marshal_as<System::String^>(cinema->id_cinema));	//создание папки
+			IO::File::WriteAllText(put + msclr::interop::marshal_as<System::String^>(cinema->id_cinema) + msclr::interop::marshal_as<System::String^>(pt), "");		//создание файла
+
+			file_stream->path_dir = msclr::interop::marshal_as< std::string >(put) + cinema->id_cinema;
+			file_stream->path = file_stream->path_dir + pt;
+			this->toolStripStatusLabel_filename->Visible = true;
+			this->toolStripStatusLabel_filename->Text = put + msclr::interop::marshal_as<System::String^>(cinema->id_cinema) + msclr::interop::marshal_as<System::String^>(pt);
+			this->tableLayoutPanel1->Visible = true;
+			cinema->kolvo_biletov[0] = cinema->kolvo_biletov[1] = 0;
+			cinema->otchet_today = "0";
+			cinema->otchet_vsego = "0";
+			cinema->start_day = Time::RetDate(0, 1);
+			ChangeForm^ p = gcnew ChangeForm(*cinema);
+			p->ShowDialog();
+
+			file_stream->Write(*cinema);
+			open_file();
 		}
 	}
 
 		   //Открытие файла
 	private: System::Void OpenToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
-		//Если открыт файл в режиме администратора с несохранёнными изменениями
-		if (this->QuitToolStripMenuItem->Visible && this->toolStripStatusLabel_filename->Visible && this->changes && MessageBox::Show(L"Сохранить изменения?", "", MessageBoxButtons::YesNo) == System::Windows::Forms::DialogResult::Yes) 
-		{
-			if (this->toolStripStatusLabel_filename->Text == L"Новый файл")
-			{
-				SaveAsToolStripMenuItem_Click(sender, e);
-			}
-			else
-			{
-				SaveToolStripMenuItem_Click(sender, e);
-			}
-			/*if (full_table() && this->openFileDialog1->ShowDialog() == System::Windows::Forms::DialogResult::OK) {
-				this->toolStripStatusLabel_filename->Text = this->openFileDialog1->FileName;
-				this->toolStripStatusLabel_filename->Visible = true;
-				open_file();
-			}*/
-		}
-		else if (this->openFileDialog1->ShowDialog() == System::Windows::Forms::DialogResult::OK) {
+		if (this->openFileDialog1->ShowDialog() == System::Windows::Forms::DialogResult::OK) {
 			this->toolStripStatusLabel_filename->Text = this->openFileDialog1->FileName;
 			file_stream->path_dir = msclr::interop::marshal_as< std::string >(this->openFileDialog1->FileName);
 			int h;
@@ -4524,7 +4409,6 @@ private: System::Windows::Forms::ToolStripMenuItem^ PayToolStripMenuItem;
 		ltime = time(NULL);
 		stime = (unsigned int)ltime / 2;
 		srand(stime);
-//		srand(time(0));
 		this->changes = false;
 		Boolean good = true;
 		
@@ -4544,7 +4428,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ PayToolStripMenuItem;
 			
 			file_stream->path = msclr::interop::marshal_as<std::string>(this->toolStripStatusLabel_filename->Text);
 			cli::array<String^>^ lines = File::ReadAllLines(this->toolStripStatusLabel_filename->Text, System::Text::Encoding::GetEncoding(1251));
-			//Если файл пуст
+
 			if (lines->Length == 0 && !this->QuitToolStripMenuItem->Visible) 
 			{
 				good = false;
@@ -4554,7 +4438,6 @@ private: System::Windows::Forms::ToolStripMenuItem^ PayToolStripMenuItem;
 				this->label_center->Visible = true;
 				this->label_center->Text = L"Файл пуст";
 			}
-			//Если файл не пустой
 			else 
 			{
 				if ((lines->Length - 10) % 129 == 0)            //форматирование верно
@@ -4589,9 +4472,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ PayToolStripMenuItem;
 						std::ifstream file(file_stream->path_dir + "\\" + cinema->films[i].path, std::ios_base::in);
 						if (file.is_open())
 						{
-							// существует
 							this->pict_film[i]->Image = Image::FromFile(msclr::interop::marshal_as<System::String^>(file_stream->path_dir + "\\" + cinema->films[i].path));
-							//this->pictureBox1->Image = Image::FromFile(msclr::interop::marshal_as<System::String^>(cinema->films[0].path));
 							file.close();
 						}
 						else
@@ -4603,77 +4484,6 @@ private: System::Windows::Forms::ToolStripMenuItem^ PayToolStripMenuItem;
 							}
 						}
 					}
-					/*
-					if (file_stream->kol_vo_film >= 1)
-					{
-						this->textBox1->Text = SetFilmInfo(cinema->films[0]);
-						this->tableLayoutPanel2->Visible = true;
-						std::ifstream file(cinema->films[0].path, std::ios_base::in);
-						if (file.is_open())
-						{
-							// существует
-							this->pictureBox1->Image = Image::FromFile(msclr::interop::marshal_as<System::String^>(cinema->films[0].path));
-							file.close();
-						}
-						else
-						{
-							System::Drawing::Image^ image = getImageFromRes(IDB_PNG1);
-							if (image != nullptr) pictureBox1->Image = image;
-						}
-						
-
-						if (file_stream->kol_vo_film >= 2)
-						{
-							this->textBox2->Text = SetFilmInfo(cinema->films[1]);
-							this->tableLayoutPanel3->Visible = true;
-							this->pictureBox2->Image = Image::FromFile(msclr::interop::marshal_as<System::String^>(cinema->films[1].path));
-							if (file_stream->kol_vo_film >= 3)
-							{
-								this->textBox3->Text = SetFilmInfo(cinema->films[2]);
-								this->tableLayoutPanel4->Visible = true;
-
-								this->pictureBox3->Image = Image::FromFile(msclr::interop::marshal_as<System::String^>(cinema->films[2].path));
-								if (file_stream->kol_vo_film >= 4)
-								{
-									this->textBox4->Text = SetFilmInfo(cinema->films[3]);
-									this->tableLayoutPanel5->Visible = true;
-									this->pictureBox4->Image = Image::FromFile(msclr::interop::marshal_as<System::String^>(cinema->films[3].path));
-									if (file_stream->kol_vo_film >= 5)
-									{
-										this->textBox5->Text = SetFilmInfo(cinema->films[4]);
-										this->tableLayoutPanel6->Visible = true;
-										this->pictureBox5->Image = Image::FromFile(msclr::interop::marshal_as<System::String^>(cinema->films[4].path));
-										if (file_stream->kol_vo_film >= 6)
-										{
-											this->textBox6->Text = SetFilmInfo(cinema->films[5]);
-											this->tableLayoutPanel7->Visible = true;
-
-											this->pictureBox6->Image = Image::FromFile(msclr::interop::marshal_as<System::String^>(cinema->films[5].path));
-											if (file_stream->kol_vo_film >= 7)
-											{
-												this->textBox7->Text = SetFilmInfo(cinema->films[6]);
-												this->tableLayoutPanel8->Visible = true;
-												this->pictureBox7->Image = Image::FromFile(msclr::interop::marshal_as<System::String^>(cinema->films[6].path));
-												if (file_stream->kol_vo_film >= 8)
-												{
-													this->textBox8->Text = SetFilmInfo(cinema->films[7]);
-													this->tableLayoutPanel9->Visible = true;
-													this->pictureBox8->Image = Image::FromFile(msclr::interop::marshal_as<System::String^>(cinema->films[7].path));
-													if (file_stream->kol_vo_film >= 9)
-													{
-														this->textBox9->Text = SetFilmInfo(cinema->films[8]);
-														this->tableLayoutPanel10->Visible = true;
-														this->pictureBox9->Image = Image::FromFile(msclr::interop::marshal_as<System::String^>(cinema->films[8].path));
-													}
-												}
-											}
-										}
-									}
-								}
-							}
-						}
-					}
-					*/
 				}
 				else
 				{
@@ -4709,7 +4519,6 @@ private: System::Windows::Forms::ToolStripMenuItem^ PayToolStripMenuItem;
 				good = false;
 			}
 		}
-
 
 		//Если содержимое файла удовлетворяет нужному формату
 		if (good) 
@@ -4765,39 +4574,20 @@ private: System::Windows::Forms::ToolStripMenuItem^ PayToolStripMenuItem;
 
 		   //Выход из режима администратора
 	private: System::Void QuitToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
-		ExitForm^ p = gcnew ExitForm();
-		if (this->toolStripStatusLabel_filename->Visible && this->changes)
+		if (this->toolStripStatusLabel_filename->Text == L"Новый файл")
 		{
-			p->ShowDialog();
+			this->tableLayoutPanel1->Visible = false;
+			this->tableLayoutPanel11->Visible = false;
 		}
 
-		if (!this->toolStripStatusLabel_filename->Visible || !this->changes || p->DialogResult == System::Windows::Forms::DialogResult::No || p->DialogResult == System::Windows::Forms::DialogResult::Yes) {
-			//Сохранение изменений
-			if (p->DialogResult == System::Windows::Forms::DialogResult::Yes) {
-				if (this->toolStripStatusLabel_filename->Visible) {
-					if (this->toolStripStatusLabel_filename->Text == L"Новый файл")
-						SaveAsToolStripMenuItem_Click(sender, e);
-					else
-						SaveToolStripMenuItem_Click(sender, e);
-				}
-			}
-			else if (this->toolStripStatusLabel_filename->Text == L"Новый файл")
-			{
-				this->tableLayoutPanel1->Visible = false;
-				this->tableLayoutPanel11->Visible = false;
-			}
-
-			if (true/*full_table()*/ || p->DialogResult == System::Windows::Forms::DialogResult::No) {
-				this->EnterToolStripMenuItem->Visible = true;
-				this->QuitToolStripMenuItem->Visible = false;
-				this->CreateToolStripMenuItem->Enabled = false;
-				this->SaveToolStripMenuItem->Enabled = false;
-				this->SaveAsToolStripMenuItem->Enabled = false;
-				this->CorrectToolStripMenuItem->Enabled = false;
-				this->ReportToolStripMenuItem->Enabled = false;
-				this->button1->Enabled = false;
-			}
-		}
+		this->EnterToolStripMenuItem->Visible = true;
+		this->QuitToolStripMenuItem->Visible = false;
+		this->CreateToolStripMenuItem->Enabled = false;
+		this->SaveToolStripMenuItem->Enabled = false;
+		this->SaveAsToolStripMenuItem->Enabled = false;
+		this->CorrectToolStripMenuItem->Enabled = false;
+		this->ReportToolStripMenuItem->Enabled = false;
+		this->button1->Enabled = false;
 	}
 
 	//Произведена смена режима - файл открывается заново
@@ -4808,67 +4598,9 @@ private: System::Windows::Forms::ToolStripMenuItem^ PayToolStripMenuItem;
 
 		   //Закрытие файла
 	private: System::Void CloseToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
-		if (this->changes && this->QuitToolStripMenuItem->Visible && MessageBox::Show(L"Сохранить изменения?", "", MessageBoxButtons::YesNo) == System::Windows::Forms::DialogResult::Yes) {
-			if (this->toolStripStatusLabel_filename->Text == L"Новый файл")
-				SaveAsToolStripMenuItem_Click(sender, e);
-			else
-				SaveToolStripMenuItem_Click(sender, e);
-			/*if (full_table())
-				this->toolStripStatusLabel_filename->Visible = false;*/
-		}
-		else
-		{
-			this->toolStripStatusLabel_filename->Visible = false;
-			this->PayToolStripMenuItem->Visible = false;
-		}
-
+		this->toolStripStatusLabel_filename->Visible = false;
+		this->PayToolStripMenuItem->Visible = false;
 		PlusChangeLocation();
-	}
-
-		   //Сохранение файла при помощи кнопки "Сохранить"
-	private: System::Void SaveToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
-		/*if (full_table()) {
-			StreamWriter^ sw = gcnew StreamWriter(this->toolStripStatusLabel_filename->Text, false, System::Text::Encoding::GetEncoding(1251));
-			for (Int32 i = 0; i < this->dataGridView1->Rows->Count - 1; i++) {
-				String^ str = this->dataGridView1->Rows[i]->Cells[0]->Value->ToString();
-				for (Int16 j = 1; j < 5; j++)
-					str += ";" + this->dataGridView1->Rows[i]->Cells[j]->Value;
-				sw->WriteLine(str);
-			}
-			sw->Close();
-			this->changes = false;
-			if (this->dataGridView1->Rows->Count > 1)
-				this->QueryToolStripMenuItem->Enabled = true;
-			else
-				this->QueryToolStripMenuItem->Enabled = false;
-		}
-		else
-			MessageBox::Show(L"Невозможно сохранить файл: в таблице есть пустые ячейки.");*/
-	}
-
-		   //Сохранение файла при помощи кнопки "Сохранить как..."
-	private: System::Void SaveAsToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
-		/*if (full_table()) {
-			if (this->saveFileDialog1->ShowDialog() == System::Windows::Forms::DialogResult::OK) {
-				this->toolStripStatusLabel_filename->Text = saveFileDialog1->FileName;
-				this->toolStripStatusLabel_filename->Visible = true;
-				SaveToolStripMenuItem_Click(sender, e);
-			}
-		}
-		else
-			MessageBox::Show(L"Невозможно сохранить файл: в таблице есть пустые ячейки.");*/
-	}
-
-		   //Открытие справки
-	private: System::Void InfoToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
-		/*if (Application::OpenForms["InfoForm"] == nullptr) {
-			InfoForm^ p = gcnew InfoForm();
-			p->Show();
-		}
-
-		//Если окно со справкой уже открыто
-		else
-			Application::OpenForms["InfoForm"]->Select();*/
 	}
 	
 	private: System::Void MainForm_ResizeEnd(System::Object^ sender, System::EventArgs^ e) {
@@ -5043,34 +4775,10 @@ private: System::Windows::Forms::ToolStripMenuItem^ PayToolStripMenuItem;
 	private: System::Void comboBox2_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
 		if (this->comboBox1->SelectedIndex == 0)
 		{
-			/*
-			this->button2->Text = this->comboBox2->SelectedIndex.ToString();
-			this->button1->Text = msclr::interop::marshal_as<System::String^>(cinema->films[this->toolStripComboBox1->SelectedIndex].time[this->comboBox2->SelectedIndex + 1]);
-			int g = cinema->DeConvert_Time(cinema->films[this->toolStripComboBox1->SelectedIndex].time[this->comboBox2->SelectedIndex + 1]);
-			int f = (cinema->DeConvert_Time(Time::RetTime(0)) + 30);
-			this->button2->Text = .ToString();
-			/*
-			this->button1->Text = (cinema->DeConvert_Time(Time::RetTime(0)) + 30).ToString();
-			this->button2->Text = (cinema->DeConvert_Time(cinema->films[this->toolStripComboBox1->SelectedIndex].time[this->comboBox2->SelectedIndex])).ToString();
-			*/
-			/*
-			
-			
-			*/
-			/*
-			this->button1->Text = (cinema->DeConvert_Time(cinema->films[this->toolStripComboBox1->SelectedIndex].time[this->comboBox2->SelectedIndex + 1])).ToString();
-			this->button2->Text = (cinema->DeConvert_Time(cinema->films[this->toolStripComboBox1->SelectedIndex].time[this->comboBox2->SelectedIndex + 2])).ToString();
-			this->button3->Text = (cinema->DeConvert_Time(cinema->films[this->toolStripComboBox1->SelectedIndex].time[this->comboBox2->SelectedIndex + 3])).ToString();
-			*/
-
 			if (cinema->DeConvert_Time(Time::RetTime(0)) + 30 > cinema->DeConvert_Time(cinema->films[this->toolStripComboBox1->SelectedIndex].time[this->comboBox2->SelectedIndex + 3]))
 			{
-			//	this->comboBox2->SelectedIndex = -1;
-				//this->comboBox2->Items(0)->Enabled = false;
-				//скрыть пункт для выбора
 				this->comboBox2->SelectedIndex = -1;
 			}
-			
 		}
 		if (this->comboBox2->SelectedIndex != -1)
 		{
@@ -5119,49 +4827,9 @@ private: System::Windows::Forms::ToolStripMenuItem^ PayToolStripMenuItem;
 
 	private: System::Void NewMovieToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 		FilmForm^ p = gcnew FilmForm(cinema, &cinema->films_number);
-		//cinema->films[cinema->films_number].path;
-		//FileInfo^ fleMembers = gcnew FileInfo("C:\\Highlander\\Лампочки\\de080acs-960.jpg");
-		
-
-		//String^ strMyDocuments = Environment::GetFolderPath(Environment::SpecialFolder::Personal);
-		//fleMembers->CopyTo(String::Concat("C:\\Users\\Пользователь\\Downloads\\40261\\", "qwe.jpg"));
-		//генерация id постера
-
-
-		/*
-		FileInfo^ fleMembers = gcnew FileInfo(msclr::interop::marshal_as<System::String^>(cinema->films[cinema->films_number].path));
-		string tre = cinema->id_cinema;
-		cinema->NewID();
-		string hol = cinema->id_cinema;
-		tre = cinema->id_cinema;
-		cinema->id_cinema = hol;
-		tre = tre + ".jpg";
-		fleMembers->CopyTo(String::Concat(msclr::interop::marshal_as<System::String^>(file_stream->path_dir), msclr::interop::marshal_as<System::String^>(tre)));
-		*/
-
-
-		/*
-		const char* fd;
-		fd = tre.c_str();
-
-		std::string qw = file_stream->path_dir + tre;
-		*/
-		
-		//fleMembers->CopyTo(String::Concat(qw, fd));
-		//fleMembers->CopyTo(msclr::interop::marshal_as<System::String^>(qw));
-		//cinema->films[cinema->films_number].path = tre + ".jpg";
-
-
-		//CopyFile(LPCTSTR("C:\\Highlander\\Лампочки\\de080acs-960.jpg"), LPCTSTR("C:\\Users\\Пользователь\\Downloads\\40261\\qwe.jpg"), FALSE);
 		p->ShowDialog();
-		
 		if (p->DialogResult == System::Windows::Forms::DialogResult::OK)
 		{
-			
-
-
-
-
 			cinema->films[cinema->films_number] = p->Result();
 
 			FileInfo^ fleMembers = gcnew FileInfo(msclr::interop::marshal_as<System::String^>(cinema->films[cinema->films_number].path));
@@ -5173,25 +4841,6 @@ private: System::Windows::Forms::ToolStripMenuItem^ PayToolStripMenuItem;
 			tre = tre + ".jpg";
 			fleMembers->CopyTo(String::Concat(msclr::interop::marshal_as<System::String^>(file_stream->path_dir + "\\"), msclr::interop::marshal_as<System::String^>(tre)));
 			cinema->films[cinema->films_number].path = tre;
-			/*
-			const wchar_t* start = (const wchar_t*)file_stream->path.c_str();
-			//const wchar_t* finish = (const wchar_t*)cinema->films[cinema->films_number].path.c_str();
-			//char finish[MAX_PATH];
-			//LPWSTR finish;
-			string path1 = "\\192.168.2.20\\e\Politeh\\Politeh 3 semestr\\Программирование\\Курсовая работа\\Forms\\1.txt";
-
-			//LPCTSTR finish = "\\192.168.2.20\\e\Politeh\\Politeh 3 semestr\\Программирование\\Курсовая работа\\Forms\\1.txt";
-			LPCTSTR finish = (const wchar_t*)path1.c_str();
-			//GetFullPathName(start, MAX_PATH, finish, nullptr);
-
-			start = (const wchar_t*)cinema->films[cinema->films_number].path.c_str();
-
-			CopyFile(LPCTSTR("C:\\Highlander\\Лампочки\\de080acs-960.jpg"),LPCTSTR("C:\\Users\\Пользователь\\Downloads\\40261\\qwe.jpg"), FALSE);
-			
-			//CopyFile(start, "\\192.168.2.20\e\Politeh\Politeh 3 semestr\Программирование\Курсовая работа\Forms\1",true);
-
-			CopyFile(start, finish, true);
-			*/
 			cinema->NewHallCinema(cinema->films_number);
 			cinema->films_number += 1;
 			file_stream->Write(*cinema);
@@ -5251,11 +4900,6 @@ private: System::Windows::Forms::ToolStripMenuItem^ PayToolStripMenuItem;
 
 		if (p->DialogResult == System::Windows::Forms::DialogResult::OK)
 		{
-
-
-
-
-
 			FilmForm^ p1 = gcnew FilmForm(cinema, &index);
 			p1->ShowDialog();
 
@@ -5338,16 +4982,12 @@ private: System::Windows::Forms::ToolStripMenuItem^ PayToolStripMenuItem;
 
 			CheckForm^ ch = gcnew CheckForm(cost - sale, num, change, way, cinema, index);
 			ch->ShowDialog();
-
-			//Ticket^ tik = gcnew Ticket(cinema, num, *tick_seats[10], this->toolStripComboBox1->SelectedIndex, this->comboBox2->SelectedIndex + this->comboBox1->SelectedIndex * 3, cost - sale);
-			//Ticket^ tik = gcnew Ticket(cinema, num, this->toolStripComboBox1->SelectedIndex, this->comboBox2->SelectedIndex + this->comboBox1->SelectedIndex * 3, cost - sale, tick_seats);
 			Ticket^ tik = gcnew Ticket(cinema, num, this->toolStripComboBox1->SelectedIndex, this->comboBox2->SelectedIndex + this->comboBox1->SelectedIndex * 3, cost - sale, tick_seats);
 			tik->ShowDialog();
 		}
 	}
 
 	private: System::Void ReportToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
-
 		ReportForm^ p = gcnew ReportForm(*cinema);
 		p->ShowDialog();
 		file_stream->Write(*cinema);

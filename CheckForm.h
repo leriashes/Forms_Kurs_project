@@ -35,9 +35,6 @@ namespace FormsKursproject {
 
 			sum = num * cost + change;
 			InitializeComponent();
-			//
-			//TODO: добавьте код конструктора
-			//
 		}
 
 	protected:

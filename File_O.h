@@ -19,14 +19,10 @@ public:
 	string path = "";
 	string path_bron = "bronirovanie.txt";
 
-	void InputPath();		//ввод пути для файла
-	void New(Cinema& cinema);	//создание нового файла   ??????
 	bool CheckPath();	//проверка на сущестование
 	void Read(Cinema& cinema);
 	bool CheckCompound();	//проверка форматирования файла
 	void Write(Cinema& cinema);	//запись всех данных в файл
 	void Clean(string pat);
-
-	//friend class Menu;
 };
 

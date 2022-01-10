@@ -7,17 +7,17 @@ using namespace std;
 class Film
 {
 public:
-	string name;	//название фильма
-	string age;		//возрастное ограничение
+	string name;		//название фильма
+	string age;			//возрастное ограничение
 	string duration;	//продолжительность фильма
-	string rejisser;//режиссеры
+	string rejisser;	//режиссеры
 	string short_description;	//краткое описание фильма
 	string main_role;	//главные роли
 	string number_zal;	//номер зала для показа
-	string date[3];	//дата сеанса
+	string date[3];		//дата сеанса
 	string path;
-	//??????????
-	string price[9];	//стоимость билета		//??????????
-	string time[9];	//время сеанса		//??????????
-	string mesta[9];	//места в зале		//??????????
+
+	string price[9];	//стоимость билета
+	string time[9];		//время сеанса
+	string mesta[9];	//места в зале
 };
