@@ -10,6 +10,7 @@
 #include "ChangeForm.h"
 #include "ChangePromo.h"
 #include "CheckForm.h"
+#include "Ticket.h"
 #include "ChooseForm.h"
 #include "PayForm.h"
 #include "resource.h"
@@ -5228,7 +5229,7 @@ namespace FormsKursproject {
 		int index = toolStripComboBox1->SelectedIndex;
 		int cost = stoi(cinema->films[this->toolStripComboBox1->SelectedIndex].price[this->comboBox2->SelectedIndex + this->comboBox1->SelectedIndex * 3]);
 		int num = 0;
-
+		
 		for (int i = 0; i < 100; i++)
 		{
 			if (seats[i]->BackColor == panel5->BackColor)
@@ -5238,7 +5239,7 @@ namespace FormsKursproject {
 		}
 		int change, sale;
 		bool way;
-
+		string tick_seats = "";
 		PayForm^ p = gcnew PayForm(cost, num, change, sale, way, cinema);
 		p->ShowDialog();
 
@@ -5250,6 +5251,7 @@ namespace FormsKursproject {
 			{
 				if (seats[i]->BackColor == panel5->BackColor)
 				{
+					tick_seats = tick_seats + to_string(i) + " ";
 					seats[i]->BackColor = panel2->BackColor;
 					cinema->films[this->toolStripComboBox1->SelectedIndex].mesta[this->comboBox2->SelectedIndex + this->comboBox1->SelectedIndex * 3][i] = '2';
 				}
@@ -5263,6 +5265,11 @@ namespace FormsKursproject {
 
 			CheckForm^ ch = gcnew CheckForm(cost - sale, num, change, way, cinema, index);
 			ch->ShowDialog();
+
+			//Ticket^ tik = gcnew Ticket(cinema, num, *tick_seats[10], this->toolStripComboBox1->SelectedIndex, this->comboBox2->SelectedIndex + this->comboBox1->SelectedIndex * 3, cost - sale);
+			//Ticket^ tik = gcnew Ticket(cinema, num, this->toolStripComboBox1->SelectedIndex, this->comboBox2->SelectedIndex + this->comboBox1->SelectedIndex * 3, cost - sale, tick_seats);
+			Ticket^ tik = gcnew Ticket(cinema, num, this->toolStripComboBox1->SelectedIndex, this->comboBox2->SelectedIndex + this->comboBox1->SelectedIndex * 3, cost - sale, tick_seats);
+			tik->ShowDialog();
 		}
 	}
 

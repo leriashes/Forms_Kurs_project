@@ -62,6 +62,8 @@ IDI_ICON1               ICON                    "popcorn.ico"
 
 IDB_PNG1                PNG                     "kino.png"
 
+IDB_PNG2                PNG                     "punktir.png"
+
 #endif    // Русский (Россия) resources
 /////////////////////////////////////////////////////////////////////////////
 

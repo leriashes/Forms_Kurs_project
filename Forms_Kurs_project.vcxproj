@@ -145,6 +145,9 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="resource.h" />
+    <ClInclude Include="Ticket.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="Time.h" />
   </ItemGroup>
   <ItemGroup>
@@ -171,6 +174,7 @@
     <ClCompile Include="MainForm.cpp" />
     <ClCompile Include="ReportForm.cpp" />
     <ClCompile Include="PayForm.cpp" />
+    <ClCompile Include="Ticket.cpp" />
     <ClCompile Include="Time.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -202,10 +206,15 @@
     <EmbeddedResource Include="PayForm.resx">
       <DependentUpon>PayForm.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ticket.resx">
+      <DependentUpon>Ticket.h</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Image Include="kino.png" />
+    <Image Include="pictureBox1.Image.jpg" />
     <Image Include="popcorn.ico" />
+    <Image Include="punktir.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
