@@ -5033,13 +5033,49 @@ private: System::Windows::Forms::ToolStripMenuItem^ PayToolStripMenuItem;
 
 			for (int i = 0; i < 3; i++)
 			{
+				
 				this->comboBox2->Items->Add((System::Object^)msclr::interop::marshal_as<System::String^>(cinema->films[number].time[i]));
+				
 			}
 		}
 	}
 
 	private: System::Void comboBox2_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
-		CheckIndex();
+		if (this->comboBox1->SelectedIndex == 0)
+		{
+			/*
+			this->button2->Text = this->comboBox2->SelectedIndex.ToString();
+			this->button1->Text = msclr::interop::marshal_as<System::String^>(cinema->films[this->toolStripComboBox1->SelectedIndex].time[this->comboBox2->SelectedIndex + 1]);
+			int g = cinema->DeConvert_Time(cinema->films[this->toolStripComboBox1->SelectedIndex].time[this->comboBox2->SelectedIndex + 1]);
+			int f = (cinema->DeConvert_Time(Time::RetTime(0)) + 30);
+			this->button2->Text = .ToString();
+			/*
+			this->button1->Text = (cinema->DeConvert_Time(Time::RetTime(0)) + 30).ToString();
+			this->button2->Text = (cinema->DeConvert_Time(cinema->films[this->toolStripComboBox1->SelectedIndex].time[this->comboBox2->SelectedIndex])).ToString();
+			*/
+			/*
+			
+			
+			*/
+			/*
+			this->button1->Text = (cinema->DeConvert_Time(cinema->films[this->toolStripComboBox1->SelectedIndex].time[this->comboBox2->SelectedIndex + 1])).ToString();
+			this->button2->Text = (cinema->DeConvert_Time(cinema->films[this->toolStripComboBox1->SelectedIndex].time[this->comboBox2->SelectedIndex + 2])).ToString();
+			this->button3->Text = (cinema->DeConvert_Time(cinema->films[this->toolStripComboBox1->SelectedIndex].time[this->comboBox2->SelectedIndex + 3])).ToString();
+			*/
+
+			if (cinema->DeConvert_Time(Time::RetTime(0)) + 30 > cinema->DeConvert_Time(cinema->films[this->toolStripComboBox1->SelectedIndex].time[this->comboBox2->SelectedIndex + 3]))
+			{
+			//	this->comboBox2->SelectedIndex = -1;
+				//this->comboBox2->Items(0)->Enabled = false;
+				//скрыть пункт для выбора
+				this->comboBox2->SelectedIndex = -1;
+			}
+			
+		}
+		if (this->comboBox2->SelectedIndex != -1)
+		{
+			CheckIndex();
+		}
 	}
 			
 		   //Бронирование
