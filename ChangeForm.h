@@ -41,7 +41,7 @@ namespace FormsKursproject {
 	public:
 	private: System::Windows::Forms::MaskedTextBox^ maskedTextBox2;
 	private: System::Windows::Forms::Button^ Button_Save;
-	private: System::Windows::Forms::Button^ button2;
+
 	private: System::Windows::Forms::LinkLabel^ linkLabel1;
 		   
 
@@ -129,59 +129,64 @@ namespace FormsKursproject {
 			this->maskedTextBox1 = (gcnew System::Windows::Forms::MaskedTextBox());
 			this->maskedTextBox2 = (gcnew System::Windows::Forms::MaskedTextBox());
 			this->Button_Save = (gcnew System::Windows::Forms::Button());
-			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->groupBox1->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// label_Name
 			// 
 			this->label_Name->AutoSize = true;
-			this->label_Name->Location = System::Drawing::Point(27, 58);
+			this->label_Name->Location = System::Drawing::Point(50, 107);
+			this->label_Name->Margin = System::Windows::Forms::Padding(6, 0, 6, 0);
 			this->label_Name->Name = L"label_Name";
-			this->label_Name->Size = System::Drawing::Size(57, 13);
+			this->label_Name->Size = System::Drawing::Size(99, 25);
 			this->label_Name->TabIndex = 0;
 			this->label_Name->Text = L"Название";
 			// 
 			// label_Adress
 			// 
 			this->label_Adress->AutoSize = true;
-			this->label_Adress->Location = System::Drawing::Point(46, 101);
+			this->label_Adress->Location = System::Drawing::Point(84, 186);
+			this->label_Adress->Margin = System::Windows::Forms::Padding(6, 0, 6, 0);
 			this->label_Adress->Name = L"label_Adress";
-			this->label_Adress->Size = System::Drawing::Size(38, 13);
+			this->label_Adress->Size = System::Drawing::Size(69, 25);
 			this->label_Adress->TabIndex = 1;
 			this->label_Adress->Text = L"Адрес";
 			// 
 			// label_Inn
 			// 
 			this->label_Inn->AutoSize = true;
-			this->label_Inn->Location = System::Drawing::Point(53, 144);
+			this->label_Inn->Location = System::Drawing::Point(97, 266);
+			this->label_Inn->Margin = System::Windows::Forms::Padding(6, 0, 6, 0);
 			this->label_Inn->Name = L"label_Inn";
-			this->label_Inn->Size = System::Drawing::Size(31, 13);
+			this->label_Inn->Size = System::Drawing::Size(52, 25);
 			this->label_Inn->TabIndex = 2;
 			this->label_Inn->Text = L"ИНН";
 			// 
 			// label_Rnm
 			// 
 			this->label_Rnm->AutoSize = true;
-			this->label_Rnm->Location = System::Drawing::Point(53, 192);
+			this->label_Rnm->Location = System::Drawing::Point(97, 354);
+			this->label_Rnm->Margin = System::Windows::Forms::Padding(6, 0, 6, 0);
 			this->label_Rnm->Name = L"label_Rnm";
-			this->label_Rnm->Size = System::Drawing::Size(31, 13);
+			this->label_Rnm->Size = System::Drawing::Size(53, 25);
 			this->label_Rnm->TabIndex = 3;
 			this->label_Rnm->Text = L"РНМ";
 			// 
 			// textBox1
 			// 
-			this->textBox1->Location = System::Drawing::Point(127, 55);
+			this->textBox1->Location = System::Drawing::Point(233, 102);
+			this->textBox1->Margin = System::Windows::Forms::Padding(6, 6, 6, 6);
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(182, 20);
+			this->textBox1->Size = System::Drawing::Size(330, 29);
 			this->textBox1->TabIndex = 5;
 			this->textBox1->TextChanged += gcnew System::EventHandler(this, &ChangeForm::textBox1_TextChanged);
 			// 
 			// textBox2
 			// 
-			this->textBox2->Location = System::Drawing::Point(127, 98);
+			this->textBox2->Location = System::Drawing::Point(233, 181);
+			this->textBox2->Margin = System::Windows::Forms::Padding(6, 6, 6, 6);
 			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(182, 20);
+			this->textBox2->Size = System::Drawing::Size(330, 29);
 			this->textBox2->TabIndex = 6;
 			this->textBox2->TextChanged += gcnew System::EventHandler(this, &ChangeForm::textBox2_TextChanged);
 			// 
@@ -203,9 +208,11 @@ namespace FormsKursproject {
 			this->groupBox1->Controls->Add(this->textBox_3);
 			this->groupBox1->Controls->Add(this->textBox_2);
 			this->groupBox1->Controls->Add(this->textBox_1);
-			this->groupBox1->Location = System::Drawing::Point(349, 31);
+			this->groupBox1->Location = System::Drawing::Point(640, 57);
+			this->groupBox1->Margin = System::Windows::Forms::Padding(6, 6, 6, 6);
 			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Size = System::Drawing::Size(393, 251);
+			this->groupBox1->Padding = System::Windows::Forms::Padding(6, 6, 6, 6);
+			this->groupBox1->Size = System::Drawing::Size(721, 463);
 			this->groupBox1->TabIndex = 9;
 			this->groupBox1->TabStop = false;
 			this->groupBox1->Text = L"Кассиры";
@@ -213,18 +220,20 @@ namespace FormsKursproject {
 			// linkLabel1
 			// 
 			this->linkLabel1->AutoSize = true;
-			this->linkLabel1->Location = System::Drawing::Point(181, 71);
+			this->linkLabel1->Location = System::Drawing::Point(332, 131);
+			this->linkLabel1->Margin = System::Windows::Forms::Padding(6, 0, 6, 0);
 			this->linkLabel1->Name = L"linkLabel1";
-			this->linkLabel1->Size = System::Drawing::Size(55, 13);
+			this->linkLabel1->Size = System::Drawing::Size(100, 25);
 			this->linkLabel1->TabIndex = 15;
 			this->linkLabel1->TabStop = true;
 			this->linkLabel1->Text = L"linkLabel1";
 			// 
 			// button_5New
 			// 
-			this->button_5New->Location = System::Drawing::Point(52, 194);
+			this->button_5New->Location = System::Drawing::Point(95, 358);
+			this->button_5New->Margin = System::Windows::Forms::Padding(6, 6, 6, 6);
 			this->button_5New->Name = L"button_5New";
-			this->button_5New->Size = System::Drawing::Size(75, 23);
+			this->button_5New->Size = System::Drawing::Size(138, 42);
 			this->button_5New->TabIndex = 14;
 			this->button_5New->Text = L"Добавить";
 			this->button_5New->UseVisualStyleBackColor = true;
@@ -232,9 +241,10 @@ namespace FormsKursproject {
 			// 
 			// button_4New
 			// 
-			this->button_4New->Location = System::Drawing::Point(52, 151);
+			this->button_4New->Location = System::Drawing::Point(95, 279);
+			this->button_4New->Margin = System::Windows::Forms::Padding(6, 6, 6, 6);
 			this->button_4New->Name = L"button_4New";
-			this->button_4New->Size = System::Drawing::Size(75, 23);
+			this->button_4New->Size = System::Drawing::Size(138, 42);
 			this->button_4New->TabIndex = 13;
 			this->button_4New->Text = L"Добавить";
 			this->button_4New->UseVisualStyleBackColor = true;
@@ -242,9 +252,10 @@ namespace FormsKursproject {
 			// 
 			// button_3New
 			// 
-			this->button_3New->Location = System::Drawing::Point(52, 113);
+			this->button_3New->Location = System::Drawing::Point(95, 209);
+			this->button_3New->Margin = System::Windows::Forms::Padding(6, 6, 6, 6);
 			this->button_3New->Name = L"button_3New";
-			this->button_3New->Size = System::Drawing::Size(75, 23);
+			this->button_3New->Size = System::Drawing::Size(138, 42);
 			this->button_3New->TabIndex = 12;
 			this->button_3New->Text = L"Добавить";
 			this->button_3New->UseVisualStyleBackColor = true;
@@ -252,9 +263,10 @@ namespace FormsKursproject {
 			// 
 			// button_2New
 			// 
-			this->button_2New->Location = System::Drawing::Point(52, 70);
+			this->button_2New->Location = System::Drawing::Point(95, 129);
+			this->button_2New->Margin = System::Windows::Forms::Padding(6, 6, 6, 6);
 			this->button_2New->Name = L"button_2New";
-			this->button_2New->Size = System::Drawing::Size(75, 23);
+			this->button_2New->Size = System::Drawing::Size(138, 42);
 			this->button_2New->TabIndex = 11;
 			this->button_2New->Text = L"Добавить";
 			this->button_2New->UseVisualStyleBackColor = true;
@@ -262,9 +274,10 @@ namespace FormsKursproject {
 			// 
 			// button_1New
 			// 
-			this->button_1New->Location = System::Drawing::Point(52, 27);
+			this->button_1New->Location = System::Drawing::Point(95, 50);
+			this->button_1New->Margin = System::Windows::Forms::Padding(6, 6, 6, 6);
 			this->button_1New->Name = L"button_1New";
-			this->button_1New->Size = System::Drawing::Size(75, 23);
+			this->button_1New->Size = System::Drawing::Size(138, 42);
 			this->button_1New->TabIndex = 10;
 			this->button_1New->Text = L"Добавить";
 			this->button_1New->UseVisualStyleBackColor = true;
@@ -272,9 +285,10 @@ namespace FormsKursproject {
 			// 
 			// button_5Del
 			// 
-			this->button_5Del->Location = System::Drawing::Point(209, 192);
+			this->button_5Del->Location = System::Drawing::Point(383, 354);
+			this->button_5Del->Margin = System::Windows::Forms::Padding(6, 6, 6, 6);
 			this->button_5Del->Name = L"button_5Del";
-			this->button_5Del->Size = System::Drawing::Size(75, 23);
+			this->button_5Del->Size = System::Drawing::Size(138, 42);
 			this->button_5Del->TabIndex = 9;
 			this->button_5Del->Text = L"Удалить";
 			this->button_5Del->UseVisualStyleBackColor = true;
@@ -282,9 +296,10 @@ namespace FormsKursproject {
 			// 
 			// button_4Del
 			// 
-			this->button_4Del->Location = System::Drawing::Point(209, 150);
+			this->button_4Del->Location = System::Drawing::Point(383, 277);
+			this->button_4Del->Margin = System::Windows::Forms::Padding(6, 6, 6, 6);
 			this->button_4Del->Name = L"button_4Del";
-			this->button_4Del->Size = System::Drawing::Size(75, 23);
+			this->button_4Del->Size = System::Drawing::Size(138, 42);
 			this->button_4Del->TabIndex = 8;
 			this->button_4Del->Text = L"Удалить";
 			this->button_4Del->UseVisualStyleBackColor = true;
@@ -292,9 +307,10 @@ namespace FormsKursproject {
 			// 
 			// button_3Del
 			// 
-			this->button_3Del->Location = System::Drawing::Point(209, 109);
+			this->button_3Del->Location = System::Drawing::Point(383, 201);
+			this->button_3Del->Margin = System::Windows::Forms::Padding(6, 6, 6, 6);
 			this->button_3Del->Name = L"button_3Del";
-			this->button_3Del->Size = System::Drawing::Size(75, 23);
+			this->button_3Del->Size = System::Drawing::Size(138, 42);
 			this->button_3Del->TabIndex = 7;
 			this->button_3Del->Text = L"Удалить";
 			this->button_3Del->UseVisualStyleBackColor = true;
@@ -302,9 +318,10 @@ namespace FormsKursproject {
 			// 
 			// button_2Del
 			// 
-			this->button_2Del->Location = System::Drawing::Point(209, 66);
+			this->button_2Del->Location = System::Drawing::Point(383, 122);
+			this->button_2Del->Margin = System::Windows::Forms::Padding(6, 6, 6, 6);
 			this->button_2Del->Name = L"button_2Del";
-			this->button_2Del->Size = System::Drawing::Size(75, 23);
+			this->button_2Del->Size = System::Drawing::Size(138, 42);
 			this->button_2Del->TabIndex = 6;
 			this->button_2Del->Text = L"Удалить";
 			this->button_2Del->UseVisualStyleBackColor = true;
@@ -312,9 +329,10 @@ namespace FormsKursproject {
 			// 
 			// button_1Del
 			// 
-			this->button_1Del->Location = System::Drawing::Point(209, 23);
+			this->button_1Del->Location = System::Drawing::Point(383, 42);
+			this->button_1Del->Margin = System::Windows::Forms::Padding(6, 6, 6, 6);
 			this->button_1Del->Name = L"button_1Del";
-			this->button_1Del->Size = System::Drawing::Size(75, 23);
+			this->button_1Del->Size = System::Drawing::Size(138, 42);
 			this->button_1Del->TabIndex = 5;
 			this->button_1Del->Text = L"Удалить";
 			this->button_1Del->UseVisualStyleBackColor = true;
@@ -322,88 +340,86 @@ namespace FormsKursproject {
 			// 
 			// textBox_5
 			// 
-			this->textBox_5->Location = System::Drawing::Point(52, 196);
+			this->textBox_5->Location = System::Drawing::Point(95, 362);
+			this->textBox_5->Margin = System::Windows::Forms::Padding(6, 6, 6, 6);
 			this->textBox_5->Name = L"textBox_5";
-			this->textBox_5->Size = System::Drawing::Size(100, 20);
+			this->textBox_5->Size = System::Drawing::Size(180, 29);
 			this->textBox_5->TabIndex = 4;
 			this->textBox_5->TextChanged += gcnew System::EventHandler(this, &ChangeForm::textBox_5_TextChanged);
 			// 
 			// textBox_4
 			// 
-			this->textBox_4->Location = System::Drawing::Point(52, 153);
+			this->textBox_4->Location = System::Drawing::Point(95, 282);
+			this->textBox_4->Margin = System::Windows::Forms::Padding(6, 6, 6, 6);
 			this->textBox_4->Name = L"textBox_4";
-			this->textBox_4->Size = System::Drawing::Size(100, 20);
+			this->textBox_4->Size = System::Drawing::Size(180, 29);
 			this->textBox_4->TabIndex = 3;
 			this->textBox_4->TextChanged += gcnew System::EventHandler(this, &ChangeForm::textBox_4_TextChanged);
 			// 
 			// textBox_3
 			// 
-			this->textBox_3->Location = System::Drawing::Point(52, 113);
+			this->textBox_3->Location = System::Drawing::Point(95, 209);
+			this->textBox_3->Margin = System::Windows::Forms::Padding(6, 6, 6, 6);
 			this->textBox_3->Name = L"textBox_3";
-			this->textBox_3->Size = System::Drawing::Size(100, 20);
+			this->textBox_3->Size = System::Drawing::Size(180, 29);
 			this->textBox_3->TabIndex = 2;
 			this->textBox_3->TextChanged += gcnew System::EventHandler(this, &ChangeForm::textBox_3_TextChanged);
 			// 
 			// textBox_2
 			// 
-			this->textBox_2->Location = System::Drawing::Point(52, 70);
+			this->textBox_2->Location = System::Drawing::Point(95, 129);
+			this->textBox_2->Margin = System::Windows::Forms::Padding(6, 6, 6, 6);
 			this->textBox_2->Name = L"textBox_2";
-			this->textBox_2->Size = System::Drawing::Size(100, 20);
+			this->textBox_2->Size = System::Drawing::Size(180, 29);
 			this->textBox_2->TabIndex = 1;
 			this->textBox_2->TextChanged += gcnew System::EventHandler(this, &ChangeForm::textBox_2_TextChanged);
 			// 
 			// textBox_1
 			// 
-			this->textBox_1->Location = System::Drawing::Point(52, 27);
+			this->textBox_1->Location = System::Drawing::Point(95, 50);
+			this->textBox_1->Margin = System::Windows::Forms::Padding(6, 6, 6, 6);
 			this->textBox_1->Name = L"textBox_1";
-			this->textBox_1->Size = System::Drawing::Size(100, 20);
+			this->textBox_1->Size = System::Drawing::Size(180, 29);
 			this->textBox_1->TabIndex = 0;
 			this->textBox_1->TextChanged += gcnew System::EventHandler(this, &ChangeForm::textBox_1_TextChanged);
 			// 
 			// maskedTextBox1
 			// 
-			this->maskedTextBox1->Location = System::Drawing::Point(127, 141);
+			this->maskedTextBox1->Location = System::Drawing::Point(233, 260);
+			this->maskedTextBox1->Margin = System::Windows::Forms::Padding(6, 6, 6, 6);
 			this->maskedTextBox1->Mask = L"000000000000";
 			this->maskedTextBox1->Name = L"maskedTextBox1";
-			this->maskedTextBox1->Size = System::Drawing::Size(182, 20);
+			this->maskedTextBox1->Size = System::Drawing::Size(330, 29);
 			this->maskedTextBox1->TabIndex = 10;
 			this->maskedTextBox1->ValidatingType = System::Int32::typeid;
 			this->maskedTextBox1->MaskInputRejected += gcnew System::Windows::Forms::MaskInputRejectedEventHandler(this, &ChangeForm::maskedTextBox1_MaskInputRejected);
 			// 
 			// maskedTextBox2
 			// 
-			this->maskedTextBox2->Location = System::Drawing::Point(127, 189);
+			this->maskedTextBox2->Location = System::Drawing::Point(233, 349);
+			this->maskedTextBox2->Margin = System::Windows::Forms::Padding(6, 6, 6, 6);
 			this->maskedTextBox2->Mask = L"0000000000000000";
 			this->maskedTextBox2->Name = L"maskedTextBox2";
-			this->maskedTextBox2->Size = System::Drawing::Size(182, 20);
+			this->maskedTextBox2->Size = System::Drawing::Size(330, 29);
 			this->maskedTextBox2->TabIndex = 11;
 			this->maskedTextBox2->MaskInputRejected += gcnew System::Windows::Forms::MaskInputRejectedEventHandler(this, &ChangeForm::maskedTextBox2_MaskInputRejected);
 			// 
 			// Button_Save
 			// 
-			this->Button_Save->Location = System::Drawing::Point(109, 299);
+			this->Button_Save->Location = System::Drawing::Point(233, 548);
+			this->Button_Save->Margin = System::Windows::Forms::Padding(6, 6, 6, 6);
 			this->Button_Save->Name = L"Button_Save";
-			this->Button_Save->Size = System::Drawing::Size(138, 37);
+			this->Button_Save->Size = System::Drawing::Size(253, 68);
 			this->Button_Save->TabIndex = 12;
 			this->Button_Save->Text = L"Сохранить";
 			this->Button_Save->UseVisualStyleBackColor = true;
 			this->Button_Save->Click += gcnew System::EventHandler(this, &ChangeForm::Button_Save_Click);
 			// 
-			// button2
-			// 
-			this->button2->Location = System::Drawing::Point(494, 329);
-			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(75, 23);
-			this->button2->TabIndex = 13;
-			this->button2->Text = L"button2";
-			this->button2->UseVisualStyleBackColor = true;
-			// 
 			// ChangeForm
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(11, 24);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(803, 394);
-			this->Controls->Add(this->button2);
+			this->ClientSize = System::Drawing::Size(1472, 727);
 			this->Controls->Add(this->Button_Save);
 			this->Controls->Add(this->maskedTextBox2);
 			this->Controls->Add(this->maskedTextBox1);
@@ -414,7 +430,9 @@ namespace FormsKursproject {
 			this->Controls->Add(this->label_Inn);
 			this->Controls->Add(this->label_Adress);
 			this->Controls->Add(this->label_Name);
+			this->Margin = System::Windows::Forms::Padding(6, 6, 6, 6);
 			this->Name = L"ChangeForm";
+			this->ShowIcon = false;
 			this->Text = L"Данные о кинотеатре";
 			this->FormClosing += gcnew System::Windows::Forms::FormClosingEventHandler(this, &ChangeForm::ChangeForm_FormClosing);
 			this->Load += gcnew System::EventHandler(this, &ChangeForm::ChangeForm_Load);

@@ -96,9 +96,10 @@ namespace FormsKursproject {
 			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(357, 254);
+			this->button1->Location = System::Drawing::Point(655, 469);
+			this->button1->Margin = System::Windows::Forms::Padding(6, 6, 6, 6);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(75, 23);
+			this->button1->Size = System::Drawing::Size(138, 42);
 			this->button1->TabIndex = 0;
 			this->button1->Text = L"Сохранить";
 			this->button1->UseVisualStyleBackColor = true;
@@ -106,9 +107,10 @@ namespace FormsKursproject {
 			// 
 			// button2
 			// 
-			this->button2->Location = System::Drawing::Point(508, 254);
+			this->button2->Location = System::Drawing::Point(931, 469);
+			this->button2->Margin = System::Windows::Forms::Padding(6, 6, 6, 6);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(75, 23);
+			this->button2->Size = System::Drawing::Size(138, 42);
 			this->button2->TabIndex = 1;
 			this->button2->Text = L"Удалить";
 			this->button2->UseVisualStyleBackColor = true;
@@ -117,53 +119,59 @@ namespace FormsKursproject {
 			// comboBox1
 			// 
 			this->comboBox1->FormattingEnabled = true;
-			this->comboBox1->Location = System::Drawing::Point(145, 88);
+			this->comboBox1->Location = System::Drawing::Point(266, 162);
+			this->comboBox1->Margin = System::Windows::Forms::Padding(6, 6, 6, 6);
 			this->comboBox1->Name = L"comboBox1";
-			this->comboBox1->Size = System::Drawing::Size(121, 21);
+			this->comboBox1->Size = System::Drawing::Size(219, 32);
 			this->comboBox1->TabIndex = 2;
 			this->comboBox1->SelectedIndexChanged += gcnew System::EventHandler(this, &ChangePromo::comboBox1_SelectedIndexChanged);
 			// 
 			// textBox1
 			// 
-			this->textBox1->Location = System::Drawing::Point(417, 89);
+			this->textBox1->Location = System::Drawing::Point(765, 164);
+			this->textBox1->Margin = System::Windows::Forms::Padding(6, 6, 6, 6);
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(100, 20);
+			this->textBox1->Size = System::Drawing::Size(180, 29);
 			this->textBox1->TabIndex = 3;
 			this->textBox1->TextChanged += gcnew System::EventHandler(this, &ChangePromo::textBox1_TextChanged);
 			// 
 			// maskedTextBox1
 			// 
-			this->maskedTextBox1->Location = System::Drawing::Point(417, 139);
+			this->maskedTextBox1->Location = System::Drawing::Point(765, 257);
+			this->maskedTextBox1->Margin = System::Windows::Forms::Padding(6, 6, 6, 6);
 			this->maskedTextBox1->Mask = L"000%";
 			this->maskedTextBox1->Name = L"maskedTextBox1";
-			this->maskedTextBox1->Size = System::Drawing::Size(100, 20);
+			this->maskedTextBox1->Size = System::Drawing::Size(180, 29);
 			this->maskedTextBox1->TabIndex = 4;
 			this->maskedTextBox1->TextChanged += gcnew System::EventHandler(this, &ChangePromo::maskedTextBox1_TextChanged);
 			// 
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(344, 95);
+			this->label1->Location = System::Drawing::Point(631, 175);
+			this->label1->Margin = System::Windows::Forms::Padding(6, 0, 6, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(57, 13);
+			this->label1->Size = System::Drawing::Size(99, 25);
 			this->label1->TabIndex = 5;
 			this->label1->Text = L"Название";
 			// 
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(347, 145);
+			this->label2->Location = System::Drawing::Point(636, 268);
+			this->label2->Margin = System::Windows::Forms::Padding(6, 0, 6, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(53, 13);
+			this->label2->Size = System::Drawing::Size(97, 25);
 			this->label2->TabIndex = 6;
 			this->label2->Text = L"Номинал";
 			// 
 			// linkLabel1
 			// 
 			this->linkLabel1->AutoSize = true;
-			this->linkLabel1->Location = System::Drawing::Point(508, 210);
+			this->linkLabel1->Location = System::Drawing::Point(931, 388);
+			this->linkLabel1->Margin = System::Windows::Forms::Padding(6, 0, 6, 0);
 			this->linkLabel1->Name = L"linkLabel1";
-			this->linkLabel1->Size = System::Drawing::Size(55, 13);
+			this->linkLabel1->Size = System::Drawing::Size(100, 25);
 			this->linkLabel1->TabIndex = 7;
 			this->linkLabel1->TabStop = true;
 			this->linkLabel1->Text = L"linkLabel1";
@@ -171,9 +179,10 @@ namespace FormsKursproject {
 			// linkLabel2
 			// 
 			this->linkLabel2->AutoSize = true;
-			this->linkLabel2->Location = System::Drawing::Point(354, 210);
+			this->linkLabel2->Location = System::Drawing::Point(649, 388);
+			this->linkLabel2->Margin = System::Windows::Forms::Padding(6, 0, 6, 0);
 			this->linkLabel2->Name = L"linkLabel2";
-			this->linkLabel2->Size = System::Drawing::Size(55, 13);
+			this->linkLabel2->Size = System::Drawing::Size(100, 25);
 			this->linkLabel2->TabIndex = 8;
 			this->linkLabel2->TabStop = true;
 			this->linkLabel2->Text = L"linkLabel2";
@@ -181,9 +190,10 @@ namespace FormsKursproject {
 			// linkLabel3
 			// 
 			this->linkLabel3->AutoSize = true;
-			this->linkLabel3->Location = System::Drawing::Point(145, 263);
+			this->linkLabel3->Location = System::Drawing::Point(266, 486);
+			this->linkLabel3->Margin = System::Windows::Forms::Padding(6, 0, 6, 0);
 			this->linkLabel3->Name = L"linkLabel3";
-			this->linkLabel3->Size = System::Drawing::Size(55, 13);
+			this->linkLabel3->Size = System::Drawing::Size(100, 25);
 			this->linkLabel3->TabIndex = 9;
 			this->linkLabel3->TabStop = true;
 			this->linkLabel3->Text = L"linkLabel3";
@@ -191,9 +201,10 @@ namespace FormsKursproject {
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(528, 92);
+			this->label3->Location = System::Drawing::Point(968, 170);
+			this->label3->Margin = System::Windows::Forms::Padding(6, 0, 6, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(35, 13);
+			this->label3->Size = System::Drawing::Size(64, 25);
 			this->label3->TabIndex = 10;
 			this->label3->Text = L"label3";
 			// 
@@ -204,36 +215,45 @@ namespace FormsKursproject {
 				this->number,
 					this->Name, this->procent
 			});
-			this->dataGridView1->Location = System::Drawing::Point(754, 56);
+			this->dataGridView1->Location = System::Drawing::Point(1382, 103);
+			this->dataGridView1->Margin = System::Windows::Forms::Padding(6, 6, 6, 6);
 			this->dataGridView1->Name = L"dataGridView1";
-			this->dataGridView1->Size = System::Drawing::Size(666, 264);
+			this->dataGridView1->RowHeadersWidth = 72;
+			this->dataGridView1->Size = System::Drawing::Size(1221, 487);
 			this->dataGridView1->TabIndex = 11;
 			// 
 			// number
 			// 
 			this->number->HeaderText = L"№";
+			this->number->MinimumWidth = 9;
 			this->number->Name = L"number";
 			this->number->ReadOnly = true;
+			this->number->Width = 175;
 			// 
 			// Name
 			// 
 			this->Name->HeaderText = L"Название";
+			this->Name->MinimumWidth = 9;
 			this->Name->Name = L"Name";
 			this->Name->ReadOnly = true;
+			this->Name->Width = 175;
 			// 
 			// procent
 			// 
 			this->procent->HeaderText = L"%";
+			this->procent->MinimumWidth = 9;
 			this->procent->Name = L"procent";
 			this->procent->ReadOnly = true;
+			this->procent->Width = 175;
 			// 
 			// linkLabel4
 			// 
 			this->linkLabel4->AutoSize = true;
 			this->linkLabel4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
-			this->linkLabel4->Location = System::Drawing::Point(842, 348);
+			this->linkLabel4->Location = System::Drawing::Point(1544, 642);
+			this->linkLabel4->Margin = System::Windows::Forms::Padding(6, 0, 6, 0);
 			this->linkLabel4->Name = L"linkLabel4";
-			this->linkLabel4->Size = System::Drawing::Size(84, 20);
+			this->linkLabel4->Size = System::Drawing::Size(147, 33);
 			this->linkLabel4->TabIndex = 12;
 			this->linkLabel4->TabStop = true;
 			this->linkLabel4->Text = L"linkLabel4";
@@ -241,9 +261,9 @@ namespace FormsKursproject {
 			// 
 			// ChangePromo
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(11, 24);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1511, 468);
+			this->ClientSize = System::Drawing::Size(2564, 864);
 			this->Controls->Add(this->linkLabel4);
 			this->Controls->Add(this->dataGridView1);
 			this->Controls->Add(this->label3);
@@ -257,7 +277,9 @@ namespace FormsKursproject {
 			this->Controls->Add(this->comboBox1);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
-			//this->Name = L"ChangePromo";
+			this->Margin = System::Windows::Forms::Padding(6, 6, 6, 6);
+			this->Name = L"ChangePromo";
+			this->ShowIcon = false;
 			this->Text = L"Редактирование информации о промокодах";
 			this->FormClosing += gcnew System::Windows::Forms::FormClosingEventHandler(this, &ChangePromo::ChangePromo_FormClosing);
 			this->Load += gcnew System::EventHandler(this, &ChangePromo::ChangePromo_Load);
