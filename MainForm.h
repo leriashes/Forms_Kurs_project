@@ -12,6 +12,7 @@
 #include "CheckForm.h"
 #include "ChooseForm.h"
 #include "PayForm.h"
+#include "OrderForm.h"
 #include "resource.h"
 #include <io.h>
 #include <filesystem>
@@ -244,7 +245,8 @@ namespace FormsKursproject {
 		private: System::Windows::Forms::ToolStripSeparator^ toolStripSeparator4;
 		private: System::Windows::Forms::ToolStripComboBox^ toolStripComboBox1;
 		private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel11;
-			   Cinema* cinema;
+private: System::Windows::Forms::ToolStripMenuItem^ PayToolStripMenuItem;
+	   Cinema* cinema;
 		public:
 			MainForm(void)
 			{
@@ -318,6 +320,7 @@ namespace FormsKursproject {
 			this->ReportToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->InfoToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->QuitToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->PayToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->statusStrip1 = (gcnew System::Windows::Forms::StatusStrip());
 			this->toolStripStatusLabel_filename = (gcnew System::Windows::Forms::ToolStripStatusLabel());
 			this->openFileDialog1 = (gcnew System::Windows::Forms::OpenFileDialog());
@@ -536,9 +539,10 @@ namespace FormsKursproject {
 			// 
 			this->menustrip_main->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->menustrip_main->ImageScalingSize = System::Drawing::Size(28, 28);
-			this->menustrip_main->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(6) {
+			this->menustrip_main->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(7) {
 				this->FileToolStripMenuItem,
-					this->EnterToolStripMenuItem, this->CorrectToolStripMenuItem, this->ReportToolStripMenuItem, this->InfoToolStripMenuItem, this->QuitToolStripMenuItem
+					this->EnterToolStripMenuItem, this->CorrectToolStripMenuItem, this->ReportToolStripMenuItem, this->InfoToolStripMenuItem, this->QuitToolStripMenuItem,
+					this->PayToolStripMenuItem
 			});
 			this->menustrip_main->Location = System::Drawing::Point(0, 0);
 			this->menustrip_main->Name = L"menustrip_main";
@@ -735,6 +739,19 @@ namespace FormsKursproject {
 			this->QuitToolStripMenuItem->Visible = false;
 			this->QuitToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::QuitToolStripMenuItem_Click);
 			this->QuitToolStripMenuItem->VisibleChanged += gcnew System::EventHandler(this, &MainForm::QuitToolStripMenuItem_VisibleChanged);
+			// 
+			// PayToolStripMenuItem
+			// 
+			this->PayToolStripMenuItem->Alignment = System::Windows::Forms::ToolStripItemAlignment::Right;
+			this->PayToolStripMenuItem->BackColor = System::Drawing::SystemColors::ControlDarkDark;
+			this->PayToolStripMenuItem->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->PayToolStripMenuItem->ForeColor = System::Drawing::SystemColors::ControlLightLight;
+			this->PayToolStripMenuItem->Name = L"PayToolStripMenuItem";
+			this->PayToolStripMenuItem->Size = System::Drawing::Size(219, 22);
+			this->PayToolStripMenuItem->Text = L"О&плата забронированных билетов";
+			this->PayToolStripMenuItem->Visible = false;
+			this->PayToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::PayToolStripMenuItem_Click);
 			// 
 			// statusStrip1
 			// 
@@ -3490,13 +3507,14 @@ namespace FormsKursproject {
 			// 
 			// textBox10
 			// 
+			this->textBox10->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->textBox10->Dock = System::Windows::Forms::DockStyle::Left;
 			this->textBox10->Location = System::Drawing::Point(56, 444);
 			this->textBox10->Margin = System::Windows::Forms::Padding(3, 10, 3, 3);
 			this->textBox10->Name = L"textBox10";
+			this->textBox10->ReadOnly = true;
 			this->textBox10->Size = System::Drawing::Size(185, 20);
 			this->textBox10->TabIndex = 29;
-			this->textBox10->TextChanged += gcnew System::EventHandler(this, &MainForm::textBox10_TextChanged);
 			// 
 			// button1
 			// 
@@ -4061,6 +4079,7 @@ namespace FormsKursproject {
 
 	private: System::Void OpenHall(int film_number)
 	{
+		textBox10->Text = "";
 		this->tableLayoutPanel11->Visible = true;
 		this->tableLayoutPanel1->Visible = false;
 		this->toolStripComboBox1->SelectedIndex = -1;
@@ -4358,7 +4377,7 @@ namespace FormsKursproject {
 			String^ message = L"Вы уверены, что хотите выйти?";
 			if (this->toolStripStatusLabel_filename->Visible == true)
 			{
-				message = message + "\nИтого за день : " + msclr::interop::marshal_as<System::String^>(cinema->otchet_today) + " руб.";
+				message = message + "\nИтого за день: " + msclr::interop::marshal_as<System::String^>(cinema->otchet_today) + " руб.";
 			}
 			String^ caption = L"";
 			if (MessageBox::Show(message, caption, MessageBoxButtons::YesNo) == System::Windows::Forms::DialogResult::Yes)
@@ -4495,6 +4514,7 @@ namespace FormsKursproject {
 		this->tableLayoutPanel8->Visible = false;
 		this->tableLayoutPanel9->Visible = false;
 		this->tableLayoutPanel10->Visible = false;
+		this->PayToolStripMenuItem->Visible = false;
 
 		if (this->toolStripStatusLabel_filename->Text != L"Новый файл") 
 		{
@@ -4523,6 +4543,12 @@ namespace FormsKursproject {
 
 					this->toolStripComboBox1->Items->Clear();
 					file_stream->ReadBron(*cinema);
+
+					if (file_stream->kol_vo_film > 0 && !QuitToolStripMenuItem->Visible)
+					{
+						this->PayToolStripMenuItem->Visible = true;
+					}
+
 					for (int i = 0; i < file_stream->kol_vo_film; i++)
 					{
 						this->toolStripComboBox1->Items->Add((System::Object^)msclr::interop::marshal_as<System::String^>(cinema->films[i].name));
@@ -4760,7 +4786,10 @@ namespace FormsKursproject {
 				this->toolStripStatusLabel_filename->Visible = false;*/
 		}
 		else
+		{
 			this->toolStripStatusLabel_filename->Visible = false;
+			this->PayToolStripMenuItem->Visible = false;
+		}
 
 		PlusChangeLocation();
 	}
@@ -5012,20 +5041,12 @@ namespace FormsKursproject {
 			cinema->bron[cinema->broni_number][2] = to_string(str);
 			cinema->bron[cinema->broni_number][3] = msclr::interop::marshal_as< std::string >(this->label4->Text);;
 			cinema->bron[cinema->broni_number][4] = Time::RetDate(0, 1);
-			cinema->bron[cinema->broni_number][5] = cinema->films[this->toolStripComboBox1->SelectedIndex].time[this->comboBox1->SelectedIndex];
+			cinema->bron[cinema->broni_number][5] = cinema->films[this->toolStripComboBox1->SelectedIndex].time[this->comboBox2->SelectedIndex];
 			cinema->bron[cinema->broni_number][6] = cinema->films[this->toolStripComboBox1->SelectedIndex].date[this->comboBox1->SelectedIndex];
 			cinema->broni_number = cinema->broni_number + 1;
 			cinema->broni_zapis = cinema->broni_zapis + 1;
 			file_stream->WriteBron(*cinema);
 			file_stream->Write(*cinema);
-		}
-	}
-
-	private: System::Void textBox10_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-		if (textBox10->Text->Length == 5)
-		{
-			//поиск по коду брони
-			textBox10->Text = "";
 		}
 	}
 
@@ -5205,6 +5226,111 @@ namespace FormsKursproject {
 		ChangePromo^ p = gcnew ChangePromo(*cinema);
 		p->ShowDialog();
 		file_stream->Write(*cinema);
+	}
+
+	private: System::Void PayToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+		int num = -1;
+		OrderForm^ p = gcnew OrderForm(cinema, &num);
+		p->ShowDialog();
+
+		if (num != -1)
+		{
+			int film = -1, day = -1, time = -1;
+
+			for (int i = 0; i < cinema->films_number; i++)
+			{
+				if (cinema->films[i].name == cinema->bron[num][3])
+				{
+					film = i;
+
+					for (int j = 0; j < 3; j++)
+					{
+						if (cinema->films[i].date[j] == cinema->bron[num][6])
+						{
+							day = j;
+
+							for (int k = 0; k < 3; k++)
+							{
+								if (cinema->films[i].time[k] == cinema->bron[num][5])
+								{
+									time = k;
+									break;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			if (film >= 0 && day >= 0 && time >= 0)
+			{
+				OpenHall(film);
+				comboBox1->SelectedIndex = day;
+				comboBox2->SelectedIndex = time;
+				textBox10->Text = msclr::interop::marshal_as<System::String^>(cinema->bron[num][2]);
+
+				int cost = stoi(cinema->films[this->toolStripComboBox1->SelectedIndex].price[this->comboBox2->SelectedIndex + this->comboBox1->SelectedIndex * 3]);
+				int number = 0;
+
+				for (int i = 0, j = -1; i < cinema->bron[num][7].length(); i++)
+				{
+					if (cinema->bron[num][7][i] == ' ')
+					{
+						if (j > -1)
+						{
+							seats[j]->BackColor = panel4->BackColor;
+							SeatClick(j);
+							number++;
+						}
+						j = -1;
+					}
+					else
+					{
+						if (j == -1)
+						{
+							j = 0;
+						}
+
+						j = j * 10 + cinema->bron[num][7][i] - 48;
+					}
+
+				}
+
+				button2->Enabled = false;
+				int change, sale;
+				bool way;
+
+				PayForm^ p = gcnew PayForm(cost, number, change, sale, way, cinema);
+				p->ShowDialog();
+
+				if (p->DialogResult == System::Windows::Forms::DialogResult::OK)
+				{
+					toolStripButton2_Click(sender, e);
+
+					for (int i = 0; i < 100; i++)
+					{
+						if (seats[i]->BackColor == panel5->BackColor)
+						{
+							seats[i]->BackColor = panel2->BackColor;
+							cinema->films[this->toolStripComboBox1->SelectedIndex].mesta[this->comboBox2->SelectedIndex + this->comboBox1->SelectedIndex * 3][i] = '2';
+						}
+					}
+
+					cinema->otchet_today = to_string(stoi(cinema->otchet_today.c_str()) + (cost - sale) * number);
+					cinema->otchet_vsego = to_string(stoi(cinema->otchet_vsego.c_str()) + (cost - sale) * number);
+					cinema->kolvo_biletov[0] = cinema->kolvo_biletov[0] + number;
+					cinema->kolvo_biletov[1] = cinema->kolvo_biletov[1] + number;
+					cinema->DelBron(num);
+					file_stream->WriteBron(*cinema);
+					file_stream->Write(*cinema);
+
+					CheckForm^ ch = gcnew CheckForm(cost - sale, number, change, way, cinema, film);
+					ch->ShowDialog();
+				}
+
+				toolStripButton2_Click(sender, e);
+			}
+		}
 	}
 };
 }

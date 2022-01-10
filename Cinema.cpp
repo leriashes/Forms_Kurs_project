@@ -1,7 +1,11 @@
 #include "Cinema.h"
-#include "conio.h"
 #include "File_O.h"
-//#include "Time.h"
+#include "Time.h"
+#include <iostream>
+#include <string>
+#include <sstream>
+#include <iostream>
+#include <limits>
 //#include "Menu.h"
 
 int Cinema::SearchBron(string code)
@@ -9,7 +13,7 @@ int Cinema::SearchBron(string code)
 	
 	for (int i = 0; i < broni_number; i++)
 	{
-		if (code == bron[i][1])
+		if (code == bron[i][2])
 		{
 			return i;
 		}
@@ -235,7 +239,7 @@ string Cinema::NewPromoName(string message)
 		{
 			if (temp[y] == ' ')
 			{
-				temp == "";
+				temp = "";
 			}
 		}
 	} while (temp == "");
@@ -288,6 +292,20 @@ void Cinema::DelFilm(int num_film)
 	}
 	films_number = films_number - 1;
 
+}
+
+void Cinema::DelBron(int num)
+{
+
+
+	for (int g = num; g < broni_number - 1; g++)
+	{
+		for (int j = 0; j < 8; j++)
+		{
+			bron[g][j] = bron[g + 1][j];
+		}
+	}
+	broni_number = broni_number - 1;
 }
 
 void Cinema::ChangeFilm(int num_punkt, int num_film)
@@ -949,4 +967,63 @@ string Cinema::NewHall()
 	}
 
 	return temp;
+}
+
+bool Cinema::CheckBron(int num)
+{
+	bool itog = true;
+	for (int j = 0; j < films_number; j++)
+	{
+		if (films[j].name == bron[num][3]) //проверка названия фильма
+		{
+
+			//cout << "Проверка названия прошла успешно!";
+			for (int r = 0; r < 3; r++)
+			{
+				if (Time::RetDate(0, 1) == bron[num][6] || Time::RetDate(1, 1) == bron[num][6] || Time::RetDate(2, 1) == bron[num][6])	//проверка даты
+				{
+					int l;
+					if (Time::RetDate(0, 1) == bron[num][6])
+					{
+						l = 0;
+						if (DeConvert_Time(bron[num][5]) > DeConvert_Time(Time::RetTime(0)))
+						{
+							return false;
+						}
+					}
+					if (Time::RetDate(1, 1) == bron[num][6])
+					{
+						l = 1;
+					}
+					if (Time::RetDate(2, 1) == bron[num][6])
+					{
+						l = 2;
+					}
+
+					//cout << "Проверка даты прошла успешно!";
+					for (int p = 0; p < 3; p++)
+					{
+						if (films[j].time[p] == bron[num][5])	//проверка времени
+						{
+							//cout << "Проверка времени прошла успешно!";
+							string temp = bron[num][7];
+							std::istringstream iss(temp);
+							std::string token;
+							while (std::getline(iss, token, ' '))
+							{
+								if (films[j].mesta[(l * 3) + p][atoi(token.c_str())] != '1')
+								{
+									return false;
+								}
+							}
+
+							return true;
+						}
+					}
+				}
+
+			}
+		}
+
+	}
 }

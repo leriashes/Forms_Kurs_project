@@ -4,6 +4,7 @@
 #include <string>
 #include "Film.h"
 #include <thread>
+#include "conio.h"
 using namespace std;
 
 class Cinema
@@ -61,6 +62,7 @@ public:
 	void TimeAuto(int duration);
 	string Convert_Time(int time);
 	int DeConvert_Time(string time);
+	bool CheckBron(int num);
 
 	void NewID();		//генерация нового ID cinema
 	void InputName();	//Ввод названия кинотеатра
@@ -70,6 +72,7 @@ public:
 	void InputRNM();		//ввод РНМ
 	void NewHallCinema(int number_film);	//генерация наполненности зала для нового фильма	
 	void PriceInput(int num_film, int num);
+	void DelBron(int num);
 
 	string NewHall();	//генерация зала (посадка)
 

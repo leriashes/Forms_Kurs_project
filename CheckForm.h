@@ -1109,6 +1109,7 @@ namespace FormsKursproject {
 		labelChange->Text = "=" + change.ToString() + ".00 –”¡";
 		labelCost->Text = "=" + (cost * num).ToString() + ".00 –”¡";
 		labelResult->Text = labelCost->Text;
+		labelSum->Text = (cost * num).ToString() + ".00 –”¡";
 		labelNDS->Text = "=" + (cost * num * 20 / 100).ToString() + ".00 –”¡";
 		labelCount->Text = cost.ToString() + ".00 X " + num.ToString() + " ÿ“";
 
