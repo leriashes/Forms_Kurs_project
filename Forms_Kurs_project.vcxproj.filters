@@ -16,6 +16,7 @@
     <ClCompile Include="PayForm.cpp" />
     <ClCompile Include="Time.cpp" />
     <ClCompile Include="OrderForm.cpp" />
+    <ClCompile Include="Ticket.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AdminForm.h" />
@@ -34,6 +35,7 @@
     <ClInclude Include="resource.h" />
     <ClInclude Include="Time.h" />
     <ClInclude Include="OrderForm.h" />
+    <ClInclude Include="Ticket.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Forms_Kurs_project.rc" />
@@ -41,5 +43,7 @@
   <ItemGroup>
     <Image Include="kino.png" />
     <Image Include="popcorn.ico" />
+    <Image Include="punktir.png" />
+    <Image Include="pictureBox1.Image.jpg" />
   </ItemGroup>
 </Project>
