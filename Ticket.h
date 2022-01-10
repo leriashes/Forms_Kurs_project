@@ -100,11 +100,13 @@ namespace FormsKursproject {
 			// 
 			// Ticket
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(11, 24);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1445, 500);
+			this->ClientSize = System::Drawing::Size(2564, 923);
+			this->Margin = System::Windows::Forms::Padding(6, 6, 6, 6);
 			this->Name = L"Ticket";
-			this->Text = L"Ticket";
+			this->ShowIcon = false;
+			this->Text = L"Билеты";
 			this->Load += gcnew System::EventHandler(this, &Ticket::Ticket_Load);
 			this->ResumeLayout(false);
 
