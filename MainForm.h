@@ -3525,6 +3525,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ PayToolStripMenuItem;
 			this->button1->TabIndex = 25;
 			this->button1->Text = L"Аннулировать";
 			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &MainForm::button1_Click);
 			// 
 			// button2
 			// 
@@ -4017,7 +4018,14 @@ private: System::Windows::Forms::ToolStripMenuItem^ PayToolStripMenuItem;
 		}
 		else
 		{
-			;
+			if (seats[number]->BackColor == panel2->BackColor)
+			{
+				seats[number]->BackColor = panel5->BackColor;
+			}
+			else if (seats[number]->BackColor == panel5->BackColor)
+			{
+				seats[number]->BackColor = panel2->BackColor;
+			}
 		}
 
 		int k = 0;
@@ -4728,7 +4736,6 @@ private: System::Windows::Forms::ToolStripMenuItem^ PayToolStripMenuItem;
 			this->EnterToolStripMenuItem->Visible = false;
 			this->QuitToolStripMenuItem->Visible = true;
 			this->CreateToolStripMenuItem->Enabled = true;
-			this->button1->Enabled = true;
 		}
 	}
 
@@ -5330,6 +5337,34 @@ private: System::Windows::Forms::ToolStripMenuItem^ PayToolStripMenuItem;
 
 				toolStripButton2_Click(sender, e);
 			}
+		}
+	}
+
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e)
+	{int num = 0;
+
+		for (int i = 0; i < 100; i++)
+		{
+			if (seats[i]->BackColor == panel5->BackColor)
+			{
+				num++;
+			}
+		}
+
+		if (MessageBox::Show(L"Аннулировать выбранные билеты? Это действие невозожно отменить.", "", MessageBoxButtons::YesNo) == System::Windows::Forms::DialogResult::Yes)
+		{
+			toolStripButton2_Click(sender, e);
+
+			for (int i = 0; i < 100; i++)
+			{
+				if (seats[i]->BackColor == panel5->BackColor)
+				{
+					seats[i]->BackColor = panel4->BackColor;
+					cinema->films[this->toolStripComboBox1->SelectedIndex].mesta[this->comboBox2->SelectedIndex + this->comboBox1->SelectedIndex * 3][i] = '0';
+				}
+			}
+
+			file_stream->Write(*cinema);
 		}
 	}
 };
