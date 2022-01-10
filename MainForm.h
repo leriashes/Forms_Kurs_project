@@ -4552,8 +4552,17 @@ private: System::Windows::Forms::ToolStripMenuItem^ PayToolStripMenuItem;
 					this->toolStripComboBox1->Items->Clear();
 					file_stream->ReadBron(*cinema);
 
-					if (file_stream->kol_vo_film > 0 && !QuitToolStripMenuItem->Visible)
+					if (file_stream->kol_vo_film > 0)
 					{
+						if (QuitToolStripMenuItem->Visible)
+						{
+							this->PayToolStripMenuItem->Text = "&јннулирование забронированных билетов";
+						}
+						else
+						{
+							this->PayToolStripMenuItem->Text = L"ќ&плата забронированных билетов";
+						}
+
 						this->PayToolStripMenuItem->Visible = true;
 					}
 
@@ -5285,7 +5294,14 @@ private: System::Windows::Forms::ToolStripMenuItem^ PayToolStripMenuItem;
 					{
 						if (j > -1)
 						{
-							seats[j]->BackColor = panel4->BackColor;
+							if (EnterToolStripMenuItem->Visible)
+							{
+								seats[j]->BackColor = panel4->BackColor;
+							}
+							else
+							{
+								seats[j]->BackColor = panel2->BackColor;
+							}
 							SeatClick(j);
 							number++;
 						}
@@ -5307,35 +5323,55 @@ private: System::Windows::Forms::ToolStripMenuItem^ PayToolStripMenuItem;
 				int change, sale;
 				bool way;
 
-				PayForm^ p = gcnew PayForm(cost, number, change, sale, way, cinema);
-				p->ShowDialog();
+				bool ready = false;
 
-				if (p->DialogResult == System::Windows::Forms::DialogResult::OK)
+				if (EnterToolStripMenuItem->Visible)
 				{
-					toolStripButton2_Click(sender, e);
+					PayForm^ p = gcnew PayForm(cost, number, change, sale, way, cinema);
+					p->ShowDialog();
+					ready = p->DialogResult == System::Windows::Forms::DialogResult::OK;
+				}
+				else if (MessageBox::Show(L"јннулировать выбранные билеты? Ёто действие невозожно отменить.", "", MessageBoxButtons::YesNo) == System::Windows::Forms::DialogResult::Yes)
+				{
+					ready = true;
+				}
 
+				toolStripButton2_Click(sender, e);
+
+				if (ready)
+				{
 					for (int i = 0; i < 100; i++)
 					{
 						if (seats[i]->BackColor == panel5->BackColor)
 						{
-							seats[i]->BackColor = panel2->BackColor;
-							cinema->films[this->toolStripComboBox1->SelectedIndex].mesta[this->comboBox2->SelectedIndex + this->comboBox1->SelectedIndex * 3][i] = '2';
+							if (EnterToolStripMenuItem->Visible)
+							{
+								seats[i]->BackColor = panel2->BackColor;
+								cinema->films[this->toolStripComboBox1->SelectedIndex].mesta[this->comboBox2->SelectedIndex + this->comboBox1->SelectedIndex * 3][i] = '2';
+							}
+							else
+							{
+								seats[i]->BackColor = panel3->BackColor;
+								cinema->films[this->toolStripComboBox1->SelectedIndex].mesta[this->comboBox2->SelectedIndex + this->comboBox1->SelectedIndex * 3][i] = '0';
+							}
 						}
 					}
 
-					cinema->otchet_today = to_string(stoi(cinema->otchet_today.c_str()) + (cost - sale) * number);
-					cinema->otchet_vsego = to_string(stoi(cinema->otchet_vsego.c_str()) + (cost - sale) * number);
-					cinema->kolvo_biletov[0] = cinema->kolvo_biletov[0] + number;
-					cinema->kolvo_biletov[1] = cinema->kolvo_biletov[1] + number;
+					if (EnterToolStripMenuItem->Visible)
+					{
+						cinema->otchet_today = to_string(stoi(cinema->otchet_today.c_str()) + (cost - sale) * num);
+						cinema->otchet_vsego = to_string(stoi(cinema->otchet_vsego.c_str()) + (cost - sale) * num);
+						cinema->kolvo_biletov[0] = cinema->kolvo_biletov[0] + num;
+						cinema->kolvo_biletov[1] = cinema->kolvo_biletov[1] + num;
+
+						CheckForm^ ch = gcnew CheckForm(cost - sale, num, change, way, cinema, film);
+						ch->ShowDialog();
+					}
+
 					cinema->DelBron(num);
 					file_stream->WriteBron(*cinema);
 					file_stream->Write(*cinema);
-
-					CheckForm^ ch = gcnew CheckForm(cost - sale, number, change, way, cinema, film);
-					ch->ShowDialog();
 				}
-
-				toolStripButton2_Click(sender, e);
 			}
 		}
 	}
