@@ -84,9 +84,9 @@ namespace FormsKursproject {
 		private: System::Windows::Forms::ToolStripMenuItem^ NewMovieToolStripMenuItem;
 		private: System::Windows::Forms::ToolStripMenuItem^ CorrectMovieToolStripMenuItem;
 		private: System::Windows::Forms::ToolStripMenuItem^ DelMovieToolStripMenuItem;
-		private: System::Windows::Forms::ToolStripMenuItem^ NewPromoToolStripMenuItem;
-		private: System::Windows::Forms::ToolStripMenuItem^ CorrectPromoToolStripMenuItem;
-		private: System::Windows::Forms::ToolStripMenuItem^ DelPromoToolStripMenuItem;
+
+
+
 		private: System::Windows::Forms::Panel^ panelPlus;
 		private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel13;
 		private: System::Windows::Forms::Label^ label5;
@@ -268,12 +268,12 @@ private: System::Windows::Forms::ToolStripMenuItem^ PayToolStripMenuItem;
 		private: System::Windows::Forms::ToolStripStatusLabel^ toolStripStatusLabel_filename;
 		private: System::Windows::Forms::ToolStripMenuItem^ OpenToolStripMenuItem;
 		private: System::Windows::Forms::OpenFileDialog^ openFileDialog1;
-		private: System::Windows::Forms::ToolStripMenuItem^ SaveToolStripMenuItem;
-		private: System::Windows::Forms::ToolStripMenuItem^ SaveAsToolStripMenuItem;
+
+
 		private: System::Windows::Forms::ToolStripSeparator^ toolStripSeparator2;
-		private: System::Windows::Forms::ToolStripSeparator^ toolStripSeparator3;
+
 		private: System::Windows::Forms::ToolStripMenuItem^ CorrectToolStripMenuItem;
-		private: System::Windows::Forms::ToolStripMenuItem^ InfoToolStripMenuItem;
+
 		private: System::Windows::Forms::ToolStripMenuItem^ QuitToolStripMenuItem;
 		private: System::Windows::Forms::ToolStripSeparator^ toolStripSeparator1;
 		private: System::Windows::Forms::ToolStripMenuItem^ CloseToolStripMenuItem;
@@ -296,9 +296,6 @@ private: System::Windows::Forms::ToolStripMenuItem^ PayToolStripMenuItem;
 			this->toolStripSeparator1 = (gcnew System::Windows::Forms::ToolStripSeparator());
 			this->CloseToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->toolStripSeparator2 = (gcnew System::Windows::Forms::ToolStripSeparator());
-			this->SaveToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->SaveAsToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->toolStripSeparator3 = (gcnew System::Windows::Forms::ToolStripSeparator());
 			this->ExitToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->EnterToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->CorrectToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -307,12 +304,8 @@ private: System::Windows::Forms::ToolStripMenuItem^ PayToolStripMenuItem;
 			this->CorrectMovieToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->DelMovieToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->PromoToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->NewPromoToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->CorrectPromoToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->DelPromoToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->CinemaToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->ReportToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->InfoToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->QuitToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->PayToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->statusStrip1 = (gcnew System::Windows::Forms::StatusStrip());
@@ -533,10 +526,9 @@ private: System::Windows::Forms::ToolStripMenuItem^ PayToolStripMenuItem;
 			// 
 			this->menustrip_main->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->menustrip_main->ImageScalingSize = System::Drawing::Size(28, 28);
-			this->menustrip_main->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(7) {
+			this->menustrip_main->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(6) {
 				this->FileToolStripMenuItem,
-					this->EnterToolStripMenuItem, this->CorrectToolStripMenuItem, this->ReportToolStripMenuItem, this->InfoToolStripMenuItem, this->QuitToolStripMenuItem,
-					this->PayToolStripMenuItem
+					this->EnterToolStripMenuItem, this->CorrectToolStripMenuItem, this->ReportToolStripMenuItem, this->QuitToolStripMenuItem, this->PayToolStripMenuItem
 			});
 			this->menustrip_main->Location = System::Drawing::Point(0, 0);
 			this->menustrip_main->Name = L"menustrip_main";
@@ -547,10 +539,9 @@ private: System::Windows::Forms::ToolStripMenuItem^ PayToolStripMenuItem;
 			// 
 			// FileToolStripMenuItem
 			// 
-			this->FileToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(9) {
+			this->FileToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(6) {
 				this->CreateToolStripMenuItem,
-					this->OpenToolStripMenuItem, this->toolStripSeparator1, this->CloseToolStripMenuItem, this->toolStripSeparator2, this->SaveToolStripMenuItem,
-					this->SaveAsToolStripMenuItem, this->toolStripSeparator3, this->ExitToolStripMenuItem
+					this->OpenToolStripMenuItem, this->toolStripSeparator1, this->CloseToolStripMenuItem, this->toolStripSeparator2, this->ExitToolStripMenuItem
 			});
 			this->FileToolStripMenuItem->Name = L"FileToolStripMenuItem";
 			this->FileToolStripMenuItem->Size = System::Drawing::Size(48, 22);
@@ -561,7 +552,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ PayToolStripMenuItem;
 			this->CreateToolStripMenuItem->Enabled = false;
 			this->CreateToolStripMenuItem->Name = L"CreateToolStripMenuItem";
 			this->CreateToolStripMenuItem->ShortcutKeys = static_cast<System::Windows::Forms::Keys>((System::Windows::Forms::Keys::Control | System::Windows::Forms::Keys::N));
-			this->CreateToolStripMenuItem->Size = System::Drawing::Size(172, 22);
+			this->CreateToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->CreateToolStripMenuItem->Text = L"&Создать";
 			this->CreateToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::CreateToolStripMenuItem_Click);
 			// 
@@ -569,53 +560,33 @@ private: System::Windows::Forms::ToolStripMenuItem^ PayToolStripMenuItem;
 			// 
 			this->OpenToolStripMenuItem->Name = L"OpenToolStripMenuItem";
 			this->OpenToolStripMenuItem->ShortcutKeys = static_cast<System::Windows::Forms::Keys>((System::Windows::Forms::Keys::Control | System::Windows::Forms::Keys::O));
-			this->OpenToolStripMenuItem->Size = System::Drawing::Size(172, 22);
+			this->OpenToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->OpenToolStripMenuItem->Text = L"&Открыть";
 			this->OpenToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::OpenToolStripMenuItem_Click);
 			// 
 			// toolStripSeparator1
 			// 
 			this->toolStripSeparator1->Name = L"toolStripSeparator1";
-			this->toolStripSeparator1->Size = System::Drawing::Size(169, 6);
+			this->toolStripSeparator1->Size = System::Drawing::Size(177, 6);
 			// 
 			// CloseToolStripMenuItem
 			// 
 			this->CloseToolStripMenuItem->Enabled = false;
 			this->CloseToolStripMenuItem->Name = L"CloseToolStripMenuItem";
-			this->CloseToolStripMenuItem->Size = System::Drawing::Size(172, 22);
+			this->CloseToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->CloseToolStripMenuItem->Text = L"&Закрыть";
 			this->CloseToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::CloseToolStripMenuItem_Click);
 			// 
 			// toolStripSeparator2
 			// 
 			this->toolStripSeparator2->Name = L"toolStripSeparator2";
-			this->toolStripSeparator2->Size = System::Drawing::Size(169, 6);
-			// 
-			// SaveToolStripMenuItem
-			// 
-			this->SaveToolStripMenuItem->Enabled = false;
-			this->SaveToolStripMenuItem->Name = L"SaveToolStripMenuItem";
-			this->SaveToolStripMenuItem->ShortcutKeys = static_cast<System::Windows::Forms::Keys>((System::Windows::Forms::Keys::Control | System::Windows::Forms::Keys::S));
-			this->SaveToolStripMenuItem->Size = System::Drawing::Size(172, 22);
-			this->SaveToolStripMenuItem->Text = L"Со&хранить";
-			// 
-			// SaveAsToolStripMenuItem
-			// 
-			this->SaveAsToolStripMenuItem->Enabled = false;
-			this->SaveAsToolStripMenuItem->Name = L"SaveAsToolStripMenuItem";
-			this->SaveAsToolStripMenuItem->Size = System::Drawing::Size(172, 22);
-			this->SaveAsToolStripMenuItem->Text = L"Сох&ранить как...";
-			// 
-			// toolStripSeparator3
-			// 
-			this->toolStripSeparator3->Name = L"toolStripSeparator3";
-			this->toolStripSeparator3->Size = System::Drawing::Size(169, 6);
+			this->toolStripSeparator2->Size = System::Drawing::Size(177, 6);
 			// 
 			// ExitToolStripMenuItem
 			// 
 			this->ExitToolStripMenuItem->Name = L"ExitToolStripMenuItem";
 			this->ExitToolStripMenuItem->ShortcutKeys = static_cast<System::Windows::Forms::Keys>((System::Windows::Forms::Keys::Alt | System::Windows::Forms::Keys::F4));
-			this->ExitToolStripMenuItem->Size = System::Drawing::Size(172, 22);
+			this->ExitToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->ExitToolStripMenuItem->Text = L"&Выход";
 			this->ExitToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::ExitToolStripMenuItem_Click);
 			// 
@@ -647,7 +618,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ PayToolStripMenuItem;
 					this->CorrectMovieToolStripMenuItem, this->DelMovieToolStripMenuItem
 			});
 			this->MovieToolStripMenuItem->Name = L"MovieToolStripMenuItem";
-			this->MovieToolStripMenuItem->Size = System::Drawing::Size(132, 22);
+			this->MovieToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->MovieToolStripMenuItem->Text = L"&Фильм";
 			// 
 			// NewMovieToolStripMenuItem
@@ -673,37 +644,15 @@ private: System::Windows::Forms::ToolStripMenuItem^ PayToolStripMenuItem;
 			// 
 			// PromoToolStripMenuItem
 			// 
-			this->PromoToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {
-				this->NewPromoToolStripMenuItem,
-					this->CorrectPromoToolStripMenuItem, this->DelPromoToolStripMenuItem
-			});
 			this->PromoToolStripMenuItem->Name = L"PromoToolStripMenuItem";
-			this->PromoToolStripMenuItem->Size = System::Drawing::Size(132, 22);
+			this->PromoToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->PromoToolStripMenuItem->Text = L"&Промокод";
 			this->PromoToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::PromoToolStripMenuItem_Click);
-			// 
-			// NewPromoToolStripMenuItem
-			// 
-			this->NewPromoToolStripMenuItem->Name = L"NewPromoToolStripMenuItem";
-			this->NewPromoToolStripMenuItem->Size = System::Drawing::Size(165, 22);
-			this->NewPromoToolStripMenuItem->Text = L"&Добавить новый";
-			// 
-			// CorrectPromoToolStripMenuItem
-			// 
-			this->CorrectPromoToolStripMenuItem->Name = L"CorrectPromoToolStripMenuItem";
-			this->CorrectPromoToolStripMenuItem->Size = System::Drawing::Size(165, 22);
-			this->CorrectPromoToolStripMenuItem->Text = L"&Изменить";
-			// 
-			// DelPromoToolStripMenuItem
-			// 
-			this->DelPromoToolStripMenuItem->Name = L"DelPromoToolStripMenuItem";
-			this->DelPromoToolStripMenuItem->Size = System::Drawing::Size(165, 22);
-			this->DelPromoToolStripMenuItem->Text = L"&Удалить";
 			// 
 			// CinemaToolStripMenuItem
 			// 
 			this->CinemaToolStripMenuItem->Name = L"CinemaToolStripMenuItem";
-			this->CinemaToolStripMenuItem->Size = System::Drawing::Size(132, 22);
+			this->CinemaToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->CinemaToolStripMenuItem->Text = L"&Кинотеатр";
 			this->CinemaToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::CinemaToolStripMenuItem_Click);
 			// 
@@ -714,12 +663,6 @@ private: System::Windows::Forms::ToolStripMenuItem^ PayToolStripMenuItem;
 			this->ReportToolStripMenuItem->Size = System::Drawing::Size(51, 22);
 			this->ReportToolStripMenuItem->Text = L"&Отчёт";
 			this->ReportToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::ReportToolStripMenuItem_Click);
-			// 
-			// InfoToolStripMenuItem
-			// 
-			this->InfoToolStripMenuItem->Name = L"InfoToolStripMenuItem";
-			this->InfoToolStripMenuItem->Size = System::Drawing::Size(65, 22);
-			this->InfoToolStripMenuItem->Text = L"&Справка";
 			// 
 			// QuitToolStripMenuItem
 			// 
@@ -4494,20 +4437,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ PayToolStripMenuItem;
 				if (!good) 
 				{
 					this->toolStripStatusLabel_filename->Visible = false;
-					if (this->EnterToolStripMenuItem->Visible)
-					{
-						MessageBox::Show(L"Содержимое файла не удовлетворяет формату.");
-					}
-					else 
-					{
-						if (MessageBox::Show(L"Содержимое файла не удовлетворяет формату. Очистить файл?", "", MessageBoxButtons::YesNo) == System::Windows::Forms::DialogResult::Yes) 
-						{
-							this->toolStripStatusLabel_filename->Visible = true;
-							good = true;
-							StreamWriter^ sw = gcnew StreamWriter(this->toolStripStatusLabel_filename->Text, false, System::Text::Encoding::GetEncoding(1251));
-							sw->Close();
-						}
-					}
+					MessageBox::Show(L"Содержимое файла не удовлетворяет формату.");
 				}
 			}
 		}
@@ -4528,11 +4458,6 @@ private: System::Windows::Forms::ToolStripMenuItem^ PayToolStripMenuItem;
 			this->CloseToolStripMenuItem->Enabled = true;
 			if (this->QuitToolStripMenuItem->Visible) 
 			{
-				this->SaveAsToolStripMenuItem->Enabled = true;
-				if (this->toolStripStatusLabel_filename->Text != L"Новый файл")
-					this->SaveToolStripMenuItem->Enabled = true;
-				else
-					this->SaveToolStripMenuItem->Enabled = false;
 				this->CorrectToolStripMenuItem->Enabled = true;
 				this->ReportToolStripMenuItem->Enabled = true;
 			}
@@ -4583,8 +4508,6 @@ private: System::Windows::Forms::ToolStripMenuItem^ PayToolStripMenuItem;
 		this->EnterToolStripMenuItem->Visible = true;
 		this->QuitToolStripMenuItem->Visible = false;
 		this->CreateToolStripMenuItem->Enabled = false;
-		this->SaveToolStripMenuItem->Enabled = false;
-		this->SaveAsToolStripMenuItem->Enabled = false;
 		this->CorrectToolStripMenuItem->Enabled = false;
 		this->ReportToolStripMenuItem->Enabled = false;
 		this->button1->Enabled = false;
